@@ -1,0 +1,8 @@
+deps/
+deps/adodbapi/adodbapi.py
+custom_components/light/__pycache__/modbus.cpython-35.pyc
+deps/adodbapi/ado_consts.py
+deps/adodbapi/examples/db_print.py
+custom_components/light/__pycache__/modbus.cpython-35.pyc
+home-assistant.log
+*.db

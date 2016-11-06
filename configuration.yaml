@@ -61,6 +61,7 @@ device_tracker:
 # Single Files
 
 light: !include include/light.yaml
+
 #binary_sensor: !include includes/binary_sensors.yaml
 #camera: !include includes/cameras.yaml
 #climate: !include includes/climate.yaml
