@@ -1,4 +1,5 @@
 ﻿  - platform: modbus
+    scan_interval: 30  
     registers:
       - name: temp_outside
         unit_of_measurement: °C

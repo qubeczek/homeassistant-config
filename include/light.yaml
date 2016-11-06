@@ -1,0 +1,15 @@
+  - platform: modbus
+    scan_interval: 5
+    coils:
+      - name: light_kuchnia_szafki
+        coil: 75
+      - name: light_kuchnia_sufit1
+        coil: 72
+      - name: light_kuchnia_sufit2
+        coil: 73
+      - name: light_kuchnia_barek1
+        coil: 74
+      - name: light_kuchnia_zlew
+        coil: 71
+      - name: light_kuchnia_blat
+        coil: 70
