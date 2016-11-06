@@ -1,0 +1,1 @@
+py -m homeassistant --config c:\priv\dom\sdi\gui\ha --open-ui

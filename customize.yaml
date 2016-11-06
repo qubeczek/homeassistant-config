@@ -1,0 +1,27 @@
+#################################################################
+## Customize
+#################################################################
+
+#lights
+       
+     light.light_kuchnia_szafki:
+       friendly_name: Pod szafkami nad blatem     
+
+
+#sensors
+     sensor.yr_humidity:
+       friendly_name: Wilgotność
+       icon: mdi:cloud-outline
+     sensor.yr_pressure:
+       friendly_name: Ciśnienie
+       icon: mdi:coffee
+     sensor.heater_workingtime:
+       friendly_name: Piec - czas grzania  
+       icon: mdi:home-outline
+     sensor.heater_oncount:
+       friendly_name: Piec - ilość zał.  
+       icon: mdi:home-outline
+     sensor.temp_outside:
+       friendly_name: Temp. zewnętrzna
+       
+  

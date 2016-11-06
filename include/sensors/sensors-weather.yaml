@@ -1,0 +1,12 @@
+﻿############################################################
+#
+# Weather sensor yr
+#
+############################################################
+  - platform: yr
+    name: pogoda
+    monitored_conditions:
+      - symbol
+      - humidity
+      - pressure
+      - windSpeed

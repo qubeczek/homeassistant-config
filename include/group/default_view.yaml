@@ -1,0 +1,23 @@
+﻿############################################################
+#
+# Home Assistant Default View
+#
+############################################################
+  default_view:
+    view: yes
+    icon: mdi:home
+    name: Panel
+    entities:
+      - device_tracker.kubaiphone
+      - sun.sun
+      - sensor.pogoda
+      - group.weather
+      
+  weather:
+    name: Pogoda
+    entities:
+      - sensor.temp_outside
+      - sensor.yr_humidity
+      - sensor.yr_pressure
+      - sensor.heater_oncount
+      - sensor.heater_workingtime

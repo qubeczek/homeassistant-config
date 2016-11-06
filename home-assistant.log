@@ -1,0 +1,5 @@
+16-11-06 13:04:09 homeassistant.components.device_tracker.tplink: Couldn't fetch auth tokens!
+16-11-06 13:04:09 homeassistant.components.device_tracker.tplink: Router didn't respond with JSON. Check if credentials are correct.
+16-11-06 13:04:09 homeassistant.components.device_tracker.tplink: Router didn't respond with JSON. Check if credentials are correct.
+16-11-06 13:04:09 homeassistant.components.recorder: Ended unfinished session (id=91 from 2016-11-06 12:02:58.362362)
+16-11-06 13:04:09 homeassistant.components.recorder: Found unfinished sessions
