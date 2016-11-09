@@ -6,6 +6,3 @@ deps/adodbapi/examples/db_print.py
 custom_components/light/__pycache__/modbus.cpython-35.pyc
 home-assistant.log
 *.db
-custom_components/light/__pycache__/modbus.cpython-35.pyc
-home-assistant_v2.db
-home-assistant.log
