@@ -9,3 +9,4 @@ home-assistant.log
 custom_components/light/__pycache__/modbus.cpython-35.pyc
 home-assistant_v2.db
 home-assistant.log
+custom_components/sensor/__pycache__/modbushas.cpython-35.pyc

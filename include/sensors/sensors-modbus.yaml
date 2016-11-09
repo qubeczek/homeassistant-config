@@ -1,11 +1,6 @@
 ﻿  - platform: modbus
     scan_interval: 30  
     registers:
-      - name: temp_outside
-        unit_of_measurement: °C
-        slave: 1
-        register: 411
-        scale: 0.01
       - name: heater_workingtime
         unit_of_measurement: min
         slave: 1
@@ -13,3 +8,12 @@
         scale:  0.0166666666
       - name: heater_oncount
         register: 509
+  - platform: modbushas
+    scan_interval: 30  
+    registers:
+      - name: temp_outside
+        unit_of_measurement: °C
+        slave: 1
+        register: 411
+        scale: 0.01
+        signed: 1
