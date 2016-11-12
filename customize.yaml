@@ -56,16 +56,100 @@
        friendly_name: Łazienka dół lustro
      light.light_lazienkadol_led2:
        friendly_name: Łazienka dół dodatkowe
-#pietro
+#oświetlenie pietro
      light.light_schody_sufit1:
        friendly_name: Schody sufit
      light.light_schody_led:
        friendly_name: Schody LED
      light.light_pralnia_sufit1:
        friendly_name: Pralnia sufit
+     light.light_korytarzgora_sufit1:
+       friendly_name: Korytarz górny sufit I
+     light.light_korytarzgora_sufit2:
+       friendly_name: Korytarz górny sufit II
+     light.light_korytarzgora_led1:
+       friendly_name: Korytarz górny LED
+     light.light_hallgora_sufit1:
+       friendly_name: Hall góra
+     light.light_pokoj1_sufit1:
+       friendly_name: Pokój Jędrka sufit I
+     light.light_pokoj1_sufit2:
+       friendly_name: Pokój Jędrka sufit II
+     light.light_pokoj2_sufit1:
+       friendly_name: Pokój Michała sufit
+     light.light_pokoj3_sufit1:
+       friendly_name: Pokój Mikołaja sufit
+     light.light_sypialnia_sufit1:
+       friendly_name: Sypialnia sufit
+     light.light_sypialnia_kinkiet1:
+       friendly_name: Sypialnia kinkiet lewy
+     light.light_sypialnia_kinkiet2:
+       friendly_name: Sypialnia kinkiet prawy
+     light.light_sypialnia_led1:
+       friendly_name: Sypialnia pod łózkiem
+     light.light_garderoba_sufit:
+       friendly_name: Garderoba sufit
+     light.light_lazienkas_sufit1:
+       friendly_name: Łazienka sypialnia sufit I
+     light.light_lazienkas_sufit2:
+       friendly_name: Łazienka sypialnia sufit II
+     light.light_lazienkas_kinkiet1:
+       friendly_name: Łazienka sypialnia kinkiet lewy
+     light.light_lazienkas_kinkiet2:
+       friendly_name: Łazienka sypialnia kinkiet prawy
+     light.light_lazienkas_led:
+       friendly_name: Łazienka sypialnia LED
+     light.light_lazienkagora_sufit1:
+       friendly_name: Łazienka górna sufit I
+     light.light_lazienkagora_sufit2:
+       friendly_name: Łazienka górna sufit II
+     light.light_lazienkagora_kinkiet1:
+       friendly_name: Łazienka górna kinkiet
+     light.light_lazienkagora_led1:
+       friendly_name: Łazienka górna umywalka
+#oświetlenie otoczenie       
+     light.light_kotlownia_sufit1:
+       friendly_name: Kotłownia sufit    
+     light.light_garaz_kin1:
+       friendly_name: Garaż kinkiet I
+     light.light_garaz_kin2:
+       friendly_name: Garaż kinkiet II
+     light.light_garaz_kin3:
+       friendly_name: Garaż kinkiet III
+     light.light_roof_back1:
+       friendly_name: Podbitka tył I
+     light.light_roof_back2:
+       friendly_name: Podbitka tył II
+     light.light_roof_front1:
+       friendly_name: Podbitka przód I
+     light.light_roof_front2:
+       friendly_name: Podbitka przód II
+     light.light_tarasgora:
+       friendly_name: Taras górny
+     light.light_balkon:
+       friendly_name: Balkon
+     light.light_elewacja:
+       friendly_name: Elewacja
+     light.light_strych:
+       friendly_name: Strych
+     light.light_podjazd:
+       friendly_name: Podjazd
+     light.light_drzwifrontowe:
+       friendly_name: Drzwi frontowe
+     light.light_ogrod_front:
+       friendly_name: Ogród frontowe
+#scene
+     scene.gaszenie_swiatel:
+       friendly_name: Pora spać - gaszenie świateł
+     scene.wieczorne_ogladanie_filmu:
+       friendly_name: Oglądanie filmu
+     scene.romantic:
+       friendly_name: Wiczorek
 
 
 #sensors
+     sensor.yr_symbol:
+       friendly_name: Pogoda
      sensor.yr_humidity:
        friendly_name: Wilgotność
        icon: mdi:cloud-outline

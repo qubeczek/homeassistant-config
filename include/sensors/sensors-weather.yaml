@@ -4,7 +4,7 @@
 #
 ############################################################
   - platform: yr
-    name: pogoda
+    name: Pogoda
     monitored_conditions:
       - symbol
       - humidity

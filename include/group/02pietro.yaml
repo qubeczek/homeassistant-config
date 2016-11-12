@@ -9,8 +9,8 @@
     entities:
       - group.korytarzgora
       - group.sypialnia
-      - group.lazienkagora
       - group.lazienkasypialnia
+      - group.lazienkagora
       - group.pokoj1
       - group.pokoj2
       - group.pokoj3
@@ -24,6 +24,15 @@
       - light.light_garderoba_sufit
       - light.light_sypialnia_led1
 
+      
+  lazienkasypialnia:
+    name: Łazienka sypialnia
+    entities:
+      - light.light_lazienkas_sufit1
+      - light.light_lazienkas_sufit2
+      - light.light_lazienkas_kinkiet1
+      - light.light_lazienkas_kinkiet2
+      - light.light_lazienkas_led
 
   korytarzgora:
     name: Korytarz górny
@@ -59,14 +68,4 @@
       - light.light_lazienkagora_sufit2
       - light.light_lazienkagora_kinkiet1
       - light.light_lazienkagora_led1
-      - light.light_lazienkagora_led2
-      
-  lazienkasypialnia:
-    name: Łazienka sypialnia
-    entities:
-      - light.light_lazienkas_sufit1
-      - light.light_lazienkas_sufit2
-      - light.light_lazienkas_kinkiet1
-      - light.light_lazienkas_kinkiet2
-      - light.light_lazienkas_led
 

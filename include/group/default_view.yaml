@@ -23,6 +23,7 @@
       - sensor.yr_windSpeed
       - sensor.heater_oncount
       - sensor.heater_workingtime
+
   sceny:
     name: Sceny
     entities:
