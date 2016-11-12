@@ -144,7 +144,7 @@
      scene.wieczorne_ogladanie_filmu:
        friendly_name: Oglądanie filmu
      scene.romantic:
-       friendly_name: Wiczorek
+       friendly_name: Wieczorek
 
 
 #sensors
