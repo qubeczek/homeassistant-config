@@ -129,7 +129,7 @@
         coil: 125
       - name: light_roof_front1
         coil: 126
-      - name: light_roof_front1
+      - name: light_roof_front2
         coil: 127
       - name: light_tarasgora
         coil: 128

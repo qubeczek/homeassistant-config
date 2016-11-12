@@ -81,4 +81,6 @@
      sensor.temp_outside:
        friendly_name: Temp. zewnętrzna
        
+       
+       
   

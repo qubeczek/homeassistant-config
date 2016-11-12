@@ -12,6 +12,7 @@
       - sun.sun
       - sensor.yr_symbol
       - group.weather
+      - group.sceny
       
   weather:
     name: Pogoda
@@ -22,3 +23,9 @@
       - sensor.yr_windSpeed
       - sensor.heater_oncount
       - sensor.heater_workingtime
+  sceny:
+    name: Sceny
+    entities:
+      - scene.wieczorne_ogladanie_filmu
+      - scene.gaszenie_swiatel
+      - scene.romantic

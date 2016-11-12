@@ -71,7 +71,7 @@ light: !include include/light.yaml
 #logger: !include includes/logger.yaml
 #media_player: !include includes/media_players.yaml
 #notify: !include includes/notify.yaml
-#scene: !include includes/scenes.yaml
+scene: !include include/scenes.yaml
 #switch: !include includes/switch.yaml
 #weblink: !include includes/weblink.yaml       
 

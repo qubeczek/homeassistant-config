@@ -1,0 +1,46 @@
+- name: gaszenie_swiatel
+  entities:
+    group.salon: off
+    group.jadalnia: off
+    group.gabinet: off
+    group.kuchnia: off
+    light.light_spizarka_sufit1: off
+    light.light_halldol_sufit1: off
+    light.light_wiatrolap_sufit1: off
+    group.lazienkadol: off
+    light.light_schody_sufit1: off
+    light.light_korytarzgora_sufit1: off
+    light.light_korytarzgora_sufit2: off
+    light.light_hallgora_sufit1: off
+    light.light_pralnia_sufit1: off
+    group.pokoj1: off
+    group.pokoj2: off
+    group.pokoj3: off
+    group.lazienkagora: off
+    group.garaz: off
+    light.light_podjazd: off
+    light.light_balkon: off
+    light.light_tarasgora: off
+    light.light_roof_front2: off
+    light.light_roof_back2: off
+
+- name: wieczorne_ogladanie_filmu
+  entities:
+    group.jadalnia: off
+    light.light_halldol_sufit1: off
+    light.light_salon_sufit1: off
+    light.light_salon_sufit2: off
+    light.light_salon_led_kominek1: on
+    light.light_salon_led_kominek2: on
+    light.light_salon_kinkiet3: on
+    light.light_salon_kinkiet2: on
+    light.light_salon_regal: off
+
+- name: romantic
+  entities:
+    group.lazienkagora: off
+    light.light_garderoba_sufit: off
+    light.light_sypialnia_sufit1: off
+    light.light_sypialnia_kinkiet1: off
+    light.light_sypialnia_kinkiet2: off
+    light.light_sypialnia_led1: on
