@@ -20,7 +20,7 @@
       - sensor.temp_outside
       - sensor.yr_humidity
       - sensor.yr_pressure
-      - sensor.yr_windSpeed
+      - sensor.yr_wind_speed
       - sensor.heater_oncount
       - sensor.heater_workingtime
 
