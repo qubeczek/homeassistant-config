@@ -61,3 +61,45 @@ b8782e9ebeb9:
   name: 8086f2411c61
   picture: null
   track: true
+
+10604be9547b:
+  hide_if_away: false
+  mac: 10:60:4B:E9:54:7B
+  name: 10604be9547b
+  picture:
+  track: false
+
+ac63bea06017:
+  hide_if_away: false
+  mac: AC:63:BE:A0:60:17
+  name: ac63bea06017
+  picture:
+  track: false
+
+f8a9d060660b:
+  hide_if_away: false
+  mac: F8:A9:D0:60:66:0B
+  name: f8a9d060660b
+  picture:
+  track: false
+
+380a9470854d:
+  hide_if_away: false
+  mac: 38:0A:94:70:85:4D
+  name: 380a9470854d
+  picture:
+  track: false
+
+a0f45058aebc:
+  hide_if_away: false
+  mac: A0:F4:50:58:AE:BC
+  name: a0f45058aebc
+  picture:
+  track: false
+
+7c1e52c94b2a:
+  hide_if_away: false
+  mac: 7C:1E:52:C9:4B:2A
+  name: 7c1e52c94b2a
+  picture:
+  track: false

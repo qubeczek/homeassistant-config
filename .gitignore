@@ -6,3 +6,8 @@ deps/adodbapi/examples/db_print.py
 custom_components/light/__pycache__/modbus.cpython-35.pyc
 home-assistant.log
 *.db
+skrot.txt
+start - nogui - Shortcut.lnk
+stderr.log
+start - nogui.bat
+stdout.log
