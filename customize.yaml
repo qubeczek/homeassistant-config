@@ -156,6 +156,8 @@
      sensor.yr_pressure:
        friendly_name: Ciśnienie
        icon: mdi:coffee
+     sensor.yr_wind_speed:
+       friendly_name: Wiatr - prędkość
      sensor.heater_workingtime:
        friendly_name: Piec - czas grzania  
        icon: mdi:home-outline
