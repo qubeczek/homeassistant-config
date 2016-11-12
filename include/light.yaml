@@ -66,19 +66,21 @@
       - name: light_pralnia_sufit1
         coil: 103
       - name: light_korytarzgora_sufit1
-        coil: 
+        coil: 116
       - name: light_korytarzgora_sufit2
-        coil: 0
+        coil: 117
       - name: light_korytarzgora_led1
-        coil: 0
+        coil: 145
+      - name: light_hallgora_sufit1
+        coil: 101
       - name: light_pokoj1_sufit1
-        coil: 0
+        coil: 96
       - name: light_pokoj1_sufit2
-        coil: 0
+        coil: 97
       - name: light_pokoj2_sufit1
-        coil: 0
+        coil: 98
       - name: light_pokoj3_sufit1
-        coil: 0
+        coil: 99
       - name: light_sypialnia_sufit1
         coil: 100
       - name: light_sypialnia_kinkiet1
@@ -129,7 +131,7 @@
         coil: 126
       - name: light_roof_front1
         coil: 127
-      - name: light_roof_garage
+      - name: light_tarasgora
         coil: 128
       - name: light_balkon
         coil: 129
@@ -141,3 +143,5 @@
         coil: 154
       - name: light_drzwifrontowe
         coil: 76
+      - name: light_ogrod_front
+        coil: 151

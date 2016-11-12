@@ -10,7 +10,7 @@
     entities:
       - device_tracker.kubaiphone
       - sun.sun
-      - sensor.pogoda
+      - sensor.yr_symbol
       - group.weather
       
   weather:
@@ -19,5 +19,6 @@
       - sensor.temp_outside
       - sensor.yr_humidity
       - sensor.yr_pressure
+      - sensor.yr_windSpeed
       - sensor.heater_oncount
       - sensor.heater_workingtime

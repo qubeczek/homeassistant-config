@@ -1,0 +1,72 @@
+﻿############################################################
+#
+# Home Assistant Rooms View
+#
+############################################################
+  pietro:
+    view: yes
+    name: Pietro
+    entities:
+      - group.korytarzgora
+      - group.sypialnia
+      - group.lazienkagora
+      - group.lazienkasypialnia
+      - group.pokoj1
+      - group.pokoj2
+      - group.pokoj3
+
+  sypialnia:
+    name: Sypialnia
+    entities:
+      - light.light_sypialnia_sufit1
+      - light.light_sypialnia_kinkiet1
+      - light.light_sypialnia_kinkiet2
+      - light.light_garderoba_sufit
+      - light.light_sypialnia_led1
+
+
+  korytarzgora:
+    name: Korytarz górny
+    entities:
+      - light.light_schody_sufit1
+      - light.light_korytarzgora_sufit1
+      - light.light_korytarzgora_sufit2
+      - light.light_hallgora_sufit1
+      - light.light_pralnia_sufit1
+      - light.light_schody_led
+      - light.light_korytarzgora_led1
+
+  pokoj1:
+    name: Pokój Jędrek
+    entities:
+      - light.light_pokoj1_sufit1
+      - light.light_pokoj1_sufit2
+      
+  pokoj2:
+    name: Pokój Michał
+    entities:
+      - light.light_pokoj2_sufit1
+
+  pokoj3:
+    name: Pokój Mikołaj
+    entities:
+      - light.light_pokoj2_sufit1
+
+  lazienkagora:
+    name: Łazienka góra
+    entities:
+      - light.light_lazienkagora_sufit1
+      - light.light_lazienkagora_sufit2
+      - light.light_lazienkagora_kinkiet1
+      - light.light_lazienkagora_led1
+      - light.light_lazienkagora_led2
+      
+  lazienkasypialnia:
+    name: Łazienka sypialnia
+    entities:
+      - light.light_lazienkas_sufit1
+      - light.light_lazienkas_sufit2
+      - light.light_lazienkas_kinkiet1
+      - light.light_lazienkas_kinkiet2
+      - light.light_lazienkas_led
+
