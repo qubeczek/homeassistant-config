@@ -158,6 +158,7 @@
        icon: mdi:coffee
      sensor.yr_wind_speed:
        friendly_name: Wiatr - prędkość
+       icon: mdi:weather-windy
      sensor.heater_workingtime:
        friendly_name: Piec - czas grzania  
        icon: mdi:home-outline
