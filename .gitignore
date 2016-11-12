@@ -17,3 +17,5 @@ stderr.log
 start - nogui.bat
 stdout.log
 .HA_VERSION
+.HA_VERSION
+home-assistant_v2.db-journal
