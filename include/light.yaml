@@ -1,3 +1,4 @@
+#parter
   - platform: modbus
     scan_interval: 5
     coils:
@@ -7,9 +8,136 @@
         coil: 72
       - name: light_kuchnia_sufit2
         coil: 73
-      - name: light_kuchnia_barek1
+      - name: light_kuchnia_barek
         coil: 74
       - name: light_kuchnia_zlew
         coil: 71
       - name: light_kuchnia_blat
         coil: 70
+      - name: light_jadalnia_sufit
+        coil: 1
+      - name: light_salon_sufit1
+        coil: 0
+      - name: light_salon_sufit2
+        coil: 254
+      - name: light_salon_regal
+        coil: 4
+      - name: light_salon_kinkiet1
+        coil: 5
+      - name: light_salon_kinkiet2
+        coil: 6
+      - name: light_salon_kinkiet3
+        coil: 7
+      - name: light_salon_led_kominek1
+        coil: 152
+      - name: light_salon_led_kominek2
+        coil: 153
+      - name: light_wiatrolap_sufit1
+        coil: 9
+      - name: light_wiatrolap_sufit2
+        coil: 10
+      - name: light_halldol_sufit1
+        coil: 8
+      - name: light_halldol_led
+        coil: 144
+      - name: light_gabinet_sufit1
+        coil: 2
+      - name: light_gabinet_sufit2
+        coil: 3
+      - name: light_spizarka_sufit1
+        coil: 13
+      - name: light_rekraacja_sufit1
+        coil: 12
+      - name: light_lazienkadol_sufit1
+        coil: 11
+      - name: light_lazienkadol_led1
+        coil: 94
+      - name: light_lazienkadol_led2
+        coil: 95
+
+#pietro        
+  - platform: modbus
+    scan_interval: 5
+    coils:
+      - name: light_schody_sufit1
+        coil: 102
+      - name: light_schody_led
+        coil: 146
+      - name: light_pralnia_sufit1
+        coil: 103
+      - name: light_korytarzgora_sufit1
+        coil: 
+      - name: light_korytarzgora_sufit2
+        coil: 0
+      - name: light_korytarzgora_led1
+        coil: 0
+      - name: light_pokoj1_sufit1
+        coil: 0
+      - name: light_pokoj1_sufit2
+        coil: 0
+      - name: light_pokoj2_sufit1
+        coil: 0
+      - name: light_pokoj3_sufit1
+        coil: 0
+      - name: light_sypialnia_sufit1
+        coil: 100
+      - name: light_sypialnia_kinkiet1
+        coil: 119
+      - name: light_sypialnia_kinkiet2
+        coil: 120
+      - name: light_sypialnia_led1
+        coil: 111
+      - name: light_garderoba_sufit
+        coil: 118
+      - name: light_lazienkas_sufit1
+        coil: 107
+      - name: light_lazienkas_sufit2
+        coil: 108
+      - name: light_lazienkas_kinkiet1
+        coil: 109
+      - name: light_lazienkas_kinkiet2
+        coil: 110
+      - name: light_lazienkas_led
+        coil: 121
+      - name: light_lazienkagora_sufit1
+        coil: 105
+      - name: light_lazienkagora_sufit2
+        coil: 106
+      - name: light_lazienkagora_kinkiet1
+        coil: 104
+      - name: light_lazienkagora_led1
+        coil: 122
+      - name: light_lazienkagora_led2
+        coil: 123
+#garaz i otoczenie
+  - platform: modbus
+    scan_interval: 5
+    coils:
+      - name: light_kotlownia_sufit1
+        coil: 112
+      - name: light_garaz_kin1
+        coil: 113
+      - name: light_garaz_kin2
+        coil: 114
+      - name: light_garaz_kin3
+        coil: 115
+      - name: light_roof_back1
+        coil: 124
+      - name: light_roof_back2
+        coil: 125
+      - name: light_roof_front1
+        coil: 126
+      - name: light_roof_front1
+        coil: 127
+      - name: light_roof_garage
+        coil: 128
+      - name: light_balkon
+        coil: 129
+      - name: light_elewacja
+        coil: 134
+      - name: light_strych
+        coil: 135
+      - name: light_podjazd
+        coil: 154
+      - name: light_drzwifrontowe
+        coil: 76

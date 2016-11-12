@@ -6,6 +6,63 @@
        
      light.light_kuchnia_szafki:
        friendly_name: Pod szafkami nad blatem     
+     light.light_kuchnia_sufit1:
+       friendly_name: Kuchnia sufit I
+     light.light_kuchnia_sufit2:
+       friendly_name: Kuchnia sufit II
+     light.light_kuchnia_zlew:
+       friendly_name: Kuchnia zlew
+     light.light_kuchnia_blat:
+       friendly_name: Kuchnia nad blatem
+     light.light_kuchnia_barek:
+       friendly_name: Kuchnia nad barkiem
+     light.light_jadalnia_sufit:
+       friendly_name: Jadalnia sufit
+     light.light_salon_sufit1:
+       friendly_name: Salon sufit I
+     light.light_salon_sufit2:
+       friendly_name: Salon sufit II
+     light.light_salon_regal:
+       friendly_name: Salon nad regałem
+     light.light_salon_kinkiet3:
+       friendly_name: Salon kinkiet lewy
+     light.light_salon_kinkiet2:
+       friendly_name: Salon kinkiet tył 
+     light.light_salon_kinkiet1:
+       friendly_name: Jadalnia kinkiet
+     light.light_salon_led_kominek1:
+       friendly_name: Salon kominek pion
+     light.light_salon_led_kominek2:
+       friendly_name: Salon kominek poziom
+     light.light_wiatrolap_sufit1:
+       friendly_name: Wiatrołap sufit I
+     light.light_wiatrolap_sufit2:
+       friendly_name: Wiatrołap sufit II
+     light.light_halldol_sufit1:
+       friendly_name: Hall dół sufit
+     light.light_halldol_led:
+       friendly_name: Hall dół LED
+     light.light_gabinet_sufit1:
+       friendly_name: Gabinet sufit I
+     light.light_gabinet_sufit2:
+       friendly_name: Gabinet sufit II
+     light.light_spizarka_sufit1:
+       friendly_name: Spiżarka sufit
+     light.light_rekraacja_sufit1:
+       friendly_name: Rekaraacja sufit
+     light.light_lazienkadol_sufit1:
+       friendly_name: Łazienka dół sufit
+     light.light_lazienkadol_led1:
+       friendly_name: Łazienka dół lustro
+     light.light_lazienkadol_led2:
+       friendly_name: Łazienka dół dodatkowe
+#pietro
+     light.light_schody_sufit1:
+       friendly_name: Schody sufit
+     light.light_schody_led:
+       friendly_name: Schody LED
+     light.light_pralnia_sufit1:
+       friendly_name: Pralnia sufit
 
 
 #sensors
