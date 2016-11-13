@@ -3,7 +3,7 @@
 # Home Assistant Rooms View
 #
 ############################################################
-  parter:
+  01parter:
     view: yes
     name: Parter
     entities:
@@ -48,7 +48,9 @@
       - light.light_wiatrolap_sufit2
       - light.light_spizarka_sufit1
       - light.light_halldol_sufit1
+      - light.light_halldol_obraz
       - light.light_halldol_led
+      - binary_sensor.hasmonitor
 
   lazienkadol:
     name: Łazienka dolna

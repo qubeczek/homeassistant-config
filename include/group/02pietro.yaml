@@ -3,9 +3,9 @@
 # Home Assistant Rooms View
 #
 ############################################################
-  pietro:
+  02pietro:
     view: yes
-    name: Pietro
+    name: Piętro
     entities:
       - group.korytarzgora
       - group.sypialnia

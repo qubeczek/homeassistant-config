@@ -44,7 +44,7 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
     """Setup Modbus binary sensors."""
     lights = []
     for coil in config.get("coils"):
-        lights.append(ModbusLight(
+        lights.append(ModbusHASLight(
             coil.get(CONF_NAME),
             coil.get(CONF_SLAVE),
             coil.get(CONF_COIL)))
@@ -52,7 +52,7 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
 
 
 
-class ModbusLight(Light):
+class ModbusHASLight(Light):
     """Modbus Light."""
 
     def __init__(self, name, slave, coil):

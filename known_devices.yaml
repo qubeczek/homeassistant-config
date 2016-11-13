@@ -61,3 +61,17 @@ b8782e9ebeb9:
   name: 8086f2411c61
   picture: null
   track: true
+
+ac5f3e2d0c78:
+  hide_if_away: false
+  mac: AC:5F:3E:2D:0C:78
+  name: ac5f3e2d0c78
+  picture: null
+  track: false
+
+7c1e52c94b2a:
+  hide_if_away: false
+  mac: 7C:1E:52:C9:4B:2A
+  name: 7c1e52c94b2a
+  picture: null
+  track: false

@@ -3,7 +3,7 @@
 # Home Assistant Rooms View
 #
 ############################################################
-  otoczenie:
+  o03toczenie:
     view: yes
     name: Otoczenie
     entities:

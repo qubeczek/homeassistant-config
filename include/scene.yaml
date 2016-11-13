@@ -7,6 +7,8 @@
     light.light_spizarka_sufit1: off
     light.light_halldol_sufit1: off
     light.light_wiatrolap_sufit1: off
+    light.light_wiatrolap_sufit2: off
+    light.light_halldol_obraz: off
     group.lazienkadol: off
     light.light_schody_sufit1: off
     light.light_korytarzgora_sufit1: off

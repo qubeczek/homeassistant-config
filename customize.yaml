@@ -42,6 +42,8 @@
        friendly_name: Hall dół sufit
      light.light_halldol_led:
        friendly_name: Hall dół LED
+     light.light_halldol_obraz:
+       friendly_name: Hall dół obraz
      light.light_gabinet_sufit1:
        friendly_name: Gabinet sufit I
      light.light_gabinet_sufit2:
@@ -146,7 +148,10 @@
      scene.romantic:
        friendly_name: Wieczorek
 
-
+#binary_sensors
+     binary_sensor.hasmonitor:
+       friendly_name: Monitor główny HA
+       icon: mdi:monitor
 #sensors
      sensor.yr_symbol:
        friendly_name: Pogoda
