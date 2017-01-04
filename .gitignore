@@ -19,3 +19,5 @@ stdout.log
 .HA_VERSION
 .HA_VERSION
 home-assistant_v2.db-journal
+custom_components/light/__pycache__/modbushas.cpython-35.pyc
+custom_components/binary_sensor/__pycache__/modbushas.cpython-35.pyc
