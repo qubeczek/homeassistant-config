@@ -50,7 +50,7 @@
       - light.light_halldol_sufit1
       - light.light_halldol_obraz
       - light.light_halldol_led
-      - binary_sensor.hasmonitor
+      - switch.hasmonitor
 
   lazienkadol:
     name: Łazienka dolna

@@ -71,8 +71,8 @@ scene: !include include/scene.yaml
 #input_select: !include includes/input_select.yaml
 #logger: !include includes/logger.yaml
 #media_player: !include includes/media_players.yaml
-#notify: !include includes/notify.yaml
-#switch: !include includes/switch.yaml
+notify: !include include/notify.yaml
+switch: !include include/switch.yaml
 #weblink: !include includes/weblink.yaml       
 
 # Merge List
@@ -85,4 +85,4 @@ sensor: !include_dir_merge_list include/sensors
 # Merge Named
 
 group: !include_dir_merge_named include/group
-#script: !include_dir_merge_named includes/scripts 
+script: !include_dir_merge_named include/scripts 

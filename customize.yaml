@@ -147,11 +147,24 @@
        friendly_name: Oglądanie filmu
      scene.romantic:
        friendly_name: Wieczorek
-
-#binary_sensors
-     binary_sensor.hasmonitor:
+#switch
+     switch.hasmonitor:
        friendly_name: Monitor główny HA
        icon: mdi:monitor
+     switch.pompa_kcwu:
+       friendly_name: Pompa kominka CWU
+     switch.pompa_kco:
+       friendly_name: Pompa kominka CO
+     switch.pompa_co:
+       friendly_name: Pompa CO - grzejniki
+     switch.pompa_cp:
+       friendly_name: Pompa Co - podłogówka
+
+#binary_sensors
+     binary_sensor.co_piecgrzeje:
+       friendly_name: Status pieca
+       sensor_class: heat
+    
 #sensors
      sensor.yr_symbol:
        friendly_name: Pogoda
@@ -172,6 +185,28 @@
        icon: mdi:home-outline
      sensor.temp_outside:
        friendly_name: Temp. zewnętrzna
+     sensor.temp_kominek:
+       friendly_name: Temp. kominka
+     sensor.temp_kominek_back:
+       friendly_name: Temp. kominka - powrót
+     sensor.temp_cwu:
+       friendly_name: Temp. CWU
+     sensor.temp_cwu_back:
+       friendly_name: Temp. cyrkulacji
+     sensor.temp_co_sprzeglo:
+       friendly_name: CO - sprzęgło
+     sensor.temp_co:
+       friendly_name: CO - zasilanie grzejniki
+     sensor.temp_co_back:
+       friendly_name: CO - powrót grzejniki
+     sensor.temp_cp:
+       friendly_name: CO - zasilanie podłogi
+     sensor.temp_cp_back:
+       friendly_name: CO - powrót grzejniki
+     sensor.temp_co_piec:
+       friendly_name: CO - zasilanie piec gaz
+     sensor.temp_co_piec_back:
+       friendly_name: CO - powrót piec gaz
        
        
        

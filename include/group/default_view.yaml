@@ -21,8 +21,6 @@
       - sensor.yr_humidity
       - sensor.yr_pressure
       - sensor.yr_wind_speed
-      - sensor.heater_oncount
-      - sensor.heater_workingtime
 
   sceny:
     name: Sceny
@@ -30,3 +28,4 @@
       - scene.wieczorne_ogladanie_filmu
       - scene.gaszenie_swiatel
       - scene.romantic
+      - script.play_podejdz_do_telefonu

@@ -1,0 +1,13 @@
+  - platform: modbus
+    scan_interval: 5
+    coils:
+      - name: hasmonitor
+        coil: 150
+      - name: pompa_kcwu
+        coil: 46
+      - name: pompa_kco
+        coil: 45
+      - name: pompa_co
+        coil: 43
+      - name: pompa_cp
+        coil: 44

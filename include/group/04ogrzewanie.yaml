@@ -1,0 +1,33 @@
+  ogrzewanie:
+    view: yes
+    name: Ogrzewanie
+    entities:
+      - group.piec
+      - group.kominek
+    
+    
+  piec:
+    name: Piec gazowy
+    entities:
+      - binary_sensor.co_piecgrzeje
+      - sensor.heater_oncount
+      - sensor.heater_workingtime
+      - switch.pompa_co
+      - switch.pompa_cp
+      - sensor.temp_cwu
+      - sensor.temp_co_sprzeglo
+      - sensor.temp_co_piec
+      - sensor.temp_co_piec_back
+      - sensor.temp_co
+      - sensor.temp_co_back
+      - sensor.temp_cp
+      - sensor.temp_cp_back
+
+  kominek:
+    name: Kominek
+    entities:
+      - switch.pompa_kcwu
+      - switch.pompa_kco
+      - sensor.temp_kominek
+      - sensor.temp_kominek_back
+

@@ -13,9 +13,18 @@
   - platform: modbushas
     scan_interval: 5
     coils:
-      - name: hasmonitor
-        slave: 1
-        coil: 150
       - name: co_piecgrzeje
         slave: 1
-        coil: 148        
+        coil: 148
+#      - name: pompa_kcwu
+#        slave: 1
+#        coil: 46
+#      - name: pompa_kco
+#        slave: 1
+#        coil: 45
+#      - name: pompa_co
+#        slve: 1
+#        coil: 43
+#      - name: pompa_cp
+#        slave: 1
+#        coil: 44

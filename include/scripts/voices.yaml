@@ -1,0 +1,15 @@
+play_podejdz_do_telefonu:
+  alias: Podejdz do telefonu !
+  sequence:
+    - service: modbus.write_register
+      data:
+        unit: 1
+        address: 1000
+        value: 2    
+#    - service: notify.has
+#      data:
+#        message: 'test'
+#        data:
+#          address: 1000
+#          value: 2
+

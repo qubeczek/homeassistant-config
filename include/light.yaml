@@ -19,7 +19,7 @@
       - name: light_salon_sufit1
         coil: 0
       - name: light_salon_sufit2
-        coil: 254
+        coil: 77
       - name: light_salon_regal
         coil: 4
       - name: light_salon_kinkiet1

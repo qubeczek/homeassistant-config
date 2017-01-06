@@ -44,7 +44,7 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
     """Setup Modbus sensors."""
     sensors = []
     for register in config.get(CONF_REGISTERS):
-        sensors.append(ModbusRegisterHasSensor(
+        sensors.append(ModbusHASRegisterSensor(
             register.get(CONF_NAME),
             register.get(CONF_SLAVE),
             register.get(CONF_REGISTER),
@@ -58,7 +58,7 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
     add_devices(sensors)
 
 
-class ModbusRegisterHasSensor(Entity):
+class ModbusHASRegisterSensor(Entity):
     """Modbus resgister sensor."""
 
     # pylint: disable=too-many-instance-attributes, too-many-arguments

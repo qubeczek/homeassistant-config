@@ -8,6 +8,10 @@
         scale:  0.0166666666
       - name: heater_oncount
         register: 509
+      - name: kominek_co_temp_wlaczenia
+        register: 535
+
+#temperatury        
   - platform: modbushas
     scan_interval: 30  
     registers:
@@ -17,3 +21,69 @@
         register: 411
         scale: 0.01
         signed: 1
+      - name: temp_kominek
+        unit_of_measurement: °C
+        slave: 1
+        register: 405
+        scale: 0.01
+        signed: 1
+      - name: temp_kominek_back
+        unit_of_measurement: °C
+        slave: 1
+        register: 409
+        scale: 0.01
+        signed: 1
+      - name: temp_cwu
+        unit_of_measurement: °C
+        slave: 1
+        register: 439
+        scale: 0.01
+        signed: 1
+      - name: temp_cwu_back
+        unit_of_measurement: °C
+        slave: 1
+        register: 435
+        scale: 0.01
+        signed: 1
+      - name: temp_co_sprzeglo
+        unit_of_measurement: °C
+        slave: 1
+        register: 441
+        scale: 0.01
+        signed: 1
+      - name: temp_co
+        unit_of_measurement: °C
+        slave: 1
+        register: 430
+        scale: 0.01
+        signed: 1        
+      - name: temp_co_back
+        unit_of_measurement: °C
+        slave: 1
+        register: 431
+        scale: 0.01
+        signed: 1        
+      - name: temp_cp
+        unit_of_measurement: °C
+        slave: 1
+        register: 432
+        scale: 0.01
+        signed: 1        
+      - name: temp_cp_back
+        unit_of_measurement: °C
+        slave: 1
+        register: 433
+        scale: 0.01
+        signed: 1
+      - name: temp_co_piec
+        unit_of_measurement: °C
+        slave: 1
+        register: 429
+        scale: 0.01
+        signed: 1
+      - name: temp_co_piec_back
+        unit_of_measurement: °C
+        slave: 1
+        register: 428
+        scale: 0.01
+        signed: 1        
