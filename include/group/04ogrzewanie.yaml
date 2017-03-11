@@ -4,6 +4,7 @@
     entities:
       - group.piec
       - group.kominek
+      - group.woda
     
     
   piec:
@@ -31,3 +32,7 @@
       - sensor.temp_kominek
       - sensor.temp_kominek_back
 
+  woda:
+    name: Zasilanie wodą
+    entities:
+      - switch.co_woda

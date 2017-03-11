@@ -16,6 +16,9 @@
       - name: co_piecgrzeje
         slave: 1
         coil: 148
+#      - name: co_woda
+#        slave: 1
+#        coil: 161
 #      - name: pompa_kcwu
 #        slave: 1
 #        coil: 46

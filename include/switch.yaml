@@ -11,3 +11,6 @@
         coil: 43
       - name: pompa_cp
         coil: 44
+      - name: co_woda
+        coil: 161
+        

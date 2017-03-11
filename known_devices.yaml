@@ -80,12 +80,62 @@ ac5f3e2d0c78:
   hide_if_away: false
   mac: 10:60:4B:E9:54:7B
   name: 10604be9547b
-  picture: null
+  picture:
+  track: false
+
+f8a9d060660b:
+  hide_if_away: false
+  mac: F8:A9:D0:60:66:0B
+  name: f8a9d060660b
+  picture:
+  track: false
+
+380a9470854d:
+  hide_if_away: false
+  mac: 38:0A:94:70:85:4D
+  name: 380a9470854d
+  picture:
+  track: false
+
+584822f76fcb:
+  hide_if_away: false
+  mac: 58:48:22:F7:6F:CB
+  name: 584822f76fcb
+  picture:
+  track: false
+
+983b1638fb35:
+  hide_if_away: false
+  mac: 98:3B:16:38:FB:35
+  name: 983b1638fb35
+  picture:
+  track: false
+
+ac63bea06017:
+  hide_if_away: false
+  mac: AC:63:BE:A0:60:17
+  name: ac63bea06017
+  picture:
+  track: false
+
+34145f692a2f:
+  hide_if_away: false
+  mac: 34:14:5F:69:2A:2F
+  name: 34145f692a2f
+  picture:
   track: false
 
 84ef18230d8e:
   hide_if_away: false
   mac: 84:EF:18:23:0D:8E
   name: 84ef18230d8e
-  picture: null
+  picture:
   track: false
+
+3c25d7ededbc:
+  hide_if_away: false
+  mac: 3C:25:D7:ED:ED:BC
+  name: 3c25d7ededbc
+  picture:
+  track: false
+  vendor: Nokia Corporation

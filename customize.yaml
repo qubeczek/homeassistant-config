@@ -159,6 +159,8 @@
        friendly_name: Pompa CO - grzejniki
      switch.pompa_cp:
        friendly_name: Pompa Co - podłogówka
+     switch.co_woda:
+       friendly_name: Woda - zasilanie domu
 
 #binary_sensors
      binary_sensor.co_piecgrzeje:
