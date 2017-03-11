@@ -13,4 +13,6 @@
         coil: 44
       - name: co_woda
         coil: 161
+      - name: hallgniazdo1
+        coil: 157
         

@@ -44,6 +44,7 @@
       - light.light_pralnia_sufit1
       - light.light_schody_led
       - light.light_korytarzgora_led1
+      - switch.hallgniazdo1
 
   pokoj1:
     name: Pokój Jędrek

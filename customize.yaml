@@ -161,6 +161,9 @@
        friendly_name: Pompa Co - podłogówka
      switch.co_woda:
        friendly_name: Woda - zasilanie domu
+     switch.hallgniazdo1:
+       friendly_name: Blokada telewizorów w hallu
+       icon: mdi:monitor
 
 #binary_sensors
      binary_sensor.co_piecgrzeje:
