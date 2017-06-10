@@ -10,6 +10,7 @@
       - group.garaz
       - group.oswietleniedomu
       - group.oswietlenieogrodu
+      - group.podlewanie
 
   garaz:
     name: Garaż
@@ -38,3 +39,28 @@
     name: Oświetlenie ogrodu
     entities:
       - light.light_ogrod_front
+
+  podlewanie:
+    name: Podlewanie ogrodu
+    entities:
+      - sensor.ogrod_status_podlewania_tmpl
+      - script.ogrod_planpodlewania_toggle
+      - script.ogrod_podlewanie_toggle
+      - sensor.ogrod_status_wody_tmpl    
+      - script.ogrod_woda_toggle
+      - sensor.ogrod_deszcz_tmpl
+      - switch.ogrodP1O1
+      - switch.ogrodP1O2
+      - switch.ogrodP2O1
+      - switch.ogrodP2O2
+      - switch.ogrodP3O1
+      - switch.ogrodP3O2
+      - switch.ogrodP3O3
+      - switch.ogrodP4O1
+      - switch.ogrodP4O2
+      - switch.ogrodP4O3
+      - switch.ogrodWarzywa
+      - switch.ogrodTaras
+      
+
+      

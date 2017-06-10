@@ -15,4 +15,31 @@
         coil: 161
       - name: hallgniazdo1
         coil: 157
+      - name: ogrodP1O1
+        coil: 56
+      - name: ogrodP1O2
+        coil: 57
+      - name: ogrodP2O1
+        coil: 58
+      - name: ogrodP2O2
+        coil: 59
+      - name: ogrodP301
+        coil: 60
+      - name: ogrodP3O2
+        coil: 61
+      - name: ogrodP3O3
+        coil: 62
+      - name: ogrodP4O1
+        coil: 63
+      - name: ogrodP4O2
+        coil: 64
+      - name: ogrodP4O3
+        coil: 65
+      - name: ogrodWarzywa
+        coil: 66
+      - name: ogrodTaras
+        coil: 67
+        
+        
+        
         

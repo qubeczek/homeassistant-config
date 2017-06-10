@@ -164,6 +164,32 @@
      switch.hallgniazdo1:
        friendly_name: Blokada telewizorów w hallu
        icon: mdi:monitor
+     switch.ogrodP1O1:
+       friendly_name: P1 O1
+     switch.ogrodP1O2:
+       friendly_name: P1 O2
+     switch.ogrodP2O1:
+       friendly_name: P2 O1
+     switch.ogrodP2O2:
+       friendly_name: P2 O2
+     switch.ogrodP3O1:
+       friendly_name: P3 O1
+     switch.ogrodP3O2:
+       friendly_name: P3 O2
+     switch.ogrodP3O3:
+       friendly_name: P3 O3
+     switch.ogrodP4O1:
+       friendly_name: P4 O1
+     switch.ogrodP4O2:
+       friendly_name: P4 O2
+     switch.ogrodP4O3:
+       friendly_name: P4 O3
+     switch.ogrodWarzywa:
+       friendly_name: Warzywniak
+     switch.ogrodTaras:
+       friendly_name: Linia kropelkowa taras
+       
+          
 
 #binary_sensors
      binary_sensor.co_piecgrzeje:
@@ -214,6 +240,11 @@
        friendly_name: CO - zasilanie piec gaz
      sensor.temp_co_piec_back:
        friendly_name: CO - powrót piec gaz
+     sensor.ogrod_susza: 
+       friendly_name: Susza w ogrodzie
+     sensor.ogrod_status_programu:
+       friendly_name: Podlewanie automatyczne - status
+       
        
        
        

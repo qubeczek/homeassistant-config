@@ -1,0 +1,26 @@
+ogrod_planpodlewania_toggle:
+  alias: Przelacz program podlewania
+  sequence:
+    - service: modbus.write_register
+      data:
+        unit: 1
+        address: 1049
+        value: 1
+
+ogrod_podlewanie_toggle:
+  alias: Wlacz / wylacz podlewanie
+  sequence:
+    - service: modbus.write_register
+      data:
+        unit: 1
+        address: 1049
+        value: 2
+
+ogrod_woda_toggle:
+  alias: Wlacz / wylacz wode w ogrodzie
+  sequence:
+    - service: modbus.write_register
+      data:
+        unit: 1
+        address: 1049
+        value: 3

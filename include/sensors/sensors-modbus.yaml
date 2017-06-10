@@ -13,7 +13,7 @@
 
 #temperatury        
   - platform: modbushas
-    scan_interval: 30  
+    scan_interval: 15  
     registers:
       - name: temp_outside
         unit_of_measurement: °C
@@ -87,3 +87,19 @@
         register: 428
         scale: 0.01
         signed: 1        
+#ogrod
+  - platform: modbushas
+    scan_interval: 5  
+    registers:
+      - name: ogrod_susza
+        slave: 1
+        register: 1048
+        signed: 1                
+      - name: ogrod_status_programu
+        slave: 1
+        register: 1016
+        signed: 1     
+      - name: ogrod_status_wody
+        slave: 1
+        register: 1018        
+        signed: 1

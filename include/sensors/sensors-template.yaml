@@ -1,0 +1,30 @@
+  - platform: template
+    sensors:
+      ogrod_deszcz_tmpl:
+        friendly_name: 'Ziemia od deszczu'
+        value_template: '{% if is_state("sensor.ogrod_susza", "1") %}susza{% else%}mokra{% endif%}'
+      ogrod_status_podlewania_tmpl:
+        friendly_name: 'Status programu podlewania'
+        value_template: >-
+            {%- if is_state("sensor.ogrod_status_programu", "1") %}
+            planowane na rano
+            {% elif is_state("sensor.ogrod_status_programu", "2") %}
+            podlewanie
+            {% elif is_state("sensor.ogrod_status_programu", "3") %}
+            podlewalo sie
+            {%else%}
+            wylaczony
+            {%- endif%}
+            
+      ogrod_status_wody_tmpl:
+        friendly_name: 'Woda w ogrodzie'
+        value_template: >-
+            {%- if is_state("sensor.ogrod_status_wody", "0") %}
+            jest woda w studni
+            {% elif is_state("sensor.ogrod_status_wody", "1") %}
+            brak wody w studni
+            {% elif is_state("sensor.ogrod_status_wody", "2") %}
+            cisnienie ze studni
+            {%else%}
+            cienienie z sieci
+            {%- endif%}
