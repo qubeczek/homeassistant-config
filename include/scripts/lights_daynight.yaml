@@ -1,0 +1,9 @@
+light_night_on:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.light_drzwifrontowe, light.light_roof_front1, light.light_roof_back1, light.light_ogrod_front, light.light_schody_led, light.light_korytarzgora_led1, light.light_halldol_led
+      
+light_day_off:
+  sequence:
+    - service: light.turn_off
+      entity_id: light.light_drzwifrontowe, light.light_roof_front1, light.light_roof_back1, light.light_ogrod_front, light.light_schody_led, light.light_korytarzgora_led1, light.light_halldol_led      

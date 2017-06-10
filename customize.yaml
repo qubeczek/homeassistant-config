@@ -169,6 +169,8 @@
      binary_sensor.co_piecgrzeje:
        friendly_name: Status pieca
        sensor_class: heat
+     binary_sensor.cwu_pompa:
+       friendly_name: Pompa CWU
     
 #sensors
      sensor.yr_symbol:

@@ -5,7 +5,7 @@
       - group.piec
       - group.kominek
       - group.woda
-    
+      - group.automatyka
     
   piec:
     name: Piec gazowy
@@ -23,6 +23,7 @@
       - sensor.temp_co_back
       - sensor.temp_cp
       - sensor.temp_cp_back
+      - binary_sensor.cwu_pompa
 
   kominek:
     name: Kominek
@@ -36,3 +37,9 @@
     name: Zasilanie wodą
     entities:
       - switch.co_woda
+      
+  automatyka:
+    name: Automatyka
+    entities:
+      - automation.poranne_gaszenie_swiate
+      - automation.wieczorne_zapalanie_swiate

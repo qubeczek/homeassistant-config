@@ -60,7 +60,7 @@
   pokoj3:
     name: Pokój Mikołaj
     entities:
-      - light.light_pokoj2_sufit1
+      - light.light_pokoj3_sufit1
 
   lazienkagora:
     name: Łazienka góra

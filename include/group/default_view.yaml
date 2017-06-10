@@ -29,3 +29,5 @@
       - scene.gaszenie_swiatel
       - scene.romantic
       - script.play_podejdz_do_telefonu
+      - script.light_night_on
+      - script.light_day_off

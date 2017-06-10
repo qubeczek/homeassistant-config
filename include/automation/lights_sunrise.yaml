@@ -1,0 +1,7 @@
+- alias: Poranne gaszenie świateł
+  trigger:
+    platform: sun
+    event: sunrise
+  action:
+    service: homeassistant.turn_on
+    entity_id: script.light_day_off

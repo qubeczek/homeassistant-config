@@ -1,0 +1,7 @@
+- alias: Wieczorne zapalanie świateł
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: homeassistant.turn_on
+    entity_id: script.light_night_on
