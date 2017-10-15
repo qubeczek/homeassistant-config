@@ -18,7 +18,7 @@ EVENT_NOTIFY = "notify"
 ATTR_ADDRESS = "address"
 ATTR_VALUE = "value"
 
-def get_service(hass, config):
+def get_service(hass, config, discovery_info=None):
     """Get the ModbusHAS notification service."""
     return ModbusHASNotificationService(hass,1)
 

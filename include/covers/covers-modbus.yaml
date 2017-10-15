@@ -1,0 +1,4 @@
+  - platform: modbushas
+    covers:
+      - name: roleta_salon_7
+        deviceadress: 1239

@@ -24,6 +24,7 @@
       - light.light_salon_kinkiet3
       - light.light_salon_led_kominek1
       - light.light_salon_led_kominek2
+      - cover.roleta_salon_7
 
   kuchnia:
     name: Kuchnia
