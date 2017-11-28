@@ -199,15 +199,15 @@
        friendly_name: Pompa CWU
     
 #sensors
-     sensor.yr_symbol:
+     sensor.Pogoda_symbol:
        friendly_name: Pogoda
-     sensor.yr_humidity:
+     sensor.Pogoda_humidity:
        friendly_name: Wilgotność
        icon: mdi:cloud-outline
-     sensor.yr_pressure:
+     sensor.Pogoda_pressure:
        friendly_name: Ciśnienie
        icon: mdi:coffee
-     sensor.yr_wind_speed:
+     sensor.Pogoda_wind_speed:
        friendly_name: Wiatr - prędkość
        icon: mdi:weather-windy
      sensor.heater_workingtime:
@@ -245,6 +245,51 @@
      sensor.ogrod_status_programu:
        friendly_name: Podlewanie automatyczne - status
        
+#sensory temperatoru
+     sensor.temp_kuchnia:
+       friendly_name: Temepratura
+     sensor.temp_kuchnia_podloga:
+       friendly_name: Temp. podłogi
+       icon: mdi:oil-temperature
+     sensor.temp_lazienka_dol:
+       friendly_name: Temepratura
+     sensor.temp_lazienka_dol_podloga:
+       friendly_name: Temp. podłogi
+       icon: mdi:oil-temperature
+     sensor.temp_pralnia:
+       friendly_name: Temepratura
+     sensor.temp_pralnia_podloga:
+       friendly_name: Temp. podłogi
+       icon: mdi:temperature-celsius
+     sensor.temp_lazienka_gora:
+       friendly_name: Temepratura
+     sensor.temp_lazienka_gora_podloga:
+       friendly_name: Temp. podłogi
+       icon: mdi:oil-temperature
+     sensor.temp_lazienka_sypialnia:
+       friendly_name: Temepratura
+     sensor.temp_lazienka_sypialnia_podloga:
+       friendly_name: Temp. podłogi
+       icon: mdi:oil-temperature
+     sensor.temp_salon:
+       friendly_name: Temepratura
+     sensor.temp_gabinet:
+       friendly_name: Temepratura
+     sensor.temp_korytarz_Ip:
+       friendly_name: Temepratura korytarz
+     sensor.temp_hall_Ip:
+       friendly_name: Temepratura hall
+     sensor.temp_pokoj3:
+       friendly_name: Temepratura
+     sensor.temp_pokoj2:
+       friendly_name: Temepratura
+     sensor.temp_pokoj1:
+       friendly_name: Temepratura
+     sensor.temp_sypialnia:
+       friendly_name: Temepratura
+
+     
+
        
        
        

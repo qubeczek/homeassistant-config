@@ -87,6 +87,102 @@
         register: 428
         scale: 0.01
         signed: 1        
+
+#temperatury pokoi
+  - platform: modbushas
+    scan_interval: 30
+    registers:
+      - name: temp_kuchnia
+        unit_of_measurement: °C
+        slave: 1
+        register: 419
+        scale: 0.01
+      - name: temp_lazienka_dol
+        unit_of_measurement: °C
+        slave: 1
+        register: 420
+        scale: 0.01
+      - name: temp_lazienka_dol_podloga
+        unit_of_measurement: °C
+        slave: 1
+        register: 404
+        scale: 0.01
+      - name: temp_kuchnia_podloga
+        unit_of_measurement: °C
+        slave: 1
+        register: 406
+        scale: 0.01
+      - name: temp_pralnia
+        unit_of_measurement: °C
+        slave: 1
+        register: 423
+        scale: 0.01
+      - name: temp_pralnia_podloga
+        unit_of_measurement: °C
+        slave: 1
+        register: 403
+        scale: 0.01
+      - name: temp_lazienka_gora
+        unit_of_measurement: °C
+        slave: 1
+        register: 402
+        scale: 0.01
+      - name: temp_lazienka_gora_podloga
+        unit_of_measurement: °C
+        slave: 1
+        register: 410
+        scale: 0.01
+      - name: temp_lazienka_sypialnia
+        unit_of_measurement: °C
+        slave: 1
+        register: 408
+        scale: 0.01
+      - name: temp_lazienka_sypialnia_podloga
+        unit_of_measurement: °C
+        slave: 1
+        register: 407
+        scale: 0.01
+      - name: temp_salon
+        unit_of_measurement: °C
+        slave: 1
+        register: 412
+        scale: 0.01
+      - name: temp_gabinet
+        unit_of_measurement: °C
+        slave: 1
+        register: 424
+        scale: 0.01
+      - name: temp_korytarz_Ip
+        unit_of_measurement: °C
+        slave: 1
+        register: 422
+        scale: 0.01
+      - name: temp_hall_Ip
+        unit_of_measurement: °C
+        slave: 1
+        register: 418
+        scale: 0.01
+      - name: temp_pokoj3
+        unit_of_measurement: °C
+        slave: 1
+        register: 416
+        scale: 0.01
+      - name: temp_pokoj2
+        unit_of_measurement: °C
+        slave: 1
+        register: 415
+        scale: 0.01
+      - name: temp_pokoj1
+        unit_of_measurement: °C
+        slave: 1
+        register: 414
+        scale: 0.01
+      - name: temp_sypialnia
+        unit_of_measurement: °C
+        slave: 1
+        register: 417
+        scale: 0.01
+        
 #ogrod
   - platform: modbushas
     scan_interval: 5  

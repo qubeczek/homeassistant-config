@@ -23,6 +23,7 @@
       - light.light_sypialnia_kinkiet2
       - light.light_garderoba_sufit
       - light.light_sypialnia_led1
+      - sensor.temp_sypialnia
 
       
   lazienkasypialnia:
@@ -33,6 +34,8 @@
       - light.light_lazienkas_kinkiet1
       - light.light_lazienkas_kinkiet2
       - light.light_lazienkas_led
+      - sensor.temp_lazienka_sypialnia
+      - sensor.temp_lazienka_sypialnia_podloga
 
   korytarzgora:
     name: Korytarz górny
@@ -44,6 +47,8 @@
       - light.light_pralnia_sufit1
       - light.light_schody_led
       - light.light_korytarzgora_led1
+      - sensor.temp_korytarz_Ip
+      - sensor.temp_hall_Ip
       - switch.hallgniazdo1
 
   pokoj1:
@@ -51,16 +56,19 @@
     entities:
       - light.light_pokoj1_sufit1
       - light.light_pokoj1_sufit2
+      - sensor.temp_pokoj1
       
   pokoj2:
     name: Pokój Michał
     entities:
       - light.light_pokoj2_sufit1
+      - sensor.temp_pokoj2
 
   pokoj3:
     name: Pokój Mikołaj
     entities:
       - light.light_pokoj3_sufit1
+      - sensor.temp_pokoj3
 
   lazienkagora:
     name: Łazienka góra
@@ -69,4 +77,6 @@
       - light.light_lazienkagora_sufit2
       - light.light_lazienkagora_kinkiet1
       - light.light_lazienkagora_led1
+      - sensor.temp_lazienka_gora
+      - sensor.temp_lazienka_gora_podloga
 

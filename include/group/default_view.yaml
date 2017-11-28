@@ -10,7 +10,7 @@
     entities:
       - device_tracker.kubaiphone
       - sun.sun
-      - sensor.yr_symbol
+      - sensor.Pogoda_symbol
       - group.weather
       - group.sceny
       
@@ -18,9 +18,9 @@
     name: Pogoda
     entities:
       - sensor.temp_outside
-      - sensor.yr_humidity
-      - sensor.yr_pressure
-      - sensor.yr_wind_speed
+      - sensor.Pogoda_humidity
+      - sensor.Pogoda_pressure
+      - sensor.Pogoda_wind_speed
 
   sceny:
     name: Sceny

@@ -24,7 +24,7 @@
       - light.light_salon_kinkiet3
       - light.light_salon_led_kominek1
       - light.light_salon_led_kominek2
-      - cover.roleta_salon_7
+      - sensor.temp_salon
 
   kuchnia:
     name: Kuchnia
@@ -35,12 +35,15 @@
       - light.light_kuchnia_barek
       - light.light_kuchnia_zlew
       - light.light_kuchnia_blat
+      - sensor.temp_kuchnia
+      - sensor.temp_kuchnia_podloga
 
   jadalnia:
     name: Jadalnia
     entities:
       - light.light_jadalnia_sufit
       - light.light_salon_kinkiet1
+      - cover.roleta_salon_7
       
   korytarzdol:
     name: Korytarze dolne
@@ -59,12 +62,15 @@
       - light.light_lazienkadol_sufit1
       - light.light_lazienkadol_led1
       - light.light_lazienkadol_led2
+      - sensor.temp_lazienka_dol
+      - sensor.temp_lazienka_dol_podloga
 
   gabinet:
     name: Gabinet
     entities:
       - light.light_gabinet_sufit1
       - light.light_gabinet_sufit1
+      - sensor.temp_gabinet
 
 
       
