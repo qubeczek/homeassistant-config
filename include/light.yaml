@@ -40,8 +40,8 @@
         coil: 8
       - name: light_halldol_led
         coil: 144
-      - name: light_halldol_obraz
-        coil: 161
+#      - name: light_halldol_obraz
+#        coil: 161
       - name: light_gabinet_sufit1
         coil: 2
       - name: light_gabinet_sufit2
