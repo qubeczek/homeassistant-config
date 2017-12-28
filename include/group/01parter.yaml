@@ -69,7 +69,7 @@
     name: Gabinet
     entities:
       - light.light_gabinet_sufit1
-      - light.light_gabinet_sufit1
+      - light.light_gabinet_sufit2
       - sensor.temp_gabinet
 
 

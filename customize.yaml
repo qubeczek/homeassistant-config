@@ -158,7 +158,7 @@
      switch.pompa_co:
        friendly_name: Pompa CO - grzejniki
      switch.pompa_cp:
-       friendly_name: Pompa Co - podłogówka
+       friendly_name: Pompa CO - podłogówka
      switch.co_woda:
        friendly_name: Woda - zasilanie domu
      switch.hallgniazdo1:

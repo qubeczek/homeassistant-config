@@ -3,41 +3,60 @@
     coils:
       - name: hasmonitor
         coil: 150
+        slave: 1
       - name: pompa_kcwu
         coil: 46
+        slave: 1
       - name: pompa_kco
         coil: 45
+        slave: 1
       - name: pompa_co
         coil: 43
+        slave: 1
       - name: pompa_cp
         coil: 44
+        slave: 1
       - name: co_woda
         coil: 161
+        slave: 1
       - name: hallgniazdo1
         coil: 157
+        slave: 1
       - name: ogrodP1O1
         coil: 56
+        slave: 1
       - name: ogrodP1O2
         coil: 57
+        slave: 1
       - name: ogrodP2O1
         coil: 58
+        slave: 1
       - name: ogrodP2O2
         coil: 59
+        slave: 1
       - name: ogrodP301
         coil: 60
+        slave: 1
       - name: ogrodP3O2
         coil: 61
+        slave: 1
       - name: ogrodP3O3
         coil: 62
+        slave: 1
       - name: ogrodP4O1
         coil: 63
+        slave: 1
       - name: ogrodP4O2
         coil: 64
+        slave: 1
       - name: ogrodP4O3
         coil: 65
+        slave: 1
       - name: ogrodWarzywa
         coil: 66
+        slave: 1
       - name: ogrodTaras
+        slave: 1
         coil: 67
         
         
