@@ -23,3 +23,11 @@ custom_components/light/__pycache__/modbushas.cpython-35.pyc
 custom_components/binary_sensor/__pycache__/modbushas.cpython-35.pyc
 custom_components/notify/__pycache__/modbushas.cpython-35.pyc
 phonegap/
+custom_components/light/__pycache__/modbushas.cpython-37.pyc
+custom_components/binary_sensor/__pycache__/modbushas.cpython-37.pyc
+custom_components/notify/__pycache__/modbushas.cpython-37.pyc
+custom_components/sensor/__pycache__/modbushas.cpython-37.pyc
+.storage/onboarding
+.storage/auth
+.storage/auth_provider.homeassistant
+.storage/core.config_entries

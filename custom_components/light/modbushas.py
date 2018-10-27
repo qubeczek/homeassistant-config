@@ -11,7 +11,7 @@ import homeassistant.components.modbus as modbus
 from homeassistant.const import CONF_NAME
 from homeassistant.components.light import (
     ATTR_BRIGHTNESS, ATTR_COLOR_TEMP, ATTR_RGB_COLOR, ATTR_WHITE_VALUE,
-    ATTR_XY_COLOR, SUPPORT_BRIGHTNESS, SUPPORT_COLOR_TEMP, SUPPORT_RGB_COLOR,
+    ATTR_XY_COLOR, SUPPORT_BRIGHTNESS, SUPPORT_COLOR_TEMP,
     SUPPORT_WHITE_VALUE, Light)
 		
 from homeassistant.const import (
@@ -28,7 +28,7 @@ CONF_COIL = "coil"
 CONF_COILS = "coils"
 CONF_SLAVE = "slave"
 
-SUPPORT_MODBUS = (SUPPORT_BRIGHTNESS | SUPPORT_COLOR_TEMP | SUPPORT_RGB_COLOR |
+SUPPORT_MODBUS = (SUPPORT_BRIGHTNESS | SUPPORT_COLOR_TEMP |
                 SUPPORT_WHITE_VALUE)
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
