@@ -33,6 +33,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 def setup_platform(hass, config, add_devices, discovery_info=None):
     """Setup Modbus binary sensors."""
     sensors = []
+	
     for coil in config.get(CONF_COILS):
         sensors.append(ModbusHASBinarySensor(
             coil.get(CONF_NAME),

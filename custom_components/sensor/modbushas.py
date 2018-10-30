@@ -6,6 +6,8 @@ https://home-assistant.io/components/sensor.modbus/
 """
 import logging
 import voluptuous as vol
+import datetime
+import pymodbus
 
 import homeassistant.components.modbus as modbus
 from homeassistant.const import (
@@ -43,6 +45,8 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 def setup_platform(hass, config, add_devices, discovery_info=None):
     """Setup Modbus sensors."""
     sensors = []
+    scan_interval =  config.get("scan_interval")
+    buffer = ModbusRegisterBuffer("buffer",1,scan_interval)
     for register in config.get(CONF_REGISTERS):
         sensors.append(ModbusHASRegisterSensor(
             register.get(CONF_NAME),
@@ -53,9 +57,58 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
             register.get(CONF_SCALE),
             register.get(CONF_OFFSET),
             register.get(CONF_PRECISION),
-						register.get(CONF_SIGNED)
+		    register.get(CONF_SIGNED),
+            buffer
 						))
     add_devices(sensors)
+
+
+    
+
+class ModbusRegisterBuffer():
+    def __init__(self, name, slave, scan_interval):
+        self._name = name
+        self._slave = slave
+        self._scan_interval = scan_interval
+        self._minreg = 99999
+        self._maxreg = 0
+        self._doread = True
+        self._result = None
+        self._lastread = datetime.datetime.now()
+        
+        
+    def set_register(self, register, count):
+        if(register < self._minreg):
+            self._minreg = register
+            self._doread = True
+        if(register+count-1 > self._maxreg):
+            self._maxreg = register+count-1
+            self._doread = True
+        _LOGGER.info("Sensor buffer min/max %s / %s",self._minreg, self._maxreg)
+
+    def refresh(self):
+        self._doread = True
+        """_LOGGER.info("Loght do refresh")"""
+
+    def read_register(self, register, count):
+        if(datetime.datetime.now()-self._scan_interval >= self._lastread):
+            self._doread = True
+        if(self._doread == True and self._maxreg >= self._minreg):
+            cnt  = self._maxreg - self._minreg + 1           
+            self._result = modbus.HUB.read_holding_registers(
+              self._slave,
+              self._minreg,
+              cnt)
+            if not self._result:
+                _LOGGER.error("ModbusRegisterBuffer read error form reg %s for %s coils", self._minreg, cnt)
+                return
+            self._doread = False
+            self._lastread = datetime.datetime.now()
+            """_LOGGER.info("Sensor readed %s registers from %s ",cnt, self._minreg)"""
+        regis = []
+        for i in range(register - self._minreg, register - self._minreg + count):
+            regis.append(self._result.registers[i])
+        return regis
 
 
 class ModbusHASRegisterSensor(Entity):
@@ -63,7 +116,7 @@ class ModbusHASRegisterSensor(Entity):
 
     # pylint: disable=too-many-instance-attributes, too-many-arguments
     def __init__(self, name, slave, register, unit_of_measurement, count,
-                 scale, offset, precision, signed):
+                 scale, offset, precision, signed, buffer):
         """Initialize the modbus register sensor."""
         self._name = name
         self._slave = int(slave) if slave else None
@@ -74,7 +127,9 @@ class ModbusHASRegisterSensor(Entity):
         self._offset = offset
         self._precision = precision
         self._signed = signed
+        self._buffer = buffer
         self._value = None
+        buffer.set_register(register, count)
 
     @property
     def state(self):
@@ -93,18 +148,21 @@ class ModbusHASRegisterSensor(Entity):
 
     def update(self):
         """Update the state of the sensor."""
-        result = modbus.HUB.read_holding_registers(
+        """resultA = modbus.HUB.read_holding_registers(
             self._slave,
             self._register,
             self._count)
-        val = 0
+        if resultA:
+            result = resultA.registers"""
+        result = self._buffer.read_register(self._register, self._count)    
         if not result:
             _LOGGER.error(
                 'No response from modbus slave %s register %s',
                 self._slave,
                 self._register)
-            return
-        for i, res in enumerate(result.registers):
+            return    
+        val = 0
+        for i, res in enumerate(result):
             r = -1
             r = res
             if i == 0 and self._signed == 1 and r > 32768:

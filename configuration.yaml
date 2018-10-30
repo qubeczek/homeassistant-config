@@ -17,7 +17,7 @@ homeassistant:
 # Enables the frontend
 frontend:
 
-hassio:
+#hassio:
 
 http:
   # Uncomment this to add a password (recommended!)

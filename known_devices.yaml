@@ -172,3 +172,19 @@ d0aeec3848c7:
   picture:
   track: false
   vendor: Shenzhen RF Technology Co., Ltd
+
+ec8914fc43e8:
+  hide_if_away: false
+  icon:
+  mac: EC:89:14:FC:43:E8
+  name: ec8914fc43e8
+  picture:
+  track: false
+
+18f0e4e0d5ab:
+  hide_if_away: false
+  icon:
+  mac: 18:F0:E4:E0:D5:AB
+  name: 18f0e4e0d5ab
+  picture:
+  track: false
