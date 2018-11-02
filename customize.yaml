@@ -244,6 +244,15 @@
        friendly_name: Susza w ogrodzie
      sensor.ogrod_status_programu:
        friendly_name: Podlewanie automatyczne - status
+     
+     group.01parter:
+       order: 1
+     group.02pietro:
+       order: 2
+     group.otoczenie:
+       order: 3
+     group.ogrzewanie:
+       order: 4     
        
        
        
