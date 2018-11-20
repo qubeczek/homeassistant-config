@@ -28,3 +28,7 @@
             {%else%}
             cienienie z sieci
             {%- endif%}
+
+      alarm_onoff_tmpl:
+        friendly_name: 'Alarm - status'
+        value_template: '{% if is_state("sensor.satel_onoff", "1") %}on{% else%}off{% endif%}'

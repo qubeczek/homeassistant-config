@@ -8,6 +8,7 @@
     name: Otoczenie
     entities:
       - group.garaz
+      - group.alarm
       - group.oswietleniedomu
       - group.oswietlenieogrodu
       - group.podlewanie
@@ -20,8 +21,13 @@
       - light.light_garaz_kin2
       - light.light_garaz_kin3
       - light.light_strych
+      - sensor.temp_garaz
 
-
+  alarm:
+    name: Alarm
+    entities:
+      - sensor.alarm_onoff_tmpl
+      
   oswietleniedomu:
     name: Oświetlenie domu
     entities:

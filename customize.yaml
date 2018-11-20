@@ -194,7 +194,7 @@
 #binary_sensors
      binary_sensor.co_piecgrzeje:
        friendly_name: Status pieca
-       sensor_class: heat
+       device_class: heat
      binary_sensor.cwu_pompa:
        friendly_name: Pompa CWU
     
@@ -235,7 +235,7 @@
      sensor.temp_cp:
        friendly_name: CO - zasilanie podłogi
      sensor.temp_cp_back:
-       friendly_name: CO - powrót grzejniki
+       friendly_name: CO - powrót podłogi
      sensor.temp_co_piec:
        friendly_name: CO - zasilanie piec gaz
      sensor.temp_co_piec_back:
@@ -244,6 +244,41 @@
        friendly_name: Susza w ogrodzie
      sensor.ogrod_status_programu:
        friendly_name: Podlewanie automatyczne - status
+     sensor.temp_garaz:
+       friendly_name: Temp. garaż
+     sensor.temp_gabinet:
+       friendly_name: Temp. gabinet
+     sensor.temp_pralnia:
+       friendly_name: Temp. pralnia
+     sensor.temp_korytarzIp:
+       friendly_name: Temp. korytarz Ip
+     sensor.temp_wiatrolap:
+       friendly_name: Temp. wiatrołap
+     sensor.temp_lazienkadol:
+       friendly_name: Temp. łazienka dół
+     sensor.temp_kuchnia:
+       friendly_name: Temp. kuchnia
+     sensor.temp_hallIp:
+       friendly_name: Temp. hall Ip
+     sensor.temp_sypialnia:
+       friendly_name: Temp. sypialnia
+     sensor.temp_pokoj3:
+       friendly_name: Temp. pokój 3
+     sensor.temp_pokoj2:
+       friendly_name: Temp. pokój 2
+     sensor.temp_pokoj1:
+       friendly_name: Temp. pokój 1
+     sensor.temp_spizarka:
+       friendly_name: Temp. spiżarka
+     sensor.temp_salon:
+       friendly_name: Temp. salon
+     sensor.temp_lazienkasyp:
+       friendly_name: Temp. łazienka syp.
+     sensor.temp_lazienkagora:
+       friendly_name: Temp. łazienka góra
+     sensor.satel_onoff:
+       friendly_name: Alarm - status
+       device_class: safety
      
      group.01parter:
        order: 1
