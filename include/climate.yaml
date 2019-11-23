@@ -1,0 +1,8 @@
+  #- platform: modbus
+  #  name: sypialnia
+  #  slave: 1
+  #  target_temp_register: 8066
+  #  current_temp_register: 417
+  
+  - platform: demo
+    

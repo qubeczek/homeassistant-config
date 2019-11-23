@@ -78,6 +78,7 @@ scene: !include include/scene.yaml
 #media_player: !include includes/media_players.yaml
 notify: !include include/notify.yaml
 switch: !include include/switch.yaml
+climate: !include include/climate.yaml
 #weblink: !include includes/weblink.yaml       
 
 # Merge List

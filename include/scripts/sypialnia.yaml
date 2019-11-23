@@ -1,0 +1,23 @@
+sypialnia_night:
+  alias: "Wieczorek we dwoje"
+  sequence:
+    - service: light.turn_off
+      entity_id: light.light_sypialnia_sufit1, light.light_sypialnia_kinkiet1, light.light_sypialnia_kinkiet2, light.light_garderoba_sufit
+    - service: light.turn_on
+      entity_id: light.light_sypialnia_led1
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.MiniWieza
+#    - service: media_player.play_media
+#      data:
+#        entity_id: media_player.MiniWieza
+#        media_content_type: "Internet"
+#        media_content_id: "1"
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.MiniWieza
+        source: Internet       
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.MiniWieza
+        volume_level: .1

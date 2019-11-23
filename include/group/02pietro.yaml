@@ -23,6 +23,7 @@
       - light.light_sypialnia_kinkiet2
       - light.light_garderoba_sufit
       - light.light_sypialnia_led1
+      - script.sypialnia_night
 
       
   lazienkasypialnia:

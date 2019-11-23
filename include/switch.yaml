@@ -1,9 +1,19 @@
-  - platform: modbus
+  - platform: modbushas
     scan_interval: 5
     coils:
       - name: hasmonitor
         coil: 150
         slave: 1
+      - name: hallgniazdo1
+        coil: 157
+        slave: 1
+      - name: co_woda
+        coil: 161
+        slave: 1
+
+  - platform: modbushas
+    scan_interval: 5
+    coils:
       - name: pompa_kcwu
         coil: 46
         slave: 1
@@ -16,11 +26,8 @@
       - name: pompa_cp
         coil: 44
         slave: 1
-      - name: co_woda
-        coil: 161
-        slave: 1
-      - name: hallgniazdo1
-        coil: 157
+      - name: COonoff
+        coil: 53
         slave: 1
       - name: ogrodP1O1
         coil: 56

@@ -13,3 +13,14 @@
         - youtube
         - makotv
         - netflix
+  - platform: onkyo2
+    host: 192.168.100.11
+    name: MiniWieza
+    sources: 
+      cd: 'CD'
+      network: 'Internet'
+      fm: 'FM'
+      
+    
+#  - platform: demo
+  

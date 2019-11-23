@@ -24,6 +24,10 @@
       - sensor.temp_cp
       - sensor.temp_cp_back
       - binary_sensor.cwu_pompa
+      - climate.sypialnia
+      - climate.HeatPump
+      - climate.Hvac
+      - climate.Ecobee
 
   kominek:
     name: Kominek

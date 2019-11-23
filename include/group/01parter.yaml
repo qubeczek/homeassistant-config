@@ -34,6 +34,7 @@
       - light.light_kuchnia_barek
       - light.light_kuchnia_zlew
       - light.light_kuchnia_blat
+      - media_player.MiniWieza
 
   jadalnia:
     name: Jadalnia
