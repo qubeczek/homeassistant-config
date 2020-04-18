@@ -21,6 +21,9 @@ from homeassistant.const import (
     CONF_COLOR_TEMP)
 from homeassistant.helpers import config_validation as cv
 from homeassistant.components.sensor import PLATFORM_SCHEMA
+from homeassistant.components.modbus import DEFAULT_HUB, DOMAIN as MODBUS_DOMAIN
+
+from homeassistant.helpers.restore_state import RestoreEntity
 
 _LOGGER = logging.getLogger(__name__)
 DEPENDENCIES = ['modbus']
@@ -41,26 +44,29 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 })
 
 
-def setup_platform(hass, config, add_devices, discovery_info=None):
+async def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
     """Setup Modbus binary sensors."""
     lights = []
     scan_interval =  config.get("scan_interval")
     """_LOGGER.info("Light scan interval %s %s",scan_interval, type(scan_interval))"""
-    buffer = ModbusCoilBuffer("test", 1, scan_interval)
-    for coil in config.get("coils"):
+    hub = hass.data[MODBUS_DOMAIN][DEFAULT_HUB]
+    buffer = ModbusCoilBuffer(hub, "test", 1, scan_interval)
+    for coil in config.get(CONF_COILS):
         lights.append(ModbusHASLight(
+            hub,
             coil.get(CONF_NAME),
             coil.get(CONF_SLAVE),
             coil.get(CONF_COIL),
 			buffer))
-    add_devices(lights)
+    async_add_devices(lights)
     
     
 
 
 
 class ModbusCoilBuffer():
-    def __init__(self, name, slave, scan_interval):
+    def __init__(self, hub, name, slave, scan_interval):
+        self._hub = hub
         self._name = name
         self._slave = slave
         self._scan_interval = scan_interval
@@ -82,13 +88,14 @@ class ModbusCoilBuffer():
     def refresh(self):
         self._doread = True
         """_LOGGER.info("Loght do refresh")"""
-
-    def read_coil(self, coil):
+    
+    
+    async def read_coil(self, coil):
         if(datetime.datetime.now()-self._scan_interval >= self._lastread):
             self._doread = True
         if(self._doread == True and self._maxcoil >= self._mincoil):
             coilnum  = self._maxcoil - self._mincoil + 1           
-            self._result = modbus.HUB.read_coils(self._slave, self._mincoil, coilnum)
+            self._result = await self._hub.read_coils(self._slave, self._mincoil, coilnum)
             if not self._result:
                 _LOGGER.error("ModbusCoilBuffer read error form coil %s for %s coils", self._mincoil, coilnum)
                 return
@@ -101,18 +108,21 @@ class ModbusCoilBuffer():
              
         
 
-class ModbusHASLight(Light):
+class ModbusHASLight(Light, RestoreEntity):
     """Modbus Light."""
 
-    def __init__(self, name, slave, coil, buffer):
+    def __init__(self, hub, name, slave, coil, buffer):
         """Initialize the modbus coil sensor."""
+        self._hub = hub
         self._name = name
         self._slave = int(slave) if slave else 1
         self._coil = int(coil)
         self._state = None
         self._buffer = buffer
         buffer.set_coil(coil)
-		
+        self._block_update = False
+        self._logged_coil = 1000
+        
 
     @property
     def name(self):
@@ -123,6 +133,8 @@ class ModbusHASLight(Light):
     @property
     def is_on(self):
         """Return true if light is on."""
+        if(self._coil == self._logged_coil):
+            _LOGGER.info("is_on checked %s:", self._state)          
         return self._state
 
     @property
@@ -130,19 +142,30 @@ class ModbusHASLight(Light):
         """Flag supported features."""
         return SUPPORT_MODBUS
 
-    def turn_on(self, **kwargs):
+    async def turn_on(self, **kwargs):
         """Turn the light on."""
-        modbus.HUB.write_coil(self._slave, self._coil, True )
+        if(self._coil == self._logged_coil):
+             _LOGGER.info("Turn on start")  
+        #self._block_update = True
+        self._buffer.refresh()   
+        await self._hub.write_coil(self._slave, self._coil, True )     
         self._state = True
-        self._buffer.refresh()
+        self._block_update = False
+        if(self._coil == self._logged_coil):
+            _LOGGER.info("Turn on end")  
 
-    def turn_off(self, **kwargs):
+    async def turn_off(self, **kwargs):
         """Turn the light off."""
-        modbus.HUB.write_coil(self._slave, self._coil, False )
-        self._state = False
+        if(self._coil == self._logged_coil):
+             _LOGGER.info("Turn off start")  
         self._buffer.refresh()
+        await self._hub.write_coil(self._slave, self._coil, False )
+        self._state = False
+        if(self._coil == self._logged_coil):
+            _LOGGER.info("Turn off end")  
 
-    def update(self):
+
+    async def async_update(self):
         """Update the state of the switch."""
         """result = modbus.HUB.read_coils(self._slave, self._coil, 1)
         if not result:
@@ -152,5 +175,22 @@ class ModbusHASLight(Light):
                 self._coil)
             return
         self._state = bool(result.bits[0])"""
-        self._state = self._buffer.read_coil(self._coil)
-
+        if(self._coil == self._logged_coil):
+            _LOGGER.info("Update async start")          
+        if(self._block_update == True):
+             return
+        if(self._coil == self._logged_coil):
+            _LOGGER.info("Update async request")               
+        try:
+            
+            result = await self._buffer.read_coil(self._coil)
+            if(not result is None):
+                self._state = result;
+        except AttributeError as error:
+            _LOGGER.error(
+                'Exception during response from modbus slave %s coil %s: %s',
+                self._slave,
+                self._coil,
+                error)
+        if(self._coil == self._logged_coil):
+            _LOGGER.info("Update async end")     

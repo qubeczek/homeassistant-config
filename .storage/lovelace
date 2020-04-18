@@ -1,0 +1,609 @@
+{
+    "data": {
+        "config": {
+            "title": "Dom",
+            "views": [
+                {
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.co_piecgrzeje"
+                        },
+                        {
+                            "entity": "sensor.alarm_onoff_tmpl"
+                        },
+                        {
+                            "entity": "binary_sensor.updater"
+                        },
+                        {
+                            "entity": "person.kuba"
+                        },
+                        {
+                            "entity": "switch.co_woda"
+                        },
+                        {
+                            "entity": "switch.hasmonitor"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "entity": "weather.dom",
+                            "type": "weather-forecast"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.temp_outside"
+                                },
+                                {
+                                    "entity": "sensor.pogoda_pressure"
+                                }
+                            ],
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "scene.wieczorne_ogladanie_filmu"
+                                },
+                                {
+                                    "entity": "scene.gaszenie_swiatel"
+                                },
+                                {
+                                    "entity": "scene.romantic"
+                                },
+                                {
+                                    "entity": "script.play_podejdz_do_telefonu"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Akcje",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:home",
+                    "path": "home",
+                    "title": "Home"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "media_player.miniwieza",
+                            "type": "media-control"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.light_salon_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_salon_sufit2"
+                                },
+                                {
+                                    "entity": "light.light_salon_regal"
+                                },
+                                {
+                                    "entity": "light.light_salon_kinkiet2"
+                                },
+                                {
+                                    "entity": "light.light_salon_kinkiet3"
+                                },
+                                {
+                                    "entity": "light.light_salon_led_kominek1"
+                                },
+                                {
+                                    "entity": "light.light_salon_led_kominek2"
+                                },
+                                {
+                                    "entity": "sensor.temp_salon"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Salon",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "scene.wieczorne_ogladanie_filmu"
+                                }
+                            ],
+                            "title": "Sceny",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.light_kuchnia_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_kuchnia_sufit2"
+                                },
+                                {
+                                    "entity": "light.light_kuchnia_szafki"
+                                },
+                                {
+                                    "entity": "light.light_kuchnia_barek"
+                                },
+                                {
+                                    "entity": "light.light_kuchnia_zlew"
+                                },
+                                {
+                                    "entity": "light.light_kuchnia_blat"
+                                },
+                                {
+                                    "entity": "sensor.temp_kuchnia"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Kuchnia",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.light_jadalnia_sufit"
+                                },
+                                {
+                                    "entity": "light.light_salon_kinkiet1"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Jadalnia",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.light_wiatrolap_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_wiatrolap_sufit2"
+                                },
+                                {
+                                    "entity": "light.light_spizarka_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_halldol_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_halldol_obraz"
+                                },
+                                {
+                                    "entity": "light.light_halldol_led"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Korytarze dolne",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.light_gabinet_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_gabinet_sufit2"
+                                },
+                                {
+                                    "entity": "sensor.temp_gabinet"
+                                }
+                            ],
+                            "title": "Gabinet",
+                            "type": "entities"
+                        }
+                    ],
+                    "path": "parter",
+                    "title": "Parter"
+                },
+                {
+                    "badges": [],
+                    "cards": [],
+                    "path": "pietro",
+                    "title": "Pi\u0119tro"
+                },
+                {
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.cwu_pompa"
+                        },
+                        {
+                            "entity": "binary_sensor.co_piecgrzeje"
+                        },
+                        {
+                            "entity": "switch.pompa_co"
+                        },
+                        {
+                            "entity": "switch.pompa_cp"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.heater_oncount"
+                                },
+                                {
+                                    "entity": "sensor.heater_workingtime"
+                                },
+                                {
+                                    "entity": "sensor.temp_cwu"
+                                },
+                                {
+                                    "entity": "sensor.temp_co_sprzeglo"
+                                },
+                                {
+                                    "entity": "sensor.temp_co_piec"
+                                },
+                                {
+                                    "entity": "sensor.temp_co_piec_back"
+                                },
+                                {
+                                    "entity": "sensor.temp_co"
+                                },
+                                {
+                                    "entity": "sensor.temp_co_back"
+                                },
+                                {
+                                    "entity": "sensor.temp_cp"
+                                },
+                                {
+                                    "entity": "sensor.temp_cp_back"
+                                }
+                            ],
+                            "title": "Piec gazowy",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.pompa_kcwu"
+                                },
+                                {
+                                    "entity": "switch.pompa_kco"
+                                },
+                                {
+                                    "entity": "sensor.temp_kominek"
+                                },
+                                {
+                                    "entity": "sensor.temp_kominek_back"
+                                }
+                            ],
+                            "title": "Kominek",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "automation.poranne_gaszenie_swiatel"
+                                },
+                                {
+                                    "entity": "automation.wieczorne_zapalanie_swiatel"
+                                },
+                                {
+                                    "entity": "automation.gaszenie_rzeczy_po_alarmie"
+                                }
+                            ],
+                            "title": "Automatyka",
+                            "type": "entities"
+                        }
+                    ],
+                    "path": "ogrzewanie",
+                    "title": "Ogrzewanie"
+                },
+                {
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.cwu_pompa"
+                        },
+                        {
+                            "entity": "binary_sensor.co_piecgrzeje"
+                        },
+                        {
+                            "entity": "binary_sensor.updater"
+                        },
+                        {
+                            "entity": "person.kuba"
+                        },
+                        {
+                            "entity": "sensor.ogrod_status_wody_tmpl"
+                        },
+                        {
+                            "entity": "sensor.ogrod_status_podlewania_tmpl"
+                        },
+                        {
+                            "entity": "sensor.alarm_onoff_tmpl"
+                        },
+                        {
+                            "entity": "sensor.ogrod_deszcz_tmpl"
+                        },
+                        {
+                            "entity": "sensor.satel_onoff"
+                        },
+                        {
+                            "entity": "sensor.ogrod_status_wody"
+                        },
+                        {
+                            "entity": "sensor.ogrod_susza"
+                        },
+                        {
+                            "entity": "sensor.ogrod_status_programu"
+                        },
+                        {
+                            "entity": "sensor.pogoda_pressure"
+                        },
+                        {
+                            "entity": "sensor.pogoda_humidity"
+                        },
+                        {
+                            "entity": "sensor.pogoda_symbol"
+                        },
+                        {
+                            "entity": "sensor.pogoda_wind_speed"
+                        },
+                        {
+                            "entity": "sensor.temp_salon"
+                        },
+                        {
+                            "entity": "sensor.temp_lazienkasyp"
+                        },
+                        {
+                            "entity": "sensor.temp_lazienkagora"
+                        },
+                        {
+                            "entity": "sensor.temp_outside"
+                        },
+                        {
+                            "entity": "sensor.temp_kominek"
+                        },
+                        {
+                            "entity": "sensor.temp_kominek_back"
+                        },
+                        {
+                            "entity": "sensor.temp_cwu"
+                        },
+                        {
+                            "entity": "sensor.temp_cwu_back"
+                        },
+                        {
+                            "entity": "sensor.temp_co_sprzeglo"
+                        },
+                        {
+                            "entity": "sensor.temp_co"
+                        },
+                        {
+                            "entity": "sensor.temp_co_back"
+                        },
+                        {
+                            "entity": "sensor.temp_cp"
+                        },
+                        {
+                            "entity": "sensor.temp_lazienkadol"
+                        },
+                        {
+                            "entity": "sensor.temp_cp_back"
+                        },
+                        {
+                            "entity": "sensor.temp_co_piec"
+                        },
+                        {
+                            "entity": "sensor.temp_co_piec_back"
+                        },
+                        {
+                            "entity": "sensor.temp_garaz"
+                        },
+                        {
+                            "entity": "sensor.temp_gabinet"
+                        },
+                        {
+                            "entity": "sensor.temp_pralnia"
+                        },
+                        {
+                            "entity": "sensor.temp_korytarzip"
+                        },
+                        {
+                            "entity": "sensor.temp_wiatrolap"
+                        },
+                        {
+                            "entity": "sensor.temp_kuchnia"
+                        },
+                        {
+                            "entity": "sensor.temp_hallip"
+                        },
+                        {
+                            "entity": "sensor.temp_sypialnia"
+                        },
+                        {
+                            "entity": "sensor.temp_pokoj3"
+                        },
+                        {
+                            "entity": "sensor.temp_pokoj2"
+                        },
+                        {
+                            "entity": "sensor.temp_pokoj1"
+                        },
+                        {
+                            "entity": "sensor.temp_spizarka"
+                        },
+                        {
+                            "entity": "sensor.heater_workingtime"
+                        },
+                        {
+                            "entity": "sensor.kominek_co_temp_wlaczenia"
+                        },
+                        {
+                            "entity": "sensor.heater_oncount"
+                        },
+                        {
+                            "entity": "sun.sun"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "entity": "climate.ecobee",
+                            "type": "thermostat"
+                        },
+                        {
+                            "entity": "climate.heatpump",
+                            "type": "thermostat"
+                        },
+                        {
+                            "entity": "climate.hvac",
+                            "type": "thermostat"
+                        },
+                        {
+                            "entities": [
+                                "cover.garage_door",
+                                "cover.hall_window",
+                                "cover.kitchen_window",
+                                "cover.living_room_window",
+                                "cover.cover_salon7",
+                                "cover.cover_salon8",
+                                "cover.salon7",
+                                "cover.salon8"
+                            ],
+                            "title": "Pokrywa",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "light.light_balkon",
+                                "light.light_drzwifrontowe",
+                                "light.light_elewacja",
+                                "light.light_gabinet_sufit1",
+                                "light.light_gabinet_sufit2",
+                                "light.light_garaz_kin1",
+                                "light.light_garaz_kin2",
+                                "light.light_garaz_kin3",
+                                "light.light_garderoba_sufit",
+                                "light.light_halldol_led",
+                                "light.light_halldol_obraz",
+                                "light.light_halldol_sufit1",
+                                "light.light_hallgora_sufit1",
+                                "light.light_salon_kinkiet1",
+                                "light.light_jadalnia_sufit",
+                                "light.light_korytarzgora_led1",
+                                "light.light_korytarzgora_sufit1",
+                                "light.light_korytarzgora_sufit2",
+                                "light.light_kotlownia_sufit1",
+                                "light.light_kuchnia_barek",
+                                "light.light_kuchnia_blat",
+                                "light.light_kuchnia_sufit1",
+                                "light.light_kuchnia_sufit2",
+                                "light.light_kuchnia_zlew",
+                                "light.light_ogrod_front",
+                                "light.light_kuchnia_szafki",
+                                "light.light_roof_front1",
+                                "light.light_roof_front2",
+                                "light.light_roof_back1",
+                                "light.light_roof_back2",
+                                "light.light_podjazd",
+                                "light.light_pokoj1_sufit1",
+                                "light.light_pokoj1_sufit2",
+                                "light.light_pokoj2_sufit1",
+                                "light.light_pokoj3_sufit1",
+                                "light.light_pralnia_sufit1",
+                                "light.light_rekraacja_sufit1",
+                                "light.light_salon_kinkiet3",
+                                "light.light_salon_kinkiet2",
+                                "light.light_salon_led_kominek1",
+                                "light.light_salon_led_kominek2",
+                                "light.light_salon_regal",
+                                "light.light_salon_sufit1",
+                                "light.light_salon_sufit2",
+                                "light.light_schody_led",
+                                "light.light_schody_sufit1",
+                                "light.light_spizarka_sufit1",
+                                "light.light_strych",
+                                "light.light_sypialnia_kinkiet1",
+                                "light.light_sypialnia_kinkiet2",
+                                "light.light_sypialnia_led1",
+                                "light.light_sypialnia_sufit1",
+                                "light.light_tarasgora",
+                                "light.light_wiatrolap_sufit1",
+                                "light.light_wiatrolap_sufit2",
+                                "light.light_lazienkagora_led2",
+                                "light.light_lazienkadol_led2",
+                                "light.light_lazienkadol_led1",
+                                "light.light_lazienkadol_sufit1",
+                                "light.light_lazienkagora_kinkiet1",
+                                "light.light_lazienkagora_sufit1",
+                                "light.light_lazienkagora_sufit2",
+                                "light.light_lazienkagora_led1",
+                                "light.light_lazienkas_led",
+                                "light.light_lazienkas_kinkiet1",
+                                "light.light_lazienkas_kinkiet2",
+                                "light.light_lazienkas_sufit1",
+                                "light.light_lazienkas_sufit2"
+                            ],
+                            "title": "\u015awiat\u0142o",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "media_player.miniwieza",
+                            "type": "media-control"
+                        },
+                        {
+                            "entities": [
+                                "scene.wieczorne_ogladanie_filmu",
+                                "scene.gaszenie_swiatel",
+                                "scene.romantic"
+                            ],
+                            "title": "Scena",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "script.play_podejdz_do_telefonu",
+                                "script.ogrod_planpodlewania_toggle",
+                                "script.sypialnia_night",
+                                "script.ogrod_podlewanie_toggle",
+                                "script.ogrod_woda_toggle",
+                                "script.light_day_off",
+                                "script.light_night_on"
+                            ],
+                            "title": "Skrypt",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "switch.hallgniazdo1",
+                                "switch.coonoff",
+                                "switch.ogrodtaras",
+                                "switch.hasmonitor",
+                                "switch.ogrodp1o1",
+                                "switch.ogrodp1o2",
+                                "switch.ogrodp2o1",
+                                "switch.ogrodp2o2",
+                                "switch.ogrodp3o2",
+                                "switch.ogrodp3o3",
+                                "switch.ogrodp4o1",
+                                "switch.ogrodp4o2",
+                                "switch.ogrodp4o3",
+                                "switch.pompa_co",
+                                "switch.pompa_cp",
+                                "switch.pompa_kco",
+                                "switch.pompa_kcwu",
+                                "switch.ogrodwarzywa",
+                                "switch.co_woda",
+                                "switch.ogrodp301"
+                            ],
+                            "title": "Prze\u0142\u0105cznik",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "weather.dom",
+                            "type": "weather-forecast"
+                        }
+                    ],
+                    "icon": "",
+                    "path": "default_view",
+                    "theme": "default",
+                    "title": "Others"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

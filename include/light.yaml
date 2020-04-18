@@ -28,20 +28,12 @@
         coil: 6
       - name: light_salon_kinkiet3
         coil: 7
-      - name: light_salon_led_kominek1
-        coil: 152
-      - name: light_salon_led_kominek2
-        coil: 153
       - name: light_wiatrolap_sufit1
         coil: 9
       - name: light_wiatrolap_sufit2
         coil: 10
       - name: light_halldol_sufit1
         coil: 8
-      - name: light_halldol_led
-        coil: 144
-      - name: light_halldol_obraz
-        coil: 227
       - name: light_gabinet_sufit1
         coil: 2
       - name: light_gabinet_sufit2
@@ -56,7 +48,8 @@
         coil: 94
       - name: light_lazienkadol_led2
         coil: 95
-
+      - name: light_drzwifrontowe
+        coil: 76
 #pietro        
   - platform: modbushas
     scan_interval: 5
@@ -113,6 +106,12 @@
         coil: 122
       - name: light_lazienkagora_led2
         coil: 123
+      - name: light_salon_led_kominek1
+        coil: 152
+      - name: light_salon_led_kominek2
+        coil: 153
+      - name: light_halldol_led
+        coil: 144        
 #garaz i otoczenie
   - platform: modbushas
     scan_interval: 5
@@ -143,7 +142,11 @@
         coil: 135
       - name: light_podjazd
         coil: 154
-      - name: light_drzwifrontowe
-        coil: 76
       - name: light_ogrod_front
         coil: 151
+        
+  - platform: modbushas
+    scan_interval: 5
+    coils:
+      - name: light_halldol_obraz
+        coil: 227

@@ -15,6 +15,8 @@ from homeassistant.const import (
 from homeassistant.helpers.entity import Entity
 from homeassistant.helpers import config_validation as cv
 from homeassistant.components.sensor import PLATFORM_SCHEMA
+from homeassistant.components.modbus import DEFAULT_HUB, DOMAIN as MODBUS_DOMAIN
+from homeassistant.helpers.restore_state import RestoreEntity
 
 _LOGGER = logging.getLogger(__name__)
 DEPENDENCIES = ['modbus']
@@ -42,13 +44,15 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 })
 
 
-def setup_platform(hass, config, add_devices, discovery_info=None):
+async def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
     """Setup Modbus sensors."""
     sensors = []
     scan_interval =  config.get("scan_interval")
-    buffer = ModbusRegisterBuffer("buffer",1,scan_interval)
+    hub = hass.data[MODBUS_DOMAIN][DEFAULT_HUB]
+    buffer = ModbusRegisterBuffer(hub, "buffer",1,scan_interval)
     for register in config.get(CONF_REGISTERS):
         sensors.append(ModbusHASRegisterSensor(
+            hub,
             register.get(CONF_NAME),
             register.get(CONF_SLAVE),
             register.get(CONF_REGISTER),
@@ -60,13 +64,14 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
 		    register.get(CONF_SIGNED),
             buffer
 						))
-    add_devices(sensors)
+    async_add_devices(sensors)
 
 
     
 
 class ModbusRegisterBuffer():
-    def __init__(self, name, slave, scan_interval):
+    def __init__(self, hub, name, slave, scan_interval):
+        self._hub = hub
         self._name = name
         self._slave = slave
         self._scan_interval = scan_interval
@@ -90,12 +95,12 @@ class ModbusRegisterBuffer():
         self._doread = True
         """_LOGGER.info("Loght do refresh")"""
 
-    def read_register(self, register, count):
+    async def read_register(self, register, count):
         if(datetime.datetime.now()-self._scan_interval >= self._lastread):
             self._doread = True
         if(self._doread == True and self._maxreg >= self._minreg):
             cnt  = self._maxreg - self._minreg + 1           
-            self._result = modbus.HUB.read_holding_registers(
+            self._result = await self._hub.read_holding_registers(
               self._slave,
               self._minreg,
               cnt)
@@ -111,13 +116,14 @@ class ModbusRegisterBuffer():
         return regis
 
 
-class ModbusHASRegisterSensor(Entity):
+class ModbusHASRegisterSensor(RestoreEntity):
     """Modbus resgister sensor."""
 
     # pylint: disable=too-many-instance-attributes, too-many-arguments
-    def __init__(self, name, slave, register, unit_of_measurement, count,
+    def __init__(self, hub, name, slave, register, unit_of_measurement, count,
                  scale, offset, precision, signed, buffer):
         """Initialize the modbus register sensor."""
+        self._hub = hub
         self._name = name
         self._slave = int(slave) if slave else None
         self._register = int(register)
@@ -130,7 +136,14 @@ class ModbusHASRegisterSensor(Entity):
         self._buffer = buffer
         self._value = None
         buffer.set_register(register, count)
-
+        
+    async def async_added_to_hass(self):
+        """Handle entity which will be added."""
+        state = await self.async_get_last_state()
+        if not state:
+            return
+        self._value = state.state
+        
     @property
     def state(self):
         """Return the state of the sensor."""
@@ -146,7 +159,7 @@ class ModbusHASRegisterSensor(Entity):
         """Return the unit of measurement."""
         return self._unit_of_measurement
 
-    def update(self):
+    async def async_update(self):
         """Update the state of the sensor."""
         """resultA = modbus.HUB.read_holding_registers(
             self._slave,
@@ -154,13 +167,21 @@ class ModbusHASRegisterSensor(Entity):
             self._count)
         if resultA:
             result = resultA.registers"""
-        result = self._buffer.read_register(self._register, self._count)    
-        if not result:
+        try:
+            result = await self._buffer.read_register(self._register, self._count)    
+            if not result:
+                _LOGGER.error(
+                    'No response from modbus slave %s register %s',
+                    self._slave,
+                    self._register)
+                return 
+        except AttributeError as error:
             _LOGGER.error(
-                'No response from modbus slave %s register %s',
+                'Exception during response from modbus slave %s register %s: %s',
                 self._slave,
-                self._register)
-            return    
+                self._register,
+                error)
+            return                
         val = 0
         for i, res in enumerate(result):
             r = -1
