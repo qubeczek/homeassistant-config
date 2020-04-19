@@ -89,16 +89,24 @@ class ModbusCoilBuffer():
         self._doread = True
         """_LOGGER.info("Loght do refresh")"""
     
-    
+             
+    async def write_coil(self, coil, value):
+        self._doread = True 
+        await self._hub.write_coil(self._slave, coil, value) 
+        #if(self._result):
+        #    self._result.bits[bitnum] = (byte)value
+        
+       
     async def read_coil(self, coil):
         if(datetime.datetime.now()-self._scan_interval >= self._lastread):
             self._doread = True
         if(self._doread == True and self._maxcoil >= self._mincoil):
             coilnum  = self._maxcoil - self._mincoil + 1           
-            self._result = await self._hub.read_coils(self._slave, self._mincoil, coilnum)
-            if not self._result:
+            res = await self._hub.read_coils(self._slave, self._mincoil, coilnum)
+            if not res:
                 _LOGGER.error("ModbusCoilBuffer read error form coil %s for %s coils", self._mincoil, coilnum)
                 return
+            self._result = res
             self._doread = False
             self._lastread = datetime.datetime.now()
             """_LOGGER.info("Light readed %s coils from %s ",coilnum, self._mincoil)"""       
@@ -146,10 +154,9 @@ class ModbusHASLight(Light, RestoreEntity):
         """Turn the light on."""
         if(self._coil == self._logged_coil):
              _LOGGER.info("Turn on start")  
-        #self._block_update = True
-        self._buffer.refresh()   
-        await self._hub.write_coil(self._slave, self._coil, True )     
+        self._block_update = True
         self._state = True
+        await self._buffer.write_coil(self._coil, self._state)              
         self._block_update = False
         if(self._coil == self._logged_coil):
             _LOGGER.info("Turn on end")  
@@ -158,9 +165,10 @@ class ModbusHASLight(Light, RestoreEntity):
         """Turn the light off."""
         if(self._coil == self._logged_coil):
              _LOGGER.info("Turn off start")  
-        self._buffer.refresh()
-        await self._hub.write_coil(self._slave, self._coil, False )
+        self._block_update = True    
         self._state = False
+        await self._buffer.write_coil(self._coil, self._state)    
+        self._block_update = False
         if(self._coil == self._logged_coil):
             _LOGGER.info("Turn off end")  
 

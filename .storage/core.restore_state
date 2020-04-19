@@ -1,922 +1,580 @@
 {
     "data": [
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. zewn\u0119trzna",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "732ce73003694b6796e9b731dbf935e4",
+                    "id": "50e22bc0540d41209547985771d136c3",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_outside",
-                "last_changed": "2020-04-18T17:39:22.001269+00:00",
-                "last_updated": "2020-04-18T17:39:22.001269+00:00",
+                "last_changed": "2020-04-19T08:55:34.499083+00:00",
+                "last_updated": "2020-04-19T08:55:34.499083+00:00",
                 "state": "14"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. kominka",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "ed006c84766a4131866a9f354d710e2e",
+                    "id": "3bdfa7b540974822b75574dfa359b027",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_kominek",
-                "last_changed": "2020-04-18T17:39:22.001269+00:00",
-                "last_updated": "2020-04-18T17:39:22.001269+00:00",
+                "last_changed": "2020-04-19T08:55:34.499083+00:00",
+                "last_updated": "2020-04-19T08:55:34.499083+00:00",
                 "state": "21"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. kominka - powr\u00f3t",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "7a9277a367604912b17100dcd1152180",
+                    "id": "900b5590432d41fa879b48cb2f2d710d",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_kominek_back",
-                "last_changed": "2020-04-18T17:39:22.001269+00:00",
-                "last_updated": "2020-04-18T17:39:22.001269+00:00",
+                "last_changed": "2020-04-19T08:55:34.499083+00:00",
+                "last_updated": "2020-04-19T08:55:34.499083+00:00",
                 "state": "20"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. CWU",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "58a74dc22dfd414daca57068d4165e91",
+                    "id": "ed36032cac4747ffbefbf1ae16ccca4d",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_cwu",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.499083+00:00",
+                "last_updated": "2020-04-19T08:55:34.499083+00:00",
                 "state": "38"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. cyrkulacji",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "5a15e860c66f4e17819d2ecba534f6e1",
+                    "id": "e99399aafdc7477187fca4d98f35e952",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_cwu_back",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.499083+00:00",
+                "last_updated": "2020-04-19T08:55:34.499083+00:00",
                 "state": "23"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "CO - sprz\u0119g\u0142o",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "7c8828e8a605427581a088c7f5301731",
+                    "id": "a0e02a52a3ed44e3a1482ea04feca5e0",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_co_sprzeglo",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.499083+00:00",
+                "last_updated": "2020-04-19T08:55:34.499083+00:00",
                 "state": "42"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "CO - zasilanie grzejniki",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "373356f57cf243148c06c9450a2d82e1",
+                    "id": "9567de7cdb8c4c6c8efdbafe59fb5273",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_co",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.499083+00:00",
+                "last_updated": "2020-04-19T08:55:34.499083+00:00",
                 "state": "38"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "CO - powr\u00f3t grzejniki",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "0a5f744be3c641f58ed3b5e98c43e2ef",
+                    "id": "da966f2ffc824140b38dea682a66f2f2",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_co_back",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.499083+00:00",
+                "last_updated": "2020-04-19T08:55:34.499083+00:00",
                 "state": "39"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "CO - zasilanie pod\u0142ogi",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "62abd9a82acb4b90a1a1ba64d19a60e3",
+                    "id": "74ba7479378b422a92761e2de6d638ff",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_cp",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.499083+00:00",
+                "last_updated": "2020-04-19T08:55:34.499083+00:00",
                 "state": "31"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "CO - powr\u00f3t pod\u0142ogi",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "d706785d71e443f880e6125ed6bd0855",
+                    "id": "c05c9278c43843de8bec88dbec0a854c",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_cp_back",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.499083+00:00",
+                "last_updated": "2020-04-19T08:55:34.499083+00:00",
                 "state": "25"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "CO - zasilanie piec gaz",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "b983256f9ee44edeae88b47f86a1851c",
+                    "id": "45c14b4909544d99a3a274f18e8d85ad",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_co_piec",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "49"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "CO - powr\u00f3t piec gaz",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "a6e1f53a309d41a08f00a4a3fb30b254",
+                    "id": "3404cb5f8f1c45d9bba65a24f145bc59",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_co_piec_back",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "38"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. gara\u017c",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "999680a35f11459cbdeaa75c899d6bf3",
+                    "id": "745dda73e01741c284f81726c87d42b5",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_garaz",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "17"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. gabinet",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "bcc700c202fb423681634d226051f06e",
+                    "id": "98325e12d39e48d1b5301df007d3b43a",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_gabinet",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "22"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. pralnia",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "ae6d631823974de0a36294aab88df76f",
+                    "id": "cff17033b5b3481d950a4d0fd2cf3dbe",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_pralnia",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "20"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. korytarz Ip",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "5e9ef54fef824b05b915d9b6e44dc50e",
+                    "id": "2c141862eb2e48299e66558d87ebf5e3",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_korytarzip",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "22"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. wiatro\u0142ap",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "0ca9d0bd35d449d29a836f6e3a41314d",
+                    "id": "857617ff856d456a865b838e72b5a089",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_wiatrolap",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "22"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. \u0142azienka d\u00f3\u0142",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "3e7676c33e234f798c799c7664556d5f",
+                    "id": "587d7e5a3ef04b279310510e6eb443d9",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_lazienkadol",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "22"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. kuchnia",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "40f4cb972d4e4f5bbace88423bbbbf1e",
+                    "id": "f19673388f574e49bb711f32137540c2",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_kuchnia",
-                "last_changed": "2020-04-18T17:39:22.002269+00:00",
-                "last_updated": "2020-04-18T17:39:22.002269+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "22"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. hall Ip",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "531edec2aeeb4b7190fa12442be2215b",
+                    "id": "dcc908fec22f4a11a5c789c9a01062fd",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_hallip",
-                "last_changed": "2020-04-18T17:39:22.003262+00:00",
-                "last_updated": "2020-04-18T17:39:22.003262+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "22"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. sypialnia",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "93b4a8b9d5a340bbaecfe31f3d1e8720",
+                    "id": "bf81be2959074857a092e5b6e7c1f14a",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_sypialnia",
-                "last_changed": "2020-04-18T17:39:22.003262+00:00",
-                "last_updated": "2020-04-18T17:39:22.003262+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "23"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. pok\u00f3j 3",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "7655ba099c004332b590f57e9c80e955",
+                    "id": "1eb19c42d18a43f4b7a1998e1ead3fe7",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_pokoj3",
-                "last_changed": "2020-04-18T17:39:22.003262+00:00",
-                "last_updated": "2020-04-18T17:39:22.003262+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "22"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. pok\u00f3j 2",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "037315246d594547a8f5066480faee1b",
+                    "id": "1a06470608a6403482ef98ad3070cc35",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_pokoj2",
-                "last_changed": "2020-04-18T17:39:22.003262+00:00",
-                "last_updated": "2020-04-18T17:39:22.003262+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "24"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. pok\u00f3j 1",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "8af476da78f34cbb9bd8170ff053f376",
+                    "id": "307da87d5c4243ac88b58076152df150",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_pokoj1",
-                "last_changed": "2020-04-18T17:39:22.003262+00:00",
-                "last_updated": "2020-04-18T17:39:22.003262+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "23"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. spi\u017carka",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "2373be3d4ce74f59a7562674e3004ea5",
+                    "id": "39623a2000ff4bbc9085f58cfbd3c166",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_spizarka",
-                "last_changed": "2020-04-18T17:39:22.003262+00:00",
-                "last_updated": "2020-04-18T17:39:22.003262+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "22"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. salon",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "411ceeac01ce458a891c18fe4293d690",
+                    "id": "ad299be2a8ce4e189f5358b494daac96",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_salon",
-                "last_changed": "2020-04-18T17:39:22.003262+00:00",
-                "last_updated": "2020-04-18T17:39:22.003262+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "22"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. \u0142azienka syp.",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "8ac77372113c41a3958a0dbb8c6bc6dd",
+                    "id": "74269e5786fa4d76a82a8bdbe7a9d894",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_lazienkasyp",
-                "last_changed": "2020-04-18T17:39:22.003262+00:00",
-                "last_updated": "2020-04-18T17:39:22.003262+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "22"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Temp. \u0142azienka g\u00f3ra",
                     "unit_of_measurement": "\u00b0C"
                 },
                 "context": {
-                    "id": "482c794b75d44cab9a9b4fc5cb9ff48c",
+                    "id": "3b8df1ef90924cb3bc2822b434721d15",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.temp_lazienkagora",
-                "last_changed": "2020-04-18T17:39:22.003262+00:00",
-                "last_updated": "2020-04-18T17:39:22.003262+00:00",
+                "last_changed": "2020-04-19T08:55:34.500080+00:00",
+                "last_updated": "2020-04-19T08:55:34.500080+00:00",
                 "state": "22"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Susza w ogrodzie"
                 },
                 "context": {
-                    "id": "9d6e74dedbd34e47bb28302e4d58b13e",
+                    "id": "422ec27d38f64cf0a51869e06c0e8ac1",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.ogrod_susza",
-                "last_changed": "2020-04-18T17:39:22.003262+00:00",
-                "last_updated": "2020-04-18T17:39:22.003262+00:00",
+                "last_changed": "2020-04-19T08:55:34.503129+00:00",
+                "last_updated": "2020-04-19T08:55:34.503129+00:00",
                 "state": "-1"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Podlewanie automatyczne - status"
                 },
                 "context": {
-                    "id": "3685fd6ab72b45dbbe9389765ce26979",
+                    "id": "2fb17331d4d545aaa378ec4fc62663cf",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.ogrod_status_programu",
-                "last_changed": "2020-04-18T17:39:22.003262+00:00",
-                "last_updated": "2020-04-18T17:39:22.003262+00:00",
+                "last_changed": "2020-04-19T08:55:34.503129+00:00",
+                "last_updated": "2020-04-19T08:55:34.503129+00:00",
                 "state": "0"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "ogrod_status_wody"
                 },
                 "context": {
-                    "id": "26a2dbfab5ad48e89bd3dba0da12e9d0",
+                    "id": "544ed4b924c14104aef5cd2843e2b94f",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.ogrod_status_wody",
-                "last_changed": "2020-04-18T17:39:22.003262+00:00",
-                "last_updated": "2020-04-18T17:39:22.003262+00:00",
+                "last_changed": "2020-04-19T08:55:34.503129+00:00",
+                "last_updated": "2020-04-19T08:55:34.503129+00:00",
                 "state": "0"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "device_class": "safety",
                     "friendly_name": "Alarm - status"
                 },
                 "context": {
-                    "id": "9257e5aac14c4aff82c2d0818fc39b68",
+                    "id": "85ff25bb968f445ea7ac6cfd5e3fbb7c",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.satel_onoff",
-                "last_changed": "2020-04-18T17:39:22.003262+00:00",
-                "last_updated": "2020-04-18T17:39:22.003262+00:00",
+                "last_changed": "2020-04-19T08:55:34.503129+00:00",
+                "last_updated": "2020-04-19T08:55:34.503129+00:00",
                 "state": "0"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Monitor g\u0142\u00f3wny HA",
-                    "icon": "mdi:monitor"
-                },
-                "context": {
-                    "id": "143d4da67f0841b79cd01162239f30c7",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.hasmonitor",
-                "last_changed": "2020-04-18T17:39:22.007194+00:00",
-                "last_updated": "2020-04-18T17:39:22.007194+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Blokada telewizor\u00f3w w hallu",
-                    "icon": "mdi:monitor"
-                },
-                "context": {
-                    "id": "dd9e57c020774e579a51ba5d9bfd0581",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.hallgniazdo1",
-                "last_changed": "2020-04-18T17:39:22.008192+00:00",
-                "last_updated": "2020-04-18T17:39:22.008192+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Woda - zasilanie domu"
-                },
-                "context": {
-                    "id": "70704cca24074848ab56922c6714c86a",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.co_woda",
-                "last_changed": "2020-04-18T17:39:22.008192+00:00",
-                "last_updated": "2020-04-18T17:39:22.008192+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Pompa kominka CWU"
-                },
-                "context": {
-                    "id": "cfe3e1784d0141fbb5e8ca036a541d77",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.pompa_kcwu",
-                "last_changed": "2020-04-18T17:39:22.008192+00:00",
-                "last_updated": "2020-04-18T17:39:22.008192+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Pompa kominka CO"
-                },
-                "context": {
-                    "id": "3f07adc1cc6f488eb4ba64bd9a20b1ff",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.pompa_kco",
-                "last_changed": "2020-04-18T17:39:22.008192+00:00",
-                "last_updated": "2020-04-18T17:39:22.008192+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Pompa CO - grzejniki"
-                },
-                "context": {
-                    "id": "5ad43f9fe50a46058fcf3c79c80fc030",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.pompa_co",
-                "last_changed": "2020-04-18T17:39:22.008192+00:00",
-                "last_updated": "2020-04-18T17:39:22.008192+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Pompa CO - pod\u0142og\u00f3wka"
-                },
-                "context": {
-                    "id": "02623c02281e48f4918b6553c974b8b1",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.pompa_cp",
-                "last_changed": "2020-04-18T17:39:22.008192+00:00",
-                "last_updated": "2020-04-18T17:39:22.008192+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "COonoff"
-                },
-                "context": {
-                    "id": "1b62414f9e8247f08d6eb5aadbe0a13a",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.coonoff",
-                "last_changed": "2020-04-18T17:39:22.008192+00:00",
-                "last_updated": "2020-04-18T17:39:22.008192+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "P1 O1"
-                },
-                "context": {
-                    "id": "51da0ba3472e4604851088be82606d11",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.ogrodp1o1",
-                "last_changed": "2020-04-18T17:39:22.008192+00:00",
-                "last_updated": "2020-04-18T17:39:22.008192+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "P1 O2"
-                },
-                "context": {
-                    "id": "6bddaa6d5e0645ab854e442ef7c6f6c1",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.ogrodp1o2",
-                "last_changed": "2020-04-18T17:39:22.008192+00:00",
-                "last_updated": "2020-04-18T17:39:22.008192+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "P2 O1"
-                },
-                "context": {
-                    "id": "4b9b20dc423e42d9aa74c984a5ebfa84",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.ogrodp2o1",
-                "last_changed": "2020-04-18T17:39:22.009237+00:00",
-                "last_updated": "2020-04-18T17:39:22.009237+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "P2 O2"
-                },
-                "context": {
-                    "id": "bd59b812e9364332ade706a06c81ce64",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.ogrodp2o2",
-                "last_changed": "2020-04-18T17:39:22.009237+00:00",
-                "last_updated": "2020-04-18T17:39:22.009237+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "ogrodP301"
-                },
-                "context": {
-                    "id": "27fa5d0c0dff4463af28095d42140d9f",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.ogrodp301",
-                "last_changed": "2020-04-18T17:39:22.009237+00:00",
-                "last_updated": "2020-04-18T17:39:22.009237+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "P3 O2"
-                },
-                "context": {
-                    "id": "c08a641d167843a5ae2a25dd2f9c890a",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.ogrodp3o2",
-                "last_changed": "2020-04-18T17:39:22.009237+00:00",
-                "last_updated": "2020-04-18T17:39:22.009237+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "P3 O3"
-                },
-                "context": {
-                    "id": "0520167a6e484d8f83a9e061241ef73e",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.ogrodp3o3",
-                "last_changed": "2020-04-18T17:39:22.009237+00:00",
-                "last_updated": "2020-04-18T17:39:22.009237+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "P4 O1"
-                },
-                "context": {
-                    "id": "fa1228a863f944af9cd18004adf1c177",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.ogrodp4o1",
-                "last_changed": "2020-04-18T17:39:22.009237+00:00",
-                "last_updated": "2020-04-18T17:39:22.009237+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "P4 O2"
-                },
-                "context": {
-                    "id": "7909ef1d78a34a27bd150affb713ee58",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.ogrodp4o2",
-                "last_changed": "2020-04-18T17:39:22.009237+00:00",
-                "last_updated": "2020-04-18T17:39:22.009237+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "P4 O3"
-                },
-                "context": {
-                    "id": "c2778504213f40b19ad959d9264d65ef",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.ogrodp4o3",
-                "last_changed": "2020-04-18T17:39:22.009237+00:00",
-                "last_updated": "2020-04-18T17:39:22.009237+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Warzywniak"
-                },
-                "context": {
-                    "id": "02a5ac6a5a2c448782efdf7a971aba13",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.ogrodwarzywa",
-                "last_changed": "2020-04-18T17:39:22.009237+00:00",
-                "last_updated": "2020-04-18T17:39:22.009237+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Linia kropelkowa taras"
-                },
-                "context": {
-                    "id": "f7f67801292447c1a98107cf9796e3f2",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "switch.ogrodtaras",
-                "last_changed": "2020-04-18T17:39:22.009237+00:00",
-                "last_updated": "2020-04-18T17:39:22.009237+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Pod szafkami nad blatem",
@@ -925,18 +583,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "f46c66a277c043589ff7fcfd78b3556f",
+                    "id": "c55c7f227f1142a7b6f34a966d1e69b0",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_kuchnia_szafki",
-                "last_changed": "2020-04-18T17:39:22.009237+00:00",
-                "last_updated": "2020-04-18T17:39:22.009237+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Kuchnia sufit I",
@@ -945,18 +603,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "3a7a866835ea4cc299af67d1ec853d7e",
+                    "id": "332fca91ef954ba9903315953d54f58a",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_kuchnia_sufit1",
-                "last_changed": "2020-04-18T17:39:22.009237+00:00",
-                "last_updated": "2020-04-18T17:39:22.009237+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Kuchnia sufit II",
@@ -965,18 +623,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "ac822bb0812049cba9e3eb34010196bc",
+                    "id": "a3003adb88334fbda8f55f5893c7fc68",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_kuchnia_sufit2",
-                "last_changed": "2020-04-18T17:39:22.009237+00:00",
-                "last_updated": "2020-04-18T17:39:22.009237+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Kuchnia nad barkiem",
@@ -985,18 +643,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "5517aacc4f474f5caa686f0c6fd71657",
+                    "id": "7ab9f92ed65e44c489ff3a9957b36ec3",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_kuchnia_barek",
-                "last_changed": "2020-04-18T17:39:22.009237+00:00",
-                "last_updated": "2020-04-18T17:39:22.009237+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Kuchnia zlew",
@@ -1005,18 +663,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "fa291de4fa874063bd7df488f68e775d",
+                    "id": "5ff0893ad89945a3aa0dccc7b10f8355",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_kuchnia_zlew",
-                "last_changed": "2020-04-18T17:39:22.009237+00:00",
-                "last_updated": "2020-04-18T17:39:22.009237+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Kuchnia nad blatem",
@@ -1025,18 +683,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "f6e3695a2ae94bada50bec8b556abe73",
+                    "id": "acc4b1de10d347578cbecab87171cbd0",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_kuchnia_blat",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Jadalnia sufit",
@@ -1045,18 +703,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "e848b7ef19f3459eb87ca60f27dbb57b",
+                    "id": "1936a1d0a5f54d009c577f69baa1678c",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_jadalnia_sufit",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Salon sufit I",
@@ -1065,18 +723,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "9218169544f44994afe22b816caa8bdf",
+                    "id": "db3071d466664f98863eddfafc268d68",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_salon_sufit1",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Salon sufit II",
@@ -1085,18 +743,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "22ca008ad34e4be196704d79d16c614e",
+                    "id": "414ad1d98090445bb9c041ad4ec05dc4",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_salon_sufit2",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Salon nad rega\u0142em",
@@ -1105,18 +763,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "572a2ff2612045c18e0095d7447a4842",
+                    "id": "f82639a1222d40ec9c0d7b7bfb1ae455",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_salon_regal",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Jadalnia kinkiet",
@@ -1125,18 +783,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "c34b44afb9f4487daaefe8b58d02088e",
+                    "id": "c09bba2b9aca4d1ca4d9d8d163c3afb9",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_salon_kinkiet1",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Salon kinkiet ty\u0142",
@@ -1145,18 +803,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "6f93d87a581a4182946a80a5422431f8",
+                    "id": "ad58229ea5da40908613de73444e0e15",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_salon_kinkiet2",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Salon kinkiet lewy",
@@ -1165,18 +823,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "6700dd9577384ce8b665eb65850d87f3",
+                    "id": "85de29b08b394fcd8c25bf146805d602",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_salon_kinkiet3",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Wiatro\u0142ap sufit I",
@@ -1185,18 +843,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "8d02dfcd35244574be56215d4f9797f6",
+                    "id": "d68dc26b919d4955909ad5c8e256c003",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_wiatrolap_sufit1",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Wiatro\u0142ap sufit II",
@@ -1205,18 +863,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "ee1e0e1b46f84f7d856ddef08098a8c7",
+                    "id": "15153ddfb9f445c68d5cabd4f5461e7f",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_wiatrolap_sufit2",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Hall d\u00f3\u0142 sufit",
@@ -1225,18 +883,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "e5dbc8869424424e8b17995c6841575b",
+                    "id": "dcc8f651f0a740208c4535f2eebd1698",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_halldol_sufit1",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Gabinet sufit I",
@@ -1245,18 +903,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "5416d8d124d041b2ac266b41c8a56784",
+                    "id": "16eb541001b64d028bc9b56e9c76ca22",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_gabinet_sufit1",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Gabinet sufit II",
@@ -1265,18 +923,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "239c2b0a697c48fb9c32fa1c869f1ffd",
+                    "id": "4eec1468fe6e42e8a9a44db59462902b",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_gabinet_sufit2",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Spi\u017carka sufit",
@@ -1285,18 +943,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "5c335449e8c2426d907ab0b5570ce130",
+                    "id": "0fe1299f0bd242039bbfd5806f28b587",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_spizarka_sufit1",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.504127+00:00",
+                "last_updated": "2020-04-19T08:55:34.504127+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Rekaraacja sufit",
@@ -1305,18 +963,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "7cfe2938bad44da792d59ac2c4ed31eb",
+                    "id": "10fdd605ce7e4e7f9128b1f571ac9f68",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_rekraacja_sufit1",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "\u0141azienka d\u00f3\u0142 sufit",
@@ -1325,18 +983,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "feb3ca74137a4e0b88fa0f19d86f9777",
+                    "id": "8f08566e6449427191e06b95b5ba6645",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_lazienkadol_sufit1",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "\u0141azienka d\u00f3\u0142 lustro",
@@ -1345,18 +1003,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "b3a5f1e5304c4a498a62060836206e51",
+                    "id": "fbc765ba482b4a8ba6357f5a8aed06f7",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_lazienkadol_led1",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "\u0141azienka d\u00f3\u0142 dodatkowe",
@@ -1365,18 +1023,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "d26e15d6fdcc437ab20bb1001efeda88",
+                    "id": "1458a56eb05b4e9991b4da178ab4767c",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_lazienkadol_led2",
-                "last_changed": "2020-04-18T17:39:22.010243+00:00",
-                "last_updated": "2020-04-18T17:39:22.010243+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Drzwi frontowe",
@@ -1385,18 +1043,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "566f02b0fea54b9cae155ef698354b87",
+                    "id": "b4461188c5bf4606b688ddc624fa3f37",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_drzwifrontowe",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Schody sufit",
@@ -1405,18 +1063,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "c9de06b27e704ecb8e6e5f843a6408a6",
+                    "id": "98825e9020b9429bb3bb14f4dff839f1",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_schody_sufit1",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Schody LED",
@@ -1425,18 +1083,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "6e729c7c60d940a99e0492cc332012e5",
+                    "id": "9503c259dda44931991d374dee35a2f3",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_schody_led",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Pralnia sufit",
@@ -1445,18 +1103,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "d916e1fbe94040f28c151db0bdead083",
+                    "id": "3e785a78177f4dc9a824bcccb4de536b",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_pralnia_sufit1",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Korytarz g\u00f3rny sufit I",
@@ -1465,18 +1123,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "21fcbe98894a4a41b0893d6f3a32ad20",
+                    "id": "f6a16dfa853b4bfdb422c57b44705ece",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_korytarzgora_sufit1",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Korytarz g\u00f3rny sufit II",
@@ -1485,18 +1143,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "384c675392b94804a460d1bce47428dc",
+                    "id": "5ce0c89c44c648c689ef7f374753ada0",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_korytarzgora_sufit2",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Korytarz g\u00f3rny LED",
@@ -1505,18 +1163,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "7b33aa4898ab4a3a94f636ae883b93e7",
+                    "id": "a8577f76251544a7898e960adb78af21",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_korytarzgora_led1",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Hall g\u00f3ra",
@@ -1525,18 +1183,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "d7b1e0ca3ea5433a8307ee60c27af360",
+                    "id": "e9c74c603a0f4c7fb80d29907d5653a4",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_hallgora_sufit1",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Pok\u00f3j J\u0119drka sufit I",
@@ -1545,18 +1203,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "21496bf6bfc24ea3a4e01962fccd8c3a",
+                    "id": "e4b773c9f95041c2bf3e2ba0c7a1a3ba",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_pokoj1_sufit1",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Pok\u00f3j J\u0119drka sufit II",
@@ -1565,18 +1223,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "9c3e2166b22045db8d8ca2eb0bd15e0d",
+                    "id": "4d9396831d4e453895815c9276c2a554",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_pokoj1_sufit2",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Pok\u00f3j Micha\u0142a sufit",
@@ -1585,18 +1243,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "f48d64422b96424ea4752ecf9ab40041",
+                    "id": "d445c35b48494e4ab5d07ce6a7d99b28",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_pokoj2_sufit1",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Pok\u00f3j Miko\u0142aja sufit",
@@ -1605,18 +1263,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "75391093ffab46048486b391a98a3c26",
+                    "id": "4d64af1727284cd88ce9decd90b6d395",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_pokoj3_sufit1",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Sypialnia sufit",
@@ -1625,18 +1283,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "290e3b0f0d374366adff941d51e53c3c",
+                    "id": "4cbe351ca4bb41f9890241a594ec35a6",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_sypialnia_sufit1",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.505125+00:00",
+                "last_updated": "2020-04-19T08:55:34.505125+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Sypialnia kinkiet lewy",
@@ -1645,18 +1303,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "936e71c8615b4c8ca38878261a908cf2",
+                    "id": "c247d0d147e04b2cb3f2d0ec8b285d8f",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_sypialnia_kinkiet1",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Sypialnia kinkiet prawy",
@@ -1665,18 +1323,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "16aed76eaa834f5284cc7f16e55e5fc6",
+                    "id": "2d6966a2b33b4adb997d5df1fc9d6422",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_sypialnia_kinkiet2",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Sypialnia pod \u0142\u00f3zkiem",
@@ -1685,18 +1343,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "4fee060e126b432c80f8f4dff75be99a",
+                    "id": "f9b847fa67f74220b6d240cdc46e7dad",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_sypialnia_led1",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Garderoba sufit",
@@ -1705,18 +1363,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "8c12292b772f490893479b5a58a66f74",
+                    "id": "7ce8afe0402a40a5b0be7ac562428cb4",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_garderoba_sufit",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "\u0141azienka sypialnia sufit I",
@@ -1725,18 +1383,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "dd2609bee2364ab1b046e07f0f49d5a7",
+                    "id": "c80ef6a04fa441b28d0cb2aec9f1fb0d",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_lazienkas_sufit1",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "\u0141azienka sypialnia sufit II",
@@ -1745,18 +1403,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "4e6332a526b74ed3b0b987f81486cdc3",
+                    "id": "c7ff1cceb3894c18b32bed4e48d4cb17",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_lazienkas_sufit2",
-                "last_changed": "2020-04-18T17:39:22.011240+00:00",
-                "last_updated": "2020-04-18T17:39:22.011240+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "\u0141azienka sypialnia kinkiet lewy",
@@ -1765,18 +1423,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "64bff745d6394f99bd7021463dc7879b",
+                    "id": "c87fc92dfad04fc3a97e01ffb74cd0e4",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_lazienkas_kinkiet1",
-                "last_changed": "2020-04-18T17:39:22.012237+00:00",
-                "last_updated": "2020-04-18T17:39:22.012237+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "\u0141azienka sypialnia kinkiet prawy",
@@ -1785,18 +1443,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "a92a9399d8284fc4aa21a540f3e2a293",
+                    "id": "276a49551ffb42a3a7da834f9866e0fa",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_lazienkas_kinkiet2",
-                "last_changed": "2020-04-18T17:39:22.012237+00:00",
-                "last_updated": "2020-04-18T17:39:22.012237+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "\u0141azienka sypialnia LED",
@@ -1805,18 +1463,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "0a27db14412e423e8b3d227daca88426",
+                    "id": "f7afc59948ee4e86b00842a21e477382",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_lazienkas_led",
-                "last_changed": "2020-04-18T17:39:22.012237+00:00",
-                "last_updated": "2020-04-18T17:39:22.012237+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "\u0141azienka g\u00f3rna sufit I",
@@ -1825,18 +1483,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "afd37d94274c477593adc35280732d8e",
+                    "id": "82e30b4dc2854fab9274a21a493ef651",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_lazienkagora_sufit1",
-                "last_changed": "2020-04-18T17:39:22.012237+00:00",
-                "last_updated": "2020-04-18T17:39:22.012237+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "\u0141azienka g\u00f3rna sufit II",
@@ -1845,18 +1503,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "00efd65ea9c34292a68c5815214a6565",
+                    "id": "cd78b898e8504bd98cfac233cabc2784",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_lazienkagora_sufit2",
-                "last_changed": "2020-04-18T17:39:22.012237+00:00",
-                "last_updated": "2020-04-18T17:39:22.012237+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "\u0141azienka g\u00f3rna kinkiet",
@@ -1865,18 +1523,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "207b4f63500e42be912b373884df34a2",
+                    "id": "cd9c2808bbbd4ffdb7fa529758d46024",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_lazienkagora_kinkiet1",
-                "last_changed": "2020-04-18T17:39:22.012237+00:00",
-                "last_updated": "2020-04-18T17:39:22.012237+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "\u0141azienka g\u00f3rna umywalka",
@@ -1885,18 +1543,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "e9ea86afb6d14028b0ae0b920bc74d1d",
+                    "id": "afd8dc563b5c4e2e850b876cfb6a1769",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_lazienkagora_led1",
-                "last_changed": "2020-04-18T17:39:22.012237+00:00",
-                "last_updated": "2020-04-18T17:39:22.012237+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "light_lazienkagora_led2",
@@ -1905,18 +1563,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "fe8d417c297b49b48a3c6ad8e34b8495",
+                    "id": "354ee4f27d314558b61d15a83cf04780",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_lazienkagora_led2",
-                "last_changed": "2020-04-18T17:39:22.012237+00:00",
-                "last_updated": "2020-04-18T17:39:22.012237+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Salon kominek pion",
@@ -1925,18 +1583,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "af5c62cc826f4483a29f09ba513a2e1b",
+                    "id": "a4e48a2ea4d447f79ee4b679ce9311ae",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_salon_led_kominek1",
-                "last_changed": "2020-04-18T17:39:22.012237+00:00",
-                "last_updated": "2020-04-18T17:39:22.012237+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Salon kominek poziom",
@@ -1945,18 +1603,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "e88d0eb01d1c4281920a9c42b1523183",
+                    "id": "ae580e9ce2ac453ba80670c4d4651a27",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_salon_led_kominek2",
-                "last_changed": "2020-04-18T17:39:22.012237+00:00",
-                "last_updated": "2020-04-18T17:39:22.012237+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Hall d\u00f3\u0142 LED",
@@ -1965,18 +1623,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "2c05f29650044b37a2a882ecfabf0712",
+                    "id": "e06d762a51804d26ab2e0aa245a2d3be",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_halldol_led",
-                "last_changed": "2020-04-18T17:39:22.012237+00:00",
-                "last_updated": "2020-04-18T17:39:22.012237+00:00",
+                "last_changed": "2020-04-19T08:55:34.506122+00:00",
+                "last_updated": "2020-04-19T08:55:34.506122+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Kot\u0142ownia sufit",
@@ -1985,18 +1643,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "1298525d49e04e2f9bc0e49c0da4391e",
+                    "id": "538b4c77a1474726b9ef8f43af0d658f",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_kotlownia_sufit1",
-                "last_changed": "2020-04-18T17:39:22.012237+00:00",
-                "last_updated": "2020-04-18T17:39:22.012237+00:00",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Gara\u017c kinkiet I",
@@ -2005,18 +1663,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "e6954266228546d4ada79f63f7ffd443",
+                    "id": "4878e08174034ff19eaff2ba062e8c78",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_garaz_kin1",
-                "last_changed": "2020-04-18T17:39:22.012237+00:00",
-                "last_updated": "2020-04-18T17:39:22.012237+00:00",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Gara\u017c kinkiet II",
@@ -2025,18 +1683,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "9b23766b10aa417fac72c370c53abb2f",
+                    "id": "35807fe2f21746a59d71728277ea3f8c",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_garaz_kin2",
-                "last_changed": "2020-04-18T17:39:22.013237+00:00",
-                "last_updated": "2020-04-18T17:39:22.013237+00:00",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Gara\u017c kinkiet III",
@@ -2045,18 +1703,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "e9e48e8b5631442bbb2ea2aecbdcc325",
+                    "id": "b5ba7fe9f49a4acebc863d96da42e7db",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_garaz_kin3",
-                "last_changed": "2020-04-18T17:39:22.013237+00:00",
-                "last_updated": "2020-04-18T17:39:22.013237+00:00",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Podbitka ty\u0142 I",
@@ -2065,18 +1723,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "4244525b80da4af49853c94cb78aa5b2",
+                    "id": "b84500eda5ef4df1945d4484ab9008b4",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_roof_back1",
-                "last_changed": "2020-04-18T17:39:22.013237+00:00",
-                "last_updated": "2020-04-18T17:39:22.013237+00:00",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Podbitka ty\u0142 II",
@@ -2085,18 +1743,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "3d96f9587e2c498787a1360f6b5b251c",
+                    "id": "af753ad0a9114090b53ecbb27b063eef",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_roof_back2",
-                "last_changed": "2020-04-18T17:39:22.013237+00:00",
-                "last_updated": "2020-04-18T17:39:22.013237+00:00",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Podbitka prz\u00f3d I",
@@ -2105,18 +1763,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "1052b0adca5d4318ab247b42863628ed",
+                    "id": "60182c4acb8643689c516b4b498253ad",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_roof_front1",
-                "last_changed": "2020-04-18T17:39:22.013237+00:00",
-                "last_updated": "2020-04-18T17:39:22.013237+00:00",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Podbitka prz\u00f3d II",
@@ -2125,18 +1783,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "623c3993cf98434a9bb38b830e1faf41",
+                    "id": "65d81df874434ca5a41361e1e9b4332d",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_roof_front2",
-                "last_changed": "2020-04-18T17:39:22.013237+00:00",
-                "last_updated": "2020-04-18T17:39:22.013237+00:00",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Taras g\u00f3rny",
@@ -2145,18 +1803,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "9e0635939b2b4b958fc3e4a45e8a730f",
+                    "id": "78e5703ced39445b9e09e341623460fd",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_tarasgora",
-                "last_changed": "2020-04-18T17:39:22.013237+00:00",
-                "last_updated": "2020-04-18T17:39:22.013237+00:00",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Balkon",
@@ -2165,18 +1823,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "a441b57a91284b7a94c986b0234a4f0c",
+                    "id": "2e85f0329d2b4e85bd2e30852a6266d5",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_balkon",
-                "last_changed": "2020-04-18T17:39:22.013237+00:00",
-                "last_updated": "2020-04-18T17:39:22.013237+00:00",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Elewacja",
@@ -2185,18 +1843,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "8d22fe177e5b49568b8f9c0194b4dff4",
+                    "id": "d367b1205b8047a6b2562834caf66f37",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_elewacja",
-                "last_changed": "2020-04-18T17:39:22.013237+00:00",
-                "last_updated": "2020-04-18T17:39:22.013237+00:00",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Strych",
@@ -2205,18 +1863,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "0ad07dd80e1c47dbb1bda34c6510dad3",
+                    "id": "4704f66ce5684e06b2aee42737c94d46",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_strych",
-                "last_changed": "2020-04-18T17:39:22.013237+00:00",
-                "last_updated": "2020-04-18T17:39:22.013237+00:00",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Podjazd",
@@ -2225,18 +1883,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "f14b18da7ef740ea8de41776b3d0b093",
+                    "id": "57224d110af2463591387a56956c8b2b",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_podjazd",
-                "last_changed": "2020-04-18T17:39:22.013237+00:00",
-                "last_updated": "2020-04-18T17:39:22.013237+00:00",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Ogr\u00f3d frontowe",
@@ -2245,18 +1903,18 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "9279d6f66e724971a192235584fbe316",
+                    "id": "bd478c04108048a7a75777d0535a0ffb",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_ogrod_front",
-                "last_changed": "2020-04-18T17:39:22.013237+00:00",
-                "last_updated": "2020-04-18T17:39:22.013237+00:00",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Hall d\u00f3\u0142 obraz",
@@ -2265,18 +1923,360 @@
                     "supported_features": 131
                 },
                 "context": {
-                    "id": "bb5481f0fd744ab6bebb310136a4f3eb",
+                    "id": "5987bef91fd94f9eb938a91e13aa07d9",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.light_halldol_obraz",
-                "last_changed": "2020-04-18T17:39:22.013237+00:00",
-                "last_updated": "2020-04-18T17:39:22.013237+00:00",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Monitor g\u0142\u00f3wny HA",
+                    "icon": "mdi:monitor"
+                },
+                "context": {
+                    "id": "380459a728cd4c76a59675231ce435f0",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.hasmonitor",
+                "last_changed": "2020-04-19T08:55:34.507061+00:00",
+                "last_updated": "2020-04-19T08:55:34.507061+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Blokada telewizor\u00f3w w hallu",
+                    "icon": "mdi:monitor"
+                },
+                "context": {
+                    "id": "5aea4156b2364cf1a55bca125e326091",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.hallgniazdo1",
+                "last_changed": "2020-04-19T08:55:34.508098+00:00",
+                "last_updated": "2020-04-19T08:55:34.508098+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Woda - zasilanie domu"
+                },
+                "context": {
+                    "id": "6d7338bb6b294b8aabe820230018708d",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.co_woda",
+                "last_changed": "2020-04-19T08:55:34.508098+00:00",
+                "last_updated": "2020-04-19T08:55:34.508098+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Pompa kominka CWU"
+                },
+                "context": {
+                    "id": "de5a481e0aa544168bddbe869790db40",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.pompa_kcwu",
+                "last_changed": "2020-04-19T08:55:34.508098+00:00",
+                "last_updated": "2020-04-19T08:55:34.508098+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Pompa kominka CO"
+                },
+                "context": {
+                    "id": "8b3d1bc70e1d4066bc3f7b845c0856ec",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.pompa_kco",
+                "last_changed": "2020-04-19T08:55:34.508098+00:00",
+                "last_updated": "2020-04-19T08:55:34.508098+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Pompa CO - grzejniki"
+                },
+                "context": {
+                    "id": "dac3993c8e7c4c8a82d9877a51c36e39",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.pompa_co",
+                "last_changed": "2020-04-19T08:55:34.508098+00:00",
+                "last_updated": "2020-04-19T08:55:34.508098+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Pompa CO - pod\u0142og\u00f3wka"
+                },
+                "context": {
+                    "id": "2c913cb3d05c43528d99bfb16cdcc5ec",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.pompa_cp",
+                "last_changed": "2020-04-19T08:55:34.508098+00:00",
+                "last_updated": "2020-04-19T08:55:34.508098+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "COonoff"
+                },
+                "context": {
+                    "id": "880a8ea5b7dc4723b8106e0baccc57f5",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.coonoff",
+                "last_changed": "2020-04-19T08:55:34.508098+00:00",
+                "last_updated": "2020-04-19T08:55:34.508098+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "P1 O1"
+                },
+                "context": {
+                    "id": "32a9ac49169a4a23929a271441c5ae33",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.ogrodp1o1",
+                "last_changed": "2020-04-19T08:55:34.508098+00:00",
+                "last_updated": "2020-04-19T08:55:34.508098+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "P1 O2"
+                },
+                "context": {
+                    "id": "ca3eb8d9142e493b82b4ddbe6febe832",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.ogrodp1o2",
+                "last_changed": "2020-04-19T08:55:34.508098+00:00",
+                "last_updated": "2020-04-19T08:55:34.508098+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "P2 O1"
+                },
+                "context": {
+                    "id": "94cab4ca84374d83ab2b0f2a755f2aae",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.ogrodp2o1",
+                "last_changed": "2020-04-19T08:55:34.508098+00:00",
+                "last_updated": "2020-04-19T08:55:34.508098+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "P2 O2"
+                },
+                "context": {
+                    "id": "918d9529f66340cb9b43d044f74978d1",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.ogrodp2o2",
+                "last_changed": "2020-04-19T08:55:34.508098+00:00",
+                "last_updated": "2020-04-19T08:55:34.508098+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "ogrodP301"
+                },
+                "context": {
+                    "id": "2ad242bb68f749e3b95c564b34548cbc",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.ogrodp301",
+                "last_changed": "2020-04-19T08:55:34.508098+00:00",
+                "last_updated": "2020-04-19T08:55:34.508098+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "P3 O2"
+                },
+                "context": {
+                    "id": "1c0f6dfb41224da2a18d2e43651f0a44",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.ogrodp3o2",
+                "last_changed": "2020-04-19T08:55:34.508098+00:00",
+                "last_updated": "2020-04-19T08:55:34.508098+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "P3 O3"
+                },
+                "context": {
+                    "id": "ebaecbc4909d4e4f8aebeaa396e14865",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.ogrodp3o3",
+                "last_changed": "2020-04-19T08:55:34.508098+00:00",
+                "last_updated": "2020-04-19T08:55:34.508098+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "P4 O1"
+                },
+                "context": {
+                    "id": "6741da920f3d4d3ab7cfdc6d6f21d50d",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.ogrodp4o1",
+                "last_changed": "2020-04-19T08:55:34.508098+00:00",
+                "last_updated": "2020-04-19T08:55:34.508098+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "P4 O2"
+                },
+                "context": {
+                    "id": "1fd5020e38024656af99aa1df9e0dee4",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.ogrodp4o2",
+                "last_changed": "2020-04-19T08:55:34.509114+00:00",
+                "last_updated": "2020-04-19T08:55:34.509114+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "P4 O3"
+                },
+                "context": {
+                    "id": "7fff8e28e52b4e0b8dcced1430f6518c",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.ogrodp4o3",
+                "last_changed": "2020-04-19T08:55:34.509114+00:00",
+                "last_updated": "2020-04-19T08:55:34.509114+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Warzywniak"
+                },
+                "context": {
+                    "id": "01da62ca73af41c5aa0f13a39ed1b8e0",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.ogrodwarzywa",
+                "last_changed": "2020-04-19T08:55:34.509114+00:00",
+                "last_updated": "2020-04-19T08:55:34.509114+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Linia kropelkowa taras"
+                },
+                "context": {
+                    "id": "b0caf3640ca14706a65a6acbeb4c045c",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.ogrodtaras",
+                "last_changed": "2020-04-19T08:55:34.509114+00:00",
+                "last_updated": "2020-04-19T08:55:34.509114+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "editable": true,
@@ -2286,18 +2286,18 @@
                     "user_id": "69f15b6483cf43ab9c53ac6856d54984"
                 },
                 "context": {
-                    "id": "3e10c47a86e54e2ebbb0974fac87415a",
+                    "id": "ea1032c64ce64dfc8f90cc718569e445",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "person.kuba",
-                "last_changed": "2020-04-18T17:39:22.013237+00:00",
-                "last_updated": "2020-04-18T17:39:22.013237+00:00",
+                "last_changed": "2020-04-19T08:55:34.509114+00:00",
+                "last_updated": "2020-04-19T08:55:34.509114+00:00",
                 "state": "unknown"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Piec - czas grzania",
@@ -2305,53 +2305,53 @@
                     "unit_of_measurement": "min"
                 },
                 "context": {
-                    "id": "f9addcf0276644988f146c58fcae702c",
+                    "id": "2da9fd3a8a9244719eea72acbd954ff5",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.heater_workingtime",
-                "last_changed": "2020-04-18T17:39:22.015231+00:00",
-                "last_updated": "2020-04-18T17:39:22.015231+00:00",
+                "last_changed": "2020-04-19T08:55:34.520028+00:00",
+                "last_updated": "2020-04-19T08:55:34.520028+00:00",
                 "state": "157"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Piec - ilo\u015b\u0107 za\u0142.",
                     "icon": "mdi:home-outline"
                 },
                 "context": {
-                    "id": "ef7ac12101034a9da00fc51551c01466",
+                    "id": "cf1aa036128a4367989907ef22be9b98",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.heater_oncount",
-                "last_changed": "2020-04-18T17:39:22.015231+00:00",
-                "last_updated": "2020-04-18T17:39:22.015231+00:00",
+                "last_changed": "2020-04-19T08:55:34.520028+00:00",
+                "last_updated": "2020-04-19T08:55:34.520028+00:00",
                 "state": "7"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "kominek_co_temp_wlaczenia"
                 },
                 "context": {
-                    "id": "fc6bc83173e24465b0c00d7e6f0dc15b",
+                    "id": "10cc33277acf4c62b3dc4097f1f1c874",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "sensor.kominek_co_temp_wlaczenia",
-                "last_changed": "2020-04-18T17:39:22.015231+00:00",
-                "last_updated": "2020-04-18T17:39:22.015231+00:00",
+                "last_changed": "2020-04-19T08:55:34.520028+00:00",
+                "last_updated": "2020-04-19T08:55:34.520028+00:00",
                 "state": "6500"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Gaszenie rzeczy po alarmie",
@@ -2359,49 +2359,49 @@
                     "last_triggered": null
                 },
                 "context": {
-                    "id": "d45b72e531f74192b4c4a26fe7160962",
+                    "id": "29e8827b74da405e913407079050b4bd",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.gaszenie_rzeczy_po_alarmie",
-                "last_changed": "2020-04-18T17:39:22.617599+00:00",
-                "last_updated": "2020-04-18T17:39:22.617599+00:00",
+                "last_changed": "2020-04-19T08:55:35.041638+00:00",
+                "last_updated": "2020-04-19T08:55:35.041638+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Poranne gaszenie \u015bwiate\u0142",
                     "last_triggered": null
                 },
                 "context": {
-                    "id": "266caa0ee5c84aa9889d03bb33e43c86",
+                    "id": "7b16836be6214af0ae9a6e1bdaf2080b",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.poranne_gaszenie_swiatel",
-                "last_changed": "2020-04-18T17:39:22.617599+00:00",
-                "last_updated": "2020-04-18T17:39:22.617599+00:00",
+                "last_changed": "2020-04-19T08:55:35.041638+00:00",
+                "last_updated": "2020-04-19T08:55:35.041638+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2020-04-18T17:39:22.641502+00:00",
+            "last_seen": "2020-04-19T08:55:35.414644+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Wieczorne zapalanie \u015bwiate\u0142",
                     "last_triggered": null
                 },
                 "context": {
-                    "id": "783e2abf8e9f432ca6284e150d9f13bc",
+                    "id": "4a811451c2e0476381b9c224fca0455b",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.wieczorne_zapalanie_swiatel",
-                "last_changed": "2020-04-18T17:39:22.617599+00:00",
-                "last_updated": "2020-04-18T17:39:22.617599+00:00",
+                "last_changed": "2020-04-19T08:55:35.041638+00:00",
+                "last_updated": "2020-04-19T08:55:35.041638+00:00",
                 "state": "on"
             }
         }

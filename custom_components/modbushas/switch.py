@@ -243,8 +243,8 @@ class ModbusHASRegisterSwitch(ModbusHASCoilSwitch):
             self._slave,
             self._register,
             self._command_on)
-        if self._verify_state:
-            self._is_on = True
+        #if self._verify_state:
+        self._is_on = True
 
     async def turn_off(self, **kwargs):
         """Set switch off."""
@@ -252,8 +252,8 @@ class ModbusHASRegisterSwitch(ModbusHASCoilSwitch):
             self._slave,
             self._register,
             self._command_off)
-        if self._verify_state:
-            self._is_on = False
+        #if not self._verify_state:
+        self._is_on = False
 
     async def async_update(self):
         """Update the state of the switch."""

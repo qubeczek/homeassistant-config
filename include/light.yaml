@@ -113,9 +113,6 @@
       - name: light_halldol_led
         coil: 144        
 #garaz i otoczenie
-  - platform: modbushas
-    scan_interval: 5
-    coils:
       - name: light_kotlownia_sufit1
         coil: 112
       - name: light_garaz_kin1
