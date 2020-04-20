@@ -34,3 +34,5 @@ custom_components/sensor/__pycache__/modbushas.cpython-37.pyc
 custom_components/switch/__pycache__/modbushas.cpython-37.pyc
 custom_components/media_player/__pycache__/onkyo2.cpython-37.pyc
 *.pyc
+*.pyc
+custom_components/modbushas/__pycache__/switch.cpython-38.pyc

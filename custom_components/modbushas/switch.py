@@ -130,6 +130,12 @@ class ModbusSwitchCoilBuffer():
         self._doread = True
         # _LOGGER.info("Loght do refresh")
 
+    async def write_coil(self, coil, value):
+        self._doread = True 
+        await self._hub.write_coil(self._slave, coil, value) 
+        #if(self._result):
+        #    self._result.bits[bitnum] = (byte)value
+        
     async def read_coil(self, coil):
         if(datetime.datetime.now()-self._scan_interval >= self._lastread):
             self._doread = True
@@ -181,15 +187,13 @@ class ModbusHASCoilSwitch(ToggleEntity, RestoreEntity):
 
     async def turn_on(self, **kwargs):
         """Set switch on."""
-        await self._hub.write_coil(self._slave, self._coil, True)
         self._is_on = True
-        self._buffer.refresh()
+        await self._buffer.write_coil(self._coil, self._is_on)
 
     async def turn_off(self, **kwargs):
         """Set switch off."""
-        await self._hub.write_coil(self._slave, self._coil, False)
         self._is_on = False
-        self._buffer.refresh()
+        await self._buffer.write_coil(self._coil, self._is_on)
 
     async def async_update(self):
         """Update the state of the switch."""

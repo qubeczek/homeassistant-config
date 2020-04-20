@@ -2,7 +2,7 @@
     host: 192.168.100.10
     name: Salon LG TV  
     timeout: 5
-    filename: webostv.conf
+#    filename: webostv.conf
     turn_on_action:
       service: persistent_notification.create
       data:
