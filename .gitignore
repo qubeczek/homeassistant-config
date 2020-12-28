@@ -42,3 +42,4 @@ custom_components/modbushas/__pycache__/light.cpython-38.pyc
 custom_components/modbushas/__pycache__/switch.cpython-38.pyc
 custom_components/modbushas/__pycache__/light.cpython-38.pyc
 custom_components/modbushas/__pycache__/binary_sensor.cpython-38.pyc
+custom_components/modbushas/__pycache__/sensor.cpython-38.pyc
