@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace",
     "data": {
         "config": {
             "title": "Dom",
@@ -26,10 +28,6 @@
                     ],
                     "cards": [
                         {
-                            "entity": "weather.dom",
-                            "type": "weather-forecast"
-                        },
-                        {
                             "entities": [
                                 {
                                     "entity": "sensor.temp_outside"
@@ -38,7 +36,8 @@
                                     "entity": "sensor.pogoda_pressure"
                                 }
                             ],
-                            "type": "glance"
+                            "type": "glance",
+                            "title": "Pogoda"
                         },
                         {
                             "entities": [
@@ -58,6 +57,10 @@
                             "show_header_toggle": false,
                             "title": "Akcje",
                             "type": "entities"
+                        },
+                        {
+                            "entity": "weather.dom",
+                            "type": "weather-forecast"
                         }
                     ],
                     "icon": "mdi:home",
@@ -70,6 +73,15 @@
                         {
                             "entity": "media_player.miniwieza",
                             "type": "media-control"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "scene.wieczorne_ogladanie_filmu"
+                                }
+                            ],
+                            "title": "Sceny",
+                            "type": "entities"
                         },
                         {
                             "entities": [
@@ -100,15 +112,6 @@
                             ],
                             "show_header_toggle": false,
                             "title": "Salon",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "scene.wieczorne_ogladanie_filmu"
-                                }
-                            ],
-                            "title": "Sceny",
                             "type": "entities"
                         },
                         {
@@ -155,6 +158,21 @@
                         {
                             "entities": [
                                 {
+                                    "entity": "light.light_gabinet_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_gabinet_sufit2"
+                                },
+                                {
+                                    "entity": "sensor.temp_gabinet"
+                                }
+                            ],
+                            "title": "Gabinet",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
                                     "entity": "light.light_wiatrolap_sufit1"
                                 },
                                 {
@@ -171,25 +189,16 @@
                                 },
                                 {
                                     "entity": "light.light_halldol_led"
+                                },
+                                {
+                                    "entity": "switch.hasmonitor"
+                                },
+                                {
+                                    "entity": "sensor.temp_wiatrolap"
                                 }
                             ],
                             "show_header_toggle": false,
                             "title": "Korytarze dolne",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "light.light_gabinet_sufit1"
-                                },
-                                {
-                                    "entity": "light.light_gabinet_sufit2"
-                                },
-                                {
-                                    "entity": "sensor.temp_gabinet"
-                                }
-                            ],
-                            "title": "Gabinet",
                             "type": "entities"
                         }
                     ],
@@ -198,28 +207,190 @@
                 },
                 {
                     "badges": [],
-                    "cards": [],
+                    "cards": [
+                        {
+                            "type": "entity",
+                            "entity": "switch.hallgniazdo1"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "light.light_schody_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_korytarzgora_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_korytarzgora_sufit2"
+                                },
+                                {
+                                    "entity": "light.light_hallgora_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_pralnia_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_schody_led"
+                                },
+                                {
+                                    "entity": "light.light_korytarzgora_led1"
+                                },
+                                {
+                                    "entity": "sensor.temp_pralnia"
+                                },
+                                {
+                                    "entity": "sensor.temp_hallip"
+                                },
+                                {
+                                    "entity": "sensor.temp_korytarzip"
+                                }
+                            ],
+                            "title": "Korytarz g\u00f3rny"
+                        }
+                    ],
                     "path": "pietro",
                     "title": "Pi\u0119tro"
                 },
                 {
-                    "badges": [
+                    "title": "INNE",
+                    "path": "inne",
+                    "badges": [],
+                    "cards": [
                         {
-                            "entity": "binary_sensor.cwu_pompa"
+                            "type": "entity",
+                            "entity": "switch.co_woda"
                         },
                         {
-                            "entity": "binary_sensor.co_piecgrzeje"
+                            "type": "entity",
+                            "entity": "sensor.alarm_onoff_tmpl"
                         },
                         {
-                            "entity": "switch.pompa_co"
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "light.light_kotlownia_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_garaz_kin1"
+                                },
+                                {
+                                    "entity": "light.light_garaz_kin2"
+                                },
+                                {
+                                    "entity": "light.light_garaz_kin3"
+                                },
+                                {
+                                    "entity": "sensor.temp_garaz"
+                                }
+                            ],
+                            "title": "Gara\u017c"
                         },
                         {
-                            "entity": "switch.pompa_cp"
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "light.light_drzwifrontowe"
+                                },
+                                {
+                                    "entity": "light.light_podjazd"
+                                },
+                                {
+                                    "entity": "light.light_elewacja"
+                                },
+                                {
+                                    "entity": "light.light_balkon"
+                                },
+                                {
+                                    "entity": "light.light_tarasgora"
+                                },
+                                {
+                                    "entity": "light.light_roof_front1"
+                                },
+                                {
+                                    "entity": "light.light_roof_front2"
+                                },
+                                {
+                                    "entity": "light.light_roof_back1"
+                                },
+                                {
+                                    "entity": "light.light_roof_back2"
+                                }
+                            ],
+                            "title": "O\u015bw. domu"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "light.light_ogrod_front"
+                                }
+                            ],
+                            "title": "O\u015bw. ogrodu"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "sensor.ogrod_status_podlewania_tmpl"
+                                },
+                                {
+                                    "entity": "script.ogrod_planpodlewania_toggle"
+                                },
+                                {
+                                    "entity": "script.ogrod_podlewanie_toggle"
+                                },
+                                {
+                                    "entity": "sensor.ogrod_status_wody_tmpl"
+                                },
+                                {
+                                    "entity": "script.ogrod_woda_toggle"
+                                },
+                                {
+                                    "entity": "sensor.ogrod_deszcz_tmpl"
+                                },
+                                {
+                                    "entity": "switch.ogrodp1o1"
+                                },
+                                {
+                                    "entity": "switch.ogrodp1o2"
+                                },
+                                {
+                                    "entity": "switch.ogrodp2o1"
+                                },
+                                {
+                                    "entity": "switch.ogrodp2o2"
+                                }
+                            ],
+                            "title": "Podlewanie"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "automation.poranne_gaszenie_swiatel"
+                                },
+                                {
+                                    "entity": "automation.wieczorne_zapalanie_swiatel"
+                                },
+                                {
+                                    "entity": "automation.gaszenie_rzeczy_po_alarmie"
+                                }
+                            ],
+                            "title": "Automatyka",
+                            "type": "entities"
                         }
-                    ],
+                    ]
+                },
+                {
+                    "path": "ogrzewanie",
+                    "title": "Ogrzewanie",
+                    "badges": [],
                     "cards": [
                         {
                             "entities": [
+                                {
+                                    "entity": "binary_sensor.co_piecgrzeje"
+                                },
                                 {
                                     "entity": "sensor.heater_oncount"
                                 },
@@ -228,6 +399,15 @@
                                 },
                                 {
                                     "entity": "sensor.temp_cwu"
+                                },
+                                {
+                                    "entity": "binary_sensor.cwu_pompa"
+                                },
+                                {
+                                    "entity": "switch.pompa_co"
+                                },
+                                {
+                                    "entity": "switch.pompa_cp"
                                 },
                                 {
                                     "entity": "sensor.temp_co_sprzeglo"
@@ -271,25 +451,8 @@
                             ],
                             "title": "Kominek",
                             "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "automation.poranne_gaszenie_swiatel"
-                                },
-                                {
-                                    "entity": "automation.wieczorne_zapalanie_swiatel"
-                                },
-                                {
-                                    "entity": "automation.gaszenie_rzeczy_po_alarmie"
-                                }
-                            ],
-                            "title": "Automatyka",
-                            "type": "entities"
                         }
-                    ],
-                    "path": "ogrzewanie",
-                    "title": "Ogrzewanie"
+                    ]
                 },
                 {
                     "badges": [
@@ -603,7 +766,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace",
-    "version": 1
+    }
 }

@@ -74,15 +74,15 @@ cloud:
 # Single Files
 media_player: !include include/mediaplayer.yaml
 
+switch: !include include/switch.yaml
 binary_sensor: !include include/binary_sensor.yaml
+sensor: !include_dir_merge_list include/sensors
 light: !include include/light.yaml
 scene: !include include/scene.yaml
 notify: !include include/notify.yaml
-switch: !include include/switch.yaml
 climate: !include include/climate.yaml
 automation: !include automations.yaml
 # Merge List
-sensor: !include_dir_merge_list include/sensors
 
 # Merge Named
 group: !include_dir_merge_named include/group

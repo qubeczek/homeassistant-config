@@ -32,29 +32,37 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 
 
 
-async def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
+def setup_platform(hass, config, add_devices, discovery_info=None):
     """Setup Modbus binary sensors."""
     sensors = []
-    hub = hass.data[MODBUS_DOMAIN][DEFAULT_HUB]
     for coil in config.get(CONF_COILS):
         sensors.append(ModbusHASBinarySensor(
-            hub,        
+            hass,        
             coil.get(CONF_NAME),
             coil.get(CONF_SLAVE),
             coil.get(CONF_COIL)))
-    async_add_devices(sensors)
+    add_devices(sensors)
 
 
 class ModbusHASBinarySensor(BinarySensorDevice):
     """Modbus coil sensor."""
 
-    def __init__(self, hub, name, slave, coil):
+    def __init__(self, hass, name, slave, coil):
         """Initialize the modbus coil sensor."""
-        self._hub = hub;
+        self._hass = hass
+        self._hub = None
         self._name = name
         self._slave = int(slave) if slave else None
         self._coil = int(coil)
         self._value = None
+        
+    def checkhub(self):
+        if(self._hub is None):
+            try:
+                if(MODBUS_DOMAIN in self._hass.data):
+                    self._hub = self._hass.data[MODBUS_DOMAIN][DEFAULT_HUB] 
+            except AttributeError as error:
+                self._hub = None
     @property
     def name(self):
         """Return the name of the sensor."""
@@ -65,10 +73,13 @@ class ModbusHASBinarySensor(BinarySensorDevice):
         """Return the state of the sensor."""
         return self._value
 
-    async def async_update(self):
+    def update(self):
         """Update the state of the sensor."""
         try:
-            result = await self._hub.read_coils(self._slave, self._coil, 1)
+            self.checkhub()
+            if(self._hub is None):
+                return
+            result = self._hub.read_coils(self._slave, self._coil, 1)
             if not result:
                 _LOGGER.error(
                     'No response from modbus slave %s register %s',

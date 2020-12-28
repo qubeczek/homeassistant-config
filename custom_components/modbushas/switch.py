@@ -73,17 +73,16 @@ PLATFORM_SCHEMA = vol.All(
     }))
 
 
-async def async_setup_platform(hass, config, async_add_entities, discovery_info=None):
+def setup_platform(hass, config, add_entities, discovery_info=None):
     """Read configuration and create Modbus devices."""
     switches = []
     scan_interval =  config.get("scan_interval")
-    hub = hass.data[MODBUS_DOMAIN][DEFAULT_HUB]
+  
     """_LOGGER.info("Switch scan interval %s %s",scan_interval, type(scan_interval))"""
-    coilBuffer = ModbusSwitchCoilBuffer(hub,"test", 1, scan_interval)
+    coilBuffer = ModbusSwitchCoilBuffer(hass,"test", 1, scan_interval)
     if CONF_COILS in config:
         for coil in config.get(CONF_COILS):
             switches.append(ModbusHASCoilSwitch(
-                hub,
                 coil.get(CONF_NAME),
                 coil.get(CONF_SLAVE),
                 coil.get(CALL_TYPE_COIL),
@@ -91,7 +90,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
     if CONF_REGISTERS in config:
         for register in config.get(CONF_REGISTERS):
             switches.append(ModbusHASRegisterSwitch(
-                hub,
+                hass,
                 register.get(CONF_NAME),
                 register.get(CONF_SLAVE),
                 register.get(CONF_REGISTER),
@@ -102,12 +101,13 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
                 register.get(CONF_REGISTER_TYPE),
                 register.get(CONF_STATE_ON),
                 register.get(CONF_STATE_OFF)))
-    async_add_entities(switches)
+    add_entities(switches)
 
 
 class ModbusSwitchCoilBuffer():
-    def __init__(self, hub, name, slave, scan_interval):
-        self._hub = hub
+    def __init__(self, hass, name, slave, scan_interval):
+        self._hass = hass
+        self._hub = None
         self._name = name
         self._slave = slave
         self._scan_interval = scan_interval
@@ -116,7 +116,14 @@ class ModbusSwitchCoilBuffer():
         self._doread = True
         self._result = None
         self._lastread = datetime.datetime.now()
-        
+ 
+    def checkhub(self):
+        if(self._hub is None):
+            try:
+                if(MODBUS_DOMAIN in self._hass.data):
+                    self._hub = self._hass.data[MODBUS_DOMAIN][DEFAULT_HUB] 
+            except AttributeError as error:
+                self._hub = None
         
     def set_coil(self, coil):
         if(coil < self._mincoil):
@@ -130,18 +137,24 @@ class ModbusSwitchCoilBuffer():
         self._doread = True
         # _LOGGER.info("Loght do refresh")
 
-    async def write_coil(self, coil, value):
-        self._doread = True 
-        await self._hub.write_coil(self._slave, coil, value) 
+    def write_coil(self, coil, value):
+        self.checkhub()
+        if(self._hub is not None):
+            self._doread = True 
+            self._hub.write_coil(self._slave, coil, value) 
         #if(self._result):
         #    self._result.bits[bitnum] = (byte)value
         
-    async def read_coil(self, coil):
+    def read_coil(self, coil):
         if(datetime.datetime.now()-self._scan_interval >= self._lastread):
             self._doread = True
         if(self._doread == True and self._maxcoil >= self._mincoil):
-            coilnum  = self._maxcoil - self._mincoil + 1           
-            self._result = await self._hub.read_coils(self._slave, self._mincoil, coilnum)
+            coilnum  = self._maxcoil - self._mincoil + 1      
+            self._result = None     
+            self.checkhub()
+            if(self._hub is None):
+                return;
+            self._result = self._hub.read_coils(self._slave, self._mincoil, coilnum)
             if not self._result:
                 _LOGGER.error("ModbusSwitchCoilBuffer read error form coil %s for %s coils", self._mincoil, coilnum)
                 return
@@ -158,9 +171,8 @@ class ModbusSwitchCoilBuffer():
 class ModbusHASCoilSwitch(ToggleEntity, RestoreEntity):
     """Representation of a Modbus coil switch."""
 
-    def __init__(self, hub, name, slave, coil, buffer):
+    def __init__(self, name, slave, coil, buffer):
         """Initialize the coil switch."""
-        self._hub = hub
         self._name = name
         self._slave = int(slave) if slave else None
         self._coil = int(coil)
@@ -168,12 +180,12 @@ class ModbusHASCoilSwitch(ToggleEntity, RestoreEntity):
         self._buffer = buffer
         buffer.set_coil(coil)
         
-    async def async_added_to_hass(self):
-        """Handle entity which will be added."""
-        state = await self.async_get_last_state()
-        if not state:
-            return
-        self._is_on = state.state == STATE_ON
+#    async def async_added_to_hass(self):
+#        """Handle entity which will be added."""
+#        state = await self.async_get_last_state()
+#        if not state:
+#            return
+#        self._is_on = state.state == STATE_ON
         
     @property
     def is_on(self):
@@ -185,21 +197,21 @@ class ModbusHASCoilSwitch(ToggleEntity, RestoreEntity):
         """Return the name of the switch."""
         return self._name
 
-    async def turn_on(self, **kwargs):
+    def turn_on(self, **kwargs):
         """Set switch on."""
         self._is_on = True
-        await self._buffer.write_coil(self._coil, self._is_on)
+        self._buffer.write_coil(self._coil, self._is_on)
 
-    async def turn_off(self, **kwargs):
+    def turn_off(self, **kwargs):
         """Set switch off."""
         self._is_on = False
-        await self._buffer.write_coil(self._coil, self._is_on)
+        self._buffer.write_coil(self._coil, self._is_on)
 
-    async def async_update(self):
+    def update(self):
         """Update the state of the switch."""
         #result = modbus.HUB.read_coils(self._slave, self._coil, 1)
         try:
-            result = await self._buffer.read_coil(self._coil)    
+            result = self._buffer.read_coil(self._coil)    
             if(not result is None):
                 self._is_on = result              
         except AttributeError as error:
@@ -214,11 +226,12 @@ class ModbusHASRegisterSwitch(ModbusHASCoilSwitch):
     """Representation of a Modbus register switch."""
 
     # pylint: disable=super-init-not-called
-    def __init__(self, hub, name, slave, register, command_on,
+    def __init__(self, hass, name, slave, register, command_on,
                  command_off, verify_state, verify_register,
                  register_type, state_on, state_off):
         """Initialize the register switch."""
-        self._hub = hub
+        self._hass = hass
+        self._hub = None
         self._name = name
         self._slave = slave
         self._register = register
@@ -228,50 +241,64 @@ class ModbusHASRegisterSwitch(ModbusHASCoilSwitch):
         self._verify_register = (
             verify_register if verify_register else self._register)
         self._register_type = register_type
-
         if state_on is not None:
             self._state_on = state_on
         else:
             self._state_on = self._command_on
-
         if state_off is not None:
             self._state_off = state_off
         else:
             self._state_off = self._command_off
-
         self._is_on = None
-
-    async def turn_on(self, **kwargs):
+        
+        
+    def checkhub(self):
+        if(self._hub is None):
+            try:
+                if(MODBUS_DOMAIN in self._hass.data):
+                    self._hub = self._hass.data[MODBUS_DOMAIN][DEFAULT_HUB] 
+            except AttributeError as error:
+                self._hub = None
+                
+    def turn_on(self, **kwargs):
         """Set switch on."""
-        await self._hub.write_register(
-            self._slave,
-            self._register,
-            self._command_on)
+        self.checkhub()
+        if(self._hub is not None):
+            self._hub.write_register(
+                self._slave,
+                self._register,
+                self._command_on)
         #if self._verify_state:
-        self._is_on = True
+            self._is_on = True
 
-    async def turn_off(self, **kwargs):
+    def turn_off(self, **kwargs):
         """Set switch off."""
-        await self._hub.write_register(
-            self._slave,
-            self._register,
-            self._command_off)
+        self.checkhub()
+        if(self._hub is not None):
+            self._hub.write_register(
+                self._slave,
+                self._register,
+                self._command_off)
         #if not self._verify_state:
-        self._is_on = False
+            self._is_on = False
 
-    async def async_update(self):
+    def update(self):
         """Update the state of the switch."""
         if not self._verify_state:
             return
 
         value = 0
+        self.checkhub()
+        if(slef._hub is None):
+            return;
+            
         if self._register_type == CALL_TYPE_REGISTER_INPUT:
-            result = await self._hub.read_input_registers(
+            result = self._hub.read_input_registers(
                 self._slave,
                 self._register,
                 1)
         else:
-            result = await self._hub.read_holding_registers(
+            result = self._hub.read_holding_registers(
                 self._slave,
                 self._register,
                 1)

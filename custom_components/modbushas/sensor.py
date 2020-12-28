@@ -44,7 +44,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 })
 
 
-async def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
+def setup_platform(hass, config, add_devices, discovery_info=None):
     """Setup Modbus sensors."""
     sensors = []
     scan_interval =  config.get("scan_interval")
@@ -64,7 +64,7 @@ async def async_setup_platform(hass, config, async_add_devices, discovery_info=N
 		    register.get(CONF_SIGNED),
             buffer
 						))
-    async_add_devices(sensors)
+    add_devices(sensors)
 
 
     
@@ -95,12 +95,12 @@ class ModbusRegisterBuffer():
         self._doread = True
         """_LOGGER.info("Loght do refresh")"""
 
-    async def read_register(self, register, count):
+    def read_register(self, register, count):
         if(datetime.datetime.now()-self._scan_interval >= self._lastread):
             self._doread = True
         if(self._doread == True and self._maxreg >= self._minreg):
             cnt  = self._maxreg - self._minreg + 1           
-            self._result = await self._hub.read_holding_registers(
+            self._result = self._hub.read_holding_registers(
               self._slave,
               self._minreg,
               cnt)
@@ -137,12 +137,12 @@ class ModbusHASRegisterSensor(RestoreEntity):
         self._value = None
         buffer.set_register(register, count)
         
-    async def async_added_to_hass(self):
-        """Handle entity which will be added."""
-        state = await self.async_get_last_state()
-        if not state:
-            return
-        self._value = state.state
+#    async def async_added_to_hass(self):
+#        """Handle entity which will be added."""
+#        state = await self.async_get_last_state()
+#        if not state:
+#            return
+#        self._value = state.state
         
     @property
     def state(self):
@@ -159,7 +159,7 @@ class ModbusHASRegisterSensor(RestoreEntity):
         """Return the unit of measurement."""
         return self._unit_of_measurement
 
-    async def async_update(self):
+    def update(self):
         """Update the state of the sensor."""
         """resultA = modbus.HUB.read_holding_registers(
             self._slave,
@@ -168,7 +168,7 @@ class ModbusHASRegisterSensor(RestoreEntity):
         if resultA:
             result = resultA.registers"""
         try:
-            result = await self._buffer.read_register(self._register, self._count)    
+            result = self._buffer.read_register(self._register, self._count)    
             if not result:
                 _LOGGER.error(
                     'No response from modbus slave %s register %s',
