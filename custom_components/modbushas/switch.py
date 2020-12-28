@@ -289,7 +289,7 @@ class ModbusHASRegisterSwitch(ModbusHASCoilSwitch):
 
         value = 0
         self.checkhub()
-        if(slef._hub is None):
+        if(self._hub is None):
             return;
             
         if self._register_type == CALL_TYPE_REGISTER_INPUT:

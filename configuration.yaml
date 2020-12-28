@@ -80,12 +80,12 @@ sensor: !include_dir_merge_list include/sensors
 light: !include include/light.yaml
 scene: !include include/scene.yaml
 notify: !include include/notify.yaml
-climate: !include include/climate.yaml
+#climate: !include include/climate.yaml
 automation: !include automations.yaml
 # Merge List
 
 # Merge Named
-group: !include_dir_merge_named include/group
+#group: !include_dir_merge_named include/group
 script: !include_dir_merge_named include/scripts 
 automation old: !include_dir_merge_list include/automation 
 

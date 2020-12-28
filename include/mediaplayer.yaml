@@ -1,18 +1,18 @@
-  - platform: webostv
-    host: 192.168.100.10
-    name: Salon LG TV  
-    timeout: 5
-#    filename: webostv.conf
-    turn_on_action:
-      service: persistent_notification.create
-      data:
-        message: "Turn on action"
-    customize:
-      sources:
-        - livetv
-        - youtube
-        - makotv
-        - netflix
+#  - platform: webostv
+#    host: 192.168.100.10
+#    name: Salon LG TV  
+#    timeout: 5
+##    filename: webostv.conf
+#    turn_on_action:
+#      service: persistent_notification.create
+#      data:
+#        message: "Turn on action"
+#    customize:
+#      sources:
+#        - livetv
+#        - youtube
+#        - makotv
+#        - netflix
   - platform: onkyo2
     host: 192.168.100.11
     name: MiniWieza

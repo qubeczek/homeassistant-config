@@ -447,10 +447,18 @@
                                 },
                                 {
                                     "entity": "sensor.temp_kominek_back"
+                                },
+                                {
+                                    "entity": "sensor.kominek_co_temp_wlaczenia"
                                 }
                             ],
                             "title": "Kominek",
                             "type": "entities"
+                        },
+                        {
+                            "type": "entity",
+                            "entity": "switch.tempcalendar_on_off",
+                            "name": "Aut. ustaw. temp. pok."
                         }
                     ]
                 },

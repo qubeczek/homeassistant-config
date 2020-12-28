@@ -1,5 +1,24 @@
   - platform: modbushas
     scan_interval: 5
+    registers:
+      - name: tempcalendar_on_off
+        register: 544
+        command_on: 2
+        command_off: 0
+        verify_state: true
+        state_on: 1
+        state_off: 0
+      - name: vacationmode
+        register: 545
+        command_on: 1
+        command_off: 0
+        verify_state: true
+        state_on: 1
+        state_off: 0
+            
+
+  - platform: modbushas
+    scan_interval: 5
     coils:
       - name: hasmonitor
         coil: 150
