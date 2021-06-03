@@ -1,0 +1,15 @@
+play_gate_1_click:
+  alias: Brama 1 - przycisk
+  sequence:
+    - service: modbus.write_register
+      data:
+        unit: 1
+        address: 546
+        value: 5
+#    - service: notify.has
+#      data:
+#        message: 'test'
+#        data:
+#          address: 1000
+#          value: 2
+

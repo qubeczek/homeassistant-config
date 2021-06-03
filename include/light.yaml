@@ -141,9 +141,14 @@
         coil: 154
       - name: light_ogrod_front
         coil: 151
+
         
   - platform: modbushas
     scan_interval: 5
     coils:
       - name: light_halldol_obraz
         coil: 227
+      - name: light_rekraacja_kinkiet1
+        coil: 228
+      - name: light_pokoj2_sufit2
+        coil: 230

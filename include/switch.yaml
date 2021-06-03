@@ -15,6 +15,20 @@
         verify_state: true
         state_on: 1
         state_off: 0
+      - name: kco_switch
+        register: 548
+        command_on: 3
+        command_off: 2
+        verify_state: true
+        state_on: 1
+        state_off: 0
+      - name: kcwu_switch
+        register: 549
+        command_on: 3
+        command_off: 2
+        verify_state: true
+        state_on: 1
+        state_off: 0
             
 
   - platform: modbushas
@@ -28,6 +42,12 @@
         slave: 1
       - name: co_woda
         coil: 161
+        slave: 1
+      - name: co_termometr
+        coil: 158
+        slave: 1
+      - name: cwu_termometr
+        coil: 159
         slave: 1
 
   - platform: modbushas

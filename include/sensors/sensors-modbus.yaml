@@ -1,4 +1,13 @@
-﻿  - platform: modbus
+  - platform: modbus
+    scan_interval: 10  
+    registers:
+      - name: heater_workingtime_a
+        unit_of_measurement: min
+        slave: 1
+        register: 501
+        scale:  0.0166666666
+        
+  - platform: modbushas
     scan_interval: 30  
     registers:
       - name: heater_workingtime
@@ -6,10 +15,23 @@
         slave: 1
         register: 501
         scale:  0.0166666666
+        signed: 1
       - name: heater_oncount
         register: 509
       - name: kominek_co_temp_wlaczenia
+        unit_of_measurement: °C
+        scale: 0.01
         register: 535
+
+  - platform: modbushas
+    scan_interval: 60  
+    registers:
+      - name: temp_set_salon_kd
+        unit_of_measurement: °C
+        slave: 1
+        register: 7923
+        scale: 0.01
+        signed: 1
 
 #temperatury        
   - platform: modbushas
@@ -85,6 +107,30 @@
         unit_of_measurement: °C
         slave: 1
         register: 428
+        scale: 0.01
+        signed: 1
+      - name: temp_cwu_piec
+        unit_of_measurement: °C
+        slave: 1
+        register: 426
+        scale: 0.01
+        signed: 1
+      - name: temp_cwu_piec_back
+        unit_of_measurement: °C
+        slave: 1
+        register: 427
+        scale: 0.01
+        signed: 1
+      - name: temp_kcwu
+        unit_of_measurement: °C
+        slave: 1
+        register: 436
+        scale: 0.01
+        signed: 1
+      - name: temp_kcwu_back
+        unit_of_measurement: °C
+        slave: 1
+        register: 438
         scale: 0.01
         signed: 1
       - name: temp_garaz
