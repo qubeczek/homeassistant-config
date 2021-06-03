@@ -152,3 +152,5 @@
         coil: 228
       - name: light_pokoj2_sufit2
         coil: 230
+      - name: light_elewacja_taras
+        coil: 231

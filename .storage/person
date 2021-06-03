@@ -1,14 +1,14 @@
 {
+    "version": 2,
+    "key": "person",
     "data": {
-        "persons": [
+        "items": [
             {
+                "name": "Jakub",
+                "user_id": "f63465d40ddd4d6b85f7665efb179970",
                 "device_trackers": [],
-                "id": "3144e1327b4b400ca65331e294742bd5",
-                "name": "kuba",
-                "user_id": "69f15b6483cf43ab9c53ac6856d54984"
+                "id": "jakub"
             }
         ]
-    },
-    "key": "person",
-    "version": 1
+    }
 }

@@ -136,6 +136,8 @@ light.light_drzwifrontowe:
   friendly_name: Drzwi frontowe
 light.light_ogrod_front:
   friendly_name: Ogród frontowe
+light.light_elewacja_taras:
+  friendly_name: Taras wieczorne
 scene.gaszenie_swiatel:
   friendly_name: Pora spać - gaszenie świateł
 scene.wieczorne_ogladanie_filmu:

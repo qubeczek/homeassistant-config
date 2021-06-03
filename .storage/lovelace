@@ -6,18 +6,12 @@
             "title": "Dom",
             "views": [
                 {
+                    "icon": "mdi:home",
+                    "path": "home",
+                    "title": "Home",
                     "badges": [
                         {
-                            "entity": "binary_sensor.co_piecgrzeje"
-                        },
-                        {
                             "entity": "sensor.alarm_onoff_tmpl"
-                        },
-                        {
-                            "entity": "binary_sensor.updater"
-                        },
-                        {
-                            "entity": "person.kuba"
                         },
                         {
                             "entity": "switch.co_woda"
@@ -33,7 +27,13 @@
                                     "entity": "sensor.temp_outside"
                                 },
                                 {
-                                    "entity": "sensor.pogoda_pressure"
+                                    "entity": "binary_sensor.co_piecgrzeje"
+                                },
+                                {
+                                    "entity": "sensor.temp_garaz"
+                                },
+                                {
+                                    "entity": "sensor.temp_cwu"
                                 }
                             ],
                             "type": "glance",
@@ -61,11 +61,22 @@
                         {
                             "entity": "weather.dom",
                             "type": "weather-forecast"
+                        },
+                        {
+                            "type": "entity",
+                            "entity": "sensor.temp_set_salon_kd"
+                        },
+                        {
+                            "type": "button",
+                            "entity": "script.play_gate_1_click",
+                            "name": "Brama 1",
+                            "show_icon": true,
+                            "icon_height": "66px",
+                            "tap_action": {
+                                "action": "toggle"
+                            }
                         }
-                    ],
-                    "icon": "mdi:home",
-                    "path": "home",
-                    "title": "Home"
+                    ]
                 },
                 {
                     "badges": [],
@@ -200,6 +211,36 @@
                             "show_header_toggle": false,
                             "title": "Korytarze dolne",
                             "type": "entities"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "light.light_lazienkadol_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_lazienkadol_led1"
+                                },
+                                {
+                                    "entity": "light.light_lazienkadol_led2"
+                                },
+                                {
+                                    "entity": "sensor.temp_lazienkadol"
+                                }
+                            ],
+                            "title": "\u0141azienka dolna"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "light.light_rekraacja_kinkiet1"
+                                },
+                                {
+                                    "entity": "light.light_rekraacja_sufit1"
+                                }
+                            ],
+                            "title": "Si\u0142ownia"
                         }
                     ],
                     "path": "parter",
@@ -247,6 +288,117 @@
                                 }
                             ],
                             "title": "Korytarz g\u00f3rny"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "script.sypialnia_night"
+                                },
+                                {
+                                    "entity": "light.light_sypialnia_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_sypialnia_kinkiet1"
+                                },
+                                {
+                                    "entity": "light.light_sypialnia_kinkiet2"
+                                },
+                                {
+                                    "entity": "light.light_sypialnia_led1"
+                                },
+                                {
+                                    "entity": "sensor.temp_sypialnia"
+                                }
+                            ],
+                            "title": "Sypialnia"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "light.light_lazienkas_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_lazienkas_sufit2"
+                                },
+                                {
+                                    "entity": "light.light_lazienkas_led"
+                                },
+                                {
+                                    "entity": "light.light_lazienkas_kinkiet1"
+                                },
+                                {
+                                    "entity": "light.light_lazienkas_kinkiet2"
+                                },
+                                {
+                                    "entity": "sensor.temp_lazienkasyp"
+                                }
+                            ],
+                            "title": "\u0141azienka sypilania"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "light.light_lazienkagora_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_lazienkagora_sufit2"
+                                },
+                                {
+                                    "entity": "light.light_lazienkagora_kinkiet1"
+                                },
+                                {
+                                    "entity": "light.light_lazienkagora_led1"
+                                },
+                                {
+                                    "entity": "sensor.temp_lazienkagora"
+                                }
+                            ],
+                            "title": "\u0141azienka g\u00f3ra"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "light.light_pokoj1_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_pokoj1_sufit2"
+                                },
+                                {
+                                    "entity": "sensor.temp_pokoj1"
+                                }
+                            ],
+                            "title": "Pok\u00f3j J\u0119drek"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "light.light_pokoj2_sufit1"
+                                },
+                                {
+                                    "entity": "light.light_pokoj2_sufit2"
+                                },
+                                {
+                                    "entity": "sensor.temp_pokoj2"
+                                }
+                            ],
+                            "title": "Pok\u00f3j Micha\u0142"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "light.light_pokoj3_sufit1"
+                                },
+                                {
+                                    "entity": "sensor.temp_pokoj3"
+                                }
+                            ],
+                            "title": "Pok\u00f3j Miko\u0142aja"
                         }
                     ],
                     "path": "pietro",
@@ -257,14 +409,6 @@
                     "path": "inne",
                     "badges": [],
                     "cards": [
-                        {
-                            "type": "entity",
-                            "entity": "switch.co_woda"
-                        },
-                        {
-                            "type": "entity",
-                            "entity": "sensor.alarm_onoff_tmpl"
-                        },
                         {
                             "type": "entities",
                             "entities": [
@@ -281,6 +425,9 @@
                                     "entity": "light.light_garaz_kin3"
                                 },
                                 {
+                                    "entity": "light.light_strych"
+                                },
+                                {
                                     "entity": "sensor.temp_garaz"
                                 }
                             ],
@@ -289,6 +436,9 @@
                         {
                             "type": "entities",
                             "entities": [
+                                {
+                                    "entity": "light.light_elewacja_taras"
+                                },
                                 {
                                     "entity": "light.light_drzwifrontowe"
                                 },
@@ -360,9 +510,34 @@
                                 },
                                 {
                                     "entity": "switch.ogrodp2o2"
+                                },
+                                {
+                                    "entity": "switch.ogrodp301"
+                                },
+                                {
+                                    "entity": "switch.ogrodp3o2"
+                                },
+                                {
+                                    "entity": "switch.ogrodp3o3"
+                                },
+                                {
+                                    "entity": "switch.ogrodp4o1"
+                                },
+                                {
+                                    "entity": "switch.ogrodp4o2"
+                                },
+                                {
+                                    "entity": "switch.ogrodp4o3"
+                                },
+                                {
+                                    "entity": "switch.ogrodwarzywa"
+                                },
+                                {
+                                    "entity": "switch.ogrodtaras"
                                 }
                             ],
-                            "title": "Podlewanie"
+                            "title": "Podlewanie",
+                            "state_color": true
                         },
                         {
                             "entities": [
@@ -378,6 +553,19 @@
                             ],
                             "title": "Automatyka",
                             "type": "entities"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "switch.tempcalendar_on_off"
+                                },
+                                {
+                                    "entity": "switch.vacationmode"
+                                }
+                            ],
+                            "title": "Tryb pracy",
+                            "state_color": true
                         }
                     ]
                 },
@@ -429,18 +617,25 @@
                                 },
                                 {
                                     "entity": "sensor.temp_cp_back"
+                                },
+                                {
+                                    "entity": "sensor.temp_cwu_piec"
+                                },
+                                {
+                                    "entity": "sensor.temp_cwu_piec_back"
                                 }
                             ],
                             "title": "Piec gazowy",
-                            "type": "entities"
+                            "type": "entities",
+                            "state_color": true
                         },
                         {
                             "entities": [
                                 {
-                                    "entity": "switch.pompa_kcwu"
+                                    "entity": "switch.kcwu_switch"
                                 },
                                 {
-                                    "entity": "switch.pompa_kco"
+                                    "entity": "switch.kco_switch"
                                 },
                                 {
                                     "entity": "sensor.temp_kominek"
@@ -449,16 +644,27 @@
                                     "entity": "sensor.temp_kominek_back"
                                 },
                                 {
-                                    "entity": "sensor.kominek_co_temp_wlaczenia"
+                                    "entity": "sensor.temp_kcwu"
+                                },
+                                {
+                                    "entity": "sensor.temp_kcwu_back"
                                 }
                             ],
                             "title": "Kominek",
-                            "type": "entities"
+                            "type": "entities",
+                            "state_color": true
                         },
                         {
-                            "type": "entity",
-                            "entity": "switch.tempcalendar_on_off",
-                            "name": "Aut. ustaw. temp. pok."
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "switch.cwu_termometr"
+                                },
+                                {
+                                    "entity": "switch.co_termometr"
+                                }
+                            ],
+                            "title": "Termometry pieca"
                         }
                     ]
                 },

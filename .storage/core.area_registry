@@ -1,28 +1,20 @@
 {
+    "version": 1,
+    "key": "core.area_registry",
     "data": {
         "areas": [
             {
-                "id": "92864cf53ae04879a6e59b746d456a86",
-                "name": "Salon"
+                "name": "Salon",
+                "id": "salon"
             },
             {
-                "id": "1af9de0249c746199f261b78f1093902",
-                "name": "Kuchnia"
+                "name": "Kuchnia",
+                "id": "kuchnia"
             },
             {
-                "id": "2669692a2c534fd4b1c8451557a95fd4",
-                "name": "Sypialnia"
-            },
-            {
-                "id": "bd2d14ac4bbe49c28fb8667cfcbd81a5",
-                "name": "Jadalnia"
-            },
-            {
-                "id": "ba18711915a94d0da15ed20b989624bb",
-                "name": "Pok\u00f3j J\u0119drek"
+                "name": "Sypialnia",
+                "id": "sypialnia"
             }
         ]
-    },
-    "key": "core.area_registry",
-    "version": 1
+    }
 }
