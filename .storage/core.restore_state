@@ -1,0 +1,1267 @@
+{
+    "version": 1,
+    "key": "core.restore_state",
+    "data": [
+        {
+            "state": {
+                "entity_id": "person.jakub",
+                "state": "unknown",
+                "attributes": {
+                    "editable": true,
+                    "id": "jakub",
+                    "user_id": "f63465d40ddd4d6b85f7665efb179970",
+                    "friendly_name": "Jakub"
+                },
+                "last_changed": "2022-03-16T18:05:48.481255+00:00",
+                "last_updated": "2022-03-16T18:05:54.929603+00:00",
+                "context": {
+                    "id": "a479c90fe2af23d1a69bb7115ec0280f",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.tempcalendar_on_off",
+                "state": "on",
+                "attributes": {
+                    "friendly_name": "tempcalendar_on_off"
+                },
+                "last_changed": "2022-04-21T03:54:18.776825+00:00",
+                "last_updated": "2022-04-21T03:54:18.776825+00:00",
+                "context": {
+                    "id": "f3c464d0c945f1952a8f2a2b9bf3e8fb",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.vacationmode",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Tryb wakacyjny"
+                },
+                "last_changed": "2022-03-16T18:05:52.885847+00:00",
+                "last_updated": "2022-03-16T18:05:52.885847+00:00",
+                "context": {
+                    "id": "8a2f9ed889b5d9a11ea56e3487c66a7e",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.kco_switch",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Zasianie z kominka CO"
+                },
+                "last_changed": "2022-03-16T18:05:52.886628+00:00",
+                "last_updated": "2022-03-16T18:05:52.886628+00:00",
+                "context": {
+                    "id": "2e9b6503c239cef40f6666666e80c959",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.kcwu_switch",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Zasilanie z kominka CWU"
+                },
+                "last_changed": "2022-03-16T18:05:52.887359+00:00",
+                "last_updated": "2022-03-16T18:05:52.887359+00:00",
+                "context": {
+                    "id": "87d5b2e3eb0dcfe9cfd279e72b3daca8",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.hasmonitor",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Monitor g\u0142\u00f3wny HA",
+                    "icon": "mdi:monitor"
+                },
+                "last_changed": "2022-03-16T18:05:52.888157+00:00",
+                "last_updated": "2022-03-16T18:05:52.888157+00:00",
+                "context": {
+                    "id": "4c3edd0b6840f0c4dc3cf45c7f6a1d2d",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.hallgniazdo1",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Blokada telewizor\u00f3w w hallu",
+                    "icon": "mdi:monitor"
+                },
+                "last_changed": "2022-04-11T14:37:14.532630+00:00",
+                "last_updated": "2022-04-11T14:37:14.532630+00:00",
+                "context": {
+                    "id": "1eadda10ecba480c98b5fe3a7f0f241c",
+                    "parent_id": null,
+                    "user_id": "ee7754f2a11746c4942ffffed1f4681a"
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.co_woda",
+                "state": "on",
+                "attributes": {
+                    "friendly_name": "Woda - zasilanie domu"
+                },
+                "last_changed": "2022-04-24T10:34:06.135950+00:00",
+                "last_updated": "2022-04-24T10:34:06.135950+00:00",
+                "context": {
+                    "id": "4ed8eebf8ca04764b96383f1005642cb",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.co_termometr",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Wy\u0142. temp. krzywej grzania"
+                },
+                "last_changed": "2022-03-16T18:05:52.891193+00:00",
+                "last_updated": "2022-03-16T18:05:52.891193+00:00",
+                "context": {
+                    "id": "e7bf50ef32c2ce76e9a7f638022a995b",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.cwu_termometr",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Wy\u0142. temp. CWU"
+                },
+                "last_changed": "2022-03-16T18:05:52.891957+00:00",
+                "last_updated": "2022-03-16T18:05:52.891957+00:00",
+                "context": {
+                    "id": "f462614165d155ac75cac81d9d87d2bf",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.pompa_kcwu",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Pompa kominka CWU"
+                },
+                "last_changed": "2022-03-16T18:05:52.892660+00:00",
+                "last_updated": "2022-03-16T18:05:52.892660+00:00",
+                "context": {
+                    "id": "959e863acac91f5d9c68571c5d94a49d",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.pompa_kco",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Pompa kominka CO"
+                },
+                "last_changed": "2022-03-16T18:05:52.893345+00:00",
+                "last_updated": "2022-03-16T18:05:52.893345+00:00",
+                "context": {
+                    "id": "ddd22304c3d3b280c42d52a5cfd0d32b",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.pompa_co",
+                "state": "on",
+                "attributes": {
+                    "friendly_name": "Pompa CO - grzejniki"
+                },
+                "last_changed": "2022-04-24T16:48:01.993683+00:00",
+                "last_updated": "2022-04-24T16:48:01.993683+00:00",
+                "context": {
+                    "id": "daacc49db32d6ff895f90f3cf06d805d",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.pompa_cp",
+                "state": "on",
+                "attributes": {
+                    "friendly_name": "Pompa CO - pod\u0142og\u00f3wka"
+                },
+                "last_changed": "2022-04-24T16:48:02.006890+00:00",
+                "last_updated": "2022-04-24T16:48:02.006890+00:00",
+                "context": {
+                    "id": "e927879e21360af930a821e908747faa",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.coonoff",
+                "state": "on",
+                "attributes": {
+                    "friendly_name": "COonoff"
+                },
+                "last_changed": "2022-03-16T18:05:58.706936+00:00",
+                "last_updated": "2022-03-16T18:05:58.706936+00:00",
+                "context": {
+                    "id": "fe2d2d8d8051c6ce164b32254fdf82c2",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.ogrodp1o1",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "P1 O1"
+                },
+                "last_changed": "2022-03-24T02:04:57.924078+00:00",
+                "last_updated": "2022-03-24T02:04:57.924078+00:00",
+                "context": {
+                    "id": "b57909b03a3bd1cdbcdb3e097a1dc83a",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.ogrodp1o2",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "P1 O2"
+                },
+                "last_changed": "2022-03-24T02:11:48.136572+00:00",
+                "last_updated": "2022-03-24T02:11:48.136572+00:00",
+                "context": {
+                    "id": "83804dabf304b257679bddcf6d011b76",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.ogrodp2o1",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "P2 O1"
+                },
+                "last_changed": "2022-03-24T02:14:48.294037+00:00",
+                "last_updated": "2022-03-24T02:14:48.294037+00:00",
+                "context": {
+                    "id": "d498c87ea53449afe559879236392b24",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.ogrodp2o2",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "P2 O2"
+                },
+                "last_changed": "2022-03-24T02:28:08.349718+00:00",
+                "last_updated": "2022-03-24T02:28:08.349718+00:00",
+                "context": {
+                    "id": "1aa2ef688e72f529746a232bbd17ef6a",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.ogrodp301",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "ogrodP301"
+                },
+                "last_changed": "2022-03-24T02:33:38.446601+00:00",
+                "last_updated": "2022-03-24T02:33:38.446601+00:00",
+                "context": {
+                    "id": "209aeec5646ea278813f3fb7989484a6",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.ogrodp3o2",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "P3 O2"
+                },
+                "last_changed": "2022-03-24T02:30:38.559547+00:00",
+                "last_updated": "2022-03-24T02:30:38.559547+00:00",
+                "context": {
+                    "id": "0939e036c000c2bdd32952b8b3aa07d7",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.ogrodp3o3",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "P3 O3"
+                },
+                "last_changed": "2022-03-24T02:32:38.480194+00:00",
+                "last_updated": "2022-03-24T02:32:38.480194+00:00",
+                "context": {
+                    "id": "19911b1235d9ec3455a55a14e12fd5a7",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.ogrodp4o1",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "P4 O1"
+                },
+                "last_changed": "2022-03-24T02:21:48.329259+00:00",
+                "last_updated": "2022-03-24T02:21:48.329259+00:00",
+                "context": {
+                    "id": "a6727459b275ad5c8f8c7b125c711600",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.ogrodp4o2",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "P4 O2"
+                },
+                "last_changed": "2022-03-24T02:37:38.554304+00:00",
+                "last_updated": "2022-03-24T02:37:38.554304+00:00",
+                "context": {
+                    "id": "3ebe0072adef483979b2b8488c43fd55",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.ogrodp4o3",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "P4 O3"
+                },
+                "last_changed": "2022-03-24T02:41:37.887089+00:00",
+                "last_updated": "2022-03-24T02:41:37.887089+00:00",
+                "context": {
+                    "id": "d396cf90a807a24e13867f038bd1f2d4",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.ogrodwarzywa",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Warzywniak"
+                },
+                "last_changed": "2022-03-16T18:05:52.903628+00:00",
+                "last_updated": "2022-03-16T18:05:52.903628+00:00",
+                "context": {
+                    "id": "9221e6e7d92d563210cfe5268e183ce4",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "switch.ogrodtaras",
+                "state": "off",
+                "attributes": {
+                    "friendly_name": "Linia kropelkowa taras"
+                },
+                "last_changed": "2022-03-16T18:05:52.904322+00:00",
+                "last_updated": "2022-03-16T18:05:52.904322+00:00",
+                "context": {
+                    "id": "c2da3c4051bd422b38c0ae164660206a",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.gaszenie_rzeczy_po_alarmie",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2022-04-24T08:49:33.366519+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "id": "1577038355590",
+                    "friendly_name": "Gaszenie rzeczy po alarmie"
+                },
+                "last_changed": "2022-03-16T18:05:53.308094+00:00",
+                "last_updated": "2022-04-24T08:49:33.775423+00:00",
+                "context": {
+                    "id": "065080b455f31ec640cb3a029842c80e",
+                    "parent_id": "9c295fa7b417e10989bd7748d470f7e7",
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.poranne_gaszenie_swiatel",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2022-04-24T03:37:34.019969+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "friendly_name": "Poranne gaszenie \u015bwiate\u0142"
+                },
+                "last_changed": "2022-03-16T18:05:53.310221+00:00",
+                "last_updated": "2022-04-24T03:37:34.038567+00:00",
+                "context": {
+                    "id": "8aae71c5fb0dfedab21a3abb87505e23",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "automation.wieczorne_zapalanie_swiatel",
+                "state": "on",
+                "attributes": {
+                    "last_triggered": "2022-04-23T17:59:57.022261+00:00",
+                    "mode": "single",
+                    "current": 0,
+                    "friendly_name": "Wieczorne zapalanie \u015bwiate\u0142"
+                },
+                "last_changed": "2022-03-16T18:05:53.312063+00:00",
+                "last_updated": "2022-04-23T17:59:57.041392+00:00",
+                "context": {
+                    "id": "7a989d6b084509c36dade22d8cd7b112",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.heater_workingtime_a",
+                "state": "192",
+                "attributes": {
+                    "unit_of_measurement": "min",
+                    "friendly_name": "heater_workingtime_a"
+                },
+                "last_changed": "2022-04-24T17:21:01.123557+00:00",
+                "last_updated": "2022-04-24T17:21:01.123557+00:00",
+                "context": {
+                    "id": "5aa4c9b973654adffd997bc897916afe",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.heater_workingtime",
+                "state": "191",
+                "attributes": {
+                    "unit_of_measurement": "min",
+                    "friendly_name": "Piec - czas grzania",
+                    "icon": "mdi:home-outline"
+                },
+                "last_changed": "2022-04-24T17:20:29.230894+00:00",
+                "last_updated": "2022-04-24T17:20:29.230894+00:00",
+                "context": {
+                    "id": "508daadaadc0c8c09be4f600e4621219",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.heater_oncount",
+                "state": "5",
+                "attributes": {
+                    "friendly_name": "Piec - ilo\u015b\u0107 za\u0142.",
+                    "icon": "mdi:home-outline"
+                },
+                "last_changed": "2022-04-24T16:48:29.108412+00:00",
+                "last_updated": "2022-04-24T16:48:29.108412+00:00",
+                "context": {
+                    "id": "82f8ee91b984dc715d7aac391e661db7",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.kominek_co_temp_wlaczenia",
+                "state": "65",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "kominek_co_temp_wlaczenia"
+                },
+                "last_changed": "2022-04-20T03:04:09.809782+00:00",
+                "last_updated": "2022-04-20T03:04:09.809782+00:00",
+                "context": {
+                    "id": "ac6152dd93905d122e4280e61b956422",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_set_salon_kd",
+                "state": "22",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "temp_set_salon_kd"
+                },
+                "last_changed": "2022-04-24T04:08:25.768223+00:00",
+                "last_updated": "2022-04-24T04:08:25.768223+00:00",
+                "context": {
+                    "id": "b8efcb70de30dee24419bab13b45b1ef",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_outside",
+                "state": "9",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. zewn\u0119trzna"
+                },
+                "last_changed": "2022-04-24T14:37:10.368721+00:00",
+                "last_updated": "2022-04-24T14:37:10.368721+00:00",
+                "context": {
+                    "id": "884e04f330caf465582ed1460bab002d",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_kominek",
+                "state": "20",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. kominka"
+                },
+                "last_changed": "2022-04-24T02:46:27.411955+00:00",
+                "last_updated": "2022-04-24T02:46:27.411955+00:00",
+                "context": {
+                    "id": "febbef3090dfba0f2e6edaf337eb7b2c",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_kominek_back",
+                "state": "20",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. kominka - powr\u00f3t"
+                },
+                "last_changed": "2022-04-24T15:28:10.719633+00:00",
+                "last_updated": "2022-04-24T15:28:10.719633+00:00",
+                "context": {
+                    "id": "9a3bb35d0e6f85f1950e9ee6111eb84c",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_cwu",
+                "state": "45",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. CWU"
+                },
+                "last_changed": "2022-04-24T17:03:11.712475+00:00",
+                "last_updated": "2022-04-24T17:03:11.712475+00:00",
+                "context": {
+                    "id": "53588005a3f31d4d71e4c66dda5509a3",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_cwu_back",
+                "state": "21",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. cyrkulacji"
+                },
+                "last_changed": "2022-04-24T17:07:41.755919+00:00",
+                "last_updated": "2022-04-24T17:07:41.755919+00:00",
+                "context": {
+                    "id": "60b5b6207287c980136ca17e4c4ac055",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_co_sprzeglo",
+                "state": "54",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "CO - sprz\u0119g\u0142o"
+                },
+                "last_changed": "2022-04-24T17:20:41.857106+00:00",
+                "last_updated": "2022-04-24T17:20:41.857106+00:00",
+                "context": {
+                    "id": "36812f4825391020784cf7987c1bfc33",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_co",
+                "state": "50",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "CO - zasilanie grzejniki"
+                },
+                "last_changed": "2022-04-24T17:20:11.925150+00:00",
+                "last_updated": "2022-04-24T17:20:11.925150+00:00",
+                "context": {
+                    "id": "b6cf61becf10ddb83a98c580db371f58",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_co_back",
+                "state": "46",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "CO - powr\u00f3t grzejniki"
+                },
+                "last_changed": "2022-04-24T17:13:41.871925+00:00",
+                "last_updated": "2022-04-24T17:13:41.871925+00:00",
+                "context": {
+                    "id": "334a51fd21849b3fc4357a5d408645ab",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_cp",
+                "state": "36",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "CO - zasilanie pod\u0142ogi"
+                },
+                "last_changed": "2022-04-24T17:20:11.936815+00:00",
+                "last_updated": "2022-04-24T17:20:11.936815+00:00",
+                "context": {
+                    "id": "7508615fcc126b2a1ec2a8538f0bd6ee",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_cp_back",
+                "state": "28",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "CO - powr\u00f3t pod\u0142ogi"
+                },
+                "last_changed": "2022-04-24T17:05:41.820184+00:00",
+                "last_updated": "2022-04-24T17:05:41.820184+00:00",
+                "context": {
+                    "id": "b780a4a190f0f364327c2d1dc990314a",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_co_piec",
+                "state": "54",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "CO - zasilanie piec gaz"
+                },
+                "last_changed": "2022-04-24T17:18:41.926994+00:00",
+                "last_updated": "2022-04-24T17:18:41.926994+00:00",
+                "context": {
+                    "id": "6d29c5e445c6d4cffb4dc3a559e4223a",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_co_piec_back",
+                "state": "45",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "CO - powr\u00f3t piec gaz"
+                },
+                "last_changed": "2022-04-24T17:20:11.952030+00:00",
+                "last_updated": "2022-04-24T17:20:11.952030+00:00",
+                "context": {
+                    "id": "0ca159e7fb0c5422265e96dce49d5c3f",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_cwu_piec",
+                "state": "24",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "CWU - zasilanie piec gaz"
+                },
+                "last_changed": "2022-04-24T17:01:11.739238+00:00",
+                "last_updated": "2022-04-24T17:01:11.739238+00:00",
+                "context": {
+                    "id": "8d382de9bf7b579578a062db763f2dfa",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_cwu_piec_back",
+                "state": "29",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "CWU - powr\u00f3t piec gaz"
+                },
+                "last_changed": "2022-04-24T17:17:56.927481+00:00",
+                "last_updated": "2022-04-24T17:17:56.927481+00:00",
+                "context": {
+                    "id": "8c8da15c2e48643f27eb84770e86f6e9",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_kcwu",
+                "state": "16",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "temp_kcwu"
+                },
+                "last_changed": "2022-04-24T16:27:56.157257+00:00",
+                "last_updated": "2022-04-24T16:27:56.157257+00:00",
+                "context": {
+                    "id": "3b205b7c66dc16fac36f23c6cf1dcff7",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_kcwu_back",
+                "state": "16",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "temp_kcwu_back"
+                },
+                "last_changed": "2022-04-24T14:24:40.281854+00:00",
+                "last_updated": "2022-04-24T14:24:40.281854+00:00",
+                "context": {
+                    "id": "0c256dcc85557b6675a3d5f813ee7093",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_garaz",
+                "state": "15",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. gara\u017c"
+                },
+                "last_changed": "2022-04-24T15:14:10.685831+00:00",
+                "last_updated": "2022-04-24T15:14:10.685831+00:00",
+                "context": {
+                    "id": "ff171ead6946dc21e1020a0c1652eec8",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_gabinet",
+                "state": "21",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. gabinet"
+                },
+                "last_changed": "2022-04-24T15:13:25.697913+00:00",
+                "last_updated": "2022-04-24T15:13:25.697913+00:00",
+                "context": {
+                    "id": "b827a9de4f58a90f1f849996f807e189",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_pralnia",
+                "state": "21",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. pralnia"
+                },
+                "last_changed": "2022-04-24T09:43:06.108868+00:00",
+                "last_updated": "2022-04-24T09:43:06.108868+00:00",
+                "context": {
+                    "id": "6641c86e2dbfde45c20cc4ba3f477596",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_korytarzip",
+                "state": "22",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. korytarz Ip"
+                },
+                "last_changed": "2022-04-24T00:18:23.798685+00:00",
+                "last_updated": "2022-04-24T00:18:23.798685+00:00",
+                "context": {
+                    "id": "d8441216d0433228b3e9a07b64e6b1bc",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_wiatrolap",
+                "state": "22",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. wiatro\u0142ap"
+                },
+                "last_changed": "2022-04-24T15:40:55.822081+00:00",
+                "last_updated": "2022-04-24T15:40:55.822081+00:00",
+                "context": {
+                    "id": "b60f25687004cc38bc00d82b1180fbf1",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_lazienkadol",
+                "state": "22",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. \u0142azienka d\u00f3\u0142"
+                },
+                "last_changed": "2022-04-23T21:10:05.902178+00:00",
+                "last_updated": "2022-04-23T21:10:05.902178+00:00",
+                "context": {
+                    "id": "d9df3f1e7c654baac6026ebd3486d6d4",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_kuchnia",
+                "state": "22",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. kuchnia"
+                },
+                "last_changed": "2022-04-24T08:22:04.755998+00:00",
+                "last_updated": "2022-04-24T08:22:04.755998+00:00",
+                "context": {
+                    "id": "42e6562efda31084abdde3387e752114",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_hallip",
+                "state": "22",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. hall Ip"
+                },
+                "last_changed": "2022-04-23T10:45:26.302187+00:00",
+                "last_updated": "2022-04-23T10:45:26.302187+00:00",
+                "context": {
+                    "id": "c1fe2ee756f63f86421100e04e64edbd",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_sypialnia",
+                "state": "22",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. sypialnia"
+                },
+                "last_changed": "2022-04-23T21:49:51.142562+00:00",
+                "last_updated": "2022-04-23T21:49:51.142562+00:00",
+                "context": {
+                    "id": "2ae1b567cbf2beb33aafc81ce8c40ef3",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_pokoj3",
+                "state": "21",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. pok\u00f3j 3"
+                },
+                "last_changed": "2022-04-24T17:20:26.985069+00:00",
+                "last_updated": "2022-04-24T17:20:26.985069+00:00",
+                "context": {
+                    "id": "957e0e1b8534edbee025fdd9d60864ed",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_pokoj2",
+                "state": "22",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. pok\u00f3j 2"
+                },
+                "last_changed": "2022-04-24T17:08:11.911269+00:00",
+                "last_updated": "2022-04-24T17:08:11.911269+00:00",
+                "context": {
+                    "id": "a185ddbed7cad474524ea57e84a1ef12",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_pokoj1",
+                "state": "21",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. pok\u00f3j 1"
+                },
+                "last_changed": "2022-04-24T08:06:34.656232+00:00",
+                "last_updated": "2022-04-24T08:06:34.656232+00:00",
+                "context": {
+                    "id": "9ce9823ee56e6fe09a597753ee8b6235",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_spizarka",
+                "state": "22",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. spi\u017carka"
+                },
+                "last_changed": "2022-04-24T01:28:40.191052+00:00",
+                "last_updated": "2022-04-24T01:28:40.191052+00:00",
+                "context": {
+                    "id": "c717beebab9849bce918c9a623d3f3dd",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_salon",
+                "state": "22",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. salon"
+                },
+                "last_changed": "2022-04-23T20:02:34.779428+00:00",
+                "last_updated": "2022-04-23T20:02:34.779428+00:00",
+                "context": {
+                    "id": "b36110702fbd2be3cc8573a2026f9158",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_lazienkasyp",
+                "state": "21",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. \u0142azienka syp."
+                },
+                "last_changed": "2022-04-24T09:27:51.033464+00:00",
+                "last_updated": "2022-04-24T09:27:51.033464+00:00",
+                "context": {
+                    "id": "147b7db6e2a2693015b6d6c11f1e369a",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.temp_lazienkagora",
+                "state": "21",
+                "attributes": {
+                    "unit_of_measurement": "\u00b0C",
+                    "friendly_name": "Temp. \u0142azienka g\u00f3ra"
+                },
+                "last_changed": "2022-04-24T08:50:35.742666+00:00",
+                "last_updated": "2022-04-24T08:50:35.742666+00:00",
+                "context": {
+                    "id": "bc5f16a8d894ecd9b7c8ab6be30f61cc",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.ogrod_susza",
+                "state": "0",
+                "attributes": {
+                    "friendly_name": "Susza w ogrodzie"
+                },
+                "last_changed": "2022-04-24T15:18:08.943045+00:00",
+                "last_updated": "2022-04-24T15:18:08.943045+00:00",
+                "context": {
+                    "id": "446998957965298e5fb8f9d2eb5347d7",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.ogrod_status_programu",
+                "state": "0",
+                "attributes": {
+                    "friendly_name": "Podlewanie automatyczne - status"
+                },
+                "last_changed": "2022-03-24T11:57:48.839542+00:00",
+                "last_updated": "2022-03-24T11:57:48.839542+00:00",
+                "context": {
+                    "id": "fa7ad390377723100415d23b248c7971",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.ogrod_status_wody",
+                "state": "0",
+                "attributes": {
+                    "friendly_name": "ogrod_status_wody"
+                },
+                "last_changed": "2022-03-24T02:41:37.417206+00:00",
+                "last_updated": "2022-03-24T02:41:37.417206+00:00",
+                "context": {
+                    "id": "3191cbf732782ef8f3c38f85e7831a7c",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        },
+        {
+            "state": {
+                "entity_id": "sensor.satel_onoff",
+                "state": "0",
+                "attributes": {
+                    "friendly_name": "Alarm - status",
+                    "device_class": "safety"
+                },
+                "last_changed": "2022-04-24T10:34:05.938187+00:00",
+                "last_updated": "2022-04-24T10:34:05.938187+00:00",
+                "context": {
+                    "id": "0ed9dbbf80b0fb998c174b3ee59bbc4d",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2022-04-24T17:21:07.410190+00:00"
+        }
+    ]
+}

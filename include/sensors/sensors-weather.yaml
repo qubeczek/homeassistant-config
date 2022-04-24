@@ -3,10 +3,10 @@
 # Weather sensor yr
 #
 ############################################################
-  - platform: yr
-    name: Pogoda
-    monitored_conditions:
-      - symbol
-      - humidity
-      - pressure
-      - windSpeed
+#  - platform: yr
+#    name: Pogoda
+#    monitored_conditions:
+#      - symbol
+#      - humidity
+#      - pressure
+#      - windSpeed

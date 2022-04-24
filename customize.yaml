@@ -1,295 +1,293 @@
-#################################################################
-## Customize
-#################################################################
-
-#lights
-       
-     light.light_kuchnia_szafki:
-       friendly_name: Pod szafkami nad blatem     
-     light.light_kuchnia_sufit1:
-       friendly_name: Kuchnia sufit I
-     light.light_kuchnia_sufit2:
-       friendly_name: Kuchnia sufit II
-     light.light_kuchnia_zlew:
-       friendly_name: Kuchnia zlew
-     light.light_kuchnia_blat:
-       friendly_name: Kuchnia nad blatem
-     light.light_kuchnia_barek:
-       friendly_name: Kuchnia nad barkiem
-     light.light_jadalnia_sufit:
-       friendly_name: Jadalnia sufit
-     light.light_salon_sufit1:
-       friendly_name: Salon sufit I
-     light.light_salon_sufit2:
-       friendly_name: Salon sufit II
-     light.light_salon_regal:
-       friendly_name: Salon nad regałem
-     light.light_salon_kinkiet3:
-       friendly_name: Salon kinkiet lewy
-     light.light_salon_kinkiet2:
-       friendly_name: Salon kinkiet tył 
-     light.light_salon_kinkiet1:
-       friendly_name: Jadalnia kinkiet
-     light.light_salon_led_kominek1:
-       friendly_name: Salon kominek pion
-     light.light_salon_led_kominek2:
-       friendly_name: Salon kominek poziom
-     light.light_wiatrolap_sufit1:
-       friendly_name: Wiatrołap sufit I
-     light.light_wiatrolap_sufit2:
-       friendly_name: Wiatrołap sufit II
-     light.light_halldol_sufit1:
-       friendly_name: Hall dół sufit
-     light.light_halldol_led:
-       friendly_name: Hall dół LED
-     light.light_halldol_obraz:
-       friendly_name: Hall dół obraz
-     light.light_gabinet_sufit1:
-       friendly_name: Gabinet sufit I
-     light.light_gabinet_sufit2:
-       friendly_name: Gabinet sufit II
-     light.light_spizarka_sufit1:
-       friendly_name: Spiżarka sufit
-     light.light_rekraacja_sufit1:
-       friendly_name: Rekaraacja sufit
-     light.light_lazienkadol_sufit1:
-       friendly_name: Łazienka dół sufit
-     light.light_lazienkadol_led1:
-       friendly_name: Łazienka dół lustro
-     light.light_lazienkadol_led2:
-       friendly_name: Łazienka dół dodatkowe
-#oświetlenie pietro
-     light.light_schody_sufit1:
-       friendly_name: Schody sufit
-     light.light_schody_led:
-       friendly_name: Schody LED
-     light.light_pralnia_sufit1:
-       friendly_name: Pralnia sufit
-     light.light_korytarzgora_sufit1:
-       friendly_name: Korytarz górny sufit I
-     light.light_korytarzgora_sufit2:
-       friendly_name: Korytarz górny sufit II
-     light.light_korytarzgora_led1:
-       friendly_name: Korytarz górny LED
-     light.light_hallgora_sufit1:
-       friendly_name: Hall góra
-     light.light_pokoj1_sufit1:
-       friendly_name: Pokój Jędrka sufit I
-     light.light_pokoj1_sufit2:
-       friendly_name: Pokój Jędrka sufit II
-     light.light_pokoj2_sufit1:
-       friendly_name: Pokój Michała sufit
-     light.light_pokoj3_sufit1:
-       friendly_name: Pokój Mikołaja sufit
-     light.light_sypialnia_sufit1:
-       friendly_name: Sypialnia sufit
-     light.light_sypialnia_kinkiet1:
-       friendly_name: Sypialnia kinkiet lewy
-     light.light_sypialnia_kinkiet2:
-       friendly_name: Sypialnia kinkiet prawy
-     light.light_sypialnia_led1:
-       friendly_name: Sypialnia pod łózkiem
-     light.light_garderoba_sufit:
-       friendly_name: Garderoba sufit
-     light.light_lazienkas_sufit1:
-       friendly_name: Łazienka sypialnia sufit I
-     light.light_lazienkas_sufit2:
-       friendly_name: Łazienka sypialnia sufit II
-     light.light_lazienkas_kinkiet1:
-       friendly_name: Łazienka sypialnia kinkiet lewy
-     light.light_lazienkas_kinkiet2:
-       friendly_name: Łazienka sypialnia kinkiet prawy
-     light.light_lazienkas_led:
-       friendly_name: Łazienka sypialnia LED
-     light.light_lazienkagora_sufit1:
-       friendly_name: Łazienka górna sufit I
-     light.light_lazienkagora_sufit2:
-       friendly_name: Łazienka górna sufit II
-     light.light_lazienkagora_kinkiet1:
-       friendly_name: Łazienka górna kinkiet
-     light.light_lazienkagora_led1:
-       friendly_name: Łazienka górna umywalka
-#oświetlenie otoczenie       
-     light.light_kotlownia_sufit1:
-       friendly_name: Kotłownia sufit    
-     light.light_garaz_kin1:
-       friendly_name: Garaż kinkiet I
-     light.light_garaz_kin2:
-       friendly_name: Garaż kinkiet II
-     light.light_garaz_kin3:
-       friendly_name: Garaż kinkiet III
-     light.light_roof_back1:
-       friendly_name: Podbitka tył I
-     light.light_roof_back2:
-       friendly_name: Podbitka tył II
-     light.light_roof_front1:
-       friendly_name: Podbitka przód I
-     light.light_roof_front2:
-       friendly_name: Podbitka przód II
-     light.light_tarasgora:
-       friendly_name: Taras górny
-     light.light_balkon:
-       friendly_name: Balkon
-     light.light_elewacja:
-       friendly_name: Elewacja
-     light.light_strych:
-       friendly_name: Strych
-     light.light_podjazd:
-       friendly_name: Podjazd
-     light.light_drzwifrontowe:
-       friendly_name: Drzwi frontowe
-     light.light_ogrod_front:
-       friendly_name: Ogród frontowe
-#scene
-     scene.gaszenie_swiatel:
-       friendly_name: Pora spać - gaszenie świateł
-     scene.wieczorne_ogladanie_filmu:
-       friendly_name: Oglądanie filmu
-     scene.romantic:
-       friendly_name: Wieczorek
-#switch
-     switch.hasmonitor:
-       friendly_name: Monitor główny HA
-       icon: mdi:monitor
-     switch.pompa_kcwu:
-       friendly_name: Pompa kominka CWU
-     switch.pompa_kco:
-       friendly_name: Pompa kominka CO
-     switch.pompa_co:
-       friendly_name: Pompa CO - grzejniki
-     switch.pompa_cp:
-       friendly_name: Pompa CO - podłogówka
-     switch.co_woda:
-       friendly_name: Woda - zasilanie domu
-     switch.hallgniazdo1:
-       friendly_name: Blokada telewizorów w hallu
-       icon: mdi:monitor
-     switch.ogrodP1O1:
-       friendly_name: P1 O1
-     switch.ogrodP1O2:
-       friendly_name: P1 O2
-     switch.ogrodP2O1:
-       friendly_name: P2 O1
-     switch.ogrodP2O2:
-       friendly_name: P2 O2
-     switch.ogrodP3O1:
-       friendly_name: P3 O1
-     switch.ogrodP3O2:
-       friendly_name: P3 O2
-     switch.ogrodP3O3:
-       friendly_name: P3 O3
-     switch.ogrodP4O1:
-       friendly_name: P4 O1
-     switch.ogrodP4O2:
-       friendly_name: P4 O2
-     switch.ogrodP4O3:
-       friendly_name: P4 O3
-     switch.ogrodWarzywa:
-       friendly_name: Warzywniak
-     switch.ogrodTaras:
-       friendly_name: Linia kropelkowa taras
-       
-          
-
-#binary_sensors
-     binary_sensor.co_piecgrzeje:
-       friendly_name: Status pieca
-       device_class: heat
-     binary_sensor.cwu_pompa:
-       friendly_name: Pompa CWU
-    
-#sensors
-     sensor.yr_symbol:
-       friendly_name: Pogoda
-     sensor.yr_humidity:
-       friendly_name: Wilgotność
-       icon: mdi:cloud-outline
-     sensor.yr_pressure:
-       friendly_name: Ciśnienie
-       icon: mdi:coffee
-     sensor.yr_wind_speed:
-       friendly_name: Wiatr - prędkość
-       icon: mdi:weather-windy
-     sensor.heater_workingtime:
-       friendly_name: Piec - czas grzania  
-       icon: mdi:home-outline
-     sensor.heater_oncount:
-       friendly_name: Piec - ilość zał.  
-       icon: mdi:home-outline
-     sensor.temp_outside:
-       friendly_name: Temp. zewnętrzna
-     sensor.temp_kominek:
-       friendly_name: Temp. kominka
-     sensor.temp_kominek_back:
-       friendly_name: Temp. kominka - powrót
-     sensor.temp_cwu:
-       friendly_name: Temp. CWU
-     sensor.temp_cwu_back:
-       friendly_name: Temp. cyrkulacji
-     sensor.temp_co_sprzeglo:
-       friendly_name: CO - sprzęgło
-     sensor.temp_co:
-       friendly_name: CO - zasilanie grzejniki
-     sensor.temp_co_back:
-       friendly_name: CO - powrót grzejniki
-     sensor.temp_cp:
-       friendly_name: CO - zasilanie podłogi
-     sensor.temp_cp_back:
-       friendly_name: CO - powrót podłogi
-     sensor.temp_co_piec:
-       friendly_name: CO - zasilanie piec gaz
-     sensor.temp_co_piec_back:
-       friendly_name: CO - powrót piec gaz
-     sensor.ogrod_susza: 
-       friendly_name: Susza w ogrodzie
-     sensor.ogrod_status_programu:
-       friendly_name: Podlewanie automatyczne - status
-     sensor.temp_garaz:
-       friendly_name: Temp. garaż
-     sensor.temp_gabinet:
-       friendly_name: Temp. gabinet
-     sensor.temp_pralnia:
-       friendly_name: Temp. pralnia
-     sensor.temp_korytarzIp:
-       friendly_name: Temp. korytarz Ip
-     sensor.temp_wiatrolap:
-       friendly_name: Temp. wiatrołap
-     sensor.temp_lazienkadol:
-       friendly_name: Temp. łazienka dół
-     sensor.temp_kuchnia:
-       friendly_name: Temp. kuchnia
-     sensor.temp_hallIp:
-       friendly_name: Temp. hall Ip
-     sensor.temp_sypialnia:
-       friendly_name: Temp. sypialnia
-     sensor.temp_pokoj3:
-       friendly_name: Temp. pokój 3
-     sensor.temp_pokoj2:
-       friendly_name: Temp. pokój 2
-     sensor.temp_pokoj1:
-       friendly_name: Temp. pokój 1
-     sensor.temp_spizarka:
-       friendly_name: Temp. spiżarka
-     sensor.temp_salon:
-       friendly_name: Temp. salon
-     sensor.temp_lazienkasyp:
-       friendly_name: Temp. łazienka syp.
-     sensor.temp_lazienkagora:
-       friendly_name: Temp. łazienka góra
-     sensor.satel_onoff:
-       friendly_name: Alarm - status
-       device_class: safety
-     
-     group.01parter:
-       order: 1
-     group.02pietro:
-       order: 2
-     group.otoczenie:
-       order: 3
-     group.ogrzewanie:
-       order: 4     
-       
-       
-       
-       
-  
+light.light_kuchnia_szafki:
+  friendly_name: Pod szafkami nad blatem
+light.light_kuchnia_sufit1:
+  friendly_name: Kuchnia sufit I
+light.light_kuchnia_sufit2:
+  friendly_name: Kuchnia sufit II
+light.light_kuchnia_zlew:
+  friendly_name: Kuchnia zlew
+light.light_kuchnia_blat:
+  friendly_name: Kuchnia nad blatem
+light.light_kuchnia_barek:
+  friendly_name: Kuchnia nad barkiem
+light.light_jadalnia_sufit:
+  friendly_name: Jadalnia sufit
+light.light_salon_sufit1:
+  friendly_name: Salon sufit I
+light.light_salon_sufit2:
+  friendly_name: Salon sufit II
+light.light_salon_regal:
+  friendly_name: Salon nad regałem
+light.light_salon_kinkiet3:
+  friendly_name: Salon kinkiet lewy
+light.light_salon_kinkiet2:
+  friendly_name: Salon kinkiet tył
+light.light_salon_kinkiet1:
+  friendly_name: Jadalnia kinkiet
+light.light_salon_led_kominek1:
+  friendly_name: Salon kominek pion
+light.light_salon_led_kominek2:
+  friendly_name: Salon kominek poziom
+light.light_wiatrolap_sufit1:
+  friendly_name: Wiatrołap sufit I
+light.light_wiatrolap_sufit2:
+  friendly_name: Wiatrołap sufit II
+light.light_halldol_sufit1:
+  friendly_name: Hall dół sufit
+light.light_halldol_led:
+  friendly_name: Hall dół LED
+light.light_halldol_obraz:
+  friendly_name: Hall dół obraz
+light.light_gabinet_sufit1:
+  friendly_name: Gabinet sufit I
+light.light_gabinet_sufit2:
+  friendly_name: Gabinet sufit II
+light.light_spizarka_sufit1:
+  friendly_name: Spiżarka sufit
+light.light_rekraacja_sufit1:
+  friendly_name: Siłownia sufit
+light.light_rekraacja_kinkiet1:
+  friendly_name: Siłownia kinkiet
+light.light_lazienkadol_sufit1:
+  friendly_name: Łazienka dół sufit
+light.light_lazienkadol_led1:
+  friendly_name: Łazienka dół lustro
+light.light_lazienkadol_led2:
+  friendly_name: Łazienka dół dodatkowe
+light.light_schody_sufit1:
+  friendly_name: Schody sufit
+light.light_schody_led:
+  friendly_name: Schody LED
+light.light_pralnia_sufit1:
+  friendly_name: Pralnia sufit
+light.light_korytarzgora_sufit1:
+  friendly_name: Korytarz górny sufit I
+light.light_korytarzgora_sufit2:
+  friendly_name: Korytarz górny sufit II
+light.light_korytarzgora_led1:
+  friendly_name: Korytarz górny LED
+light.light_hallgora_sufit1:
+  friendly_name: Hall góra
+light.light_pokoj1_sufit1:
+  friendly_name: Pokój Jędrka sufit I
+light.light_pokoj1_sufit2:
+  friendly_name: Pokój Jędrka sufit II
+light.light_pokoj2_sufit1:
+  friendly_name: Pokój Michała sufit I
+light.light_pokoj2_sufit2:
+  friendly_name: Pokój Michała sufit II
+light.light_pokoj3_sufit1:
+  friendly_name: Pokój Mikołaja sufit
+light.light_sypialnia_sufit1:
+  friendly_name: Sypialnia sufit
+light.light_sypialnia_kinkiet1:
+  friendly_name: Sypialnia kinkiet lewy
+light.light_sypialnia_kinkiet2:
+  friendly_name: Sypialnia kinkiet prawy
+light.light_sypialnia_led1:
+  friendly_name: Sypialnia pod łózkiem
+light.light_garderoba_sufit:
+  friendly_name: Garderoba sufit
+light.light_lazienkas_sufit1:
+  friendly_name: Łazienka sypialnia sufit I
+light.light_lazienkas_sufit2:
+  friendly_name: Łazienka sypialnia sufit II
+light.light_lazienkas_kinkiet1:
+  friendly_name: Łazienka sypialnia kinkiet lewy
+light.light_lazienkas_kinkiet2:
+  friendly_name: Łazienka sypialnia kinkiet prawy
+light.light_lazienkas_led:
+  friendly_name: Łazienka sypialnia LED
+light.light_lazienkagora_sufit1:
+  friendly_name: Łazienka górna sufit I
+light.light_lazienkagora_sufit2:
+  friendly_name: Łazienka górna sufit II
+light.light_lazienkagora_kinkiet1:
+  friendly_name: Łazienka górna kinkiet
+light.light_lazienkagora_led1:
+  friendly_name: Łazienka górna umywalka
+light.light_kotlownia_sufit1:
+  friendly_name: Kotłownia sufit
+light.light_garaz_kin1:
+  friendly_name: Garaż kinkiet I
+light.light_garaz_kin2:
+  friendly_name: Garaż kinkiet II
+light.light_garaz_kin3:
+  friendly_name: Garaż kinkiet III
+light.light_roof_back1:
+  friendly_name: Podbitka tył I
+light.light_roof_back2:
+  friendly_name: Podbitka tył II
+light.light_roof_front1:
+  friendly_name: Podbitka przód I
+light.light_roof_front2:
+  friendly_name: Podbitka przód II
+light.light_tarasgora:
+  friendly_name: Taras górny
+light.light_balkon:
+  friendly_name: Balkon
+light.light_elewacja:
+  friendly_name: Elewacja
+light.light_strych:
+  friendly_name: Strych
+light.light_podjazd:
+  friendly_name: Podjazd
+light.light_drzwifrontowe:
+  friendly_name: Drzwi frontowe
+light.light_ogrod_front:
+  friendly_name: Ogród frontowe
+light.light_elewacja_taras:
+  friendly_name: Taras wieczorne
+scene.gaszenie_swiatel:
+  friendly_name: Pora spać - gaszenie świateł
+scene.wieczorne_ogladanie_filmu:
+  friendly_name: Oglądanie filmu
+scene.romantic:
+  friendly_name: Wieczorek
+switch.hasmonitor:
+  friendly_name: Monitor główny HA
+  icon: mdi:monitor
+switch.kcwu_switch:
+  friendly_name: Zasilanie z kominka CWU
+switch.kco_switch:
+  friendly_name: Zasianie z kominka CO
+switch.pompa_kcwu:
+  friendly_name: Pompa kominka CWU
+switch.pompa_kco:
+  friendly_name: Pompa kominka CO
+switch.pompa_co:
+  friendly_name: Pompa CO - grzejniki
+switch.pompa_cp:
+  friendly_name: Pompa CO - podłogówka
+switch.co_woda:
+  friendly_name: Woda - zasilanie domu
+switch.hallgniazdo1:
+  friendly_name: Blokada telewizorów w hallu
+  icon: mdi:monitor
+switch.ogrodP1O1:
+  friendly_name: P1 O1
+switch.ogrodP1O2:
+  friendly_name: P1 O2
+switch.ogrodP2O1:
+  friendly_name: P2 O1
+switch.ogrodP2O2:
+  friendly_name: P2 O2
+switch.ogrodP3O1:
+  friendly_name: P3 O1
+switch.ogrodP3O2:
+  friendly_name: P3 O2
+switch.ogrodP3O3:
+  friendly_name: P3 O3
+switch.ogrodP4O1:
+  friendly_name: P4 O1
+switch.ogrodP4O2:
+  friendly_name: P4 O2
+switch.ogrodP4O3:
+  friendly_name: P4 O3
+switch.ogrodWarzywa:
+  friendly_name: Warzywniak
+switch.ogrodTaras:
+  friendly_name: Linia kropelkowa taras
+binary_sensor.co_piecgrzeje:
+  friendly_name: Status pieca
+  device_class: heat
+binary_sensor.cwu_pompa:
+  friendly_name: Pompa CWU
+sensor.yr_symbol:
+  friendly_name: Pogoda
+sensor.yr_humidity:
+  friendly_name: Wilgotność
+  icon: mdi:cloud-outline
+sensor.yr_pressure:
+  friendly_name: Ciśnienie
+  icon: mdi:coffee
+sensor.yr_wind_speed:
+  friendly_name: Wiatr - prędkość
+  icon: mdi:weather-windy
+sensor.heater_workingtime:
+  friendly_name: Piec - czas grzania
+  icon: mdi:home-outline
+sensor.heater_oncount:
+  friendly_name: Piec - ilość zał.
+  icon: mdi:home-outline
+sensor.temp_outside:
+  friendly_name: Temp. zewnętrzna
+sensor.temp_kominek:
+  friendly_name: Temp. kominka
+sensor.temp_kominek_back:
+  friendly_name: Temp. kominka - powrót
+sensor.temp_cwu:
+  friendly_name: Temp. CWU
+sensor.temp_cwu_back:
+  friendly_name: Temp. cyrkulacji
+sensor.temp_co_sprzeglo:
+  friendly_name: CO - sprzęgło
+sensor.temp_co:
+  friendly_name: CO - zasilanie grzejniki
+sensor.temp_co_back:
+  friendly_name: CO - powrót grzejniki
+sensor.temp_cp:
+  friendly_name: CO - zasilanie podłogi
+sensor.temp_cp_back:
+  friendly_name: CO - powrót podłogi
+sensor.temp_co_piec:
+  friendly_name: CO - zasilanie piec gaz
+sensor.temp_co_piec_back:
+  friendly_name: CO - powrót piec gaz
+sensor.temp_cwu_piec:
+  friendly_name: CWU - zasilanie piec gaz
+sensor.temp_cwu_piec_back:
+  friendly_name: CWU - powrót piec gaz
+sensor.ogrod_susza:
+  friendly_name: Susza w ogrodzie
+sensor.ogrod_status_programu:
+  friendly_name: Podlewanie automatyczne - status
+sensor.temp_garaz:
+  friendly_name: Temp. garaż
+sensor.temp_gabinet:
+  friendly_name: Temp. gabinet
+sensor.temp_pralnia:
+  friendly_name: Temp. pralnia
+sensor.temp_korytarzIp:
+  friendly_name: Temp. korytarz Ip
+sensor.temp_wiatrolap:
+  friendly_name: Temp. wiatrołap
+sensor.temp_lazienkadol:
+  friendly_name: Temp. łazienka dół
+sensor.temp_kuchnia:
+  friendly_name: Temp. kuchnia
+sensor.temp_hallIp:
+  friendly_name: Temp. hall Ip
+sensor.temp_sypialnia:
+  friendly_name: Temp. sypialnia
+sensor.temp_pokoj3:
+  friendly_name: Temp. pokój 3
+sensor.temp_pokoj2:
+  friendly_name: Temp. pokój 2
+sensor.temp_pokoj1:
+  friendly_name: Temp. pokój 1
+sensor.temp_spizarka:
+  friendly_name: Temp. spiżarka
+sensor.temp_salon:
+  friendly_name: Temp. salon
+sensor.temp_lazienkasyp:
+  friendly_name: Temp. łazienka syp.
+sensor.temp_lazienkagora:
+  friendly_name: Temp. łazienka góra
+sensor.satel_onoff:
+  friendly_name: Alarm - status
+  device_class: safety
+group.01parter:
+  order: 1
+group.02pietro:
+  order: 2
+group.otoczenie:
+  order: 3
+group.ogrzewanie:
+  order: 4
+switch.vacationmode:
+  friendly_name: Tryb wakacyjny
+switch.co_termometr:
+  friendly_name: Wył. temp. krzywej grzania
+switch.cwu_termometr:
+  friendly_name: Wył. temp. CWU

@@ -21,6 +21,10 @@
       - sensor.Pogoda_humidity
       - sensor.Pogoda_pressure
       - sensor.Pogoda_wind_speed
+      - cover.garage_door
+      - cover.kitchen_window
+      - cover.hall_window
+      - cover.salon7
 
   sceny:
     name: Sceny

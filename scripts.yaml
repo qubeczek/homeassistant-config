@@ -1,0 +1,9 @@
+play_gate_1click:
+  alias: play_gate_1click
+  sequence:
+  - service: modbus.write_register
+    data:
+      unit: 1
+      adress: 546
+      value: 5
+  mode: single
