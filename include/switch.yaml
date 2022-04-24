@@ -107,4 +107,10 @@
         
         
         
+  - platform: modbushas
+    scan_interval: 5
+    coils:
+      - name: cwu_grzalka_elektr
+        coil: 232
+        slave: 1
         

@@ -161,6 +161,8 @@ switch.pompa_cp:
   friendly_name: Pompa CO - podłogówka
 switch.co_woda:
   friendly_name: Woda - zasilanie domu
+switch.cwu_grzalka_elektr:
+  friendly_name: Grzałka elektr. CWU
 switch.hallgniazdo1:
   friendly_name: Blokada telewizorów w hallu
   icon: mdi:monitor
