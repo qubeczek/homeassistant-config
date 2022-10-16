@@ -293,3 +293,13 @@ switch.co_termometr:
   friendly_name: Wył. temp. krzywej grzania
 switch.cwu_termometr:
   friendly_name: Wył. temp. CWU
+sensor.zebice_9_1_kwp_energy_this_year:
+  friendly_name: Panele - energia za rok
+sensor.zebice_9_1_kwp_energy_this_month:
+  friendly_name: Panele - energia za miesiac
+sensor.zebice_9_1_kwp_energy_today:
+  friendly_name: Panele - energia dzisiaj
+sensor.zebice_9_1_kwp_current_power:
+  friendly_name: Panele - moc aktualna
+
+  
