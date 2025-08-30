@@ -1,30 +1,22 @@
 {
-    "version": 1,
-    "key": "core.device_registry",
-    "data": {
-        "devices": [
-            {
-                "config_entries": [
-                    "ba3cb0cd548be6536a05285d8dfdc88f"
-                ],
-                "connections": [],
-                "identifiers": [
-                    [
-                        "met"
-                    ]
-                ],
-                "manufacturer": "Met.no",
-                "model": "Forecast",
-                "name": "Forecast",
-                "sw_version": null,
-                "entry_type": "service",
-                "id": "09210a69632e69d3f90458a0defd2f96",
-                "via_device_id": null,
-                "area_id": null,
-                "name_by_user": null,
-                "disabled_by": null
-            }
-        ],
-        "deleted_devices": []
-    }
+  "version": 1,
+  "minor_version": 11,
+  "key": "core.device_registry",
+  "data": {
+    "devices": [
+      {"area_id":null,"config_entries":["01K3PHZCGNEGK4JZXGY14NKJD6"],"config_entries_subentries":{"01K3PHZCGNEGK4JZXGY14NKJD6":[null]},"configuration_url":null,"connections":[],"created_at":"2025-08-27T20:02:14.168127+00:00","disabled_by":null,"entry_type":"service","hw_version":null,"id":"ff11666c80e47b5c7deeefff7a24ce76","identifiers":[["sun","01K3PHZCGNEGK4JZXGY14NKJD6"]],"labels":[],"manufacturer":null,"model":null,"model_id":null,"modified_at":"2025-08-27T20:02:14.168184+00:00","name_by_user":null,"name":"Sun","primary_config_entry":"01K3PHZCGNEGK4JZXGY14NKJD6","serial_number":null,"sw_version":null,"via_device_id":null},
+      {"area_id":null,"config_entries":["01K3PHZCWPM47NE2Q9ZFS20TKG"],"config_entries_subentries":{"01K3PHZCWPM47NE2Q9ZFS20TKG":[null]},"configuration_url":null,"connections":[["bluetooth","2C:CF:67:88:2C:C7"]],"created_at":"2025-08-27T20:02:14.581730+00:00","disabled_by":null,"entry_type":null,"hw_version":"usb:v1D6Bp0246d054F","id":"129a8c1858e047c1f19d54d435fce5c7","identifiers":[],"labels":[],"manufacturer":"Raspberry Pi (Trading) Ltd","model":"bcm43438-bt","model_id":null,"modified_at":"2025-08-27T20:02:14.581784+00:00","name_by_user":null,"name":"hci0 (2C:CF:67:88:2C:C7)","primary_config_entry":"01K3PHZCWPM47NE2Q9ZFS20TKG","serial_number":null,"sw_version":"homeassistant","via_device_id":null},
+      {"area_id":null,"config_entries":["01K3PHZCWPXZ092KQCNY9CWPX5"],"config_entries_subentries":{"01K3PHZCWPXZ092KQCNY9CWPX5":[null]},"configuration_url":null,"connections":[],"created_at":"2025-08-27T20:02:14.590868+00:00","disabled_by":null,"entry_type":"service","hw_version":null,"id":"61007d69863db7c33cfe57aaa2c0b82d","identifiers":[["hassio","core"]],"labels":[],"manufacturer":"Home Assistant","model":"Home Assistant Core","model_id":null,"modified_at":"2025-08-27T20:02:14.590918+00:00","name_by_user":null,"name":"Home Assistant Core","primary_config_entry":"01K3PHZCWPXZ092KQCNY9CWPX5","serial_number":null,"sw_version":"2025.8.3","via_device_id":null},
+      {"area_id":null,"config_entries":["01K3PHZCWPXZ092KQCNY9CWPX5"],"config_entries_subentries":{"01K3PHZCWPXZ092KQCNY9CWPX5":[null]},"configuration_url":null,"connections":[],"created_at":"2025-08-27T20:02:14.591016+00:00","disabled_by":null,"entry_type":"service","hw_version":null,"id":"bf2408d3b035d976e70d42b7b819237e","identifiers":[["hassio","supervisor"]],"labels":[],"manufacturer":"Home Assistant","model":"Home Assistant Supervisor","model_id":null,"modified_at":"2025-08-27T20:02:14.591034+00:00","name_by_user":null,"name":"Home Assistant Supervisor","primary_config_entry":"01K3PHZCWPXZ092KQCNY9CWPX5","serial_number":null,"sw_version":"2025.08.3","via_device_id":null},
+      {"area_id":null,"config_entries":["01K3PHZCWPXZ092KQCNY9CWPX5"],"config_entries_subentries":{"01K3PHZCWPXZ092KQCNY9CWPX5":[null]},"configuration_url":null,"connections":[],"created_at":"2025-08-27T20:02:14.591078+00:00","disabled_by":null,"entry_type":"service","hw_version":null,"id":"acb7c8806a8e5ed666e80fcf1f4417bd","identifiers":[["hassio","host"]],"labels":[],"manufacturer":"Home Assistant","model":"Home Assistant Host","model_id":null,"modified_at":"2025-08-27T20:02:14.591094+00:00","name_by_user":null,"name":"Home Assistant Host","primary_config_entry":"01K3PHZCWPXZ092KQCNY9CWPX5","serial_number":null,"sw_version":null,"via_device_id":null},
+      {"area_id":null,"config_entries":["01K3PHZCWPXZ092KQCNY9CWPX5"],"config_entries_subentries":{"01K3PHZCWPXZ092KQCNY9CWPX5":[null]},"configuration_url":null,"connections":[],"created_at":"2025-08-27T20:02:14.591136+00:00","disabled_by":null,"entry_type":"service","hw_version":null,"id":"513165ca00290a59abe6681efda0cb91","identifiers":[["hassio","OS"]],"labels":[],"manufacturer":"Home Assistant","model":"Home Assistant Operating System","model_id":null,"modified_at":"2025-08-27T20:02:14.591151+00:00","name_by_user":null,"name":"Home Assistant Operating System","primary_config_entry":"01K3PHZCWPXZ092KQCNY9CWPX5","serial_number":null,"sw_version":"16.1","via_device_id":null},
+      {"area_id":null,"config_entries":["01K3PHZCX3SS89GSY5NP1E3Y6F"],"config_entries_subentries":{"01K3PHZCX3SS89GSY5NP1E3Y6F":[null]},"configuration_url":"homeassistant://config/backup","connections":[],"created_at":"2025-08-27T20:02:14.636592+00:00","disabled_by":null,"entry_type":"service","hw_version":null,"id":"cd179975cbbf137bb43446f56ad292f5","identifiers":[["backup","backup_manager"]],"labels":[],"manufacturer":"Home Assistant","model":"Home Assistant Backup","model_id":null,"modified_at":"2025-08-27T20:02:14.636640+00:00","name_by_user":null,"name":"Backup","primary_config_entry":"01K3PHZCX3SS89GSY5NP1E3Y6F","serial_number":null,"sw_version":"2025.8.3","via_device_id":null},
+      {"area_id":null,"config_entries":["01K3PHZGNQSRK39ZAH9A7CB115"],"config_entries_subentries":{"01K3PHZGNQSRK39ZAH9A7CB115":[null]},"configuration_url":null,"connections":[],"created_at":"2025-08-27T20:02:21.156746+00:00","disabled_by":null,"entry_type":null,"hw_version":null,"id":"c314ac2a84ebdd58c36c123acaddcdf0","identifiers":[["cast","fba99a3cd68ef98806a817903544d91a"]],"labels":[],"manufacturer":"Unknown manufacturer","model":"Onkyo CR-N575D","model_id":null,"modified_at":"2025-08-27T20:07:45.329572+00:00","name_by_user":null,"name":"Onkyo CR-N575D E9BDBF","primary_config_entry":"01K3PHZGNQSRK39ZAH9A7CB115","serial_number":null,"sw_version":null,"via_device_id":null},
+      {"area_id":null,"config_entries":["01K3PJ3RJQGT25NZ8XDXPJ2PGM"],"config_entries_subentries":{"01K3PJ3RJQGT25NZ8XDXPJ2PGM":[null]},"configuration_url":"https://www.met.no/en","connections":[],"created_at":"2025-08-27T20:04:37.924840+00:00","disabled_by":null,"entry_type":"service","hw_version":null,"id":"30bba934257244c6394611f1b9b81988","identifiers":[["met","01K3PJ3RJQGT25NZ8XDXPJ2PGM"]],"labels":[],"manufacturer":"Met.no","model":"Forecast","model_id":null,"modified_at":"2025-08-27T20:04:37.924909+00:00","name_by_user":null,"name":"Forecast","primary_config_entry":"01K3PJ3RJQGT25NZ8XDXPJ2PGM","serial_number":null,"sw_version":null,"via_device_id":null},
+      {"area_id":null,"config_entries":["01K3PHZCWPXZ092KQCNY9CWPX5"],"config_entries_subentries":{"01K3PHZCWPXZ092KQCNY9CWPX5":[null]},"configuration_url":"homeassistant://hassio/addon/a0d7b954_ssh","connections":[],"created_at":"2025-08-28T11:16:41.913339+00:00","disabled_by":null,"entry_type":"service","hw_version":null,"id":"21a7f4cfddf07200d3742f297ad70688","identifiers":[["hassio","a0d7b954_ssh"]],"labels":[],"manufacturer":"Home Assistant Community Add-ons","model":"Home Assistant Add-on","model_id":null,"modified_at":"2025-08-28T11:16:41.913416+00:00","name_by_user":null,"name":"Advanced SSH & Web Terminal","primary_config_entry":"01K3PHZCWPXZ092KQCNY9CWPX5","serial_number":null,"sw_version":"21.0.2","via_device_id":null},
+      {"area_id":null,"config_entries":["01K3PHZCWPXZ092KQCNY9CWPX5"],"config_entries_subentries":{"01K3PHZCWPXZ092KQCNY9CWPX5":[null]},"configuration_url":"homeassistant://hassio/addon/core_configurator","connections":[],"created_at":"2025-08-28T12:03:17.649125+00:00","disabled_by":null,"entry_type":"service","hw_version":null,"id":"784a5cbcb3de5eb56b9c1b727c51fa6b","identifiers":[["hassio","core_configurator"]],"labels":[],"manufacturer":"Official add-ons","model":"Home Assistant Add-on","model_id":null,"modified_at":"2025-08-28T12:03:17.649192+00:00","name_by_user":null,"name":"File editor","primary_config_entry":"01K3PHZCWPXZ092KQCNY9CWPX5","serial_number":null,"sw_version":"5.8.0","via_device_id":null},
+      {"area_id":null,"config_entries":["01K3PHZCWPXZ092KQCNY9CWPX5"],"config_entries_subentries":{"01K3PHZCWPXZ092KQCNY9CWPX5":[null]},"configuration_url":"homeassistant://hassio/addon/core_samba","connections":[],"created_at":"2025-08-28T12:08:17.625618+00:00","disabled_by":null,"entry_type":"service","hw_version":null,"id":"ab9f9f9478d036cb8574e5101fc8f296","identifiers":[["hassio","core_samba"]],"labels":[],"manufacturer":"Official add-ons","model":"Home Assistant Add-on","model_id":null,"modified_at":"2025-08-28T12:08:17.625679+00:00","name_by_user":null,"name":"Samba share","primary_config_entry":"01K3PHZCWPXZ092KQCNY9CWPX5","serial_number":null,"sw_version":"12.5.2","via_device_id":null}
+    ],
+    "deleted_devices": []
+  }
 }

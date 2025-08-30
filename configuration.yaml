@@ -1,121 +1,34 @@
-homeassistant:
-  # Name of the location where Home Assistant is running
-  name: Dom
-  # Location required to calculate the time the sun rises and sets
-  latitude: 51.0113889
-  longitude: 17.1613889
-  # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 120
-  # metric for Metric, imperial for Imperial
-  unit_system: metric
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone:  Europe/Warsaw
-  # Customization file
-  customize: !include customize.yaml
-  auth_providers:
-   - type: legacy_api_password
-     api_password: 3214
+# Loads default set of integrations. Do not remove.
+default_config:
 
-# Show links to resources in log and frontend
-#introduction:
-
-# Enables the frontend
+# Load frontend themes from the themes folder
 frontend:
-
-# Enables configuration UI
-config:
-
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-# http:
-#   base_url: example.duckdns.org:8123
-
-# Checks for available updates
-# Note: This component will send some information about your system to
-# the developers to assist with development of Home Assistant.
-# For more information, please see:
-# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
-
-# Discover some devices automatically
-discovery:
-
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-
-# Enables support for tracking state changes over time
-history:
-
-# View all events in a logbook
-logbook:
-
-# Enables a map showing the location of tracked devices
-map:
-
-# Track the sun
+  themes: !include_dir_merge_named themes
 sun:
 
+# Modbus HAS integration
+modbushas:
+  light: !include include/light.yaml
+
+logger:
+  default: warning
+  logs:
+    custom_components.modbushas: debug
+    homeassistant.components.modbus: debug
+    pymodbus: debug
+
 modbus:
-  type: tcp
-  host: 192.168.100.3
-  port: 502
-  
+  - name: fatek
+    type: tcp
+    host: 192.168.100.3
+    port: 502
+    binary_sensors:
+      - name: fatek_dummy_coil_72
+        address: 72
+        slave: 1
+        input_type: coil
+        scan_interval: 60
 
-  
-# Text to speech
-tts:
-  - platform: google_translate
-    service_name: google_say
-
-# Cloud
-cloud:
-
-# Single Files
-media_player: !include include/mediaplayer.yaml
-
-switch: !include include/switch.yaml
-binary_sensor: !include include/binary_sensor.yaml
-sensor: !include_dir_merge_list include/sensors
-light: !include include/light.yaml
-scene: !include include/scene.yaml
-notify: !include include/notify.yaml
-#climate: !include include/climate.yaml
-automation: !include automations.yaml
-# Merge List
-
-# Merge Named
-#group: !include_dir_merge_named include/group
-script: !include_dir_merge_named include/scripts 
-automation old: !include_dir_merge_list include/automation 
-
-#cover:
-#  - platform: demo
-#  - platform: modbushas
-#    scan_interval: 5
-#    covers:
-#      - name: salon7
-#        register: 1239
-#        device_class: garage
-#      - name: salon8
-#        register: 1246
-
-###### previous examples
-#camera: !include includes/cameras.yaml
-#climate: !include includes/climate.yaml
-#device_tracker: !include includes/device_trackers.yaml
-#input_boolean: !include includes/input_boolean.yaml
-#input_select: !include includes/input_select.yaml
-#logger: !include includes/logger.yaml
-#media_player: !include includes/media_players.yaml
-#weblink: !include includes/weblink.yaml       
-
-
-#shell_command: !include_dir_merge_named includes/shell_command
-#zone: !include_dir_merge_list includes/zone
-
-
-#DEMO group: !include groups.yaml
-#DEMO automation: !include automations.yaml
-#DEMO script: !include scripts.yaml
-
+#automation: !include automations.yaml
+#script: !include scripts.yaml
+#scene: !include scenes.yaml

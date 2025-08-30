@@ -1,20 +1,48 @@
 {
-    "version": 1,
-    "key": "core.area_registry",
-    "data": {
-        "areas": [
-            {
-                "name": "Salon",
-                "id": "salon"
-            },
-            {
-                "name": "Kuchnia",
-                "id": "kuchnia"
-            },
-            {
-                "name": "Sypialnia",
-                "id": "sypialnia"
-            }
-        ]
-    }
+  "version": 1,
+  "minor_version": 8,
+  "key": "core.area_registry",
+  "data": {
+    "areas": [
+      {
+        "aliases": [],
+        "floor_id": null,
+        "humidity_entity_id": null,
+        "icon": null,
+        "id": "salon",
+        "labels": [],
+        "name": "Salon",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "2025-08-27T20:03:55.675761+00:00",
+        "modified_at": "2025-08-27T20:03:55.675765+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "humidity_entity_id": null,
+        "icon": null,
+        "id": "kuchnia",
+        "labels": [],
+        "name": "Kuchnia",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "2025-08-27T20:03:55.675886+00:00",
+        "modified_at": "2025-08-27T20:03:55.675888+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "humidity_entity_id": null,
+        "icon": null,
+        "id": "sypialnia",
+        "labels": [],
+        "name": "Sypialnia",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "2025-08-27T20:03:55.675937+00:00",
+        "modified_at": "2025-08-27T20:03:55.675938+00:00"
+      }
+    ]
+  }
 }

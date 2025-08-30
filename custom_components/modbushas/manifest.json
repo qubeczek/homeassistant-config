@@ -1,0 +1,10 @@
+{
+  "domain": "modbushas",
+  "name": "Modbus HAS",
+  "documentation": "https://github.com/your-repo/modbushas",
+  "dependencies": ["modbus"],
+  "codeowners": ["@your-username"],
+  "requirements": [],
+  "version": "1.0.0",
+  "iot_class": "local_polling"
+}

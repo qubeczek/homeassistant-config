@@ -33,3 +33,12 @@ custom_components/sensor/__pycache__/modbushas.cpython-37.pyc
 .storage/core.config_entries
 custom_components/switch/__pycache__/modbushas.cpython-37.pyc
 custom_components/media_player/__pycache__/onkyo2.cpython-37.pyc
+core-master.zip
+/core-master
+/custom_components/modbushas/__pycache__
+/custom_components/modbushas/__pycache__
+/custom_components/modbushas/__pycache__
+custom_components/modbushas/__pycache__/binary_sensor.cpython-38.pyc
+/custom_components/modbushas/light/__pycache__
+/custom_components/onkyo2/__pycache__
+/custom_components/onkyo2/__pycache__

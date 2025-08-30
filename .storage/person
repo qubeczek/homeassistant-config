@@ -1,14 +1,15 @@
 {
-    "version": 2,
-    "key": "person",
-    "data": {
-        "items": [
-            {
-                "name": "Jakub",
-                "user_id": "f63465d40ddd4d6b85f7665efb179970",
-                "device_trackers": [],
-                "id": "jakub"
-            }
-        ]
-    }
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "id": "admin",
+        "name": "Admin",
+        "user_id": "b1c2894f170644d982400adba6e99d4f",
+        "device_trackers": []
+      }
+    ]
+  }
 }
