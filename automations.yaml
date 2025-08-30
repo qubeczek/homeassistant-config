@@ -1,1 +1,11 @@
-[]
+- id: '1577038355590'
+  alias: Gaszenie rzeczy po alarmie
+  description: ''
+  trigger:
+  - entity_id: sensor.alarm_onoff_tmpl
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - scene: scene.gaszenie_swiatel

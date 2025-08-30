@@ -23,6 +23,7 @@ from homeassistant.components.modbus.const import (
 from homeassistant.const import (
     CONF_SLAVE,
     CONF_SCAN_INTERVAL,
+    CONF_UNIQUE_ID,
 )
 
 from homeassistant.const import CONF_NAME
@@ -49,7 +50,8 @@ PLATFORM_SCHEMA = vol.Schema({
     vol.Required(CONF_COILS): [{
         vol.Required(CONF_COIL): cv.positive_int,
         vol.Required(CONF_NAME): cv.string,
-        vol.Optional(CONF_SLAVE): cv.positive_int
+        vol.Optional(CONF_SLAVE): cv.positive_int,
+        vol.Optional(CONF_UNIQUE_ID): cv.string
     }]
 })
 
@@ -94,7 +96,8 @@ async def async_setup_platform(hass, config, async_add_devices, discovery_info=N
         lights.append(ModbusHASLight(
             coil.get(CONF_NAME),
             coil.get(CONF_COIL),
-            buffer))
+            buffer,
+            coil.get(CONF_UNIQUE_ID)))
     
     _LOGGER.info("Added %d Modbus lights", len(lights))
     async_add_devices(lights)
@@ -136,7 +139,8 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
         lights.append(ModbusHASLight(
             coil.get(CONF_NAME),
             coil.get(CONF_COIL),
-            buffer))
+            buffer,
+            coil.get(CONF_UNIQUE_ID)))
     
     _LOGGER.info("Added %d Modbus lights", len(lights))
     add_devices(lights)
@@ -410,15 +414,22 @@ class ModbusHASLight(LightEntity):
     _attr_should_poll = False
     _attr_available = True
 
-    def __init__(self, name, coil, buffer):
+    def __init__(self, name, coil, buffer, unique_id=None):
         """Initialize the modbus coil sensor."""
         self._name = name
         self._coil = int(coil)
         self._state = None
         self._buffer = buffer
         self._cancel_timer = None
+        
+        # Generujemy unikalny ID dla encji - używamy podany lub generujemy domyślny
+        if unique_id:
+            self._attr_unique_id = unique_id
+        else:
+            self._attr_unique_id = f"modbushas_light_{name}_{coil}"
+        
         buffer.set_coil(coil)
-        _LOGGER.debug("ModbusHASLight initialized: name=%s, coil=%s", name, coil)
+        _LOGGER.debug("ModbusHASLight initialized: name=%s, coil=%s, unique_id=%s", name, coil, self._attr_unique_id)
 
     async def async_added_to_hass(self):
         """Handle entity which will be added."""

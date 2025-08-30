@@ -28,7 +28,9 @@ modbus:
         slave: 1
         input_type: coil
         scan_interval: 60
+scene: !include scenes.yaml
+notify: !include include/notify.yaml
+script: !include_dir_merge_named include/scripts 
 
-#automation: !include automations.yaml
-#script: !include scripts.yaml
-#scene: !include scenes.yaml
+automation: !include automations.yaml
+automation old: !include_dir_merge_list include/automation 
