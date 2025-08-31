@@ -41,6 +41,34 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
         else:
             _LOGGER.error("Unexpected light_config structure: %s", type(light_config))
     
+    # Load binary_sensor platform if configured
+    if DOMAIN in config and "binary_sensor" in config[DOMAIN]:
+        _LOGGER.info("Loading binary_sensor platform from config")
+        
+        # Get the binary_sensor configuration
+        binary_sensor_config = config[DOMAIN]["binary_sensor"]
+        _LOGGER.info("Binary sensor config: %s", binary_sensor_config)
+        
+        # Sprawdź strukturę binary_sensor_config po rozszerzeniu !include
+        if isinstance(binary_sensor_config, dict) and "binary_sensor" in binary_sensor_config:
+            # Struktura po rozszerzeniu !include: {'binary_sensor': [platform1, platform2, platform3]}
+            platforms = binary_sensor_config["binary_sensor"]
+            if isinstance(platforms, list):
+                for platform_config in platforms:
+                    if platform_config.get("platform") == "modbushas":
+                        _LOGGER.info("Loading binary_sensor platform: %s", platform_config)
+                        discovery.load_platform(hass, "binary_sensor", "modbushas", platform_config, config)
+            else:
+                _LOGGER.error("Expected list of platforms, got: %s", type(platforms))
+        elif isinstance(binary_sensor_config, list):
+            # Struktura: [platform1, platform2, platform3] - bezpośrednia lista
+            for platform_config in binary_sensor_config:
+                if platform_config.get("platform") == "modbushas":
+                    _LOGGER.info("Loading binary_sensor platform: %s", platform_config)
+                    discovery.load_platform(hass, "binary_sensor", "modbushas", platform_config, config)
+        else:
+            _LOGGER.error("Unexpected binary_sensor_config structure: %s", type(binary_sensor_config))
+    
     return True
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:

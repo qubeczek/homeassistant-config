@@ -10,27 +10,30 @@
 #
 ############################################################
 
-  - platform: modbushas
-    scan_interval: 5
-    coils:
-      - name: co_piecgrzeje
-        slave: 1
-        coil: 148
-      - name: cwu_pompa
-        slave: 1
-        coil: 47
-#      - name: co_woda
-#        slave: 1
-#        coil: 161
-#      - name: pompa_kcwu
-#        slave: 1
-#        coil: 46
-#      - name: pompa_kco
-#        slave: 1
-#        coil: 45
-#      - name: pompa_co
-#        slve: 1
-#        coil: 43
-#      - name: pompa_cp
-#        slave: 1
-#        coil: 44
+- platform: modbushas
+  hub: fatek
+  scan_interval: 5
+  coils:
+    - name: co_piecgrzeje
+      slave: 1
+      coil: 148
+      unique_id: "co_piecgrzeje_sensor"
+    - name: cwu_pompa
+      slave: 1
+      coil: 47
+      unique_id: "cwu_pompa_sensor"
+#    - name: co_woda
+#      slave: 1
+#      coil: 161
+#    - name: pompa_kcwu
+#      slave: 1
+#      coil: 46
+#    - name: pompa_kco
+#      slave: 1
+#      coil: 45
+#    - name: pompa_co
+#      slave: 1
+#      coil: 43
+#    - name: pompa_cp
+#      slave: 1
+#      coil: 44

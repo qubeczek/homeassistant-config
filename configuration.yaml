@@ -9,6 +9,7 @@ sun:
 # Modbus HAS integration
 modbushas:
   light: !include include/light.yaml
+  binary_sensor: !include include/binary_sensor.yaml
 
 logger:
   default: warning
@@ -28,6 +29,9 @@ modbus:
         slave: 1
         input_type: coil
         scan_interval: 60
+
+# binary_sensor: !include include/binary_sensor.yaml  # Przeniesione do modbushas
+
 scene: !include scenes.yaml
 notify: !include include/notify.yaml
 script: !include scripts.yaml
