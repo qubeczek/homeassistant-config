@@ -30,7 +30,7 @@ modbus:
         scan_interval: 60
 scene: !include scenes.yaml
 notify: !include include/notify.yaml
-script: !include_dir_merge_named include/scripts 
+script: !include scripts.yaml
 
 automation: !include automations.yaml
 automation old: !include_dir_merge_list include/automation 

@@ -6,9 +6,17 @@
     "items": [
       {
         "id": "admin",
-        "name": "Admin",
+        "name": "kuba",
         "user_id": "b1c2894f170644d982400adba6e99d4f",
-        "device_trackers": []
+        "device_trackers": [],
+        "picture": null
+      },
+      {
+        "id": "magda",
+        "name": "magda",
+        "device_trackers": [],
+        "user_id": "5c3e0f23188843a58eb27648ed0502d1",
+        "picture": null
       }
     ]
   }

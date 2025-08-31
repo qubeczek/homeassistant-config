@@ -6,7 +6,7 @@
     "areas": [
       {
         "aliases": [],
-        "floor_id": null,
+        "floor_id": "parter",
         "humidity_entity_id": null,
         "icon": null,
         "id": "salon",
@@ -15,11 +15,11 @@
         "picture": null,
         "temperature_entity_id": null,
         "created_at": "2025-08-27T20:03:55.675761+00:00",
-        "modified_at": "2025-08-27T20:03:55.675765+00:00"
+        "modified_at": "2025-08-30T16:59:24.889500+00:00"
       },
       {
         "aliases": [],
-        "floor_id": null,
+        "floor_id": "parter",
         "humidity_entity_id": null,
         "icon": null,
         "id": "kuchnia",
@@ -28,11 +28,11 @@
         "picture": null,
         "temperature_entity_id": null,
         "created_at": "2025-08-27T20:03:55.675886+00:00",
-        "modified_at": "2025-08-27T20:03:55.675888+00:00"
+        "modified_at": "2025-08-30T10:02:37.357219+00:00"
       },
       {
         "aliases": [],
-        "floor_id": null,
+        "floor_id": "pietro",
         "humidity_entity_id": null,
         "icon": null,
         "id": "sypialnia",
@@ -41,7 +41,33 @@
         "picture": null,
         "temperature_entity_id": null,
         "created_at": "2025-08-27T20:03:55.675937+00:00",
-        "modified_at": "2025-08-27T20:03:55.675938+00:00"
+        "modified_at": "2025-08-30T16:59:35.634032+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "general",
+        "humidity_entity_id": null,
+        "icon": null,
+        "id": "dom",
+        "labels": [],
+        "name": "Dom",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "2025-08-30T10:09:55.898111+00:00",
+        "modified_at": "2025-08-30T10:09:55.898117+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "parter",
+        "humidity_entity_id": null,
+        "icon": "mdi:blinds",
+        "id": "gabinet",
+        "labels": [],
+        "name": "Gabinet",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "2025-08-30T10:24:29.249578+00:00",
+        "modified_at": "2025-08-30T10:24:29.249583+00:00"
       }
     ]
   }

@@ -2,5 +2,102 @@
   "version": 1,
   "minor_version": 1,
   "key": "trace.saved_traces",
-  "data": {}
+  "data": {
+    "script.play_gate_1_click": [
+      {
+        "extended_dict": {
+          "last_step": "sequence/0",
+          "run_id": "05ecaab984d1ef3a2c6637927dff6d0b",
+          "state": "stopped",
+          "script_execution": "error",
+          "timestamp": {
+            "start": "2025-08-30T16:29:37.654598+00:00",
+            "finish": "2025-08-30T16:29:37.662706+00:00"
+          },
+          "domain": "script",
+          "item_id": "play_gate_1_click",
+          "error": "'modbus_hub'",
+          "trace": {
+            "sequence/0": [
+              {
+                "path": "sequence/0",
+                "timestamp": "2025-08-30T16:29:37.655049+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "script.play_gate_1_click",
+                    "state": "off",
+                    "attributes": {
+                      "last_triggered": "2025-08-30T14:53:48.358546+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Brama 1 - przycisk"
+                    },
+                    "last_changed": "2025-08-30T16:05:45.995564+00:00",
+                    "last_reported": "2025-08-30T16:05:45.995564+00:00",
+                    "last_updated": "2025-08-30T16:05:45.995564+00:00",
+                    "context": {
+                      "id": "01K3XVMHWBQDRGZCNRQB4NXN7B",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "context": {
+                    "id": "01K3XX07ZPZZ47YP0AX9GSVXH3",
+                    "parent_id": null,
+                    "user_id": "b1c2894f170644d982400adba6e99d4f"
+                  }
+                },
+                "error": "'modbus_hub'",
+                "result": {
+                  "params": {
+                    "domain": "modbus",
+                    "service": "write_register",
+                    "service_data": {
+                      "unit": 1,
+                      "address": 546,
+                      "value": 5
+                    },
+                    "target": {}
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "alias": "Brama 1 - przycisk",
+            "sequence": [
+              {
+                "data": {
+                  "unit": 1,
+                  "address": 546,
+                  "value": 5
+                },
+                "action": "modbus.write_register"
+              }
+            ]
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K3XX07ZPZZ47YP0AX9GSVXH3",
+            "parent_id": null,
+            "user_id": "b1c2894f170644d982400adba6e99d4f"
+          }
+        },
+        "short_dict": {
+          "last_step": "sequence/0",
+          "run_id": "05ecaab984d1ef3a2c6637927dff6d0b",
+          "state": "stopped",
+          "script_execution": "error",
+          "timestamp": {
+            "start": "2025-08-30T16:29:37.654598+00:00",
+            "finish": "2025-08-30T16:29:37.662706+00:00"
+          },
+          "domain": "script",
+          "item_id": "play_gate_1_click",
+          "error": "'modbus_hub'"
+        }
+      }
+    ]
+  }
 }

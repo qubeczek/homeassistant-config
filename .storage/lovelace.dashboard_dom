@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.dashboard_dom",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Dom",
+          "type": "sections",
+          "max_columns": 4,
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "subtitle",
+                  "badges": []
+                },
+                {
+                  "show_current": true,
+                  "show_forecast": true,
+                  "type": "weather-forecast",
+                  "entity": "weather.forecast_dom",
+                  "forecast_type": "daily"
+                },
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "entity": "script.podejdz_do_telefonu",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "scene.wieczorne_ogladanie_filmu"
+                    },
+                    {
+                      "entity": "scene.gaszenie_swiatel"
+                    }
+                  ],
+                  "title": "Scenariusze"
+                },
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "entity": "script.brama_1a",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                }
+              ],
+              "column_span": 4
+            }
+          ],
+          "header": {
+            "card": {
+              "type": "markdown",
+              "content": "# Witaj {{ user }} \n Miłego dnia! ✨"
+            },
+            "layout": "responsive",
+            "badges_position": "bottom",
+            "badges_wrap": "wrap"
+          },
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "zone.home"
+            }
+          ]
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Parter",
+          "path": "parter",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.light_salon_sufit1"
+                    },
+                    {
+                      "entity": "light.light_salon_sufit2"
+                    },
+                    {
+                      "entity": "light.light_salon_kinkiet1"
+                    },
+                    {
+                      "entity": "light.light_salon_kinkiet2"
+                    },
+                    {
+                      "entity": "light.light_salon_kinkiet3"
+                    },
+                    {
+                      "entity": "light.light_salon_led_kominek1"
+                    },
+                    {
+                      "entity": "light.light_salon_led_kominek2"
+                    }
+                  ],
+                  "title": "Salon",
+                  "show_header_toggle": true,
+                  "state_color": false
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Nowa sekcja"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Piętro",
+          "path": "pietro",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Nowa sekcja"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

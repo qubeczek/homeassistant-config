@@ -12,6 +12,15 @@
         "mode": "storage",
         "show_in_sidebar": true,
         "require_admin": false
+      },
+      {
+        "id": "dashboard_dom",
+        "show_in_sidebar": true,
+        "icon": "mdi:home",
+        "title": "Dom",
+        "require_admin": false,
+        "mode": "storage",
+        "url_path": "dashboard-dom"
       }
     ]
   }
