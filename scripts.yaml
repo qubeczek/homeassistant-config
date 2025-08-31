@@ -1,0 +1,76 @@
+brama_1a:
+  sequence:
+  - action: modbus.write_register
+    metadata: {}
+    data:
+      hub: fatek
+      address: 546
+      slave: 1
+      value: 5
+  alias: Brama 1a
+  description: ''
+light_night_on:
+  sequence:
+  - service: light.turn_on
+    entity_id: light.light_drzwifrontowe, light.light_roof_front1, light.light_roof_back1,
+      light.light_ogrod_front, light.light_schody_led, light.light_korytarzgora_led1,
+      light.light_halldol_led
+light_day_off:
+  sequence:
+  - service: light.turn_off
+    entity_id: light.light_drzwifrontowe, light.light_roof_front1, light.light_roof_back1,
+      light.light_ogrod_front, light.light_schody_led, light.light_korytarzgora_led1,
+      light.light_halldol_led
+ogrod_planpodlewania_toggle:
+  alias: Przelacz program podlewania
+  sequence:
+  - service: modbus.write_register
+    data:
+      unit: 1
+      address: 1049
+      value: 1
+ogrod_podlewanie_toggle:
+  alias: Wlacz / wylacz podlewanie
+  sequence:
+  - service: modbus.write_register
+    data:
+      unit: 1
+      address: 1049
+      value: 2
+ogrod_woda_toggle:
+  alias: Wlacz / wylacz wode w ogrodzie
+  sequence:
+  - service: modbus.write_register
+    data:
+      unit: 1
+      address: 1049
+      value: 3
+sypialnia_night:
+  alias: Wieczorek we dwoje
+  sequence:
+  - service: light.turn_off
+    entity_id: light.light_sypialnia_sufit1, light.light_sypialnia_kinkiet1, light.light_sypialnia_kinkiet2,
+      light.light_garderoba_sufit
+  - service: light.turn_on
+    entity_id: light.light_sypialnia_led1
+  - service: media_player.turn_on
+    data:
+      entity_id: media_player.MiniWieza
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.MiniWieza
+      source: Internet
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.MiniWieza
+      volume_level: 0.1
+podejdz_do_telefonu:
+  sequence:
+  - action: modbus.write_register
+    metadata: {}
+    data:
+      hub: fatek
+      address: 1000
+      value: 2
+  alias: podejdz_do_telefonu
+  description: ''
