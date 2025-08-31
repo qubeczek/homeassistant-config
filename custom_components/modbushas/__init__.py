@@ -69,6 +69,34 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
         else:
             _LOGGER.error("Unexpected binary_sensor_config structure: %s", type(binary_sensor_config))
     
+    # Load sensor platform if configured
+    if DOMAIN in config and "sensor" in config[DOMAIN]:
+        _LOGGER.info("Loading sensor platform from config")
+        
+        # Get the sensor configuration
+        sensor_config = config[DOMAIN]["sensor"]
+        _LOGGER.info("Sensor config: %s", sensor_config)
+        
+        # Sprawdź strukturę sensor_config po rozszerzeniu !include
+        if isinstance(sensor_config, dict) and "sensor" in sensor_config:
+            # Struktura po rozszerzeniu !include: {'sensor': [platform1, platform2, platform3]}
+            platforms = sensor_config["sensor"]
+            if isinstance(platforms, list):
+                for platform_config in platforms:
+                    if platform_config.get("platform") == "modbushas":
+                        _LOGGER.info("Loading sensor platform: %s", platform_config)
+                        discovery.load_platform(hass, "sensor", "modbushas", platform_config, config)
+            else:
+                _LOGGER.error("Expected list of platforms, got: %s", type(platforms))
+        elif isinstance(sensor_config, list):
+            # Struktura: [platform1, platform2, platform3] - bezpośrednia lista
+            for platform_config in sensor_config:
+                if platform_config.get("platform") == "modbushas":
+                    _LOGGER.info("Loading sensor platform: %s", platform_config)
+                    discovery.load_platform(hass, "sensor", "modbushas", platform_config, config)
+        else:
+            _LOGGER.error("Unexpected sensor_config structure: %s", type(sensor_config))
+    
     return True
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:

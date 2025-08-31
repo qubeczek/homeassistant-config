@@ -3,61 +3,85 @@
   "minor_version": 1,
   "key": "trace.saved_traces",
   "data": {
-    "script.play_gate_1_click": [
+    "automation.None": [
       {
         "extended_dict": {
-          "last_step": "sequence/0",
-          "run_id": "05ecaab984d1ef3a2c6637927dff6d0b",
-          "state": "stopped",
-          "script_execution": "error",
+          "last_step": "action/0",
+          "run_id": "56808d3b0bdda62a9efd62669516fced",
+          "state": "running",
+          "script_execution": null,
           "timestamp": {
-            "start": "2025-08-30T16:29:37.654598+00:00",
-            "finish": "2025-08-30T16:29:37.662706+00:00"
+            "start": "2025-08-31T17:40:55.388055+00:00",
+            "finish": null
           },
-          "domain": "script",
-          "item_id": "play_gate_1_click",
-          "error": "'modbus_hub'",
+          "domain": "automation",
+          "item_id": "None",
+          "trigger": "sunset",
           "trace": {
-            "sequence/0": [
+            "trigger/0": [
               {
-                "path": "sequence/0",
-                "timestamp": "2025-08-30T16:29:37.655049+00:00",
+                "path": "trigger/0",
+                "timestamp": "2025-08-31T17:40:55.388130+00:00",
                 "changed_variables": {
                   "this": {
-                    "entity_id": "script.play_gate_1_click",
-                    "state": "off",
+                    "entity_id": "automation.wieczorne_zapalanie_swiatel",
+                    "state": "on",
                     "attributes": {
-                      "last_triggered": "2025-08-30T14:53:48.358546+00:00",
+                      "last_triggered": "2025-08-30T17:43:06.461030+00:00",
                       "mode": "single",
                       "current": 0,
-                      "friendly_name": "Brama 1 - przycisk"
+                      "friendly_name": "Wieczorne zapalanie \u015bwiate\u0142"
                     },
-                    "last_changed": "2025-08-30T16:05:45.995564+00:00",
-                    "last_reported": "2025-08-30T16:05:45.995564+00:00",
-                    "last_updated": "2025-08-30T16:05:45.995564+00:00",
+                    "last_changed": "2025-08-31T16:35:28.968382+00:00",
+                    "last_reported": "2025-08-31T16:35:28.968382+00:00",
+                    "last_updated": "2025-08-31T16:35:28.968382+00:00",
                     "context": {
-                      "id": "01K3XVMHWBQDRGZCNRQB4NXN7B",
+                      "id": "01K40FQP28QW5PJE4HFB27VZWD",
                       "parent_id": null,
                       "user_id": null
                     }
                   },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "sun",
+                    "event": "sunset",
+                    "offset": {
+                      "__type": "<class 'datetime.timedelta'>",
+                      "total_seconds": 0.0
+                    },
+                    "description": "sunset"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-08-31T17:40:55.388467+00:00",
+                "child_id": {
+                  "domain": "script",
+                  "item_id": "light_night_on",
+                  "run_id": "ffb0bcab30ce358787a510155360fd9b"
+                },
+                "changed_variables": {
                   "context": {
-                    "id": "01K3XX07ZPZZ47YP0AX9GSVXH3",
+                    "id": "01K40KFGEWARTQBJ73X2WTM9KJ",
                     "parent_id": null,
-                    "user_id": "b1c2894f170644d982400adba6e99d4f"
+                    "user_id": null
                   }
                 },
-                "error": "'modbus_hub'",
                 "result": {
                   "params": {
-                    "domain": "modbus",
-                    "service": "write_register",
-                    "service_data": {
-                      "unit": 1,
-                      "address": 546,
-                      "value": 5
-                    },
-                    "target": {}
+                    "domain": "homeassistant",
+                    "service": "turn_on",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "script.light_night_on"
+                      ]
+                    }
                   },
                   "running_script": false
                 }
@@ -65,37 +89,129 @@
             ]
           },
           "config": {
-            "alias": "Brama 1 - przycisk",
+            "alias": "Wieczorne zapalanie \u015bwiate\u0142",
+            "trigger": {
+              "platform": "sun",
+              "event": "sunset"
+            },
+            "action": {
+              "entity_id": "script.light_night_on",
+              "action": "homeassistant.turn_on"
+            }
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K40KFGEWARTQBJ73X2WTM9KJ",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "56808d3b0bdda62a9efd62669516fced",
+          "state": "running",
+          "script_execution": null,
+          "timestamp": {
+            "start": "2025-08-31T17:40:55.388055+00:00",
+            "finish": null
+          },
+          "domain": "automation",
+          "item_id": "None",
+          "trigger": "sunset"
+        }
+      }
+    ],
+    "script.light_night_on": [
+      {
+        "extended_dict": {
+          "last_step": "sequence/0",
+          "run_id": "ffb0bcab30ce358787a510155360fd9b",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-31T17:40:55.393305+00:00",
+            "finish": "2025-08-31T17:40:56.005037+00:00"
+          },
+          "domain": "script",
+          "item_id": "light_night_on",
+          "trace": {
+            "sequence/0": [
+              {
+                "path": "sequence/0",
+                "timestamp": "2025-08-31T17:40:55.393572+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "script.light_night_on",
+                    "state": "off",
+                    "attributes": {
+                      "last_triggered": "2025-08-30T17:43:06.463569+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "light_night_on"
+                    },
+                    "last_changed": "2025-08-31T16:35:28.491761+00:00",
+                    "last_reported": "2025-08-31T16:35:28.491761+00:00",
+                    "last_updated": "2025-08-31T16:35:28.491761+00:00",
+                    "context": {
+                      "id": "01K40FQNKBWCJMPJGV9B4XNNRZ",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "context": {
+                    "id": "01K40KFGEWARTQBJ73X2WTM9KJ",
+                    "parent_id": null,
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "light",
+                    "service": "turn_on",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "light.light_drzwifrontowe",
+                        "light.light_roof_front1",
+                        "light.light_roof_back1",
+                        "light.light_ogrod_front",
+                        "light.light_schody_led",
+                        "light.light_korytarzgora_led1",
+                        "light.light_halldol_led"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
             "sequence": [
               {
-                "data": {
-                  "unit": 1,
-                  "address": 546,
-                  "value": 5
-                },
-                "action": "modbus.write_register"
+                "entity_id": "light.light_drzwifrontowe, light.light_roof_front1, light.light_roof_back1, light.light_ogrod_front, light.light_schody_led, light.light_korytarzgora_led1, light.light_halldol_led",
+                "action": "light.turn_on"
               }
             ]
           },
           "blueprint_inputs": null,
           "context": {
-            "id": "01K3XX07ZPZZ47YP0AX9GSVXH3",
+            "id": "01K40KFGEWARTQBJ73X2WTM9KJ",
             "parent_id": null,
-            "user_id": "b1c2894f170644d982400adba6e99d4f"
+            "user_id": null
           }
         },
         "short_dict": {
           "last_step": "sequence/0",
-          "run_id": "05ecaab984d1ef3a2c6637927dff6d0b",
+          "run_id": "ffb0bcab30ce358787a510155360fd9b",
           "state": "stopped",
-          "script_execution": "error",
+          "script_execution": "finished",
           "timestamp": {
-            "start": "2025-08-30T16:29:37.654598+00:00",
-            "finish": "2025-08-30T16:29:37.662706+00:00"
+            "start": "2025-08-31T17:40:55.393305+00:00",
+            "finish": "2025-08-31T17:40:56.005037+00:00"
           },
           "domain": "script",
-          "item_id": "play_gate_1_click",
-          "error": "'modbus_hub'"
+          "item_id": "light_night_on"
         }
       }
     ]

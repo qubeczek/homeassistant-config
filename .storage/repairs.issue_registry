@@ -17,6 +17,13 @@
         "domain": "homeassistant",
         "is_persistent": false,
         "issue_id": "platform_integration_no_support_light_modbushas"
+      },
+      {
+        "created": "2025-08-31T11:36:35.778115+00:00",
+        "dismissed_version": "2025.8.3",
+        "domain": "homeassistant",
+        "is_persistent": false,
+        "issue_id": "platform_integration_no_support_binary_sensor_modbushas"
       }
     ]
   }

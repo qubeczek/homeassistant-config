@@ -10,6 +10,7 @@ sun:
 modbushas:
   light: !include include/light.yaml
   binary_sensor: !include include/binary_sensor.yaml
+  sensor: !include include/sensors/sensors-modbus.yaml
 
 logger:
   default: warning

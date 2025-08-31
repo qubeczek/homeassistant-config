@@ -42,3 +42,5 @@ custom_components/modbushas/__pycache__/binary_sensor.cpython-38.pyc
 /custom_components/modbushas/light/__pycache__
 /custom_components/onkyo2/__pycache__
 /custom_components/onkyo2/__pycache__
+/custom_components/modbushas/sensor/__pycache__
+/custom_components/modbushas/binary_sensor/__pycache__

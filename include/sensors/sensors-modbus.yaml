@@ -1,257 +1,265 @@
-  - platform: modbus
-    scan_interval: 10  
-    registers:
-      - name: heater_workingtime_a
-        unit_of_measurement: min
-        slave: 1
-        register: 501
-        scale:  0.0166666666
-        
-  - platform: modbushas
-    scan_interval: 30  
-    registers:
-      - name: heater_workingtime
-        unit_of_measurement: min
-        slave: 1
-        register: 501
-        scale:  0.0166666666
-        signed: 1
-      - name: heater_oncount
-        register: 509
-      - name: kominek_co_temp_wlaczenia
-        unit_of_measurement: °C
-        scale: 0.01
-        register: 535
+- platform: modbushas
+  hub: fatek
+  scan_interval: 10  
+  registers:
+    - name: heater_workingtime_a
+      unit_of_measurement: min
+      slave: 1
+      register: 501
+      scale:  0.0166666666
+      
+- platform: modbushas
+  hub: fatek
+  scan_interval: 30  
+  registers:
+    - name: heater_workingtime
+      unit_of_measurement: min
+      slave: 1
+      register: 501
+      scale:  0.0166666666
+      signed: 1
+    - name: heater_oncount
+      slave: 1
+      register: 509
+    - name: kominek_co_temp_wlaczenia
+      unit_of_measurement: °C
+      scale: 0.01
+      slave: 1
+      register: 535
 
-  - platform: modbushas
-    scan_interval: 60  
-    registers:
-      - name: temp_set_salon_kd
-        unit_of_measurement: °C
-        slave: 1
-        register: 7923
-        scale: 0.01
-        signed: 1
+- platform: modbushas
+  hub: fatek
+  scan_interval: 60  
+  registers:
+    - name: temp_set_salon_kd
+      unit_of_measurement: °C
+      slave: 1
+      register: 7923
+      scale: 0.01
+      signed: 1
 
 #temperatury        
-  - platform: modbushas
-    scan_interval: 15  
-    registers:
-      - name: temp_outside
-        unit_of_measurement: °C
-        slave: 1
-        register: 411
-        scale: 0.01
-        signed: 1
-      - name: temp_kominek
-        unit_of_measurement: °C
-        slave: 1
-        register: 405
-        scale: 0.01
-        signed: 1
-      - name: temp_kominek_back
-        unit_of_measurement: °C
-        slave: 1
-        register: 409
-        scale: 0.01
-        signed: 1
-      - name: temp_cwu
-        unit_of_measurement: °C
-        slave: 1
-        register: 439
-        scale: 0.01
-        signed: 1
-      - name: temp_cwu_back
-        unit_of_measurement: °C
-        slave: 1
-        register: 435
-        scale: 0.01
-        signed: 1
-      - name: temp_co_sprzeglo
-        unit_of_measurement: °C
-        slave: 1
-        register: 441
-        scale: 0.01
-        signed: 1
-      - name: temp_co
-        unit_of_measurement: °C
-        slave: 1
-        register: 430
-        scale: 0.01
-        signed: 1        
-      - name: temp_co_back
-        unit_of_measurement: °C
-        slave: 1
-        register: 431
-        scale: 0.01
-        signed: 1        
-      - name: temp_cp
-        unit_of_measurement: °C
-        slave: 1
-        register: 432
-        scale: 0.01
-        signed: 1        
-      - name: temp_cp_back
-        unit_of_measurement: °C
-        slave: 1
-        register: 433
-        scale: 0.01
-        signed: 1
-      - name: temp_co_piec
-        unit_of_measurement: °C
-        slave: 1
-        register: 429
-        scale: 0.01
-        signed: 1
-      - name: temp_co_piec_back
-        unit_of_measurement: °C
-        slave: 1
-        register: 428
-        scale: 0.01
-        signed: 1
-      - name: temp_cwu_piec
-        unit_of_measurement: °C
-        slave: 1
-        register: 426
-        scale: 0.01
-        signed: 1
-      - name: temp_cwu_piec_back
-        unit_of_measurement: °C
-        slave: 1
-        register: 427
-        scale: 0.01
-        signed: 1
-      - name: temp_kcwu
-        unit_of_measurement: °C
-        slave: 1
-        register: 436
-        scale: 0.01
-        signed: 1
-      - name: temp_kcwu_back
-        unit_of_measurement: °C
-        slave: 1
-        register: 438
-        scale: 0.01
-        signed: 1
-      - name: temp_garaz
-        unit_of_measurement: °C
-        slave: 1
-        register: 425
-        scale: 0.01
-        signed: 1     
-      - name: temp_gabinet
-        unit_of_measurement: °C
-        slave: 1
-        register: 424
-        scale: 0.01
-        signed: 1
-      - name: temp_pralnia
-        unit_of_measurement: °C
-        slave: 1
-        register: 423
-        scale: 0.01
-        signed: 1
-      - name: temp_korytarzIp
-        unit_of_measurement: °C
-        slave: 1
-        register: 422
-        scale: 0.01
-        signed: 1
-      - name: temp_wiatrolap
-        unit_of_measurement: °C
-        slave: 1
-        register: 421
-        scale: 0.01
-        signed: 1
-      - name: temp_lazienkadol
-        unit_of_measurement: °C
-        slave: 1
-        register: 420
-        scale: 0.01
-        signed: 1
-      - name: temp_kuchnia
-        unit_of_measurement: °C
-        slave: 1
-        register: 419
-        scale: 0.01
-        signed: 1
-      - name: temp_hallIp
-        unit_of_measurement: °C
-        slave: 1
-        register: 418
-        scale: 0.01
-        signed: 1
-      - name: temp_sypialnia
-        unit_of_measurement: °C
-        slave: 1
-        register: 417
-        scale: 0.01
-        signed: 1
-      - name: temp_pokoj3
-        unit_of_measurement: °C
-        slave: 1
-        register: 416
-        scale: 0.01
-        signed: 1
-      - name: temp_pokoj2
-        unit_of_measurement: °C
-        slave: 1
-        register: 415
-        scale: 0.01
-        signed: 1
-      - name: temp_pokoj1
-        unit_of_measurement: °C
-        slave: 1
-        register: 414
-        scale: 0.01
-        signed: 1
-      - name: temp_spizarka
-        unit_of_measurement: °C
-        slave: 1
-        register: 413
-        scale: 0.01
-        signed: 1
-      - name: temp_salon
-        unit_of_measurement: °C
-        slave: 1
-        register: 412
-        scale: 0.01
-        signed: 1
-      - name: temp_lazienkasyp
-        unit_of_measurement: °C
-        slave: 1
-        register: 408
-        scale: 0.01
-        signed: 1
-      - name: temp_lazienkagora
-        unit_of_measurement: °C
-        slave: 1
-        register: 402
-        scale: 0.01
-        signed: 1
+- platform: modbushas
+  hub: fatek
+  scan_interval: 15  
+  registers:
+    - name: temp_outside
+      unit_of_measurement: °C
+      slave: 1
+      register: 411
+      scale: 0.01
+      signed: 1
+    - name: temp_kominek
+      unit_of_measurement: °C
+      slave: 1
+      register: 405
+      scale: 0.01
+      signed: 1
+    - name: temp_kominek_back
+      unit_of_measurement: °C
+      slave: 1
+      register: 409
+      scale: 0.01
+      signed: 1
+    - name: temp_cwu
+      unit_of_measurement: °C
+      slave: 1
+      register: 439
+      scale: 0.01
+      signed: 1
+    - name: temp_cwu_back
+      unit_of_measurement: °C
+      slave: 1
+      register: 435
+      scale: 0.01
+      signed: 1
+    - name: temp_co_sprzeglo
+      unit_of_measurement: °C
+      slave: 1
+      register: 441
+      scale: 0.01
+      signed: 1
+    - name: temp_co
+      unit_of_measurement: °C
+      slave: 1
+      register: 430
+      scale: 0.01
+      signed: 1        
+    - name: temp_co_back
+      unit_of_measurement: °C
+      slave: 1
+      register: 431
+      scale: 0.01
+      signed: 1        
+    - name: temp_cp
+      unit_of_measurement: °C
+      slave: 1
+      register: 432
+      scale: 0.01
+      signed: 1        
+    - name: temp_cp_back
+      unit_of_measurement: °C
+      slave: 1
+      register: 433
+      scale: 0.01
+      signed: 1
+    - name: temp_co_piec
+      unit_of_measurement: °C
+      slave: 1
+      register: 429
+      scale: 0.01
+      signed: 1
+    - name: temp_co_piec_back
+      unit_of_measurement: °C
+      slave: 1
+      register: 428
+      scale: 0.01
+      signed: 1
+    - name: temp_cwu_piec
+      unit_of_measurement: °C
+      slave: 1
+      register: 426
+      scale: 0.01
+      signed: 1
+    - name: temp_cwu_piec_back
+      unit_of_measurement: °C
+      slave: 1
+      register: 427
+      scale: 0.01
+      signed: 1
+    - name: temp_kcwu
+      unit_of_measurement: °C
+      slave: 1
+      register: 436
+      scale: 0.01
+      signed: 1
+    - name: temp_kcwu_back
+      unit_of_measurement: °C
+      slave: 1
+      register: 438
+      scale: 0.01
+      signed: 1
+    - name: temp_garaz
+      unit_of_measurement: °C
+      slave: 1
+      register: 425
+      scale: 0.01
+      signed: 1     
+    - name: temp_gabinet
+      unit_of_measurement: °C
+      slave: 1
+      register: 424
+      scale: 0.01
+      signed: 1
+    - name: temp_pralnia
+      unit_of_measurement: °C
+      slave: 1
+      register: 423
+      scale: 0.01
+      signed: 1
+    - name: temp_korytarzIp
+      unit_of_measurement: °C
+      slave: 1
+      register: 422
+      scale: 0.01
+      signed: 1
+    - name: temp_wiatrolap
+      unit_of_measurement: °C
+      slave: 1
+      register: 421
+      scale: 0.01
+      signed: 1
+    - name: temp_lazienkadol
+      unit_of_measurement: °C
+      slave: 1
+      register: 420
+      scale: 0.01
+      signed: 1
+    - name: temp_kuchnia
+      unit_of_measurement: °C
+      slave: 1
+      register: 419
+      scale: 0.01
+      signed: 1
+    - name: temp_hallIp
+      unit_of_measurement: °C
+      slave: 1
+      register: 418
+      scale: 0.01
+      signed: 1
+    - name: temp_sypialnia
+      unit_of_measurement: °C
+      slave: 1
+      register: 417
+      scale: 0.01
+      signed: 1
+    - name: temp_pokoj3
+      unit_of_measurement: °C
+      slave: 1
+      register: 416
+      scale: 0.01
+      signed: 1
+    - name: temp_pokoj2
+      unit_of_measurement: °C
+      slave: 1
+      register: 415
+      scale: 0.01
+      signed: 1
+    - name: temp_pokoj1
+      unit_of_measurement: °C
+      slave: 1
+      register: 414
+      scale: 0.01
+      signed: 1
+    - name: temp_spizarka
+      unit_of_measurement: °C
+      slave: 1
+      register: 413
+      scale: 0.01
+      signed: 1
+    - name: temp_salon
+      unit_of_measurement: °C
+      slave: 1
+      register: 412
+      scale: 0.01
+      signed: 1
+    - name: temp_lazienkasyp
+      unit_of_measurement: °C
+      slave: 1
+      register: 408
+      scale: 0.01
+      signed: 1
+    - name: temp_lazienkagora
+      unit_of_measurement: °C
+      slave: 1
+      register: 402
+      scale: 0.01
+      signed: 1
 
 #ogrod
-  - platform: modbushas
-    scan_interval: 5  
-    registers:
-      - name: ogrod_susza
-        slave: 1
-        register: 1048
-        signed: 1                
-      - name: ogrod_status_programu
-        slave: 1
-        register: 1016
-        signed: 1     
-      - name: ogrod_status_wody
-        slave: 1
-        register: 1018        
-        signed: 1
+- platform: modbushas
+  hub: fatek
+  scan_interval: 5  
+  registers:
+    - name: ogrod_susza
+      slave: 1
+      register: 1048
+      signed: 1                
+    - name: ogrod_status_programu
+      slave: 1
+      register: 1016
+      signed: 1     
+    - name: ogrod_status_wody
+      slave: 1
+      register: 1018        
+      signed: 1
 
 #satel
-  - platform: modbushas
-    scan_interval: 5
-    registers:
-      - name: satel_onoff
-        slave: 1
-        register: 452
-        signed: 1
+- platform: modbushas
+  hub: fatek
+  scan_interval: 5
+  registers:
+    - name: satel_onoff
+      slave: 1
+      register: 452
+      signed: 1

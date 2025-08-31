@@ -4,137 +4,137 @@
   "key": "core.restore_state",
   "data": [
     {
-      "state": {"entity_id":"update.home_assistant_supervisor_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"2025.08.3","in_progress":false,"latest_version":"2025.08.3","release_summary":null,"release_url":"https://github.com/home-assistant/supervisor/releases/tag/2025.08.3","skipped_version":null,"title":"Home Assistant Supervisor","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/hassio/icon.png","friendly_name":"Home Assistant Supervisor Update","supported_features":1},"last_changed":"2025-08-30T16:42:46.942374+00:00","last_reported":"2025-08-30T16:42:46.942374+00:00","last_updated":"2025-08-30T16:42:46.942374+00:00","context":{"id":"01K3XXRARYWMFZ12T6M9HB58JX","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"update.home_assistant_supervisor_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"2025.08.3","in_progress":false,"latest_version":"2025.08.3","release_summary":null,"release_url":"https://github.com/home-assistant/supervisor/releases/tag/2025.08.3","skipped_version":null,"title":"Home Assistant Supervisor","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/hassio/icon.png","friendly_name":"Home Assistant Supervisor Update","supported_features":1},"last_changed":"2025-08-31T18:27:24.804346+00:00","last_reported":"2025-08-31T18:27:24.804346+00:00","last_updated":"2025-08-31T18:27:24.804346+00:00","context":{"id":"01K40P4MG4MJP4GG82E9SVCXD7","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"update.home_assistant_core_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2025.8.3","in_progress":false,"latest_version":"2025.8.3","release_summary":null,"release_url":"https://www.home-assistant.io/latest-release-notes/","skipped_version":null,"title":"Home Assistant Core","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Core Update","supported_features":11},"last_changed":"2025-08-30T16:42:46.942682+00:00","last_reported":"2025-08-30T16:42:46.942682+00:00","last_updated":"2025-08-30T16:42:46.942682+00:00","context":{"id":"01K3XXRARYQGD7A2DDZ9KEPFMK","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"update.home_assistant_core_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2025.8.3","in_progress":false,"latest_version":"2025.8.3","release_summary":null,"release_url":"https://www.home-assistant.io/latest-release-notes/","skipped_version":null,"title":"Home Assistant Core","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Core Update","supported_features":11},"last_changed":"2025-08-31T18:27:24.804656+00:00","last_reported":"2025-08-31T18:27:24.804656+00:00","last_updated":"2025-08-31T18:27:24.804656+00:00","context":{"id":"01K40P4MG4PK8S0M3H46PEY5YJ","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"update.advanced_ssh_web_terminal_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"21.0.2","in_progress":false,"latest_version":"21.0.2","release_summary":null,"release_url":null,"skipped_version":null,"title":"Advanced SSH & Web Terminal","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_ssh/icon","friendly_name":"Advanced SSH & Web Terminal Update","supported_features":25},"last_changed":"2025-08-30T16:42:46.942897+00:00","last_reported":"2025-08-30T16:42:46.942897+00:00","last_updated":"2025-08-30T16:42:46.942897+00:00","context":{"id":"01K3XXRARYMAAFQZ97RV7SF06N","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"update.advanced_ssh_web_terminal_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"21.0.2","in_progress":false,"latest_version":"21.0.2","release_summary":null,"release_url":null,"skipped_version":null,"title":"Advanced SSH & Web Terminal","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_ssh/icon","friendly_name":"Advanced SSH & Web Terminal Update","supported_features":25},"last_changed":"2025-08-31T18:27:24.804863+00:00","last_reported":"2025-08-31T18:27:24.804863+00:00","last_updated":"2025-08-31T18:27:24.804863+00:00","context":{"id":"01K40P4MG4HYS8SAKER0JC5K23","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"update.file_editor_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"5.8.0","in_progress":false,"latest_version":"5.8.0","release_summary":null,"release_url":null,"skipped_version":null,"title":"File editor","update_percentage":null,"entity_picture":"/api/hassio/addons/core_configurator/icon","friendly_name":"File editor Update","supported_features":25},"last_changed":"2025-08-30T16:42:46.943048+00:00","last_reported":"2025-08-30T16:42:46.943048+00:00","last_updated":"2025-08-30T16:42:46.943048+00:00","context":{"id":"01K3XXRARZFP40VKV98563YQMZ","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"update.file_editor_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"5.8.0","in_progress":false,"latest_version":"5.8.0","release_summary":null,"release_url":null,"skipped_version":null,"title":"File editor","update_percentage":null,"entity_picture":"/api/hassio/addons/core_configurator/icon","friendly_name":"File editor Update","supported_features":25},"last_changed":"2025-08-31T18:27:24.805003+00:00","last_reported":"2025-08-31T18:27:24.805003+00:00","last_updated":"2025-08-31T18:27:24.805003+00:00","context":{"id":"01K40P4MG5XSRYXS1V4Q2VDZ3N","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"update.samba_share_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"12.5.2","in_progress":false,"latest_version":"12.5.2","release_summary":null,"release_url":null,"skipped_version":null,"title":"Samba share","update_percentage":null,"entity_picture":"/api/hassio/addons/core_samba/icon","friendly_name":"Samba share Update","supported_features":25},"last_changed":"2025-08-30T16:42:46.943191+00:00","last_reported":"2025-08-30T16:42:46.943191+00:00","last_updated":"2025-08-30T16:42:46.943191+00:00","context":{"id":"01K3XXRARZACF88GEBZX2X84J8","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"update.samba_share_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"12.5.2","in_progress":false,"latest_version":"12.5.2","release_summary":null,"release_url":null,"skipped_version":null,"title":"Samba share","update_percentage":null,"entity_picture":"/api/hassio/addons/core_samba/icon","friendly_name":"Samba share Update","supported_features":25},"last_changed":"2025-08-31T18:27:24.805135+00:00","last_reported":"2025-08-31T18:27:24.805135+00:00","last_updated":"2025-08-31T18:27:24.805135+00:00","context":{"id":"01K40P4MG5AS7HMZC816FR18WJ","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"update.home_assistant_operating_system_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"16.1","in_progress":false,"latest_version":"16.1","release_summary":null,"release_url":"https://github.com/home-assistant/operating-system/releases/tag/16.1","skipped_version":null,"title":"Home Assistant Operating System","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Operating System Update","supported_features":11},"last_changed":"2025-08-30T16:42:46.943385+00:00","last_reported":"2025-08-30T16:42:46.943385+00:00","last_updated":"2025-08-30T16:42:46.943385+00:00","context":{"id":"01K3XXRARZVHVSZME30E8CH5JT","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"update.home_assistant_operating_system_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"16.1","in_progress":false,"latest_version":"16.1","release_summary":null,"release_url":"https://github.com/home-assistant/operating-system/releases/tag/16.1","skipped_version":null,"title":"Home Assistant Operating System","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Operating System Update","supported_features":11},"last_changed":"2025-08-31T18:27:24.805326+00:00","last_reported":"2025-08-31T18:27:24.805326+00:00","last_updated":"2025-08-31T18:27:24.805326+00:00","context":{"id":"01K40P4MG5KW8643JCEVW47140","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"conversation.home_assistant","state":"2025-08-28T11:49:53.080823+00:00","attributes":{"friendly_name":"Home Assistant","supported_features":1},"last_changed":"2025-08-30T16:42:47.774472+00:00","last_reported":"2025-08-30T16:42:47.774472+00:00","last_updated":"2025-08-30T16:42:47.774472+00:00","context":{"id":"01K3XXRBJYDY7RXHF0RGQMG9TG","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"conversation.home_assistant","state":"2025-08-28T11:49:53.080823+00:00","attributes":{"friendly_name":"Home Assistant","supported_features":1},"last_changed":"2025-08-31T18:27:25.495585+00:00","last_reported":"2025-08-31T18:27:25.495585+00:00","last_updated":"2025-08-31T18:27:25.495585+00:00","context":{"id":"01K40P4N5Q2MTYSPZRS9M1QFGT","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"event.backup_automatyczna_kopia_zapasowa","state":"unknown","attributes":{"event_types":["completed","failed","in_progress"],"event_type":null,"friendly_name":"Backup Automatyczna kopia zapasowa"},"last_changed":"2025-08-30T16:42:47.831711+00:00","last_reported":"2025-08-30T16:42:47.831711+00:00","last_updated":"2025-08-30T16:42:47.831711+00:00","context":{"id":"01K3XXRBMQTQPMB5WXXJJQZN62","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"event.backup_automatyczna_kopia_zapasowa","state":"unknown","attributes":{"event_types":["completed","failed","in_progress"],"event_type":null,"friendly_name":"Backup Automatyczna kopia zapasowa"},"last_changed":"2025-08-31T18:27:25.602277+00:00","last_reported":"2025-08-31T18:27:25.602277+00:00","last_updated":"2025-08-31T18:27:25.602277+00:00","context":{"id":"01K40P4N92VESQ1YQY9RPFEJ68","parent_id":null,"user_id":null}},
       "extra_data": {
         "last_event_type": null,
         "last_event_attributes": null
       },
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"scene.gaszenie_swiatel","state":"2025-08-31T08:36:51.283914+00:00","attributes":{"entity_id":["group.salon","group.jadalnia","group.gabinet","group.kuchnia","light.light_spizarka_sufit1","light.light_halldol_sufit1","light.light_wiatrolap_sufit1","light.light_wiatrolap_sufit2","group.lazienkadol","light.light_schody_sufit1","light.light_korytarzgora_sufit1","light.light_korytarzgora_sufit2","light.light_hallgora_sufit1","light.light_pralnia_sufit1","group.pokoj1","group.pokoj2","group.pokoj3","group.lazienkagora","group.garaz","light.light_podjazd","light.light_balkon","light.light_tarasgora","light.light_roof_front2","light.light_roof_back2"],"friendly_name":"gaszenie_swiatel"},"last_changed":"2025-08-31T08:36:51.283971+00:00","last_reported":"2025-08-31T08:36:51.283971+00:00","last_updated":"2025-08-31T08:36:51.283971+00:00","context":{"id":"01K3ZMB9EKYBG22SSDM6CZG7MA","parent_id":null,"user_id":"b1c2894f170644d982400adba6e99d4f"}},
+      "state": {"entity_id":"script.brama_1a","state":"off","attributes":{"last_triggered":"2025-08-30T17:12:13.847971+00:00","mode":"single","current":0,"friendly_name":"Brama 1"},"last_changed":"2025-08-31T18:27:25.785748+00:00","last_reported":"2025-08-31T18:27:25.785748+00:00","last_updated":"2025-08-31T18:27:25.785748+00:00","context":{"id":"01K40P4NESARZ3EEKMKA0GJ7SF","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"scene.wieczorne_ogladanie_filmu","state":"2025-08-31T08:36:43.498835+00:00","attributes":{"entity_id":["group.jadalnia","light.light_halldol_sufit1","light.light_salon_sufit1","light.light_salon_sufit2","light.light_salon_led_kominek1","light.light_salon_led_kominek2","light.light_salon_kinkiet3","light.light_salon_kinkiet2","light.light_salon_regal"],"friendly_name":"wieczorne_ogladanie_filmu"},"last_changed":"2025-08-31T08:36:43.498899+00:00","last_reported":"2025-08-31T08:36:43.498899+00:00","last_updated":"2025-08-31T08:36:43.498899+00:00","context":{"id":"01K3ZMB1VA7HP3RQGF781FGHQ9","parent_id":null,"user_id":"b1c2894f170644d982400adba6e99d4f"}},
+      "state": {"entity_id":"script.light_night_on","state":"off","attributes":{"last_triggered":"2025-08-31T17:40:55.393419+00:00","mode":"single","current":0,"friendly_name":"light_night_on"},"last_changed":"2025-08-31T18:27:25.785898+00:00","last_reported":"2025-08-31T18:27:25.785898+00:00","last_updated":"2025-08-31T18:27:25.785898+00:00","context":{"id":"01K40P4NESDVKSZGZ449J8VRAV","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"scene.romantic","state":"2025-08-30T09:58:22.103862+00:00","attributes":{"entity_id":["group.lazienkagora","light.light_garderoba_sufit","light.light_sypialnia_sufit1","light.light_sypialnia_kinkiet1","light.light_sypialnia_kinkiet2","light.light_sypialnia_led1"],"friendly_name":"romantic"},"last_changed":"2025-08-30T16:42:47.896749+00:00","last_reported":"2025-08-30T16:42:47.896749+00:00","last_updated":"2025-08-30T16:42:47.896749+00:00","context":{"id":"01K3XXRBPRFS7GWKHEQ148F8B7","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"script.light_day_off","state":"off","attributes":{"last_triggered":"2025-08-31T04:01:16.708111+00:00","mode":"single","current":0,"friendly_name":"light_day_off"},"last_changed":"2025-08-31T18:27:25.786015+00:00","last_reported":"2025-08-31T18:27:25.786015+00:00","last_updated":"2025-08-31T18:27:25.786015+00:00","context":{"id":"01K40P4NET9VKR6JJBTZAP00JX","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"script.brama_1a","state":"off","attributes":{"last_triggered":"2025-08-30T17:12:13.847971+00:00","mode":"single","current":0,"friendly_name":"Brama 1"},"last_changed":"2025-08-30T17:12:13.881418+00:00","last_reported":"2025-08-30T17:12:13.881418+00:00","last_updated":"2025-08-30T17:12:13.881418+00:00","context":{"id":"01K3XZE88XJJ9251RQRC88MQFV","parent_id":null,"user_id":"b1c2894f170644d982400adba6e99d4f"}},
+      "state": {"entity_id":"script.ogrod_planpodlewania_toggle","state":"off","attributes":{"last_triggered":null,"mode":"single","current":0,"friendly_name":"Przelacz program podlewania"},"last_changed":"2025-08-31T18:27:25.786105+00:00","last_reported":"2025-08-31T18:27:25.786105+00:00","last_updated":"2025-08-31T18:27:25.786105+00:00","context":{"id":"01K40P4NETPTAKT9Q3SCGETAZZ","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"script.light_night_on","state":"off","attributes":{"last_triggered":"2025-08-30T17:43:06.463569+00:00","mode":"single","current":0,"friendly_name":"light_night_on"},"last_changed":"2025-08-30T17:43:07.038031+00:00","last_reported":"2025-08-30T17:43:07.038031+00:00","last_updated":"2025-08-30T17:43:07.038031+00:00","context":{"id":"01K3Y16SEWTHX2SX65KA3Z72ES","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"script.ogrod_podlewanie_toggle","state":"off","attributes":{"last_triggered":null,"mode":"single","current":0,"friendly_name":"Wlacz / wylacz podlewanie"},"last_changed":"2025-08-31T18:27:25.786190+00:00","last_reported":"2025-08-31T18:27:25.786190+00:00","last_updated":"2025-08-31T18:27:25.786190+00:00","context":{"id":"01K40P4NETRWBT1CK6M10X46MW","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"script.light_day_off","state":"off","attributes":{"last_triggered":"2025-08-31T04:01:16.708111+00:00","mode":"single","current":0,"friendly_name":"light_day_off"},"last_changed":"2025-08-31T04:01:17.260556+00:00","last_reported":"2025-08-31T04:01:17.260556+00:00","last_updated":"2025-08-31T04:01:17.260556+00:00","context":{"id":"01K3Z4JPD1TQKYBB076VK56AS4","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"script.ogrod_woda_toggle","state":"off","attributes":{"last_triggered":null,"mode":"single","current":0,"friendly_name":"Wlacz / wylacz wode w ogrodzie"},"last_changed":"2025-08-31T18:27:25.786820+00:00","last_reported":"2025-08-31T18:27:25.786820+00:00","last_updated":"2025-08-31T18:27:25.786820+00:00","context":{"id":"01K40P4NETN3G5ZC0MAHEA84YH","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"script.ogrod_planpodlewania_toggle","state":"off","attributes":{"last_triggered":null,"mode":"single","current":0,"friendly_name":"Przelacz program podlewania"},"last_changed":"2025-08-30T16:42:47.919895+00:00","last_reported":"2025-08-30T16:42:47.919895+00:00","last_updated":"2025-08-30T16:42:47.919895+00:00","context":{"id":"01K3XXRBQFA3BQAX4E8JRB8G2T","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"script.sypialnia_night","state":"off","attributes":{"last_triggered":"2025-08-30T16:49:44.635919+00:00","mode":"single","current":0,"friendly_name":"Wieczorek we dwoje"},"last_changed":"2025-08-31T18:27:25.786943+00:00","last_reported":"2025-08-31T18:27:25.786943+00:00","last_updated":"2025-08-31T18:27:25.786943+00:00","context":{"id":"01K40P4NETHTNVCNMRSSD4QKYZ","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"script.ogrod_podlewanie_toggle","state":"off","attributes":{"last_triggered":null,"mode":"single","current":0,"friendly_name":"Wlacz / wylacz podlewanie"},"last_changed":"2025-08-30T16:42:47.920014+00:00","last_reported":"2025-08-30T16:42:47.920014+00:00","last_updated":"2025-08-30T16:42:47.920014+00:00","context":{"id":"01K3XXRBQGJTHXH67GJBP57H2G","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"script.podejdz_do_telefonu","state":"off","attributes":{"last_triggered":"2025-08-30T17:05:27.783595+00:00","mode":"single","current":0,"icon":"mdi:phone-alert","friendly_name":"Podejdź do telefonu!"},"last_changed":"2025-08-31T18:27:25.787032+00:00","last_reported":"2025-08-31T18:27:25.787032+00:00","last_updated":"2025-08-31T18:27:25.787032+00:00","context":{"id":"01K40P4NEVZW2JHT4YY917B585","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"script.ogrod_woda_toggle","state":"off","attributes":{"last_triggered":null,"mode":"single","current":0,"friendly_name":"Wlacz / wylacz wode w ogrodzie"},"last_changed":"2025-08-30T16:42:47.920134+00:00","last_reported":"2025-08-30T16:42:47.920134+00:00","last_updated":"2025-08-30T16:42:47.920134+00:00","context":{"id":"01K3XXRBQGMQJ10T2JN6M7BJ9C","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"person.admin","state":"unknown","attributes":{"editable":true,"id":"admin","device_trackers":[],"source":"person.admin","user_id":"b1c2894f170644d982400adba6e99d4f","friendly_name":"kuba"},"last_changed":"2025-08-31T18:27:25.800559+00:00","last_reported":"2025-08-31T18:27:25.800559+00:00","last_updated":"2025-08-31T18:27:25.800559+00:00","context":{"id":"01K40P4NF8GDAMV8A4FE4CES54","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"script.sypialnia_night","state":"off","attributes":{"last_triggered":"2025-08-30T16:49:44.635919+00:00","mode":"single","current":0,"friendly_name":"Wieczorek we dwoje"},"last_changed":"2025-08-30T16:49:45.169940+00:00","last_reported":"2025-08-30T16:49:45.169940+00:00","last_updated":"2025-08-30T16:49:45.169940+00:00","context":{"id":"01K3XY52NVNH933XX1CN105Z6C","parent_id":null,"user_id":"b1c2894f170644d982400adba6e99d4f"}},
+      "state": {"entity_id":"person.magda","state":"unknown","attributes":{"editable":true,"id":"magda","device_trackers":[],"source":"person.magda","user_id":"5c3e0f23188843a58eb27648ed0502d1","friendly_name":"magda"},"last_changed":"2025-08-31T18:27:25.800799+00:00","last_reported":"2025-08-31T18:27:25.800799+00:00","last_updated":"2025-08-31T18:27:25.800799+00:00","context":{"id":"01K40P4NF8F06BVJQ2EPN29MCF","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"person.admin","state":"unknown","attributes":{"editable":true,"id":"admin","device_trackers":[],"user_id":"b1c2894f170644d982400adba6e99d4f","friendly_name":"kuba"},"last_changed":"2025-08-30T16:42:47.921444+00:00","last_reported":"2025-08-30T16:42:52.004567+00:00","last_updated":"2025-08-30T16:42:52.004567+00:00","context":{"id":"01K3XXRFQ45RP7BMMQMQ12R9A1","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"scene.gaszenie_swiatel","state":"2025-08-31T08:36:51.283914+00:00","attributes":{"entity_id":["group.salon","group.jadalnia","group.gabinet","group.kuchnia","light.light_spizarka_sufit1","light.light_halldol_sufit1","light.light_wiatrolap_sufit1","light.light_wiatrolap_sufit2","group.lazienkadol","light.light_schody_sufit1","light.light_korytarzgora_sufit1","light.light_korytarzgora_sufit2","light.light_hallgora_sufit1","light.light_pralnia_sufit1","group.pokoj1","group.pokoj2","group.pokoj3","group.lazienkagora","group.garaz","light.light_podjazd","light.light_balkon","light.light_tarasgora","light.light_roof_front2","light.light_roof_back2"],"friendly_name":"gaszenie_swiatel"},"last_changed":"2025-08-31T18:27:25.803416+00:00","last_reported":"2025-08-31T18:27:25.803416+00:00","last_updated":"2025-08-31T18:27:25.803416+00:00","context":{"id":"01K40P4NFB72K4CW6ZBDCB9C7Z","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"person.magda","state":"unknown","attributes":{"editable":true,"id":"magda","device_trackers":[],"user_id":"5c3e0f23188843a58eb27648ed0502d1","friendly_name":"magda"},"last_changed":"2025-08-30T16:42:47.921669+00:00","last_reported":"2025-08-30T16:42:52.004743+00:00","last_updated":"2025-08-30T16:42:52.004743+00:00","context":{"id":"01K3XXRFQ4T00GRFPWDPAQRTGC","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"scene.wieczorne_ogladanie_filmu","state":"2025-08-31T08:36:43.498835+00:00","attributes":{"entity_id":["group.jadalnia","light.light_halldol_sufit1","light.light_salon_sufit1","light.light_salon_sufit2","light.light_salon_led_kominek1","light.light_salon_led_kominek2","light.light_salon_kinkiet3","light.light_salon_kinkiet2","light.light_salon_regal"],"friendly_name":"wieczorne_ogladanie_filmu"},"last_changed":"2025-08-31T18:27:25.803910+00:00","last_reported":"2025-08-31T18:27:25.803910+00:00","last_updated":"2025-08-31T18:27:25.803910+00:00","context":{"id":"01K40P4NFBXNAR7VVF03F679N3","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"automation.gaszenie_rzeczy_po_alarmie","state":"on","attributes":{"id":"1577038355590","last_triggered":null,"mode":"single","current":0,"friendly_name":"Gaszenie rzeczy po alarmie"},"last_changed":"2025-08-30T16:42:48.748252+00:00","last_reported":"2025-08-30T16:42:48.748252+00:00","last_updated":"2025-08-30T16:42:48.748252+00:00","context":{"id":"01K3XXRCHCJFSMDMM95S2M5P14","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"scene.romantic","state":"2025-08-30T09:58:22.103862+00:00","attributes":{"entity_id":["group.lazienkagora","light.light_garderoba_sufit","light.light_sypialnia_sufit1","light.light_sypialnia_kinkiet1","light.light_sypialnia_kinkiet2","light.light_sypialnia_led1"],"friendly_name":"romantic"},"last_changed":"2025-08-31T18:27:25.804135+00:00","last_reported":"2025-08-31T18:27:25.804135+00:00","last_updated":"2025-08-31T18:27:25.804135+00:00","context":{"id":"01K40P4NFC4PXQYX6DTY2KE70R","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"automation.poranne_gaszenie_swiatel","state":"on","attributes":{"last_triggered":"2025-08-31T04:01:16.705650+00:00","mode":"single","current":0,"friendly_name":"Poranne gaszenie świateł"},"last_changed":"2025-08-30T16:42:48.748538+00:00","last_reported":"2025-08-31T04:01:16.710822+00:00","last_updated":"2025-08-31T04:01:16.710822+00:00","context":{"id":"01K3Z4JPD1TQKYBB076VK56AS4","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"binary_sensor.fatek_dummy_coil_72","state":"off","attributes":{"friendly_name":"fatek_dummy_coil_72"},"last_changed":"2025-08-31T18:27:26.736613+00:00","last_reported":"2025-08-31T18:27:29.887370+00:00","last_updated":"2025-08-31T18:27:26.736613+00:00","context":{"id":"01K40P4PCGE2XBBJHR14J22PGZ","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"automation.wieczorne_zapalanie_swiatel","state":"on","attributes":{"last_triggered":"2025-08-30T17:43:06.461030+00:00","mode":"single","current":0,"friendly_name":"Wieczorne zapalanie świateł"},"last_changed":"2025-08-30T16:42:48.748682+00:00","last_reported":"2025-08-30T17:43:06.466090+00:00","last_updated":"2025-08-30T17:43:06.466090+00:00","context":{"id":"01K3Y16SEWTHX2SX65KA3Z72ES","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"automation.gaszenie_rzeczy_po_alarmie","state":"on","attributes":{"id":"1577038355590","last_triggered":null,"mode":"single","current":0,"friendly_name":"Gaszenie rzeczy po alarmie"},"last_changed":"2025-08-31T18:27:26.876419+00:00","last_reported":"2025-08-31T18:27:26.876419+00:00","last_updated":"2025-08-31T18:27:26.876419+00:00","context":{"id":"01K40P4PGW13APQ18H0N2ZCHQD","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"binary_sensor.fatek_dummy_coil_72","state":"off","attributes":{"friendly_name":"fatek_dummy_coil_72"},"last_changed":"2025-08-30T21:06:49.215333+00:00","last_reported":"2025-08-30T21:06:49.215333+00:00","last_updated":"2025-08-30T21:06:49.215333+00:00","context":{"id":"01K3YCVSQZJXTNMX9ZYG7BA6HR","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"automation.poranne_gaszenie_swiatel","state":"on","attributes":{"last_triggered":"2025-08-31T04:01:16.705650+00:00","mode":"single","current":0,"friendly_name":"Poranne gaszenie świateł"},"last_changed":"2025-08-31T18:27:26.876654+00:00","last_reported":"2025-08-31T18:27:26.876654+00:00","last_updated":"2025-08-31T18:27:26.876654+00:00","context":{"id":"01K40P4PGWNDB6S0WP7JV5RCZP","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"tts.google_translate_en_com","state":"unknown","attributes":{"friendly_name":"Google Translate en com"},"last_changed":"2025-08-30T16:42:49.040874+00:00","last_reported":"2025-08-30T16:42:49.040874+00:00","last_updated":"2025-08-30T16:42:49.040874+00:00","context":{"id":"01K3XXRCTGC7J9HJKMNHZS815P","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"automation.wieczorne_zapalanie_swiatel","state":"on","attributes":{"last_triggered":"2025-08-31T17:40:55.388277+00:00","mode":"single","current":0,"friendly_name":"Wieczorne zapalanie świateł"},"last_changed":"2025-08-31T18:27:26.876785+00:00","last_reported":"2025-08-31T18:27:26.876785+00:00","last_updated":"2025-08-31T18:27:26.876785+00:00","context":{"id":"01K40P4PGW98TD2XWYT67BP5CM","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
-      "state": {"entity_id":"script.podejdz_do_telefonu","state":"off","attributes":{"last_triggered":"2025-08-30T17:05:27.783595+00:00","mode":"single","current":0,"icon":"mdi:phone-alert","friendly_name":"Podejdź do telefonu!"},"last_changed":"2025-08-30T17:05:27.827008+00:00","last_reported":"2025-08-30T17:05:27.827008+00:00","last_updated":"2025-08-30T17:05:27.827008+00:00","context":{"id":"01K3XZ1VQ7N1X76F2HYBDZ47X6","parent_id":null,"user_id":"b1c2894f170644d982400adba6e99d4f"}},
+      "state": {"entity_id":"tts.google_translate_en_com","state":"unknown","attributes":{"friendly_name":"Google Translate en com"},"last_changed":"2025-08-31T18:27:26.977273+00:00","last_reported":"2025-08-31T18:27:26.977273+00:00","last_updated":"2025-08-31T18:27:26.977273+00:00","context":{"id":"01K40P4PM16W8NFC5XZ0FA7QS3","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-08-31T10:57:52.070605+00:00"
+      "last_seen": "2025-08-31T18:27:31.300013+00:00"
     },
     {
       "state": {"entity_id":"script.play_gate_1_click","state":"off","attributes":{"last_triggered":"2025-08-30T16:44:01.874246+00:00","mode":"single","current":0,"friendly_name":"Brama 1 - przycisk"},"last_changed":"2025-08-30T16:44:01.880749+00:00","last_reported":"2025-08-30T16:44:01.880749+00:00","last_updated":"2025-08-30T16:44:01.880749+00:00","context":{"id":"01K3XXTKYHXW8PAAJNM420GHDD","parent_id":null,"user_id":"b1c2894f170644d982400adba6e99d4f"}},

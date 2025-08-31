@@ -389,8 +389,8 @@ class ModbusHASBinarySensor(BinarySensorEntity):
         """Handle entity which will be added."""
         await super().async_added_to_hass()
         
-        # Schedule initial update
-        self.async_write_ha_state()
+        # Schedule initial update - odczytujemy dane z PLC
+        await self.async_update()
         
         # Schedule regular updates based on scan_interval
         if hasattr(self._buffer, '_scan_interval') and self._buffer._scan_interval:
@@ -409,7 +409,8 @@ class ModbusHASBinarySensor(BinarySensorEntity):
     def _async_update_if_not_in_progress(self, now=None):
         """Update the entity state if not already in progress."""
         _LOGGER.debug("Scheduled update for binary sensor: %s", self._name)
-        self.async_write_ha_state()
+        # Wywołujemy async_update aby odczytać dane z PLC
+        self.hass.async_create_task(self.async_update())
 
     async def async_will_remove_from_hass(self):
         """Handle entity which will be removed."""
@@ -461,6 +462,9 @@ class ModbusHASBinarySensor(BinarySensorEntity):
             _LOGGER.debug("Binary sensor %s read single coil state: %s", self._name, self._state)
         
         _LOGGER.debug("Binary sensor %s async updated state: %s", self._name, self._state)
+        
+        # Aktualizujemy stan encji w HA
+        self.async_write_ha_state()
         
         # Debug cache performance
         if hasattr(self._buffer, 'get_performance_stats'):

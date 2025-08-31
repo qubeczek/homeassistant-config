@@ -53,7 +53,9 @@
                   "entity": "script.brama_1a",
                   "tap_action": {
                     "action": "toggle"
-                  }
+                  },
+                  "icon": "mdi:boom-gate",
+                  "show_state": false
                 }
               ],
               "column_span": 4
@@ -71,10 +73,19 @@
           "badges": [
             {
               "type": "entity",
-              "show_name": false,
+              "show_name": true,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.co_piecgrzeje",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "show_name": true,
               "show_state": true,
               "show_icon": true,
-              "entity": "zone.home"
+              "entity": "sensor.satel_onoff",
+              "show_entity_picture": true
             }
           ]
         },
@@ -122,8 +133,89 @@
               "type": "grid",
               "cards": [
                 {
-                  "type": "heading",
-                  "heading": "Nowa sekcja"
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.light_kuchnia_sufit1"
+                    },
+                    {
+                      "entity": "light.light_kuchnia_sufit2"
+                    },
+                    {
+                      "entity": "light.light_kuchnia_szafki"
+                    },
+                    {
+                      "entity": "light.light_kuchnia_zlew"
+                    },
+                    {
+                      "entity": "light.light_kuchnia_blat"
+                    },
+                    {
+                      "entity": "light.light_kuchnia_barek"
+                    }
+                  ],
+                  "title": "Kuchnia"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.light_jadalnia_sufit"
+                    }
+                  ],
+                  "title": "Jadalnia"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.light_halldol_sufit1"
+                    },
+                    {
+                      "entity": "light.light_halldol_led"
+                    },
+                    {
+                      "entity": "light.light_halldol_obraz"
+                    },
+                    {
+                      "entity": "light.light_spizarka_sufit1"
+                    }
+                  ],
+                  "title": "Korytarz"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.light_wiatrolap_sufit1"
+                    },
+                    {
+                      "entity": "light.light_wiatrolap_sufit2"
+                    }
+                  ],
+                  "title": "Wiatrołap"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.light_gabinet_sufit1"
+                    },
+                    {
+                      "entity": "light.light_gabinet_sufit2"
+                    }
+                  ],
+                  "title": "Gabinet"
                 }
               ]
             }
