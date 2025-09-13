@@ -97,6 +97,34 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
         else:
             _LOGGER.error("Unexpected sensor_config structure: %s", type(sensor_config))
     
+    # Load switch platform if configured
+    if DOMAIN in config and "switch" in config[DOMAIN]:
+        _LOGGER.info("Loading switch platform from config")
+        
+        # Get the switch configuration
+        switch_config = config[DOMAIN]["switch"]
+        _LOGGER.info("Switch config: %s", switch_config)
+        
+        # Sprawdź strukturę switch_config po rozszerzeniu !include
+        if isinstance(switch_config, dict) and "switch" in switch_config:
+            # Struktura po rozszerzeniu !include: {'switch': [platform1, platform2, platform3]}
+            platforms = switch_config["switch"]
+            if isinstance(platforms, list):
+                for platform_config in platforms:
+                    if platform_config.get("platform") == "modbushas":
+                        _LOGGER.info("Loading switch platform: %s", platform_config)
+                        discovery.load_platform(hass, "switch", "modbushas", platform_config, config)
+            else:
+                _LOGGER.error("Expected list of platforms, got: %s", type(platforms))
+        elif isinstance(switch_config, list):
+            # Struktura: [platform1, platform2, platform3] - bezpośrednia lista
+            for platform_config in switch_config:
+                if platform_config.get("platform") == "modbushas":
+                    _LOGGER.info("Loading switch platform: %s", platform_config)
+                    discovery.load_platform(hass, "switch", "modbushas", platform_config, config)
+        else:
+            _LOGGER.error("Unexpected switch_config structure: %s", type(switch_config))
+    
     return True
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:

@@ -11,13 +11,14 @@ modbushas:
   light: !include include/light.yaml
   binary_sensor: !include include/binary_sensor.yaml
   sensor: !include include/sensors/sensors-modbus.yaml
+  switch: !include include/switch.yaml
 
 logger:
   default: warning
-  logs:
-    custom_components.modbushas: debug
-    homeassistant.components.modbus: debug
-    pymodbus: debug
+#  logs:
+#    custom_components.modbushas: info
+#    homeassistant.components.modbus: warning
+#    pymodbus: warning
 
 modbus:
   - name: fatek

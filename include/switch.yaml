@@ -1,5 +1,6 @@
   - platform: modbushas
     scan_interval: 5
+    hub: fatek
     registers:
       - name: tempcalendar_on_off
         register: 544
@@ -8,6 +9,7 @@
         verify_state: true
         state_on: 1
         state_off: 0
+        unique_id: tempcalendar_on_off
       - name: vacationmode
         register: 545
         command_on: 1
@@ -15,6 +17,7 @@
         verify_state: true
         state_on: 1
         state_off: 0
+        unique_id: vacationmode
       - name: kco_switch
         register: 548
         command_on: 3
@@ -22,6 +25,7 @@
         verify_state: true
         state_on: 1
         state_off: 0
+        unique_id: kco_switch
       - name: kcwu_switch
         register: 549
         command_on: 3
@@ -29,88 +33,115 @@
         verify_state: true
         state_on: 1
         state_off: 0
+        unique_id: kcwu_switch
             
 
   - platform: modbushas
     scan_interval: 5
+    hub: fatek
     coils:
       - name: hasmonitor
         coil: 150
         slave: 1
+        unique_id: hasmonitor
       - name: hallgniazdo1
         coil: 157
         slave: 1
+        unique_id: hallgniazdo1
       - name: co_woda
         coil: 161
         slave: 1
+        unique_id: co_woda
       - name: co_termometr
         coil: 158
         slave: 1
+        unique_id: co_termometr
       - name: cwu_termometr
         coil: 159
         slave: 1
+        unique_id: cwu_termometr
 
   - platform: modbushas
     scan_interval: 5
+    hub: fatek
     coils:
       - name: pompa_kcwu
         coil: 46
         slave: 1
+        unique_id: pompa_kcwu
       - name: pompa_kco
         coil: 45
         slave: 1
+        unique_id: pompa_kco
       - name: pompa_co
         coil: 43
         slave: 1
+        unique_id: pompa_co
       - name: pompa_cp
         coil: 44
         slave: 1
+        unique_id: pompa_cp
       - name: COonoff
         coil: 53
         slave: 1
+        unique_id: COonoff
       - name: ogrodP1O1
         coil: 56
         slave: 1
+        unique_id: ogrodP1O1
       - name: ogrodP1O2
         coil: 57
         slave: 1
+        unique_id: ogrodP1O2
       - name: ogrodP2O1
         coil: 58
         slave: 1
+        unique_id: ogrodP2O1
       - name: ogrodP2O2
         coil: 59
         slave: 1
+        unique_id: ogrodP2O2
       - name: ogrodP301
         coil: 60
         slave: 1
+        unique_id: ogrodP301
       - name: ogrodP3O2
         coil: 61
         slave: 1
+        unique_id: ogrodP3O2
       - name: ogrodP3O3
         coil: 62
         slave: 1
+        unique_id: ogrodP3O3
       - name: ogrodP4O1
         coil: 63
         slave: 1
+        unique_id: ogrodP4O1
       - name: ogrodP4O2
         coil: 64
         slave: 1
+        unique_id: ogrodP4O2
       - name: ogrodP4O3
         coil: 65
         slave: 1
+        unique_id: ogrodP4O3
       - name: ogrodWarzywa
         coil: 66
         slave: 1
+        unique_id: ogrodWarzywa
       - name: ogrodTaras
-        slave: 1
         coil: 67
+        slave: 1
+        unique_id: ogrodTaras
         
         
         
   - platform: modbushas
     scan_interval: 5
+    hub: fatek
     coils:
       - name: cwu_grzalka_elektr
         coil: 232
         slave: 1
+        unique_id: cwu_grzalka_elektr
         
