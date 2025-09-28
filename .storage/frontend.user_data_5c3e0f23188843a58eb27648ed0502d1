@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "frontend.user_data_5c3e0f23188843a58eb27648ed0502d1",
+  "data": {
+    "language": {
+      "language": "pl",
+      "number_format": "language",
+      "time_format": "language",
+      "date_format": "language",
+      "time_zone": "local",
+      "first_weekday": "language"
+    },
+    "sidebar": {
+      "panelOrder": [
+        "dashboard-dom",
+        "map",
+        "energy",
+        "logbook",
+        "history",
+        "media-browser",
+        "todo"
+      ],
+      "hiddenPanels": [
+        "lovelace"
+      ]
+    }
+  }
+}

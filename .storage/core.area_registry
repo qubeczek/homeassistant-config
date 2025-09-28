@@ -276,6 +276,19 @@
         "temperature_entity_id": null,
         "created_at": "2025-08-31T18:14:51.021560+00:00",
         "modified_at": "2025-08-31T18:14:51.021566+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": "general",
+        "humidity_entity_id": null,
+        "icon": "mdi:heat-pump",
+        "id": "ogrzewanie",
+        "labels": [],
+        "name": "Ogrzewanie",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "2025-09-13T07:54:27.099494+00:00",
+        "modified_at": "2025-09-13T07:54:27.099498+00:00"
       }
     ]
   }

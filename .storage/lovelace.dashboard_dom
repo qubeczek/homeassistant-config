@@ -77,15 +77,42 @@
               "show_state": false,
               "show_icon": true,
               "entity": "binary_sensor.co_piecgrzeje",
-              "show_entity_picture": true
+              "show_entity_picture": true,
+              "name": "Piec grzeje"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "sensor.satel_onoff",
+              "name": "Alarm",
+              "icon": "mdi:alarm-light"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "switch.co_woda",
+              "name": "Woda w domu",
+              "icon": "mdi:kettle-steam-outline"
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.temp_outside"
             },
             {
               "type": "entity",
               "show_name": true,
               "show_state": true,
               "show_icon": true,
-              "entity": "sensor.satel_onoff",
-              "show_entity_picture": true
+              "entity": "sensor.ogrod_status_programu",
+              "icon": "mdi:shower-head",
+              "name": "Podlewanie"
             }
           ]
         },
@@ -121,6 +148,9 @@
                     },
                     {
                       "entity": "light.light_salon_led_kominek2"
+                    },
+                    {
+                      "entity": "sensor.temp_salon"
                     }
                   ],
                   "title": "Salon",
@@ -152,6 +182,9 @@
                     },
                     {
                       "entity": "light.light_kuchnia_barek"
+                    },
+                    {
+                      "entity": "sensor.temp_kuchnia"
                     }
                   ],
                   "title": "Kuchnia"
@@ -171,19 +204,34 @@
               "type": "grid",
               "cards": [
                 {
+                  "type": "media-control",
+                  "entity": "media_player.onkyo_cr_n575d_e9bdbf"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
                   "type": "entities",
                   "entities": [
                     {
                       "entity": "light.light_halldol_sufit1"
                     },
                     {
-                      "entity": "light.light_halldol_led"
+                      "entity": "light.light_spizarka_sufit1"
                     },
                     {
                       "entity": "light.light_halldol_obraz"
                     },
                     {
+                      "entity": "light.light_halldol_led"
+                    },
+                    {
                       "entity": "light.light_spizarka_sufit1"
+                    },
+                    {
+                      "entity": "sensor.temp_spizarka"
                     }
                   ],
                   "title": "Korytarz"
@@ -196,6 +244,9 @@
                     },
                     {
                       "entity": "light.light_wiatrolap_sufit2"
+                    },
+                    {
+                      "entity": "sensor.temp_wiatrolap"
                     }
                   ],
                   "title": "Wiatrołap"
@@ -213,9 +264,21 @@
                     },
                     {
                       "entity": "light.light_gabinet_sufit2"
+                    },
+                    {
+                      "entity": "sensor.temp_gabinet"
                     }
                   ],
                   "title": "Gabinet"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Nowa sekcja"
                 }
               ]
             }
@@ -231,8 +294,232 @@
               "type": "grid",
               "cards": [
                 {
-                  "type": "heading",
-                  "heading": "Nowa sekcja"
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.light_korytarzgora_sufit1"
+                    },
+                    {
+                      "entity": "light.light_korytarzgora_sufit2"
+                    },
+                    {
+                      "entity": "light.light_korytarzgora_led1"
+                    },
+                    {
+                      "entity": "light.light_hallgora_sufit1"
+                    },
+                    {
+                      "entity": "sensor.temp_hallip"
+                    },
+                    {
+                      "entity": "switch.hallgniazdo1"
+                    }
+                  ],
+                  "title": "Korytarz"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.light_sypialnia_sufit1"
+                    },
+                    {
+                      "entity": "light.light_sypialnia_kinkiet2"
+                    },
+                    {
+                      "entity": "light.light_sypialnia_kinkiet1"
+                    },
+                    {
+                      "entity": "light.light_sypialnia_led1"
+                    },
+                    {
+                      "entity": "sensor.temp_sypialnia"
+                    },
+                    {
+                      "entity": "light.light_garderoba_sufit"
+                    },
+                    {
+                      "entity": "script.sypialnia_night"
+                    }
+                  ],
+                  "title": "Sypialnia"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.light_pokoj1_sufit1"
+                    },
+                    {
+                      "entity": "light.light_pokoj1_sufit2"
+                    },
+                    {
+                      "entity": "sensor.temp_pokoj1"
+                    }
+                  ],
+                  "title": "Pokój 1"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "light.light_pokoj2_sufit1"
+                    },
+                    {
+                      "entity": "light.light_pokoj2_sufit2"
+                    },
+                    {
+                      "entity": "sensor.temp_pokoj2"
+                    }
+                  ],
+                  "title": "Pokój 2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Ogrzewanie",
+          "path": "ogrzewanie",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "sensor.heater_workingtime"
+                    },
+                    {
+                      "entity": "sensor.heater_oncount"
+                    },
+                    {
+                      "entity": "binary_sensor.co_piecgrzeje"
+                    },
+                    {
+                      "entity": "sensor.temp_co_piec"
+                    },
+                    {
+                      "entity": "sensor.temp_co_piec_back"
+                    },
+                    {
+                      "entity": "sensor.temp_cwu_piec"
+                    },
+                    {
+                      "entity": "sensor.temp_cwu_piec_back"
+                    }
+                  ],
+                  "title": "Piec"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "switch.pompa_co"
+                    },
+                    {
+                      "entity": "switch.pompa_cp"
+                    },
+                    {
+                      "entity": "sensor.temp_co_sprzeglo"
+                    },
+                    {
+                      "entity": "sensor.temp_co"
+                    },
+                    {
+                      "entity": "sensor.temp_co_back"
+                    },
+                    {
+                      "entity": "sensor.temp_cp"
+                    },
+                    {
+                      "entity": "sensor.temp_cp_back"
+                    }
+                  ],
+                  "title": "Mieszacz"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "switch.cwu_grzalka_elektr"
+                    },
+                    {
+                      "entity": "sensor.temp_cwu"
+                    },
+                    {
+                      "entity": "sensor.temp_cwu_back"
+                    },
+                    {
+                      "entity": "sensor.temp_cwu_piec"
+                    },
+                    {
+                      "entity": "sensor.temp_cwu_piec_back"
+                    }
+                  ],
+                  "title": "CWU"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "switch.kco_switch"
+                    },
+                    {
+                      "entity": "switch.kcwu_switch"
+                    },
+                    {
+                      "entity": "switch.pompa_kco"
+                    },
+                    {
+                      "entity": "switch.pompa_kcwu"
+                    },
+                    {
+                      "entity": "sensor.kominek_co_temp_wlaczenia"
+                    },
+                    {
+                      "entity": "sensor.temp_kominek"
+                    },
+                    {
+                      "entity": "sensor.temp_kominek_back"
+                    },
+                    {
+                      "entity": "sensor.temp_kcwu"
+                    },
+                    {
+                      "entity": "sensor.temp_kcwu_back"
+                    }
+                  ],
+                  "title": "Kominek"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "switch.tempcalendar_on_off"
+                    },
+                    {
+                      "entity": "switch.co_termometr"
+                    },
+                    {
+                      "entity": "switch.cwu_termometr"
+                    }
+                  ],
+                  "title": "Przełączniki ",
+                  "show_header_toggle": false
                 }
               ]
             }
