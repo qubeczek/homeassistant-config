@@ -246,11 +246,10 @@ class ModbusRegisterBuffer():
     async def force_read_register(self, register, count):
         """Wymusza odczyt rejestru z pominięciem cache'a."""
         _LOGGER.debug("Force reading register: %s", register)
-        # Czyścimy cache dla tego rejestru
-        if register in self._register_cache:
-            del self._register_cache[register]
-        # Odczytujemy pojedynczy rejestr
-        return await self.async_read_single_register(register, count)
+        # Czyścimy cały cache i wymuszamy odczyt
+        self._doread = True 
+        # Odczytujemy stan rejestru (z odświeżeniem bufora jeśli potrzeba)
+        return await self.async_read_register(register, count)
     
     def is_register_cached(self, register):
         """Sprawdza czy rejestr jest w cache'u."""
@@ -303,28 +302,25 @@ class ModbusRegisterBuffer():
             return None
 
     async def async_read_register(self, register, count):
-        """Async version of read_register for use in async context."""
-        # Sprawdz czy minął scan_interval (scan_interval to już timedelta)
-        if self._scan_interval and (datetime.datetime.now() - self._lastread >= self._scan_interval):
-            self._doread = True
-            _LOGGER.debug("Scan interval exceeded, forcing read")
+        """Odczyt stanu rejestru - bufor sam zarządza odświeżaniem."""
+        _LOGGER.debug("Reading register: %s, count: %s", register, count)
+        
+        # Sprawdzamy czy bufor wymaga odświeżenia
+        if self._doread or (self._scan_interval and (datetime.datetime.now() - self._lastread >= self._scan_interval)):
+            _LOGGER.debug("Buffer needs refresh, reading all registers from %s to %s", self._minreg, self._maxreg)
             
-        # Sprawdzamy cache dla pojedynczego rejestru
-        if register in self._register_cache:
-            _LOGGER.debug("Using cached value for register %s: %s", register, self._register_cache[register])
-            return self._register_cache[register]
-            
-        if(self._doread == True and self._maxreg >= self._minreg):
-            regnum = self._maxreg - self._minreg + 1   
-            self.checkhub()
-            if(self._hub is None):
-                _LOGGER.error("Cannot read register %s: hub not available", register)
+            if self._maxreg < self._minreg:
+                _LOGGER.error("Invalid register range: min=%s, max=%s", self._minreg, self._maxreg)
                 return None
                 
-            _LOGGER.debug("Reading %d registers from %s to %s", regnum, self._minreg, self._maxreg)
-            
+            regnum = self._maxreg - self._minreg + 1
+            self.checkhub()
+            if self._hub is None:
+                _LOGGER.error("Cannot read registers: hub not available")
+                return None
+                
             try:
-                # Używamy async_pb_call bezpośrednio z hub
+                # Odczytujemy cały zakres rejestrów
                 self._result = await self._hub.async_pb_call(
                     unit=self._slave,
                     address=self._minreg,
@@ -339,35 +335,34 @@ class ModbusRegisterBuffer():
                 _LOGGER.error("ModbusRegisterBuffer read error from register %s for %s registers", self._minreg, regnum)
                 return None
                 
-            self._doread = False
-            self._lastread = datetime.datetime.now()
-            _LOGGER.debug("Successfully read %s registers from %s", regnum, self._minreg)
-            
             # Aktualizujemy cache dla wszystkich odczytanych rejestrów
+            self._register_cache.clear()
             for i, reg_addr in enumerate(range(self._minreg, self._maxreg + 1)):
                 if i < len(self._result.registers):
                     self._register_cache[reg_addr] = [self._result.registers[i]]
-            
-        if self._result is None:
-            _LOGGER.error("No result available for register %s", register)
-            return None
-            
-        regnum = register - self._minreg
-        if regnum < 0 or regnum >= len(self._result.registers):
-            _LOGGER.error("Register %s out of range (reg %s, max %s)", register, regnum, len(self._result.registers))
-            return None
-            
-        # Zwracamy listę wartości dla żądanego rejestru i count
-        result_values = []
-        for i in range(count):
-            if regnum + i < len(self._result.registers):
-                result_values.append(self._result.registers[regnum + i])
-            else:
-                _LOGGER.error("Register %s+%s out of range", register, i)
-                break
+                    
+            self._doread = False
+            self._lastread = datetime.datetime.now()
+            _LOGGER.debug("Successfully read %s registers from %s to %s", regnum, self._minreg, self._maxreg)
         
-        _LOGGER.debug("Register %s (reg %s) values: %s", register, regnum, result_values)
-        return result_values
+        # Sprawdzamy czy rejestr jest w cache'u
+        if register in self._register_cache:
+            cached_values = self._register_cache[register]
+            _LOGGER.debug("Register %s values from cache: %s", register, cached_values)
+            
+            # Zwracamy listę wartości dla żądanego rejestru i count
+            result_values = []
+            for i in range(count):
+                if i < len(cached_values):
+                    result_values.append(cached_values[i])
+                else:
+                    _LOGGER.error("Register %s+%s out of cached range", register, i)
+                    break
+            
+            return result_values
+        else:
+            _LOGGER.error("Register %s not found in cache after refresh", register)
+            return None
 
     def get_performance_stats(self):
         """Zwraca statystyki wydajności cache'a."""
@@ -511,15 +506,9 @@ class ModbusHASRegisterSensor(SensorEntity):
         """Async update the state of the sensor."""
         _LOGGER.debug("Async updating sensor state: %s", self._name)
         
-        # Sprawdzamy cache najpierw
-        if hasattr(self._buffer, '_register_cache') and self._register in self._buffer._register_cache:
-            cached_value = self._buffer._register_cache[self._register]
-            _LOGGER.debug("Sensor %s using cached value: %s", self._name, cached_value)
-            raw_value = cached_value
-        else:
-            # Jeśli nie ma w cache, odczytujemy pojedynczy rejestr
-            raw_value = await self._buffer.async_read_single_register(self._register, self._count)
-            _LOGGER.debug("Sensor %s read single register value: %s", self._name, raw_value)
+        # Odczytujemy wartość rejestru - bufor sam zarządza odświeżaniem
+        raw_value = await self._buffer.async_read_register(self._register, self._count)
+        _LOGGER.debug("Sensor %s read register value: %s", self._name, raw_value)
         
         # Przetwarzamy surowe wartości rejestrów
         if raw_value:
@@ -545,8 +534,6 @@ class ModbusHASRegisterSensor(SensorEntity):
         else:
             _LOGGER.error("No raw value available for sensor %s", self._name)
             self._value = None
-        
-        _LOGGER.debug("Sensor %s async updated value: %s", self._name, self._value)
         
         # Aktualizujemy stan encji w HA
         self.async_write_ha_state()

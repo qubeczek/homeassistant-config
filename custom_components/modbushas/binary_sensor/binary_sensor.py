@@ -205,11 +205,10 @@ class ModbusCoilBuffer():
     async def force_read_coil(self, coil):
         """Wymusza odczyt coila z pominięciem cache'a."""
         _LOGGER.debug("Force reading coil: %s", coil)
-        # Czyścimy cache dla tego coila
-        if coil in self._coil_cache:
-            del self._coil_cache[coil]
-        # Odczytujemy pojedynczy coil
-        return await self.async_read_single_coil(coil)
+        # Czyścimy cały cache i wymuszamy odczyt
+        self._doread = True 
+        # Odczytujemy stan coila (z odświeżeniem bufora jeśli potrzeba)
+        return await self.async_read_coil(coil)
     
     def is_coil_cached(self, coil):
         """Sprawdza czy coil jest w cache'u."""
@@ -303,28 +302,25 @@ class ModbusCoilBuffer():
             return False
 
     async def async_read_coil(self, coil):
-        """Async version of read_coil for use in async context."""
-        # Sprawdz czy minął scan_interval (scan_interval to już timedelta)
-        if self._scan_interval and (datetime.datetime.now() - self._lastread >= self._scan_interval):
-            self._doread = True
-            _LOGGER.debug("Scan interval exceeded, forcing read")
+        """Odczyt stanu pojedynczego coila - bufor sam zarządza odświeżaniem."""
+        _LOGGER.debug("Reading coil: %s", coil)
+        
+        # Sprawdzamy czy bufor wymaga odświeżenia
+        if self._doread or (self._scan_interval and (datetime.datetime.now() - self._lastread >= self._scan_interval)):
+            _LOGGER.debug("Buffer needs refresh, reading all coils from %s to %s", self._mincoil, self._maxcoil)
             
-        # Sprawdzamy cache dla pojedynczego coila
-        if coil in self._coil_cache:
-            _LOGGER.debug("Using cached value for coil %s: %s", coil, self._coil_cache[coil])
-            return self._coil_cache[coil]
-            
-        if(self._doread == True and self._maxcoil >= self._mincoil):
-            coilnum = self._maxcoil - self._mincoil + 1   
-            self.checkhub()
-            if(self._hub is None):
-                _LOGGER.error("Cannot read coil %s: hub not available", coil)
+            if self._maxcoil < self._mincoil:
+                _LOGGER.error("Invalid coil range: min=%s, max=%s", self._mincoil, self._maxcoil)
                 return False
                 
-            _LOGGER.debug("Reading %d coils from %s to %s", coilnum, self._mincoil, self._maxcoil)
-            
+            coilnum = self._maxcoil - self._mincoil + 1
+            self.checkhub()
+            if self._hub is None:
+                _LOGGER.error("Cannot read coils: hub not available")
+                return False
+                
             try:
-                # Używamy async_pb_call bezpośrednio z hub
+                # Odczytujemy cały zakres coilów
                 self._result = await self._hub.async_pb_call(
                     unit=self._slave,
                     address=self._mincoil,
@@ -339,27 +335,24 @@ class ModbusCoilBuffer():
                 _LOGGER.error("ModbusCoilBuffer read error from coil %s for %s coils", self._mincoil, coilnum)
                 return False
                 
-            self._doread = False
-            self._lastread = datetime.datetime.now()
-            _LOGGER.debug("Successfully read %s coils from %s", coilnum, self._mincoil)
-            
             # Aktualizujemy cache dla wszystkich odczytanych coilów
+            self._coil_cache.clear()
             for i, coil_addr in enumerate(range(self._mincoil, self._maxcoil + 1)):
                 if i < len(self._result.bits):
                     self._coil_cache[coil_addr] = bool(self._result.bits[i])
-            
-        if self._result is None:
-            _LOGGER.error("No result available for coil %s", coil)
+                    
+            self._doread = False
+            self._lastread = datetime.datetime.now()
+            _LOGGER.debug("Successfully read %s coils from %s to %s", coilnum, self._mincoil, self._maxcoil)
+        
+        # Zwracamy stan z cache'a
+        if coil in self._coil_cache:
+            result = self._coil_cache[coil]
+            _LOGGER.debug("Coil %s state from cache: %s", coil, result)
+            return result
+        else:
+            _LOGGER.error("Coil %s not found in cache after refresh", coil)
             return False
-            
-        bitnum = coil - self._mincoil
-        if bitnum < 0 or bitnum >= len(self._result.bits):
-            _LOGGER.error("Coil %s out of range (bit %s, max %s)", coil, bitnum, len(self._result.bits))
-            return False
-            
-        result = bool(self._result.bits[bitnum])
-        _LOGGER.debug("Coil %s (bit %s) state: %s", coil, bitnum, result)
-        return result
 
 
 class ModbusHASBinarySensor(BinarySensorEntity):
@@ -451,17 +444,9 @@ class ModbusHASBinarySensor(BinarySensorEntity):
         """Async update the state of the binary sensor."""
         _LOGGER.debug("Async updating binary sensor state: %s", self._name)
         
-        # Sprawdzamy cache najpierw
-        if hasattr(self._buffer, '_coil_cache') and self._coil in self._buffer._coil_cache:
-            cached_state = self._buffer._coil_cache[self._coil]
-            _LOGGER.debug("Binary sensor %s using cached state: %s", self._name, cached_state)
-            self._state = cached_state
-        else:
-            # Jeśli nie ma w cache, odczytujemy pojedynczy coil
-            self._state = await self._buffer.async_read_single_coil(self._coil)
-            _LOGGER.debug("Binary sensor %s read single coil state: %s", self._name, self._state)
-        
-        _LOGGER.debug("Binary sensor %s async updated state: %s", self._name, self._state)
+        # Odczytujemy stan coila - bufor sam zarządza odświeżaniem
+        self._state = await self._buffer.async_read_coil(self._coil)
+        _LOGGER.debug("Binary sensor %s read coil state: %s", self._name, self._state)
         
         # Aktualizujemy stan encji w HA
         self.async_write_ha_state()
