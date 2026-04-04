@@ -590,8 +590,8 @@ class ModbusHASRegisterSwitch(ModbusHASCoilSwitch):
         self._verify_state = verify_state
         self._verify_register = verify_register or register
         self._register_type = register_type
-        self._state_on = state_on or command_on
-        self._state_off = state_off or command_off
+        self._state_on = state_on if state_on is not None else command_on
+        self._state_off = state_off if state_off is not None else command_off
         self._state = None
         self._hub = None
         self._hub_name = hub_name

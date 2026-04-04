@@ -35,7 +35,7 @@ modbus:
 
 # binary_sensor: !include include/binary_sensor.yaml  # Przeniesione do modbushas
 
-sensor: !include include/sensors/sensors-template.yaml
+template: !include include/sensors/sensors-template.yaml
 
 scene: !include scenes.yaml
 notify: !include include/notify.yaml

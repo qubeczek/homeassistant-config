@@ -29,7 +29,7 @@ from homeassistant.const import (
 from homeassistant.const import CONF_NAME
 
 from homeassistant.components.light import (
-    LightEntity, ColorMode)
+    LightEntity, LightEntityFeature, ColorMode)
     
 from homeassistant.helpers import config_validation as cv
 
@@ -40,7 +40,7 @@ CONF_COIL = "coil"
 CONF_COILS = "coils"
 
 # Dla prostych świateł on/off nie potrzebuję specjalnych funkcji
-SUPPORT_MODBUS = 0
+SUPPORT_MODBUS = LightEntityFeature(0)
 
 # Tworzę własny schemat zamiast importować z sensor
 PLATFORM_SCHEMA = vol.Schema({
