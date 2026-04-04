@@ -12,7 +12,7 @@ Tablica danych rolety w rejestrach D (od bazowego adresu N):
 
 Komendy przez rejestry R:
   R[X]   — bazowy adres D rolety
-  R[X+1] — kod polecenia: 0=stop, 1=up, 2=down, 3=set_position
+  R[X+1] — kod polecenia: 0=stop, 1=down, 2=up, 3=set_position
   R[X+2] — docelowy czas w sekundach (tylko dla komendy 3)
 """
 import logging
@@ -26,8 +26,9 @@ from homeassistant.core import callback
 from homeassistant.components.modbus.const import (
     MODBUS_DOMAIN,
     CALL_TYPE_REGISTER_HOLDING,
-    CALL_TYPE_WRITE_REGISTER,
 )
+
+from custom_components.modbushas import DATA_WRITE_CLIENT
 
 from homeassistant.const import (
     CONF_SLAVE,
@@ -51,13 +52,11 @@ CONF_REGISTER = "register"
 CONF_COVERS = "covers"
 CONF_HUB = "hub"
 CONF_COMMAND_REGISTER = "command_register"
-CONF_COMMAND_CODE_REGISTER = "command_code_register"
-CONF_COMMAND_POSITION_REGISTER = "command_position_register"
 
 # Kody komend PLC
 CMD_STOP = 0
-CMD_UP = 1
-CMD_DOWN = 2
+CMD_DOWN = 1
+CMD_UP = 2
 CMD_SET_POSITION = 3
 
 # Statusy PLC
@@ -90,8 +89,6 @@ PLATFORM_SCHEMA = vol.Schema({
     vol.Optional(CONF_HUB): cv.string,
     vol.Optional(CONF_SCAN_INTERVAL): vol.Any(cv.positive_int, cv.positive_float),
     vol.Required(CONF_COMMAND_REGISTER): cv.positive_int,
-    vol.Required(CONF_COMMAND_CODE_REGISTER): cv.positive_int,
-    vol.Required(CONF_COMMAND_POSITION_REGISTER): cv.positive_int,
     vol.Required(CONF_COVERS): [COVERS_SCHEMA],
 })
 
@@ -114,8 +111,6 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
         scan_interval_td = scan_interval
 
     command_register = config.get(CONF_COMMAND_REGISTER)
-    command_code_register = config.get(CONF_COMMAND_CODE_REGISTER)
-    command_position_register = config.get(CONF_COMMAND_POSITION_REGISTER)
 
     covers_config = config.get(CONF_COVERS)
     if not covers_config:
@@ -140,8 +135,6 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
             slave=slave,
             unique_id=unique_id,
             command_register=command_register,
-            command_code_register=command_code_register,
-            command_position_register=command_position_register,
             buffer=buffer,
             scan_interval=scan_interval_td,
         ))
@@ -168,8 +161,6 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
         scan_interval_td = scan_interval
 
     command_register = config.get(CONF_COMMAND_REGISTER)
-    command_code_register = config.get(CONF_COMMAND_CODE_REGISTER)
-    command_position_register = config.get(CONF_COMMAND_POSITION_REGISTER)
 
     covers_config = config.get(CONF_COVERS)
     if not covers_config:
@@ -193,8 +184,6 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
             slave=slave,
             unique_id=unique_id,
             command_register=command_register,
-            command_code_register=command_code_register,
-            command_position_register=command_position_register,
             buffer=buffer,
             scan_interval=scan_interval_td,
         ))
@@ -309,8 +298,7 @@ class ModbusHASCover(CoverEntity):
     )
 
     def __init__(self, hass, hub_name, name, register, slave, unique_id,
-                 command_register, command_code_register, command_position_register,
-                 buffer, scan_interval):
+                 command_register, buffer, scan_interval):
         self._hass = hass
         self._hub_name = hub_name
         self._name = name
@@ -318,8 +306,6 @@ class ModbusHASCover(CoverEntity):
         self._modbus_register = register + FATEK_D_REGISTER_OFFSET  # adres Modbus do odczytu
         self._slave = slave
         self._command_register = command_register
-        self._command_code_register = command_code_register
-        self._command_position_register = command_position_register
         self._buffer = buffer
         self._scan_interval = scan_interval
         self._hub = None
@@ -393,48 +379,41 @@ class ModbusHASCover(CoverEntity):
     # --- Komendy ---
 
     async def _async_write_command(self, command_code, target_time=None):
-        """Wysyła komendę do PLC: zapisuje adres rolety i kod polecenia do rejestrów R."""
+        """Wysyła komendę do PLC: zapisuje 3 kolejne rejestry R jednym wywołaniem Modbus (funkcja 16).
+
+        R[X]   = bazowy adres D rolety
+        R[X+1] = kod polecenia (0=stop, 1=up, 2=down, 3=set_position)
+        R[X+2] = docelowy czas w sekundach (tylko dla set_position)
+        """
         self.checkhub()
         if self._hub is None:
             _LOGGER.error("Cannot send command for cover %s: hub not available", self._name)
             return
 
         try:
-            # R[X] = bazowy adres D rolety
-            result1 = await self._hub.async_pb_call(
-                unit=self._slave,
-                address=self._command_register,
-                value=self._register,
-                use_call=CALL_TYPE_WRITE_REGISTER
-            )
-            if not result1:
-                _LOGGER.error("Failed to write command register for cover %s", self._name)
-                return
-
-            # R[X+2] = docelowy czas (tylko dla set_position)
-            if target_time is not None:
-                result3 = await self._hub.async_pb_call(
-                    unit=self._slave,
-                    address=self._command_position_register,
-                    value=target_time,
-                    use_call=CALL_TYPE_WRITE_REGISTER
+            values = [self._register, command_code, target_time if target_time is not None else 0]
+            write_client = self._hass.data.get(DATA_WRITE_CLIENT)
+            if write_client:
+                result = await write_client.async_write_registers(
+                    self._command_register, values, slave=self._slave
                 )
-                if not result3:
-                    _LOGGER.error("Failed to write position register for cover %s", self._name)
+            else:
+                # Fallback na główny hub jeśli write_client niedostępny
+                self.checkhub()
+                if self._hub is None:
                     return
-
-            # R[X+1] = kod polecenia
-            result2 = await self._hub.async_pb_call(
-                unit=self._slave,
-                address=self._command_code_register,
-                value=command_code,
-                use_call=CALL_TYPE_WRITE_REGISTER
-            )
-            if not result2:
-                _LOGGER.error("Failed to write command code register for cover %s", self._name)
+                from homeassistant.components.modbus.const import CALL_TYPE_WRITE_REGISTERS
+                result = await self._hub.async_pb_call(
+                    unit=self._slave,
+                    address=self._command_register,
+                    value=values,
+                    use_call=CALL_TYPE_WRITE_REGISTERS
+                )
+            if not result:
+                _LOGGER.error("Failed to write command registers for cover %s", self._name)
                 return
 
-            _LOGGER.info("Cover %s command %s sent successfully", self._name, command_code)
+            _LOGGER.info("Cover %s command %s sent successfully (values=%s)", self._name, command_code, values)
         except Exception as e:
             _LOGGER.error("Error sending command %s for cover %s: %s", command_code, self._name, e)
 

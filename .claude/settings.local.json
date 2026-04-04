@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls d:/priv/dom/SDI/homeassistant-config/*.py d:/priv/dom/SDI/homeassistant-config/*.md d:/priv/dom/SDI/homeassistant-config/*.json d:/priv/dom/SDI/homeassistant-config/*.yaml)",
+      "Bash(bash deploy.sh)",
+      "Read(//h//**)"
+    ]
+  }
+}

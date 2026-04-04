@@ -20,6 +20,8 @@ from homeassistant.components.modbus.const import (
     DEFAULT_SLAVE,
 )
 
+from custom_components.modbushas import DATA_WRITE_CLIENT
+
 from homeassistant.const import (
     CONF_SLAVE,
     CONF_SCAN_INTERVAL,
@@ -314,13 +316,16 @@ class ModbusCoilBuffer():
             return False
         
         try:
-            # Używamy async_pb_call bezpośrednio z hub
-            result = await self._hub.async_pb_call(
-                unit=self._slave,
-                address=coil,
-                value=value,
-                use_call=CALL_TYPE_WRITE_COIL
-            )
+            write_client = self._hass.data.get(DATA_WRITE_CLIENT)
+            if write_client:
+                result = await write_client.async_write_coil(coil, value, slave=self._slave)
+            else:
+                result = await self._hub.async_pb_call(
+                    unit=self._slave,
+                    address=coil,
+                    value=value,
+                    use_call=CALL_TYPE_WRITE_COIL
+                )
             if result:
                 _LOGGER.debug("Successfully wrote coil %s to value: %s", coil, value)
                 

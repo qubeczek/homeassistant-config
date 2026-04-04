@@ -23,6 +23,8 @@ from homeassistant.components.modbus.const import (
     DEFAULT_SLAVE,
 )
 
+from custom_components.modbushas import DATA_WRITE_CLIENT
+
 from homeassistant.const import (
     CONF_SLAVE,
     CONF_SCAN_INTERVAL,
@@ -388,19 +390,22 @@ class ModbusCoilBuffer():
     async def async_write_coil(self, coil, value, verify_after_write=True):
         """Async version of write_coil with optional verification."""
         _LOGGER.debug("Async writing coil %s to value: %s (verify: %s)", coil, value, verify_after_write)
-        self.checkhub()
-        if(self._hub is None):
-            _LOGGER.error("Cannot write coil %s: hub not available", coil)
-            return False
-        
+
         try:
-            # Używamy async_pb_call bezpośrednio z hub
-            result = await self._hub.async_pb_call(
-                unit=self._slave,
-                address=coil,
-                value=value,
-                use_call=CALL_TYPE_WRITE_COIL
-            )
+            write_client = self._hass.data.get(DATA_WRITE_CLIENT)
+            if write_client:
+                result = await write_client.async_write_coil(coil, value, slave=self._slave)
+            else:
+                self.checkhub()
+                if self._hub is None:
+                    _LOGGER.error("Cannot write coil %s: hub not available", coil)
+                    return False
+                result = await self._hub.async_pb_call(
+                    unit=self._slave,
+                    address=coil,
+                    value=value,
+                    use_call=CALL_TYPE_WRITE_COIL
+                )
             if result:
                 _LOGGER.debug("Successfully wrote coil %s to value: %s", coil, value)
                 
@@ -635,44 +640,58 @@ class ModbusHASRegisterSwitch(ModbusHASCoilSwitch):
     async def async_turn_on(self, **kwargs):
         """Turn the switch on."""
         _LOGGER.info("Async turning on register switch: %s", self._name)
-        self.checkhub()
-        if self._hub is not None:
-            try:
+        try:
+            write_client = self._hass.data.get(DATA_WRITE_CLIENT)
+            if write_client:
+                result = await write_client.async_write_register(
+                    self._register, self._command_on, slave=self._slave
+                )
+            else:
+                self.checkhub()
+                if self._hub is None:
+                    return
                 result = await self._hub.async_pb_call(
                     unit=self._slave,
                     address=self._register,
                     value=self._command_on,
                     use_call=CALL_TYPE_WRITE_REGISTER
                 )
-                if result:
-                    self._state = True
-                    self.async_write_ha_state()
-                    _LOGGER.debug("Register switch %s turned ON successfully", self._name)
-                else:
-                    _LOGGER.error("Failed to write register %s for switch %s", self._register, self._name)
-            except Exception as e:
-                _LOGGER.error("Error writing register %s for switch %s: %s", self._register, self._name, e)
+            if result:
+                self._state = True
+                self.async_write_ha_state()
+                _LOGGER.debug("Register switch %s turned ON successfully", self._name)
+            else:
+                _LOGGER.error("Failed to write register %s for switch %s", self._register, self._name)
+        except Exception as e:
+            _LOGGER.error("Error writing register %s for switch %s: %s", self._register, self._name, e)
 
     async def async_turn_off(self, **kwargs):
         """Turn the switch off."""
         _LOGGER.info("Async turning off register switch: %s", self._name)
-        self.checkhub()
-        if self._hub is not None:
-            try:
+        try:
+            write_client = self._hass.data.get(DATA_WRITE_CLIENT)
+            if write_client:
+                result = await write_client.async_write_register(
+                    self._register, self._command_off, slave=self._slave
+                )
+            else:
+                self.checkhub()
+                if self._hub is None:
+                    return
                 result = await self._hub.async_pb_call(
                     unit=self._slave,
                     address=self._register,
                     value=self._command_off,
                     use_call=CALL_TYPE_WRITE_REGISTER
                 )
-                if result:
-                    self._state = False
-                    self.async_write_ha_state()
-                    _LOGGER.debug("Register switch %s turned OFF successfully", self._name)
-                else:
-                    _LOGGER.error("Failed to write register %s for switch %s", self._register, self._name)
-            except Exception as e:
-                _LOGGER.error("Error writing register %s for switch %s: %s", self._register, self._name, e)
+            if result:
+                self._state = False
+                self.async_write_ha_state()
+                _LOGGER.debug("Register switch %s turned OFF successfully", self._name)
+            else:
+                _LOGGER.error("Failed to write register %s for switch %s", self._register, self._name)
+        except Exception as e:
+            _LOGGER.error("Error writing register %s for switch %s: %s", self._register, self._name, e)
 
     async def async_update(self):
         """Async update the state of the register switch."""

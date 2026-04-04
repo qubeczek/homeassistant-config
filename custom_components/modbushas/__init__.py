@@ -1,17 +1,132 @@
 """Modbus HAS integration."""
 import logging
+import asyncio
+
+from pymodbus.client import AsyncModbusTcpClient
+from pymodbus.framer import FramerType
 
 from homeassistant.core import HomeAssistant
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.helpers import discovery
+from homeassistant.const import EVENT_HOMEASSISTANT_STOP
 
 _LOGGER = logging.getLogger(__name__)
 
 DOMAIN = "modbushas"
 
+# Klucz w hass.data do dedykowanego klienta zapisu
+DATA_WRITE_CLIENT = "modbushas_write_client"
+
+
+class ModbusWriteClient:
+    """Dedykowany klient Modbus TCP do operacji zapisu.
+
+    Oddzielne połączenie TCP, aby zapisy nie czekały w kolejce
+    za odczytami na głównym hubie (który ma globalny asyncio.Lock).
+    """
+
+    def __init__(self, host: str, port: int):
+        self._host = host
+        self._port = port
+        self._client: AsyncModbusTcpClient | None = None
+        self._lock = asyncio.Lock()
+
+    async def async_setup(self) -> bool:
+        """Nawiąż połączenie z PLC."""
+        try:
+            self._client = AsyncModbusTcpClient(
+                host=self._host,
+                port=self._port,
+                framer=FramerType.SOCKET,
+                timeout=3,
+                retries=3,
+            )
+            if await self._client.connect():
+                _LOGGER.info("ModbusWriteClient: połączono z %s:%s", self._host, self._port)
+                return True
+            _LOGGER.error("ModbusWriteClient: nie udało się połączyć z %s:%s", self._host, self._port)
+            return False
+        except Exception as e:
+            _LOGGER.error("ModbusWriteClient: błąd połączenia: %s", e)
+            return False
+
+    async def async_close(self) -> None:
+        """Zamknij połączenie."""
+        if self._client:
+            self._client.close()
+            self._client = None
+            _LOGGER.info("ModbusWriteClient: połączenie zamknięte")
+
+    async def async_write_coil(self, address: int, value: bool, slave: int = 1):
+        """Zapis pojedynczego coila."""
+        if not self._client:
+            _LOGGER.error("ModbusWriteClient: brak połączenia")
+            return None
+        async with self._lock:
+            result = await self._client.write_coil(address, value, device_id=slave)
+            if result.isError():
+                _LOGGER.error("ModbusWriteClient: błąd zapisu coil %s: %s", address, result)
+                return None
+            return result
+
+    async def async_write_register(self, address: int, value: int, slave: int = 1):
+        """Zapis pojedynczego rejestru."""
+        if not self._client:
+            _LOGGER.error("ModbusWriteClient: brak połączenia")
+            return None
+        async with self._lock:
+            result = await self._client.write_register(address, value, device_id=slave)
+            if result.isError():
+                _LOGGER.error("ModbusWriteClient: błąd zapisu rejestru %s: %s", address, result)
+                return None
+            return result
+
+    async def async_write_registers(self, address: int, values: list[int], slave: int = 1):
+        """Zapis wielu kolejnych rejestrów."""
+        if not self._client:
+            _LOGGER.error("ModbusWriteClient: brak połączenia")
+            return None
+        async with self._lock:
+            result = await self._client.write_registers(address, values, device_id=slave)
+            if result.isError():
+                _LOGGER.error("ModbusWriteClient: błąd zapisu rejestrów %s: %s", address, result)
+                return None
+            return result
+
+
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
     """Set up the Modbus HAS integration."""
     _LOGGER.info("Setting up Modbus HAS integration")
+
+    # Dedykowany klient TCP do zapisów — nie blokuje odczytów na głównym hubie
+    modbushas_config = config.get(DOMAIN, {})
+    plc_host = modbushas_config.get("host")
+    plc_port = modbushas_config.get("port")
+
+    # Fallback: czytaj host/port z konfiguracji integracji modbus
+    if not plc_host or not plc_port:
+        modbus_configs = config.get("modbus", [])
+        if modbus_configs:
+            first_hub = modbus_configs[0]
+            plc_host = plc_host or first_hub.get("host")
+            plc_port = plc_port or first_hub.get("port")
+
+    if not plc_host or not plc_port:
+        _LOGGER.error("Brak konfiguracji host/port w modbushas ani modbus — write_client wyłączony")
+        hass.data[DATA_WRITE_CLIENT] = None
+        return True
+    write_client = ModbusWriteClient(plc_host, plc_port)
+    if await write_client.async_setup():
+        hass.data[DATA_WRITE_CLIENT] = write_client
+    else:
+        _LOGGER.warning("ModbusWriteClient: nie udało się uruchomić, zapisy będą przez główny hub")
+        hass.data[DATA_WRITE_CLIENT] = None
+
+    async def _async_close_write_client(event):
+        if hass.data.get(DATA_WRITE_CLIENT):
+            await hass.data[DATA_WRITE_CLIENT].async_close()
+
+    hass.bus.async_listen_once(EVENT_HOMEASSISTANT_STOP, _async_close_write_client)
     
     # Load light platform if configured
     if DOMAIN in config and "light" in config[DOMAIN]:
