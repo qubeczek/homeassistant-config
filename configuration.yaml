@@ -8,6 +8,7 @@ sun:
 
 # Modbus HAS integration
 modbushas:
+  command_register: 190
   light: !include include/light.yaml
   binary_sensor: !include include/binary_sensor.yaml
   sensor: !include include/sensors/sensors-modbus.yaml

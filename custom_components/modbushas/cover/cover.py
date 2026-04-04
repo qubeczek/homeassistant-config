@@ -10,10 +10,11 @@ Tablica danych rolety w rejestrach D (od bazowego adresu N):
   D[N+4] — status: 0=otwarta, 1=częściowo(ruch w górę), 2=częściowo(ruch w dół), 3=zamknięta
   D[N+5] — pozycja zakończenia ostatniego ruchu (w sekundach, 0=otwarta, D[N+3]=zamknięta)
 
-Komendy przez rejestry R:
-  R[X]   — bazowy adres D rolety
-  R[X+1] — kod polecenia: 0=stop, 1=down, 2=up, 3=set_position
-  R[X+2] — docelowy czas w sekundach (tylko dla komendy 3)
+Komendy wysyłane przez wspólny mechanizm PlcCommandSender:
+  Program 301 (3 parametry):
+    param 1 — bazowy adres D rolety
+    param 2 — kod polecenia: 0=stop, 1=down, 2=up, 3=set_position
+    param 3 — docelowy czas w sekundach (tylko dla komendy 3)
 """
 import logging
 import voluptuous as vol
@@ -28,7 +29,7 @@ from homeassistant.components.modbus.const import (
     CALL_TYPE_REGISTER_HOLDING,
 )
 
-from custom_components.modbushas import DATA_WRITE_CLIENT
+from custom_components.modbushas import DATA_COMMAND_SENDER
 
 from homeassistant.const import (
     CONF_SLAVE,
@@ -51,7 +52,9 @@ _LOGGER = logging.getLogger(__name__)
 CONF_REGISTER = "register"
 CONF_COVERS = "covers"
 CONF_HUB = "hub"
-CONF_COMMAND_REGISTER = "command_register"
+
+# Program PLC dla sterowania roletami
+PLC_PROGRAM_COVER = 301
 
 # Kody komend PLC
 CMD_STOP = 0
@@ -88,7 +91,6 @@ PLATFORM_SCHEMA = vol.Schema({
     vol.Required("platform"): "modbushas",
     vol.Optional(CONF_HUB): cv.string,
     vol.Optional(CONF_SCAN_INTERVAL): vol.Any(cv.positive_int, cv.positive_float),
-    vol.Required(CONF_COMMAND_REGISTER): cv.positive_int,
     vol.Required(CONF_COVERS): [COVERS_SCHEMA],
 })
 
@@ -110,11 +112,14 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
     else:
         scan_interval_td = scan_interval
 
-    command_register = config.get(CONF_COMMAND_REGISTER)
-
     covers_config = config.get(CONF_COVERS)
     if not covers_config:
         _LOGGER.error("No covers found in config: %s", config)
+        return
+
+    command_sender = hass.data.get(DATA_COMMAND_SENDER)
+    if command_sender is None:
+        _LOGGER.error("PlcCommandSender niedostępny — brak command_register w konfiguracji modbushas")
         return
 
     # Jeden bufor na grupę rolet (ten sam slave)
@@ -134,7 +139,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
             register=register,
             slave=slave,
             unique_id=unique_id,
-            command_register=command_register,
+            command_sender=command_sender,
             buffer=buffer,
             scan_interval=scan_interval_td,
         ))
@@ -160,11 +165,14 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
     else:
         scan_interval_td = scan_interval
 
-    command_register = config.get(CONF_COMMAND_REGISTER)
-
     covers_config = config.get(CONF_COVERS)
     if not covers_config:
         _LOGGER.error("No covers found in config: %s", config)
+        return
+
+    command_sender = hass.data.get(DATA_COMMAND_SENDER)
+    if command_sender is None:
+        _LOGGER.error("PlcCommandSender niedostępny — brak command_register w konfiguracji modbushas")
         return
 
     buffer = ModbusCoverRegisterBuffer("covers", hass, hub_name, 1, scan_interval_td)
@@ -183,7 +191,7 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
             register=register,
             slave=slave,
             unique_id=unique_id,
-            command_register=command_register,
+            command_sender=command_sender,
             buffer=buffer,
             scan_interval=scan_interval_td,
         ))
@@ -298,17 +306,16 @@ class ModbusHASCover(CoverEntity):
     )
 
     def __init__(self, hass, hub_name, name, register, slave, unique_id,
-                 command_register, buffer, scan_interval):
+                 command_sender, buffer, scan_interval):
         self._hass = hass
         self._hub_name = hub_name
         self._name = name
         self._register = register  # numer rejestru D (konfiguracja PLC)
         self._modbus_register = register + FATEK_D_REGISTER_OFFSET  # adres Modbus do odczytu
         self._slave = slave
-        self._command_register = command_register
+        self._command_sender = command_sender
         self._buffer = buffer
         self._scan_interval = scan_interval
-        self._hub = None
         self._cancel_timer = None
 
         # Stan rolety
@@ -326,18 +333,6 @@ class ModbusHASCover(CoverEntity):
 
         _LOGGER.debug("ModbusHASCover initialized: name=%s, D_register=%s, modbus_address=%s, unique_id=%s",
                        name, register, self._modbus_register, self._attr_unique_id)
-
-    def checkhub(self):
-        """Inicjalizacja połączenia z hubem modbus."""
-        if self._hub is None:
-            try:
-                if MODBUS_DOMAIN in self._hass.data:
-                    self._hub = self._hass.data[MODBUS_DOMAIN][self._hub_name]
-                else:
-                    _LOGGER.warning("MODBUS_DOMAIN not found in hass.data")
-            except (AttributeError, KeyError) as error:
-                _LOGGER.error("Error accessing hub '%s': %s", self._hub_name, error)
-                self._hub = None
 
     async def async_added_to_hass(self):
         """Rejestracja w HA — inicjalny odczyt i cykliczny update."""
@@ -379,43 +374,19 @@ class ModbusHASCover(CoverEntity):
     # --- Komendy ---
 
     async def _async_write_command(self, command_code, target_time=None):
-        """Wysyła komendę do PLC: zapisuje 3 kolejne rejestry R jednym wywołaniem Modbus (funkcja 16).
+        """Wysyła komendę do PLC przez wspólny PlcCommandSender.
 
-        R[X]   = bazowy adres D rolety
-        R[X+1] = kod polecenia (0=stop, 1=up, 2=down, 3=set_position)
-        R[X+2] = docelowy czas w sekundach (tylko dla set_position)
+        Program 301 (3 parametry):
+          param 1 = bazowy adres D rolety
+          param 2 = kod polecenia (0=stop, 1=down, 2=up, 3=set_position)
+          param 3 = docelowy czas w sekundach (tylko dla set_position)
         """
-        self.checkhub()
-        if self._hub is None:
-            _LOGGER.error("Cannot send command for cover %s: hub not available", self._name)
-            return
-
-        try:
-            values = [self._register, command_code, target_time if target_time is not None else 0]
-            write_client = self._hass.data.get(DATA_WRITE_CLIENT)
-            if write_client:
-                result = await write_client.async_write_registers(
-                    self._command_register, values, slave=self._slave
-                )
-            else:
-                # Fallback na główny hub jeśli write_client niedostępny
-                self.checkhub()
-                if self._hub is None:
-                    return
-                from homeassistant.components.modbus.const import CALL_TYPE_WRITE_REGISTERS
-                result = await self._hub.async_pb_call(
-                    unit=self._slave,
-                    address=self._command_register,
-                    value=values,
-                    use_call=CALL_TYPE_WRITE_REGISTERS
-                )
-            if not result:
-                _LOGGER.error("Failed to write command registers for cover %s", self._name)
-                return
-
-            _LOGGER.info("Cover %s command %s sent successfully (values=%s)", self._name, command_code, values)
-        except Exception as e:
-            _LOGGER.error("Error sending command %s for cover %s: %s", command_code, self._name, e)
+        params = [self._register, command_code, target_time if target_time is not None else 0]
+        result = await self._command_sender.async_send_command(
+            PLC_PROGRAM_COVER, params, slave=self._slave,
+        )
+        if not result:
+            _LOGGER.error("Failed to send cover command for %s", self._name)
 
     async def async_open_cover(self, **kwargs):
         _LOGGER.info("Opening cover: %s", self._name)
@@ -472,8 +443,9 @@ class ModbusHASCover(CoverEntity):
             self._is_closed = False
             if total_time > 0:
                 self._position = round((1 - position_seconds / total_time) * 100)
-                # Ograniczenie do zakresu 0-100
-                self._position = max(0, min(100, self._position))
+                # Status częściowy — pozycja musi być 1-99,
+                # aby HA nie blokował przycisków open/close.
+                self._position = max(1, min(99, self._position))
             else:
                 self._position = None
         else:

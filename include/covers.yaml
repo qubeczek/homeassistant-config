@@ -1,7 +1,6 @@
 - platform: modbushas
   hub: fatek
   scan_interval: 5
-  command_register: 475
   covers:
     - name: gabinet_roleta_1
       register: 1274

@@ -14,8 +14,9 @@ _LOGGER = logging.getLogger(__name__)
 
 DOMAIN = "modbushas"
 
-# Klucz w hass.data do dedykowanego klienta zapisu
+# Klucze w hass.data
 DATA_WRITE_CLIENT = "modbushas_write_client"
+DATA_COMMAND_SENDER = "modbushas_command_sender"
 
 
 class ModbusWriteClient:
@@ -94,6 +95,77 @@ class ModbusWriteClient:
             return result
 
 
+class PlcCommandSender:
+    """Wspólny mechanizm wysyłania komend do PLC.
+
+    Format komendy w rejestrach R (od command_register):
+      R[X]     — kod programu PLC (np. 301)
+      R[X+1..] — parametry programu (ilość = kod // 100)
+
+    Np. program 301 ma 3 parametry, 405 — 4 parametry, 3 — zero parametrów.
+    """
+
+    def __init__(self, hass: HomeAssistant, command_register: int):
+        self._hass = hass
+        self._command_register = command_register
+
+    async def async_send_command(self, program_code: int, params: list[int], slave: int = 1) -> bool:
+        """Wyślij komendę do PLC.
+
+        Args:
+            program_code: Kod programu PLC (np. 301).
+            params: Lista parametrów — musi mieć długość = program_code // 100.
+            slave: Adres slave Modbus.
+
+        Returns:
+            True jeśli zapis się powiódł.
+        """
+        expected_params = program_code // 100
+        if len(params) != expected_params:
+            _LOGGER.error(
+                "Program %s wymaga %s parametrów, podano %s",
+                program_code, expected_params, len(params),
+            )
+            return False
+
+        values = [program_code] + params
+        write_client = self._hass.data.get(DATA_WRITE_CLIENT)
+
+        try:
+            if write_client:
+                result = await write_client.async_write_registers(
+                    self._command_register, values, slave=slave,
+                )
+            else:
+                from homeassistant.components.modbus.const import (
+                    MODBUS_DOMAIN,
+                    CALL_TYPE_WRITE_REGISTERS,
+                )
+                hub = self._hass.data[MODBUS_DOMAIN].get("fatek")
+                if hub is None:
+                    _LOGGER.error("PlcCommandSender: hub 'fatek' niedostępny")
+                    return False
+                result = await hub.async_pb_call(
+                    unit=slave,
+                    address=self._command_register,
+                    value=values,
+                    use_call=CALL_TYPE_WRITE_REGISTERS,
+                )
+
+            if not result:
+                _LOGGER.error("PlcCommandSender: błąd zapisu programu %s", program_code)
+                return False
+
+            _LOGGER.info(
+                "PlcCommandSender: program %s wysłany (rejestr=%s, wartości=%s)",
+                program_code, self._command_register, values,
+            )
+            return True
+        except Exception as e:
+            _LOGGER.error("PlcCommandSender: wyjątek przy programie %s: %s", program_code, e)
+            return False
+
+
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
     """Set up the Modbus HAS integration."""
     _LOGGER.info("Setting up Modbus HAS integration")
@@ -127,7 +199,16 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
             await hass.data[DATA_WRITE_CLIENT].async_close()
 
     hass.bus.async_listen_once(EVENT_HOMEASSISTANT_STOP, _async_close_write_client)
-    
+
+    # Wspólny mechanizm komend PLC
+    command_register = modbushas_config.get("command_register")
+    if command_register is not None:
+        hass.data[DATA_COMMAND_SENDER] = PlcCommandSender(hass, command_register)
+        _LOGGER.info("PlcCommandSender zainicjalizowany z rejestrem komend: %s", command_register)
+    else:
+        hass.data[DATA_COMMAND_SENDER] = None
+        _LOGGER.warning("Brak command_register w konfiguracji modbushas — PlcCommandSender wyłączony")
+
     # Load light platform if configured
     if DOMAIN in config and "light" in config[DOMAIN]:
         _LOGGER.info("Loading light platform from config")
