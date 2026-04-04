@@ -12,11 +12,12 @@ modbushas:
   binary_sensor: !include include/binary_sensor.yaml
   sensor: !include include/sensors/sensors-modbus.yaml
   switch: !include include/switch.yaml
+  cover: !include include/covers.yaml
 
 logger:
   default: warning
-#  logs:
-#    custom_components.modbushas: info
+  logs:
+    custom_components.modbushas: info
 #    homeassistant.components.modbus: warning
 #    pymodbus: warning
 

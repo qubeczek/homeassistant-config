@@ -125,6 +125,30 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
         else:
             _LOGGER.error("Unexpected switch_config structure: %s", type(switch_config))
     
+    # Load cover platform if configured
+    if DOMAIN in config and "cover" in config[DOMAIN]:
+        _LOGGER.info("Loading cover platform from config")
+
+        cover_config = config[DOMAIN]["cover"]
+        _LOGGER.info("Cover config: %s", cover_config)
+
+        if isinstance(cover_config, dict) and "cover" in cover_config:
+            platforms = cover_config["cover"]
+            if isinstance(platforms, list):
+                for platform_config in platforms:
+                    if platform_config.get("platform") == "modbushas":
+                        _LOGGER.info("Loading cover platform: %s", platform_config)
+                        discovery.load_platform(hass, "cover", "modbushas", platform_config, config)
+            else:
+                _LOGGER.error("Expected list of platforms, got: %s", type(platforms))
+        elif isinstance(cover_config, list):
+            for platform_config in cover_config:
+                if platform_config.get("platform") == "modbushas":
+                    _LOGGER.info("Loading cover platform: %s", platform_config)
+                    discovery.load_platform(hass, "cover", "modbushas", platform_config, config)
+        else:
+            _LOGGER.error("Unexpected cover_config structure: %s", type(cover_config))
+
     return True
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
