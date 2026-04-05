@@ -6,15 +6,21 @@ Tablica danych rolety w rejestrach D (od bazowego adresu N):
   D[N]   — typ urządzenia PLC (21 = roleta)
   D[N+1] — numer wyjścia PLC: silnik w dół (stała konfiguracyjna)
   D[N+2] — numer wyjścia PLC: silnik w górę (stała konfiguracyjna)
-  D[N+3] — całkowity czas otwarcia/zamknięcia (sekundy)
-  D[N+4] — status: 0=otwarta, 1=częściowo(ruch w górę), 2=częściowo(ruch w dół), 3=zamknięta
-  D[N+5] — pozycja zakończenia ostatniego ruchu (w sekundach, 0=otwarta, D[N+3]=zamknięta)
+  D[N+3] — całkowity czas otwarcia/zamknięcia (w 1/10 sekundy)
+  D[N+4] — status: 0=otwarta, 1=jedzie w górę, 2=jedzie w dół, 3=zamknięta,
+              4=nie obsadzony, 5=stoi pomiędzy(po górze), 6=stoi pomiędzy(po dole)
+  D[N+5] — pozycja zakończenia ostatniego ruchu (w 1/10 sekundy, 0=otwarta, D[N+3]=zamknięta)
 
 Komendy wysyłane przez wspólny mechanizm PlcCommandSender:
   Program 301 (3 parametry):
     param 1 — bazowy adres D rolety
-    param 2 — kod polecenia: 0=stop, 1=down, 2=up, 3=set_position
-    param 3 — docelowy czas w sekundach (tylko dla komendy 3)
+    param 2 — kod polecenia: 0=stop, 1=down, 2=up
+    param 3 — nieużywany (0)
+
+SET_POSITION jest symulowane po stronie HA:
+  1. Obliczenie delty między aktualną a docelową pozycją (w decysekundach)
+  2. Wysłanie komendy UP lub DOWN
+  3. Zaplanowanie komendy STOP po obliczonym czasie
 """
 import logging
 import voluptuous as vol
@@ -60,13 +66,15 @@ PLC_PROGRAM_COVER = 301
 CMD_STOP = 0
 CMD_DOWN = 1
 CMD_UP = 2
-CMD_SET_POSITION = 3
 
 # Statusy PLC
 STATUS_OPEN = 0
-STATUS_PARTIAL_UP = 1
-STATUS_PARTIAL_DOWN = 2
+STATUS_MOVING_UP = 1
+STATUS_MOVING_DOWN = 2
 STATUS_CLOSED = 3
+STATUS_NOT_INSTALLED = 4
+STATUS_STOPPED_AFTER_UP = 5
+STATUS_STOPPED_AFTER_DOWN = 6
 
 # Offsety rejestrów w tablicy danych rolety
 REG_DEVICE_TYPE = 0
@@ -321,7 +329,11 @@ class ModbusHASCover(CoverEntity):
         # Stan rolety
         self._position = None  # 0=zamknięta, 100=otwarta (konwencja HA)
         self._is_closed = None
-        self._total_time = None  # D[N+3] — potrzebny do set_position
+        self._is_opening = False
+        self._is_closing = False
+        self._total_time = None  # D[N+3] — całkowity czas w decysekundach
+        self._position_deciseconds = None  # D[N+5] — surowa pozycja w decysekundach
+        self._stop_timer = None  # handle do zaplanowanego STOP (symulacja set_position)
 
         if unique_id:
             self._attr_unique_id = unique_id
@@ -357,6 +369,7 @@ class ModbusHASCover(CoverEntity):
         if self._cancel_timer:
             self._cancel_timer()
             self._cancel_timer = None
+        self._cancel_stop_timer()
         await super().async_will_remove_from_hass()
 
     @property
@@ -368,20 +381,34 @@ class ModbusHASCover(CoverEntity):
         return self._is_closed
 
     @property
+    def is_opening(self):
+        return self._is_opening
+
+    @property
+    def is_closing(self):
+        return self._is_closing
+
+    @property
     def current_cover_position(self):
         return self._position
 
     # --- Komendy ---
 
-    async def _async_write_command(self, command_code, target_time=None):
+    def _cancel_stop_timer(self):
+        """Anuluje zaplanowany STOP (jeśli istnieje)."""
+        if self._stop_timer is not None:
+            self._stop_timer.cancel()
+            self._stop_timer = None
+
+    async def _async_write_command(self, command_code):
         """Wysyła komendę do PLC przez wspólny PlcCommandSender.
 
         Program 301 (3 parametry):
           param 1 = bazowy adres D rolety
-          param 2 = kod polecenia (0=stop, 1=down, 2=up, 3=set_position)
-          param 3 = docelowy czas w sekundach (tylko dla set_position)
+          param 2 = kod polecenia (0=stop, 1=down, 2=up)
+          param 3 = 0 (nieużywany)
         """
-        params = [self._register, command_code, target_time if target_time is not None else 0]
+        params = [self._register, command_code, 0]
         result = await self._command_sender.async_send_command(
             PLC_PROGRAM_COVER, params, slave=self._slave,
         )
@@ -390,18 +417,30 @@ class ModbusHASCover(CoverEntity):
 
     async def async_open_cover(self, **kwargs):
         _LOGGER.info("Opening cover: %s", self._name)
+        self._cancel_stop_timer()
         await self._async_write_command(CMD_UP)
 
     async def async_close_cover(self, **kwargs):
         _LOGGER.info("Closing cover: %s", self._name)
+        self._cancel_stop_timer()
         await self._async_write_command(CMD_DOWN)
 
     async def async_stop_cover(self, **kwargs):
         _LOGGER.info("Stopping cover: %s", self._name)
+        self._cancel_stop_timer()
         await self._async_write_command(CMD_STOP)
 
     async def async_set_cover_position(self, **kwargs):
-        """Ustawia pozycję rolety. HA: 0=zamknięta, 100=otwarta."""
+        """Symulacja ustawienia pozycji rolety.
+
+        PLC nie obsługuje komendy SET_POSITION — symulujemy ją:
+        1. Obliczamy deltę między aktualną a docelową pozycją (decysekundy)
+        2. Wysyłamy UP lub DOWN
+        3. Planujemy STOP po obliczonym czasie
+
+        HA: 0=zamknięta, 100=otwarta.
+        PLC: 0=otwarta, total_time=zamknięta (w decysekundach).
+        """
         position = kwargs.get(ATTR_POSITION)
         if position is None:
             return
@@ -410,12 +449,64 @@ class ModbusHASCover(CoverEntity):
             _LOGGER.error("Cannot set position for cover %s: total_time unknown", self._name)
             return
 
-        # Przeliczenie z % HA na sekundy PLC
-        # HA: 0=zamknięta, 100=otwarta
-        # PLC: 0=otwarta, total_time=zamknięta
-        target_seconds = round((1 - position / 100) * self._total_time)
-        _LOGGER.info("Setting cover %s position to %s%% (target_seconds=%s)", self._name, position, target_seconds)
-        await self._async_write_command(CMD_SET_POSITION, target_time=target_seconds)
+        if self._position_deciseconds is None:
+            _LOGGER.error("Cannot set position for cover %s: current position unknown", self._name)
+            return
+
+        # Anuluj poprzedni zaplanowany STOP
+        self._cancel_stop_timer()
+
+        # Jeśli roleta jedzie — zatrzymaj najpierw i odczytaj aktualną pozycję
+        if self._is_opening or self._is_closing:
+            _LOGGER.info("Cover %s is moving, stopping first before set_position", self._name)
+            await self._async_write_command(CMD_STOP)
+            await asyncio.sleep(0.5)
+            self._buffer.refresh()
+            await self.async_update()
+
+        # Oblicz docelową pozycję w decysekundach
+        # HA: 0=zamknięta, 100=otwarta → PLC: total_time=zamknięta, 0=otwarta
+        target_ds = round((1 - position / 100) * self._total_time)
+        current_ds = self._position_deciseconds
+        delta_ds = target_ds - current_ds
+
+        _LOGGER.info(
+            "Cover %s set_position: target=%s%%, current_ds=%s, target_ds=%s, delta_ds=%s",
+            self._name, position, current_ds, target_ds, delta_ds,
+        )
+
+        # Jeśli różnica jest zbyt mała (< 0.5s), nie ruszaj
+        if abs(delta_ds) < 5:
+            _LOGGER.info("Cover %s: delta too small (%s ds), skipping", self._name, delta_ds)
+            return
+
+        # Wybierz kierunek
+        if delta_ds > 0:
+            # target > current → trzeba jechać w dół (zamykanie)
+            command = CMD_DOWN
+            direction = "down"
+        else:
+            # target < current → trzeba jechać w górę (otwieranie)
+            command = CMD_UP
+            direction = "up"
+
+        move_seconds = abs(delta_ds) / 10.0
+        _LOGGER.info("Cover %s: moving %s for %.1f seconds", self._name, direction, move_seconds)
+
+        await self._async_write_command(command)
+
+        # Zaplanuj STOP po obliczonym czasie
+        async def _delayed_stop():
+            await asyncio.sleep(move_seconds)
+            _LOGGER.info("Cover %s: auto-stop after %.1f seconds (%s)", self._name, move_seconds, direction)
+            await self._async_write_command(CMD_STOP)
+            self._stop_timer = None
+            # Odśwież stan po zatrzymaniu
+            await asyncio.sleep(0.5)
+            self._buffer.refresh()
+            await self.async_update()
+
+        self._stop_timer = self._hass.async_create_task(_delayed_stop())
 
     # --- Odczyt stanu ---
 
@@ -428,26 +519,49 @@ class ModbusHASCover(CoverEntity):
 
         total_time = regs[REG_TOTAL_TIME]
         status = regs[REG_STATUS]
-        position_seconds = regs[REG_POSITION]
+        position_ds = regs[REG_POSITION]  # pozycja w decysekundach
 
         self._total_time = total_time
+        self._position_deciseconds = position_ds
 
-        # Status ma priorytet nad pozycją
+        # Reset flag ruchu — ustawiane ponownie jeśli status wskazuje ruch
+        self._is_opening = False
+        self._is_closing = False
+
         if status == STATUS_OPEN:
             self._is_closed = False
             self._position = 100
         elif status == STATUS_CLOSED:
             self._is_closed = True
             self._position = 0
-        elif status in (STATUS_PARTIAL_UP, STATUS_PARTIAL_DOWN):
+        elif status == STATUS_MOVING_UP:
+            self._is_opening = True
             self._is_closed = False
-            if total_time > 0:
-                self._position = round((1 - position_seconds / total_time) * 100)
-                # Status częściowy — pozycja musi być 1-99,
-                # aby HA nie blokował przycisków open/close.
+            if total_time > 0 and position_ds <= total_time:
+                self._position = round((1 - position_ds / total_time) * 100)
                 self._position = max(1, min(99, self._position))
             else:
                 self._position = None
+        elif status == STATUS_MOVING_DOWN:
+            self._is_closing = True
+            self._is_closed = False
+            if total_time > 0 and position_ds <= total_time:
+                self._position = round((1 - position_ds / total_time) * 100)
+                self._position = max(1, min(99, self._position))
+            else:
+                self._position = None
+        elif status in (STATUS_STOPPED_AFTER_UP, STATUS_STOPPED_AFTER_DOWN):
+            self._is_closed = False
+            if total_time > 0 and position_ds <= total_time:
+                self._position = round((1 - position_ds / total_time) * 100)
+                self._position = max(1, min(99, self._position))
+            else:
+                self._position = None
+        elif status == STATUS_NOT_INSTALLED:
+            _LOGGER.warning("Cover %s reports status NOT_INSTALLED (4)", self._name)
+            self._attr_available = False
+            self._position = None
+            self._is_closed = None
         else:
             _LOGGER.warning("Unknown cover status %s for %s", status, self._name)
             self._position = None
@@ -455,4 +569,4 @@ class ModbusHASCover(CoverEntity):
 
         self.async_write_ha_state()
         _LOGGER.debug("Cover %s updated: status=%s, position_sec=%s, total_time=%s, position_ha=%s",
-                       self._name, status, position_seconds, total_time, self._position)
+                       self._name, status, position_ds, total_time, self._position)
