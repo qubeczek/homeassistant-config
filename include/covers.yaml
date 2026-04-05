@@ -1,7 +1,54 @@
+# Grupa 1: Salon (rejestry 1204-1246)
 - platform: modbushas
   hub: fatek
   scan_interval: 5
   covers:
+    - name: salon_roleta_1
+      register: 1204
+      slave: 1
+      unique_id: salon_roleta_1
+    - name: salon_roleta_2
+      register: 1211
+      slave: 1
+      unique_id: salon_roleta_2
+    - name: salon_roleta_3
+      register: 1218
+      slave: 1
+      unique_id: salon_roleta_3
+    - name: salon_roleta_4_6
+      register: 1225
+      slave: 1
+      unique_id: salon_roleta_4_6
+    - name: salon_roleta_5
+      register: 1232
+      slave: 1
+      unique_id: salon_roleta_5
+    - name: salon_roleta_7
+      register: 1239
+      slave: 1
+      unique_id: salon_roleta_7
+    - name: salon_roleta_8
+      register: 1246
+      slave: 1
+      unique_id: salon_roleta_8
+
+# Grupa 2: Parter reszta (rejestry 1253-1334)
+- platform: modbushas
+  hub: fatek
+  scan_interval: 5
+  covers:
+    - name: kuchnia_roleta_1
+      register: 1253
+      slave: 1
+      unique_id: kuchnia_roleta_1
+    - name: spizarka_roleta_1
+      register: 1260
+      slave: 1
+      unique_id: spizarka_roleta_1
+    - name: rekreacja_roleta_1
+      register: 1267
+      slave: 1
+      unique_id: rekreacja_roleta_1
     - name: gabinet_roleta_1
       register: 1274
       slave: 1
@@ -10,3 +57,67 @@
       register: 1281
       slave: 1
       unique_id: gabinet_roleta_2
+    - name: sypialnia_roleta_1
+      register: 1288
+      slave: 1
+      unique_id: sypialnia_roleta_1
+    - name: sypialnia_roleta_2
+      register: 1295
+      slave: 1
+      unique_id: sypialnia_roleta_2
+    - name: pralnia_roleta_1
+      register: 1320
+      slave: 1
+      unique_id: pralnia_roleta_1
+    - name: pokoj3_roleta_1
+      register: 1327
+      slave: 1
+      unique_id: pokoj3_roleta_1
+    - name: pokoj3_roleta_2
+      register: 1334
+      slave: 1
+      unique_id: pokoj3_roleta_2
+
+# Grupa 3: Pietro pokoje (rejestry 1600-1621)
+- platform: modbushas
+  hub: fatek
+  scan_interval: 5
+  covers:
+    - name: pokoj1_roleta_1
+      register: 1600
+      slave: 1
+      unique_id: pokoj1_roleta_1
+    - name: pokoj1_roleta_2
+      register: 1607
+      slave: 1
+      unique_id: pokoj1_roleta_2
+    - name: pokoj2_roleta_1
+      register: 1614
+      slave: 1
+      unique_id: pokoj2_roleta_1
+    - name: pokoj2_roleta_2
+      register: 1621
+      slave: 1
+      unique_id: pokoj2_roleta_2
+
+# Grupa 4: Pietro reszta (rejestry 1684-1719)
+- platform: modbushas
+  hub: fatek
+  scan_interval: 5
+  covers:
+    - name: hall_roleta_1
+      register: 1684
+      slave: 1
+      unique_id: hall_roleta_1
+    - name: lazienka_roleta_1
+      register: 1691
+      slave: 1
+      unique_id: lazienka_roleta_1
+    - name: klatka_roleta_1
+      register: 1698
+      slave: 1
+      unique_id: klatka_roleta_1
+    - name: taras_roleta_1
+      register: 1719
+      slave: 1
+      unique_id: taras_roleta_1
