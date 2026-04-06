@@ -121,3 +121,11 @@
       register: 1719
       slave: 1
       unique_id: taras_roleta_1
+    - name: lazienka_syp_roleta_1
+      register: 1712
+      slave: 1
+      unique_id: lazienka_syp_roleta_1
+    - name: taras_korytarz_roleta_1
+      register: 1705
+      slave: 1
+      unique_id: taras_korytarz_roleta_1
