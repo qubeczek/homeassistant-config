@@ -1,5 +1,5 @@
 #!/bin/bash
-# Skrypt deployujący konfigurację na produkcję (H:\)
+# Skrypt deployujący konfigurację na produkcję (Y:\)
 # Kopiuje pliki .py, .md, .json, .yaml z:
 #   - bieżącego katalogu (bez rekursji)
 #   - custom_components/ (rekursywnie)
@@ -7,7 +7,7 @@
 # Kopiuje tylko pliki, które się różnią od wersji na produkcji.
 
 SRC="d:/priv/dom/SDI/homeassistant-config"
-DST="h:"
+DST="y:"
 EXTENSIONS=("*.py" "*.md" "*.json" "*.yaml")
 COUNTFILE=$(mktemp)
 echo 0 > "$COUNTFILE"

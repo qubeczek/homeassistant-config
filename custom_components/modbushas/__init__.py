@@ -200,6 +200,22 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
 
     hass.bus.async_listen_once(EVENT_HOMEASSISTANT_STOP, _async_close_write_client)
 
+    # Serwis modbushas.write_register — używa dedykowanego write_client
+    async def async_handle_write_register(call):
+        address = call.data["address"]
+        value = call.data["value"]
+        slave = call.data.get("slave", 1)
+        wc = hass.data.get(DATA_WRITE_CLIENT)
+        if wc:
+            result = await wc.async_write_register(address, value, slave=slave)
+            if result is None:
+                _LOGGER.error("modbushas.write_register: błąd zapisu rejestru %s", address)
+        else:
+            _LOGGER.error("modbushas.write_register: write_client niedostępny")
+
+    hass.services.async_register(DOMAIN, "write_register", async_handle_write_register)
+    _LOGGER.info("Zarejestrowano serwis modbushas.write_register")
+
     # Wspólny mechanizm komend PLC
     command_register = modbushas_config.get("command_register")
     if command_register is not None:

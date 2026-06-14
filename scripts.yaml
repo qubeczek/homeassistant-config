@@ -1,9 +1,7 @@
 brama_1a:
   sequence:
-  - action: modbus.write_register
-    metadata: {}
+  - action: modbushas.write_register
     data:
-      hub: fatek
       address: 546
       slave: 1
       value: 5
@@ -33,7 +31,7 @@ light_day_off:
 ogrod_planpodlewania_toggle:
   alias: Przelacz program podlewania
   sequence:
-  - action: modbus.write_register
+  - action: modbushas.write_register
     data:
       slave: 1
       address: 1049
@@ -41,7 +39,7 @@ ogrod_planpodlewania_toggle:
 ogrod_podlewanie_toggle:
   alias: Wlacz / wylacz podlewanie
   sequence:
-  - action: modbus.write_register
+  - action: modbushas.write_register
     data:
       slave: 1
       address: 1049
@@ -49,7 +47,7 @@ ogrod_podlewanie_toggle:
 ogrod_woda_toggle:
   alias: Wlacz / wylacz wode w ogrodzie
   sequence:
-  - action: modbus.write_register
+  - action: modbushas.write_register
     data:
       slave: 1
       address: 1049
@@ -84,11 +82,10 @@ sypialnia_night:
       - cover.sypialnia_roleta_2
 podejdz_do_telefonu:
   sequence:
-  - action: modbus.write_register
-    metadata: {}
+  - action: modbushas.write_register
     data:
-      hub: fatek
       address: 1000
+      slave: 1
       value: 2
   alias: podejdz_do_telefonu
   description: ''
