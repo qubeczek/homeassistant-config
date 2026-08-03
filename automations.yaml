@@ -1,3 +1,12 @@
+- id: 'auto_dump_logs'
+  alias: Zrzut logow do pliku
+  trigger:
+  - platform: time_pattern
+    minutes: /1
+  condition: []
+  action:
+  - action: shell_command.dump_logs
+
 - id: '1577038355590'
   alias: Gaszenie rzeczy po alarmie
   description: ''

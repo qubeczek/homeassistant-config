@@ -48,4 +48,7 @@ homeassistant:
   customize: !include customize.yaml
 
 automation: !include automations.yaml
-automation old: !include_dir_merge_list include/automation 
+automation old: !include_dir_merge_list include/automation
+
+shell_command:
+  dump_logs: "cat /config/home-assistant.log.* > /config/ha-logs.txt 2>/dev/null; ls -la /config/*.log* >> /config/ha-logs.txt 2>/dev/null; find /config -name '*.log*' >> /config/ha-logs.txt 2>/dev/null; find / -name 'home-assistant.log' 2>/dev/null >> /config/ha-logs.txt"
